@@ -1,0 +1,25 @@
+Vanatome atlas asset attribution
+
+The GLB models and related manifest distributed in public/models/ are
+browser-oriented adaptations of:
+
+“Z-Anatomy — The libre 3D atlas of anatomy”
+Created by Gauthier Kervyn (design, 3D, anatomy) and Marcin Zielinski
+(Python script), with additional authors and upstream assets documented by the
+project.
+
+Project source: https://github.com/Z-Anatomy/Models
+License: Creative Commons Attribution-ShareAlike 4.0 International
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+Vanatome modifications include web export, structure selection identifiers,
+material adjustments, curve-to-mesh conversion, and geometry optimization.
+
+Z-Anatomy documents models derived from:
+“BodyParts3D — The Database Center for Life Science”
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html
+
+The MIT license for Vanatome viewer code does not relicense these atlas assets.
+Preserve the relevant attribution, indicate modifications, and follow the
+applicable ShareAlike terms when redistributing adapted atlas material. Refer
+to ASSET-LICENSE.md and the upstream notices for further provenance.

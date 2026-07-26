@@ -1,0 +1,24 @@
+name: Product idea
+description: Propose an anatomy exploration or embedding capability.
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User need
+      description: Who needs this, and what are they trying to understand or do?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed experience
+      description: Describe the behavior rather than only the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: assets
+    attributes:
+      label: Atlas or licensing considerations
+      description: List any new anatomy data, provenance, or license implications.

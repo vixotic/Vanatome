@@ -1,0 +1,60 @@
+{
+  "name": "@vanatome/react",
+  "version": "0.1.0",
+  "description": "Embeddable React viewer for curated Vanatome human anatomy atlases.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.build.json --noEmit",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "@react-three/drei": "^10.0.0",
+    "@react-three/fiber": "^9.0.0",
+    "react": "^19.0.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@types/react": "^19.2.14",
+    "react": "^19.2.6",
+    "three": "^0.185.1",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vixotic/Vanatome.git",
+    "directory": "packages/react"
+  },
+  "keywords": [
+    "anatomy",
+    "react",
+    "react-three-fiber",
+    "three.js",
+    "visualization",
+    "z-anatomy"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
