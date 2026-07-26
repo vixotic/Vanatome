@@ -1,15 +1,15 @@
-# `@vanatome/react`
+# `@vixotic/vanatome-react`
 
 The embeddable Vanatome anatomy viewer for React. It renders curated Vanatome
 glTF atlases and exposes the interaction state needed to build search,
 hierarchy, layer, isolate, focus, and detail-panel experiences.
 
 ```bash
-npm install @vanatome/react three @react-three/fiber @react-three/drei
+npm install @vixotic/vanatome-react three @react-three/fiber @react-three/drei
 ```
 
 ```tsx
-import { VanatomeViewer, useVanatomeController } from "@vanatome/react";
+import { VanatomeViewer, useVanatomeController } from "@vixotic/vanatome-react";
 import atlas from "./atlas";
 
 export function Anatomy() {

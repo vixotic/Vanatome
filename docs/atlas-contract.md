@@ -54,7 +54,7 @@ version.
 
 ## Licensing boundary
 
-`@vanatome/react` is viewer code. Atlas models and related metadata are data
+`@vixotic/vanatome-react` is viewer code. Atlas models and related metadata are data
 artifacts with their own provenance and license notices. A distributor of a
 Z-Anatomy-derived atlas should preserve attribution, identify modifications,
 link to CC BY-SA 4.0, and apply its ShareAlike requirements to the adapted atlas

@@ -52,11 +52,12 @@ npm test
 
 ## Embed Vanatome
 
-The React package is prepared as `@vanatome/react`. Until its first npm release,
-install it from this repository or use the workspace locally.
+The React package is prepared for npm as `@vixotic/vanatome-react`.
+
+After the first public release, install it with:
 
 ```bash
-npm install @vanatome/react three @react-three/fiber @react-three/drei
+npm install @vixotic/vanatome-react three @react-three/fiber @react-three/drei
 ```
 
 ```tsx
@@ -64,7 +65,7 @@ import {
   VanatomeViewer,
   useVanatomeController,
   type VanatomeAtlas,
-} from "@vanatome/react";
+} from "@vixotic/vanatome-react";
 
 const atlas: VanatomeAtlas = {
   id: "vanatome-human",
@@ -134,7 +135,7 @@ for professional medical guidance.
 
 ## Architecture for consumers
 
-`@vanatome/react` exports:
+`@vixotic/vanatome-react` exports:
 
 - `VanatomeViewer`, a controlled React Three Fiber scene;
 - `useVanatomeController`, state helpers for select, focus, isolate, layer, and

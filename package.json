@@ -25,8 +25,8 @@
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern '**/dist/**' --ignore-pattern .next",
-    "package:build": "npm run build --workspace @vanatome/react",
-    "package:check": "npm run check --workspace @vanatome/react"
+    "package:build": "npm run build --workspace @vixotic/vanatome-react",
+    "package:check": "npm run check --workspace @vixotic/vanatome-react"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
