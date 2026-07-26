@@ -20,6 +20,9 @@ type SceneProps = Omit<VanatomeViewerProps, "className"> & {
   modelPosition: VanatomeVector3;
 };
 
+const BODY_SHELL_ID = "body-shell";
+const SKELETON_ID = "skeleton";
+
 function anatomyIdFor(object: THREE.Object3D | null): string | null {
   let current = object;
   while (current) {
@@ -89,14 +92,62 @@ function AtlasModel({
         : [object.material];
       for (const material of materials) {
         if (!(material instanceof THREE.MeshStandardMaterial)) continue;
-        material.transparent = id !== selectedId;
-        material.opacity = id === selectedId ? 1 : 0.72;
-        material.emissive.copy(material.color);
-        material.emissiveIntensity = id === selectedId ? 1.4 : 0.12;
+
+        if (id === BODY_SHELL_ID) {
+          material.transparent = true;
+          material.opacity = 0.12;
+          material.depthWrite = false;
+          material.color.set("#41dff7");
+          material.emissive.set("#087c99");
+          material.emissiveIntensity = 0.65;
+          material.wireframe = true;
+        } else if (id === SKELETON_ID) {
+          material.transparent = true;
+          material.opacity = 0.22;
+          material.depthWrite = false;
+          material.color.set("#9befff");
+          material.emissive.set("#2cbad5");
+          material.emissiveIntensity = 0.28;
+          material.wireframe = false;
+        } else if (id === selectedId) {
+          material.transparent = false;
+          material.opacity = 1;
+          material.depthWrite = true;
+          material.wireframe = false;
+          material.emissive.copy(material.color);
+          material.emissiveIntensity = 1.75;
+        } else {
+          material.transparent = true;
+          material.opacity = 0.78;
+          material.depthWrite = true;
+          material.wireframe = false;
+          material.emissive.copy(material.color);
+          material.emissiveIntensity = 0.2;
+        }
         material.needsUpdate = true;
       }
     });
   }, [isolatedIds, model, selectedId, structures, visibleLayers]);
+
+  useFrame(({ clock }) => {
+    const pulse = 1.55 + Math.sin(clock.elapsedTime * 4.2) * 0.65;
+    model.traverse((object) => {
+      if (
+        !(object instanceof THREE.Mesh) ||
+        anatomyIdFor(object) !== selectedId
+      ) {
+        return;
+      }
+      const materials = Array.isArray(object.material)
+        ? object.material
+        : [object.material];
+      for (const material of materials) {
+        if (material instanceof THREE.MeshStandardMaterial) {
+          material.emissiveIntensity = pulse;
+        }
+      }
+    });
+  });
 
   const selectFromEvent = (event: ThreeEvent<MouseEvent>) => {
     const id = anatomyIdFor(event.object);
