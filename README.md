@@ -146,6 +146,10 @@ for professional medical guidance.
 The package is browser-only at render time, has no Next.js dependency, and loads
 static glTF assets from a URL supplied by the host.
 
+The Vanatome product demo consumes this same package through the repository
+workspace. Its production build and interaction surface act as the reference
+integration for selection, focus, isolation, reset, hierarchy, and layers.
+
 ## Licensing and attribution
 
 Viewer source code is available under the [MIT License](LICENSE).

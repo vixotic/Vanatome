@@ -5,7 +5,10 @@ import {
   Box,
   ChevronRight,
   Crosshair,
+  Eye,
+  EyeOff,
   Info,
+  Layers3,
   PanelLeftClose,
   PanelLeftOpen,
   PanelRightClose,
@@ -19,7 +22,16 @@ import {
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
-import { anatomyById, anatomyRegistry } from "../data/anatomy";
+import { useVanatomeController } from "@vixotic/vanatome-react";
+import {
+  anatomyById,
+  anatomyHierarchy,
+  anatomyLayers,
+  anatomyRegistry,
+  type AnatomyStructure,
+} from "../data/anatomy";
+
+const initialLayers = anatomyLayers.map((layer) => layer.id);
 
 const AnatomyScene = dynamic(
   () => import("./AnatomyScene").then((module) => module.AnatomyScene),
@@ -35,15 +47,13 @@ const AnatomyScene = dynamic(
 );
 
 export function AnatomyExplorer() {
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const viewer = useVanatomeController(initialLayers);
   const [query, setQuery] = useState("");
   const [leftOpen, setLeftOpen] = useState(true);
   const [rightOpen, setRightOpen] = useState(true);
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
-  const [focusSignal, setFocusSignal] = useState(0);
-  const [resetSignal, setResetSignal] = useState(0);
-  const selected = selectedId ? anatomyById[selectedId] : null;
+  const selected = viewer.selectedId ? anatomyById[viewer.selectedId] : null;
   const rightPanelExpanded = isCompact ? mobilePanelOpen : rightOpen;
 
   useEffect(() => {
@@ -64,13 +74,31 @@ export function AnatomyExplorer() {
     );
   }, [query]);
 
-  const choose = (id: string) => {
-    setSelectedId(id);
-    setFocusSignal((signal) => signal + 1);
+  const choose = (id: string | null) => {
+    viewer.select(id);
+    if (!id) return;
     setRightOpen(true);
     setMobilePanelOpen(true);
     setQuery("");
   };
+
+  const renderStructure = (organ: AnatomyStructure, index: number) => (
+    <button
+      key={organ.id}
+      type="button"
+      role="option"
+      aria-selected={organ.id === viewer.selectedId}
+      className={`structure-item ${organ.id === viewer.selectedId ? "active" : ""}`}
+      onClick={() => choose(organ.id)}
+    >
+      <span className="item-index">{String(index + 1).padStart(2, "0")}</span>
+      <span className="item-copy">
+        <strong>{organ.name}</strong>
+        <small>{organ.system}</small>
+      </span>
+      <ChevronRight size={15} aria-hidden="true" />
+    </button>
+  );
 
   const toggleRightPanel = () => {
     if (isCompact) {
@@ -157,29 +185,50 @@ export function AnatomyExplorer() {
               )}
             </label>
 
+            <div className="layer-controls" aria-label="Anatomy layers">
+              <span className="layer-label">
+                <Layers3 size={13} />
+                LAYERS
+              </span>
+              <div className="layer-chips">
+                {anatomyLayers.map((layer) => {
+                  const active = viewer.visibleLayers.includes(layer.id);
+                  return (
+                    <button
+                      key={layer.id}
+                      type="button"
+                      className={`layer-chip ${active ? "active" : ""}`}
+                      aria-pressed={active}
+                      onClick={() => viewer.toggleLayer(layer.id)}
+                    >
+                      {layer.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
             <div className="rail-heading">
-              <span>STRUCTURES</span>
+              <span>{query ? "SEARCH RESULTS" : "HIERARCHY"}</span>
               <span>{String(matches.length).padStart(2, "0")}</span>
             </div>
 
             <div className="structure-list" role="listbox" aria-label="Anatomy structures">
-              {matches.map((organ, index) => (
-                <button
-                  key={organ.id}
-                  type="button"
-                  role="option"
-                  aria-selected={organ.id === selectedId}
-                  className={`structure-item ${organ.id === selectedId ? "active" : ""}`}
-                  onClick={() => choose(organ.id)}
-                >
-                  <span className="item-index">{String(index + 1).padStart(2, "0")}</span>
-                  <span className="item-copy">
-                    <strong>{organ.name}</strong>
-                    <small>{organ.system}</small>
-                  </span>
-                  <ChevronRight size={15} aria-hidden="true" />
-                </button>
-              ))}
+              {query
+                ? matches.map(renderStructure)
+                : anatomyHierarchy.map((region) => (
+                    <div className="structure-group" key={region.id}>
+                      <div className="structure-group-label">{region.name}</div>
+                      {region.children.map((organ) =>
+                        renderStructure(
+                          organ as AnatomyStructure,
+                          anatomyRegistry.findIndex(
+                            (candidate) => candidate.id === organ.id,
+                          ),
+                        ),
+                      )}
+                    </div>
+                  ))}
               {matches.length === 0 && (
                 <div className="empty-search">
                   No structures match “{query}”.
@@ -196,9 +245,11 @@ export function AnatomyExplorer() {
 
         <section className="viewer" aria-label="Interactive 3D human anatomy model">
           <AnatomyScene
-            selectedId={selectedId}
-            focusSignal={focusSignal}
-            resetSignal={resetSignal}
+            selectedId={viewer.selectedId}
+            isolatedId={viewer.isolatedId}
+            visibleLayers={viewer.visibleLayers}
+            focusRequestKey={viewer.focusRequestKey}
+            resetViewKey={viewer.resetViewKey}
             onSelect={choose}
           />
 
@@ -216,7 +267,7 @@ export function AnatomyExplorer() {
           <button
             className="reset-view-button"
             type="button"
-            onClick={() => setResetSignal((signal) => signal + 1)}
+            onClick={viewer.reset}
           >
             <RotateCcw size={15} />
             RESET VIEW
@@ -268,6 +319,34 @@ export function AnatomyExplorer() {
                 <span className="eyebrow">{selected.system.toUpperCase()} SYSTEM</span>
                 <h2>{selected.name}</h2>
                 <p className="summary">{selected.summary}</p>
+
+                <div className="panel-actions">
+                  <button
+                    type="button"
+                    className={`panel-action ${viewer.isolatedId ? "active" : ""}`}
+                    aria-pressed={viewer.isolatedId === selected.id}
+                    onClick={() =>
+                      viewer.isolate(
+                        viewer.isolatedId === selected.id ? null : selected.id,
+                      )
+                    }
+                  >
+                    {viewer.isolatedId === selected.id ? (
+                      <EyeOff size={15} />
+                    ) : (
+                      <Eye size={15} />
+                    )}
+                    {viewer.isolatedId === selected.id ? "SHOW ALL" : "ISOLATE"}
+                  </button>
+                  <button
+                    type="button"
+                    className="panel-action"
+                    onClick={() => viewer.focus(selected.id)}
+                  >
+                    <Crosshair size={15} />
+                    FOCUS
+                  </button>
+                </div>
 
                 <div className="data-block">
                   <span className="data-label">PRIMARY FUNCTION</span>

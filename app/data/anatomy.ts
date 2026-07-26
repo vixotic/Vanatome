@@ -1,16 +1,19 @@
-export type AnatomyRegion = "thorax" | "abdomen" | "urinary";
+import {
+  createVanatomeHierarchy,
+  type VanatomeAtlas,
+  type VanatomeHierarchyNode,
+  type VanatomeStructure,
+} from "@vixotic/vanatome-react";
 
-export type AnatomyStructure = {
-  id: string;
-  name: string;
-  system: string;
+export type AnatomyRegion = "thorax" | "abdomen" | "pelvis";
+
+export type AnatomyStructure = VanatomeStructure & {
   region: AnatomyRegion;
-  color: string;
-  position: [number, number, number];
   scale: [number, number, number];
-  summary: string;
-  function: string;
-  fact: string;
+  color: string;
+  summary: NonNullable<VanatomeStructure["summary"]>;
+  function: NonNullable<VanatomeStructure["function"]>;
+  fact: NonNullable<VanatomeStructure["fact"]>;
 };
 
 export const anatomyRegistry: AnatomyStructure[] = [
@@ -19,6 +22,8 @@ export const anatomyRegistry: AnatomyStructure[] = [
     name: "Heart",
     system: "Cardiovascular",
     region: "thorax",
+    layer: "cardiovascular",
+    parentId: "thorax",
     color: "#ff4f87",
     position: [0.16, 2.94, 0.17],
     scale: [0.58, 0.72, 0.5],
@@ -31,6 +36,8 @@ export const anatomyRegistry: AnatomyStructure[] = [
     name: "Lungs",
     system: "Respiratory",
     region: "thorax",
+    layer: "respiratory",
+    parentId: "thorax",
     color: "#63e6ff",
     position: [-0.01, 2.99, 0.07],
     scale: [1.25, 0.95, 0.55],
@@ -43,6 +50,8 @@ export const anatomyRegistry: AnatomyStructure[] = [
     name: "Liver",
     system: "Digestive",
     region: "abdomen",
+    layer: "digestive",
+    parentId: "abdomen",
     color: "#ff945e",
     position: [-0.08, 2.12, 0.16],
     scale: [1.12, 0.48, 0.58],
@@ -55,6 +64,8 @@ export const anatomyRegistry: AnatomyStructure[] = [
     name: "Stomach",
     system: "Digestive",
     region: "abdomen",
+    layer: "digestive",
+    parentId: "abdomen",
     color: "#c879ff",
     position: [0.27, 2.06, 0.25],
     scale: [0.52, 0.72, 0.45],
@@ -66,7 +77,9 @@ export const anatomyRegistry: AnatomyStructure[] = [
     id: "kidneys",
     name: "Kidneys",
     system: "Urinary",
-    region: "urinary",
+    region: "abdomen",
+    layer: "urinary",
+    parentId: "abdomen",
     color: "#ff6f61",
     position: [0.01, 1.62, -0.09],
     scale: [1.02, 0.58, 0.38],
@@ -79,6 +92,8 @@ export const anatomyRegistry: AnatomyStructure[] = [
     name: "Small Intestine",
     system: "Digestive",
     region: "abdomen",
+    layer: "digestive",
+    parentId: "abdomen",
     color: "#ffd36a",
     position: [0.06, 0.99, 0.3],
     scale: [0.95, 0.72, 0.45],
@@ -91,6 +106,8 @@ export const anatomyRegistry: AnatomyStructure[] = [
     name: "Large Intestine",
     system: "Digestive",
     region: "abdomen",
+    layer: "digestive",
+    parentId: "abdomen",
     color: "#47d7a5",
     position: [0, 0.69, 0.03],
     scale: [1.22, 0.92, 0.52],
@@ -102,7 +119,9 @@ export const anatomyRegistry: AnatomyStructure[] = [
     id: "bladder",
     name: "Urinary Bladder",
     system: "Urinary",
-    region: "urinary",
+    region: "pelvis",
+    layer: "urinary",
+    parentId: "pelvis",
     color: "#4bb7ff",
     position: [0, -0.11, 0],
     scale: [0.52, 0.46, 0.45],
@@ -115,3 +134,48 @@ export const anatomyRegistry: AnatomyStructure[] = [
 export const anatomyById = Object.fromEntries(
   anatomyRegistry.map((structure) => [structure.id, structure]),
 ) as Record<string, AnatomyStructure>;
+
+const hierarchyRegions: VanatomeStructure[] = [
+  {
+    id: "thorax",
+    name: "Thorax",
+    system: "Regional anatomy",
+    layer: "region",
+    position: [0, 2.8, 0],
+  },
+  {
+    id: "abdomen",
+    name: "Abdomen",
+    system: "Regional anatomy",
+    layer: "region",
+    position: [0, 1.5, 0],
+  },
+  {
+    id: "pelvis",
+    name: "Pelvis",
+    system: "Regional anatomy",
+    layer: "region",
+    position: [0, 0, 0],
+  },
+];
+
+export const anatomyHierarchy = createVanatomeHierarchy([
+  ...hierarchyRegions,
+  ...anatomyRegistry,
+]) as VanatomeHierarchyNode[];
+
+export const anatomyLayers = [
+  { id: "cardiovascular", label: "Cardio" },
+  { id: "respiratory", label: "Respiratory" },
+  { id: "digestive", label: "Digestive" },
+  { id: "urinary", label: "Urinary" },
+] as const;
+
+export const vanatomeAtlas: VanatomeAtlas = {
+  id: "vanatome-human",
+  name: "Vanatome Human Atlas",
+  version: "1.0.0",
+  modelUrl: "/models/z-anatomy-full-body.glb",
+  structures: anatomyRegistry,
+  attribution: "Z-Anatomy contributors, CC BY-SA 4.0",
+};

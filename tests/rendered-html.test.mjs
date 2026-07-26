@@ -31,6 +31,11 @@ test("server-renders the anatomy explorer shell", async () => {
   assert.match(html, /<title>Vanatome \/\/ Human Anatomy Explorer<\/title>/i);
   assert.match(html, /Vanatome/);
   assert.match(html, /Search anatomy/);
+  assert.match(html, /Anatomy layers/);
+  assert.match(html, /HIERARCHY/);
+  assert.match(html, /Thorax/);
+  assert.match(html, /Abdomen/);
+  assert.match(html, /Pelvis/);
   assert.match(html, /Interactive 3D human anatomy model/);
   assert.match(html, /No structure selected/);
   assert.match(html, /Educational visualization/);
