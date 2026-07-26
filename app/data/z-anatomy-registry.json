@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.1.0",
+  "release": "demo-1.1.0",
+  "buildId": "9585030077d8147d",
+  "structures": [
+    {
+      "id": "heart",
+      "system": "cardiovascular",
+      "position": [
+        0.1594,
+        2.9353,
+        0.1734
+      ],
+      "objectCount": 4
+    },
+    {
+      "id": "lungs",
+      "system": "respiratory",
+      "position": [
+        -0.0045,
+        2.993,
+        0.0673
+      ],
+      "objectCount": 5
+    },
+    {
+      "id": "trachea",
+      "system": "respiratory",
+      "position": [
+        -0.0017,
+        3.7552,
+        -0.0127
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oesophagus",
+      "system": "digestive",
+      "position": [
+        0.0326,
+        3.2436,
+        -0.0538
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "liver",
+      "system": "digestive",
+      "position": [
+        -0.0797,
+        2.1217,
+        0.16
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "gallbladder",
+      "system": "digestive",
+      "position": [
+        -0.3162,
+        1.8599,
+        0.3938
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "stomach",
+      "system": "digestive",
+      "position": [
+        0.2684,
+        2.0649,
+        0.2532
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "pancreas",
+      "system": "digestive",
+      "position": [
+        0.0952,
+        1.712,
+        0.1509
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "spleen",
+      "system": "lymphatic",
+      "position": [
+        0.5933,
+        2.0305,
+        -0.0309
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "small-intestine",
+      "system": "digestive",
+      "position": [
+        0.0622,
+        0.9851,
+        0.3035
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "large-intestine",
+      "system": "digestive",
+      "position": [
+        0.0016,
+        0.6861,
+        0.0333
+      ],
+      "objectCount": 5
+    },
+    {
+      "id": "kidneys",
+      "system": "urinary",
+      "position": [
+        0.0098,
+        1.6238,
+        -0.087
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "bladder",
+      "system": "urinary",
+      "position": [
+        0.0027,
+        -0.1155,
+        0.0009
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton",
+      "system": "skeletal",
+      "position": [
+        0,
+        2.1253,
+        0.1046
+      ],
+      "objectCount": 55
+    },
+    {
+      "id": "body-shell",
+      "system": "regional-anatomy",
+      "position": [
+        0,
+        0.0004,
+        -0.0094
+      ],
+      "objectCount": 236
+    },
+    {
+      "id": "brainstem",
+      "system": "nervous",
+      "position": [
+        0,
+        4.9469,
+        -0.0975
+      ],
+      "objectCount": 6
+    },
+    {
+      "id": "fourth-ventricle",
+      "system": "nervous",
+      "position": [
+        0,
+        4.9806,
+        -0.1727
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebral-aqueduct",
+      "system": "nervous",
+      "position": [
+        0,
+        5.1687,
+        -0.086
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-colliculi",
+      "system": "nervous",
+      "position": [
+        0,
+        5.1877,
+        -0.1164
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "inferior-colliculi",
+      "system": "nervous",
+      "position": [
+        0,
+        5.1581,
+        -0.1133
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "medullary-olives",
+      "system": "nervous",
+      "position": [
+        0,
+        4.8912,
+        -0.11
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "medullary-pyramids",
+      "system": "nervous",
+      "position": [
+        0,
+        4.8852,
+        -0.0785
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "red-nuclei",
+      "system": "nervous",
+      "position": [
+        0,
+        5.1701,
+        0.0063
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "oculomotor-nuclei",
+      "system": "nervous",
+      "position": [
+        0,
+        5.1504,
+        -0.0644
+      ],
+      "objectCount": 4
+    },
+    {
+      "id": "facial-motor-nuclei",
+      "system": "nervous",
+      "position": [
+        0,
+        4.9667,
+        -0.0745
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "abducens-nuclei",
+      "system": "nervous",
+      "position": [
+        0,
+        4.9753,
+        -0.1116
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "superior-salivatory-nuclei",
+      "system": "nervous",
+      "position": [
+        0,
+        4.9525,
+        -0.083
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "vestibular-nuclei",
+      "system": "nervous",
+      "position": [
+        0,
+        5.0333,
+        -0.0742
+      ],
+      "objectCount": 2
+    },
+    {
+      "id": "interpeduncular-fossae",
+      "system": "nervous",
+      "position": [
+        0,
+        5.2045,
+        0.0323
+      ],
+      "objectCount": 2
+    }
+  ]
+}

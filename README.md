@@ -150,6 +150,14 @@ The Vanatome product demo consumes this same package through the repository
 workspace. Its production build and interaction surface act as the reference
 integration for selection, focus, isolation, reset, hierarchy, and layers.
 
+## Atlas conversion
+
+The checked-in [safe conversion pipeline](docs/anatomy-pipeline.md) turns
+declarative Z-Anatomy batches into fingerprinted, versioned staging candidates.
+It keeps embedded Blend scripts disabled, validates anatomy IDs and attribution,
+and requires a separate explicitly confirmed promotion before any candidate can
+enter `public/models/`. No recurring schedule is enabled by the repository.
+
 ## Licensing and attribution
 
 Viewer source code is available under the [MIT License](LICENSE).

@@ -28,6 +28,7 @@ import {
   anatomyHierarchy,
   anatomyLayers,
   anatomyRegistry,
+  atlasMappedNodeCount,
   type AnatomyStructure,
 } from "../data/anatomy";
 
@@ -397,7 +398,7 @@ export function AnatomyExplorer() {
       </section>
 
       <footer className="footer">
-        <span>Z-ANATOMY MODEL • 317 MAPPED NODES • FULL-BODY SHELL</span>
+        <span>Z-ANATOMY MODEL • {atlasMappedNodeCount} MAPPED NODES • FULL-BODY SHELL</span>
         <a href="/ATTRIBUTION.txt" target="_blank" rel="noreferrer">
           OPEN MODEL ATTRIBUTION
         </a>

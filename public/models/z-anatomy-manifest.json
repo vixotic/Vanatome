@@ -1,26 +1,111 @@
 {
-  "source": "Z-Anatomy CC BY-SA 4.0",
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "release": "demo-1.1.0"
+  },
+  "build": {
+    "id": "9585030077d8147d",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "7e513a38ce5902f3e5b0dc5c89180d6ab3cc80b5ce89cd19205ead0596d7b250",
+      "releaseToolSha256": "4f5c4d7c43372a08a90fd1b131a86ce2ca640211622d2aa3e2d53c2c154b183b",
+      "releaseValidatorSha256": "0f495300c337c09dbfb05ac0ffee86ab29769038255b9b32be89c663e2f9075a",
+      "releaseConfigSha256": "36e68144eb02e2449ec67f44b83713e52d063229475a40f4288caaedc46eb752",
+      "componentsSha256": "8f7e8bd816e62371adb55ff213df7d3affbc29e828e04f90ab8f725ee6749450"
+    }
+  },
+  "components": [
+    {
+      "batch": "visceral-core",
+      "buildId": "176405700e7560b1",
+      "manifestSha256": "d06f5254a79bc1944432802f33a9d2123a1b4e02db25a3e3452670824dd455af",
+      "assetSha256": "c974adeb7c2b6afc619a28ea5d830006b6a755c2bde7536b2622d1f634bfec74"
+    },
+    {
+      "batch": "torso-skeleton",
+      "buildId": "02398b90fe9ed16d",
+      "manifestSha256": "eaf415cc2bc0ede6bdd5ffac84817aa35fc4e4628fdd0c753c5b5a16295401f6",
+      "assetSha256": "c2bc6f12d5e15137c9b5d940f54faed8b5f677653b0eca7fbc69b6a70c2e7c80"
+    },
+    {
+      "batch": "body-shell",
+      "buildId": "1fd91ab1f631eaee",
+      "manifestSha256": "41d0b54ac05fafc9897fab4690a57552ac5c6a7dc2c6c25cc55de7a9d23cafed",
+      "assetSha256": "79eb43386ed15714ed00de07f4884d44c9fae79c4db4a754d47a7a1e24185a89"
+    },
+    {
+      "batch": "brainstem-core",
+      "buildId": "322991a250d451cc",
+      "manifestSha256": "cb438c164ce2035220a05e52ef03b4bfbe7c28cce7f05cfc8a44d80f5fed32e8",
+      "assetSha256": "b6b0dd9f2dcd60c59ca643e47814817c0073becb14bb6e407407166868cf0479"
+    }
+  ],
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringAssembly": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 11089712,
+    "sha256": "af0384016d3a51497891329a45446255c21fb089b06f69fa4fd2b7e815fc1303"
+  },
+  "registry": {
+    "file": "registry.json",
+    "bytes": 5001,
+    "sha256": "795c06f00eb2ca34e8243e05c6b063416d8d057940909177dbac955ed91db342"
+  },
+  "objectCount": 349,
   "groups": {
     "heart": {
+      "centerBlender": [
+        0.022772,
+        -0.024772,
+        1.290753
+      ],
+      "missing": [],
       "nodes": [
         "heart__Right atrium",
         "heart__Right ventricle",
         "heart__Left atrium",
         "heart__Left ventricle"
       ],
-      "centerBlender": [
-        0.022743,
-        -0.024804,
-        1.29107
-      ],
       "sizeBlender": [
-        0.119238,
-        0.112924,
-        0.10886
+        0.119118,
+        0.112861,
+        0.10804
       ],
-      "missing": []
+      "sourceObjects": [
+        "Right atrium",
+        "Right ventricle",
+        "Left atrium",
+        "Left ventricle"
+      ],
+      "system": "cardiovascular"
     },
     "lungs": {
+      "centerBlender": [
+        -0.000641,
+        -0.009616,
+        1.298999
+      ],
+      "missing": [],
       "nodes": [
         "lungs__Superior lobe of right lung",
         "lungs__Middle lobe of right lung",
@@ -28,85 +113,189 @@
         "lungs__Superior lobe of left lung",
         "lungs__Inferior lobe of left lung"
       ],
+      "sizeBlender": [
+        0.26098,
+        0.185717,
+        0.264036
+      ],
+      "sourceObjects": [
+        "Superior lobe of right lung",
+        "Middle lobe of right lung",
+        "Inferior lobe of right lung",
+        "Superior lobe of left lung",
+        "Inferior lobe of left lung"
+      ],
+      "system": "respiratory"
+    },
+    "trachea": {
       "centerBlender": [
-        -0.000747,
-        -0.009424,
-        1.299092
+        -0.000249,
+        0.00182,
+        1.407881
+      ],
+      "missing": [],
+      "nodes": [
+        "trachea__Trachea"
       ],
       "sizeBlender": [
-        0.261824,
-        0.186573,
-        0.266015
+        0.027157,
+        0.038959,
+        0.10537
       ],
-      "missing": []
+      "sourceObjects": [
+        "Trachea"
+      ],
+      "system": "respiratory"
+    },
+    "oesophagus": {
+      "centerBlender": [
+        0.004663,
+        0.007691,
+        1.3348
+      ],
+      "missing": [],
+      "nodes": [
+        "oesophagus__Oesophagus"
+      ],
+      "sizeBlender": [
+        0.027327,
+        0.052063,
+        0.281477
+      ],
+      "sourceObjects": [
+        "Oesophagus"
+      ],
+      "system": "digestive"
     },
     "liver": {
+      "centerBlender": [
+        -0.01138,
+        -0.022853,
+        1.174528
+      ],
+      "missing": [],
       "nodes": [
         "liver__Liver"
       ],
+      "sizeBlender": [
+        0.206692,
+        0.153159,
+        0.166268
+      ],
+      "sourceObjects": [
+        "Liver"
+      ],
+      "system": "digestive"
+    },
+    "gallbladder": {
       "centerBlender": [
-        -0.010915,
-        -0.022652,
-        1.174099
+        -0.045169,
+        -0.056255,
+        1.137135
+      ],
+      "missing": [],
+      "nodes": [
+        "gallbladder__Gallbladder"
       ],
       "sizeBlender": [
-        0.208365,
-        0.154043,
-        0.167818
+        0.036248,
+        0.048257,
+        0.04347
       ],
-      "missing": []
+      "sourceObjects": [
+        "Gallbladder"
+      ],
+      "system": "digestive"
     },
     "stomach": {
+      "centerBlender": [
+        0.038336,
+        -0.036165,
+        1.16641
+      ],
+      "missing": [],
       "nodes": [
         "stomach__Stomach"
       ],
-      "centerBlender": [
-        0.03832,
-        -0.036203,
-        1.166325
-      ],
       "sizeBlender": [
-        0.134408,
-        0.105741,
-        0.126003
+        0.134175,
+        0.105319,
+        0.125464
       ],
-      "missing": []
+      "sourceObjects": [
+        "Stomach"
+      ],
+      "system": "digestive"
     },
-    "kidneys": {
-      "nodes": [
-        "kidneys__Kidney.l",
-        "kidneys__Kidney.r"
-      ],
+    "pancreas": {
       "centerBlender": [
-        0.001404,
-        0.012424,
-        1.103407
+        0.013604,
+        -0.021552,
+        1.116003
+      ],
+      "missing": [],
+      "nodes": [
+        "pancreas__Pancreas"
       ],
       "sizeBlender": [
-        0.177959,
-        0.052263,
-        0.12362
+        0.118141,
+        0.053359,
+        0.07374
       ],
-      "missing": []
+      "sourceObjects": [
+        "Pancreas"
+      ],
+      "system": "digestive"
+    },
+    "spleen": {
+      "centerBlender": [
+        0.084751,
+        0.004418,
+        1.161499
+      ],
+      "missing": [],
+      "nodes": [
+        "spleen__Spleen"
+      ],
+      "sizeBlender": [
+        0.058234,
+        0.095066,
+        0.07023
+      ],
+      "sourceObjects": [
+        "Spleen"
+      ],
+      "system": "lymphatic"
     },
     "small-intestine": {
-      "nodes": [
-        "small-intestine__Duodenum",
-        "small-intestine__Jejunum"
-      ],
       "centerBlender": [
         0.008879,
         -0.043361,
         1.012161
+      ],
+      "missing": [],
+      "nodes": [
+        "small-intestine__Duodenum",
+        "small-intestine__Jejunum"
       ],
       "sizeBlender": [
         0.182973,
         0.07523,
         0.262197
       ],
-      "missing": []
+      "sourceObjects": [
+        "Duodenum",
+        "Jejunum"
+      ],
+      "system": "digestive"
     },
     "large-intestine": {
+      "centerBlender": [
+        0.000227,
+        -0.004763,
+        0.969445
+      ],
+      "missing": [],
       "nodes": [
         "large-intestine__Ascending colon",
         "large-intestine__Transverse colon",
@@ -114,115 +303,69 @@
         "large-intestine__Sigmoid colon",
         "large-intestine__Vermiform appendix"
       ],
-      "centerBlender": [
-        0.000227,
-        -0.004763,
-        0.969445
-      ],
       "sizeBlender": [
         0.228103,
         0.153055,
         0.331391
       ],
-      "missing": []
+      "sourceObjects": [
+        "Ascending colon",
+        "Transverse colon",
+        "Descending colon",
+        "Sigmoid colon",
+        "Vermiform appendix"
+      ],
+      "system": "digestive"
+    },
+    "kidneys": {
+      "centerBlender": [
+        0.001404,
+        0.012424,
+        1.103407
+      ],
+      "missing": [],
+      "nodes": [
+        "kidneys__Kidney.l",
+        "kidneys__Kidney.r"
+      ],
+      "sizeBlender": [
+        0.177959,
+        0.052263,
+        0.12362
+      ],
+      "sourceObjects": [
+        "Kidney.l",
+        "Kidney.r"
+      ],
+      "system": "urinary"
     },
     "bladder": {
+      "centerBlender": [
+        0.000389,
+        -0.000135,
+        0.854927
+      ],
+      "missing": [],
       "nodes": [
         "bladder__Urinary bladder"
       ],
-      "centerBlender": [
-        0.000389,
-        6e-05,
-        0.855472
-      ],
       "sizeBlender": [
-        0.07587,
-        0.083891,
-        0.052895
+        0.074454,
+        0.083254,
+        0.051332
       ],
-      "missing": []
-    },
-    "trachea": {
-      "nodes": [
-        "trachea__Trachea"
+      "sourceObjects": [
+        "Urinary bladder"
       ],
-      "centerBlender": [
-        -0.000249,
-        0.00182,
-        1.407881
-      ],
-      "sizeBlender": [
-        0.027157,
-        0.038959,
-        0.10537
-      ],
-      "missing": []
-    },
-    "oesophagus": {
-      "nodes": [
-        "oesophagus__Oesophagus"
-      ],
-      "centerBlender": [
-        0.004663,
-        0.007691,
-        1.3348
-      ],
-      "sizeBlender": [
-        0.027327,
-        0.052063,
-        0.281477
-      ],
-      "missing": []
-    },
-    "pancreas": {
-      "nodes": [
-        "pancreas__Pancreas"
-      ],
-      "centerBlender": [
-        0.013604,
-        -0.021552,
-        1.116003
-      ],
-      "sizeBlender": [
-        0.118141,
-        0.053359,
-        0.07374
-      ],
-      "missing": []
-    },
-    "spleen": {
-      "nodes": [
-        "spleen__Spleen"
-      ],
-      "centerBlender": [
-        0.084751,
-        0.004418,
-        1.161499
-      ],
-      "sizeBlender": [
-        0.058234,
-        0.095066,
-        0.07023
-      ],
-      "missing": []
-    },
-    "gallbladder": {
-      "nodes": [
-        "gallbladder__Gallbladder"
-      ],
-      "centerBlender": [
-        -0.045169,
-        -0.056255,
-        1.137135
-      ],
-      "sizeBlender": [
-        0.036248,
-        0.048257,
-        0.04347
-      ],
-      "missing": []
+      "system": "urinary"
     },
     "skeleton": {
+      "centerBlender": [
+        0,
+        -0.014936,
+        1.175048
+      ],
+      "missing": [],
       "nodes": [
         "skeleton__Vertebra C3",
         "skeleton__Vertebra C4",
@@ -280,272 +423,875 @@
         "skeleton__Twelfth rib.l",
         "skeleton__Twelfth rib.r"
       ],
-      "centerBlender": [
-        0.0,
-        -0.014936,
-        1.175048
-      ],
       "sizeBlender": [
-        0.28328,
+        0.283316,
         0.231715,
         0.755416
       ],
-      "missing": []
+      "sourceObjects": [
+        "Vertebra C3",
+        "Vertebra C4",
+        "Vertebra C5",
+        "Vertebra C6",
+        "Vertebra C7",
+        "Atlas (C1)",
+        "Axis (C2)",
+        "Vertebra T1",
+        "Vertebra T2",
+        "Vertebra T3",
+        "Vertebra T4",
+        "Vertebra T5",
+        "Vertebra T6",
+        "Vertebra T7",
+        "Vertebra T8",
+        "Vertebra T9",
+        "Vertebra T10",
+        "Vertebra T11",
+        "Vertebra T12",
+        "Vertebra L1",
+        "Vertebra L2",
+        "Vertebra L3",
+        "Vertebra L4",
+        "Vertebra L5",
+        "Sacrum",
+        "Coccyx",
+        "Hip bone.l",
+        "Hip bone.r",
+        "Manubrium of sternum",
+        "Body of sternum",
+        "Xiphoid process",
+        "First rib.l",
+        "First rib.r",
+        "Second rib.l",
+        "Second rib.r",
+        "Third rib.l",
+        "Third rib.r",
+        "Fourth rib.l",
+        "Fourth rib.r",
+        "Fifth rib.l",
+        "Fifth rib.r",
+        "Sixth rib.l",
+        "Sixth rib.r",
+        "Seventh rib.l",
+        "Seventh rib.r",
+        "Eighth rib.l",
+        "Eighth rib.r",
+        "Ninth rib.l",
+        "Ninth rib.r",
+        "Tenth rib.l",
+        "Tenth rib.r",
+        "Eleventh rib.l",
+        "Eleventh rib.r",
+        "Twelfth rib.l",
+        "Twelfth rib.r"
+      ],
+      "system": "skeletal"
     },
     "body-shell": {
+      "centerBlender": [
+        0,
+        0.001348,
+        0.871479
+      ],
+      "missing": [],
       "nodes": [
-        "body-shell__Frontal region.r",
-        "body-shell__Frontal region.l",
-        "body-shell__Mastoid region.r",
-        "body-shell__Occipital region.r",
-        "body-shell__Parietal region.r",
-        "body-shell__Temporal region.r",
-        "body-shell__Mastoid region.l",
-        "body-shell__Occipital region.l",
-        "body-shell__Parietal region.l",
-        "body-shell__Temporal region.l",
+        "body-shell__Angle of mouth.l",
+        "body-shell__Angle of mouth.r",
+        "body-shell__Anterior notch of auricle.l",
+        "body-shell__Anterior notch of auricle.r",
+        "body-shell__Anterior region of ankle.l",
+        "body-shell__Anterior region of ankle.r",
+        "body-shell__Anterior region of arm.l",
+        "body-shell__Anterior region of arm.r",
+        "body-shell__Anterior region of elbow.l",
+        "body-shell__Anterior region of elbow.r",
+        "body-shell__Anterior region of forearm.l",
+        "body-shell__Anterior region of forearm.r",
+        "body-shell__Anterior region of knee.l",
+        "body-shell__Anterior region of knee.r",
+        "body-shell__Anterior region of leg.l",
+        "body-shell__Anterior region of leg.r",
+        "body-shell__Anterior region of thigh.l",
+        "body-shell__Anterior region of thigh.r",
+        "body-shell__Anterior region of wrist.l",
+        "body-shell__Anterior region of wrist.r",
+        "body-shell__Antihelix.l",
+        "body-shell__Antihelix.r",
+        "body-shell__Antitragus.l",
+        "body-shell__Antitragus.r",
+        "body-shell__Apex of auricle.l",
+        "body-shell__Apex of auricle.r",
+        "body-shell__Auricular region.l",
+        "body-shell__Auricular region.r",
+        "body-shell__Auricular tubercle.l",
+        "body-shell__Auricular tubercle.r",
+        "body-shell__Buccal region.l",
+        "body-shell__Buccal region.r",
+        "body-shell__Carotid triangle.l",
+        "body-shell__Carotid triangle.r",
         "body-shell__Cavity of concha.l",
         "body-shell__Cavity of concha.r",
         "body-shell__Concha of auricle.l",
         "body-shell__Concha of auricle.r",
+        "body-shell__Crura of antihelix.l",
+        "body-shell__Crura of antihelix.r",
+        "body-shell__Cubital fossa.l",
+        "body-shell__Cubital fossa.r",
         "body-shell__Cymba conchae.l",
         "body-shell__Cymba conchae.r",
-        "body-shell__Anterior notch of auricle.r",
-        "body-shell__Antihelix.r",
-        "body-shell__Antitragus.r",
-        "body-shell__Apex of auricle.r",
-        "body-shell__Auricular region.r",
-        "body-shell__Auricular tubercle.r",
-        "body-shell__Crura of antihelix.r",
-        "body-shell__Eminentia conchae.r",
-        "body-shell__Eminentia fossae triangularis.r",
-        "body-shell__Eminentia scaphae.r",
-        "body-shell__Fossa antihelica.r",
-        "body-shell__Helix.r",
-        "body-shell__Intertragic incisure.r",
-        "body-shell__Lobule of auricle.r",
-        "body-shell__Scapha.r",
-        "body-shell__Tragus.r",
-        "body-shell__Triangular fossa.r",
-        "body-shell__Posterior auricular groove.r",
-        "body-shell__Anterior notch of auricle.l",
-        "body-shell__Antihelix.l",
-        "body-shell__Antitragus.l",
-        "body-shell__Apex of auricle.l",
-        "body-shell__Auricular region.l",
-        "body-shell__Auricular tubercle.l",
-        "body-shell__Crura of antihelix.l",
-        "body-shell__Eminentia conchae.l",
-        "body-shell__Eminentia fossae triangularis.l",
-        "body-shell__Eminentia scaphae.l",
-        "body-shell__Fossa antihelica.l",
-        "body-shell__Helix.l",
-        "body-shell__Intertragic incisure.l",
-        "body-shell__Lobule of auricle.l",
-        "body-shell__Scapha.l",
-        "body-shell__Tragus.l",
-        "body-shell__Triangular fossa.l",
-        "body-shell__Posterior auricular groove.l",
-        "body-shell__Orbital region.r",
-        "body-shell__Orbital region.l",
-        "body-shell__Nasal region.r",
-        "body-shell__Nasal region.l",
-        "body-shell__Angle of mouth.r",
-        "body-shell__Labial commissure.r",
-        "body-shell__Oral region.r",
-        "body-shell__Angle of mouth.l",
-        "body-shell__Labial commissure.l",
-        "body-shell__Oral region.l",
-        "body-shell__Buccal region.r",
-        "body-shell__Infra-orbital region.r",
-        "body-shell__Mental region.r",
-        "body-shell__Mentolabial sulcus.r",
-        "body-shell__Parotideomasseteric region.r",
-        "body-shell__Zygomatic region.r",
-        "body-shell__Nasolabial sulcus.r",
-        "body-shell__Buccal region.l",
-        "body-shell__Infra-orbital region.l",
-        "body-shell__Mental region.l",
-        "body-shell__Mentolabial sulcus.l",
-        "body-shell__Parotideomasseteric region.l",
-        "body-shell__Zygomatic region.l",
-        "body-shell__Nasolabial sulcus.l",
-        "body-shell__Submandibular triangle.r",
-        "body-shell__Submental triangle.r",
-        "body-shell__Submandibular triangle.l",
-        "body-shell__Submental triangle.l",
-        "body-shell__Carotid triangle.r",
-        "body-shell__Muscular triangle.r",
-        "body-shell__Carotid triangle.l",
-        "body-shell__Muscular triangle.l",
-        "body-shell__Sternocleidomastoid region.r",
-        "body-shell__Sternocleidomastoid region.l",
-        "body-shell__Lateral region of neck.r",
-        "body-shell__Greater supraclavicular fossa.r",
-        "body-shell__Lateral region of neck.l",
-        "body-shell__Greater supraclavicular fossa.l",
-        "body-shell__Posterior region of neck.r",
-        "body-shell__Posterior region of neck.l",
-        "body-shell__Epigastric region.r",
-        "body-shell__Epigastric region.l",
-        "body-shell__Umbilical region.r",
-        "body-shell__Umbilical region.l",
-        "body-shell__Hypochondriac region.r",
-        "body-shell__Hypogastric region.r",
-        "body-shell__Inguinal region.r",
-        "body-shell__Lateral region of abdomen.r",
-        "body-shell__Hypochondriac region.l",
-        "body-shell__Hypogastric region.l",
-        "body-shell__Inguinal region.l",
-        "body-shell__Lateral region of abdomen.l",
-        "body-shell__Lumbar region.r",
-        "body-shell__Lumbar region.l",
-        "body-shell__Sacral region.r",
-        "body-shell__Sacral region.l",
-        "body-shell__Infrascapular region.r",
-        "body-shell__Interscapular region.r",
-        "body-shell__Scapular region.r",
-        "body-shell__Vertebral region.r",
-        "body-shell__Infrascapular region.l",
-        "body-shell__Interscapular region.l",
-        "body-shell__Scapular region.l",
-        "body-shell__Vertebral region.l",
-        "body-shell__Urogenital region.r",
-        "body-shell__Urogenital region.l",
-        "body-shell__Anterior region of arm.r",
-        "body-shell__Lateral bicipital groove.r",
-        "body-shell__Anterior region of arm.l",
-        "body-shell__Lateral bicipital groove.l",
-        "body-shell__Posterior region of arm.r",
-        "body-shell__Posterior region of arm.l",
-        "body-shell__Anterior region of elbow.r",
-        "body-shell__Anterior region of elbow.l",
-        "body-shell__Cubital fossa.r",
-        "body-shell__Cubital fossa.l",
-        "body-shell__Posterior region of elbow.r",
-        "body-shell__Posterior region of elbow.l",
-        "body-shell__Posterior region of forearm.r",
-        "body-shell__Lateral border of forearm.r",
-        "body-shell__Medial border of forearm.r",
-        "body-shell__Anterior region of forearm.r",
-        "body-shell__Posterior region of forearm.l",
-        "body-shell__Lateral border of forearm.l",
-        "body-shell__Medial border of forearm.l",
-        "body-shell__Anterior region of forearm.l",
-        "body-shell__Anterior region of wrist.r",
-        "body-shell__Posterior region of wrist.r",
-        "body-shell__Anterior region of wrist.l",
-        "body-shell__Posterior region of wrist.l",
-        "body-shell__Palm.r",
-        "body-shell__Palm.l",
-        "body-shell__Palmar surfaces of digits of hand.r",
-        "body-shell__Dorsal surfaces of digits of hand.r",
-        "body-shell__Palmar surfaces of digits of hand.l",
-        "body-shell__Dorsal surfaces of digits of hand.l",
-        "body-shell__Dorsum of hand.r",
-        "body-shell__Dorsum of hand.l",
-        "body-shell__Deltoid region.r",
         "body-shell__Deltoid region.l",
-        "body-shell__Gluteal region.r",
-        "body-shell__Gluteal region.l",
-        "body-shell__Anterior region of thigh.r",
-        "body-shell__Femoral triangle.r",
-        "body-shell__Anterior region of thigh.l",
-        "body-shell__Femoral triangle.l",
-        "body-shell__Posterior region of thigh.r",
-        "body-shell__Posterior region of thigh.l",
-        "body-shell__Popliteal fossa.r",
-        "body-shell__Posterior region of knee.r",
-        "body-shell__Popliteal fossa.l",
-        "body-shell__Posterior region of knee.l",
-        "body-shell__Anterior region of knee.r",
-        "body-shell__Anterior region of knee.l",
-        "body-shell__Posterior region of leg.r",
-        "body-shell__Posterior region of leg.l",
-        "body-shell__Anterior region of leg.r",
-        "body-shell__Anterior region of leg.l",
-        "body-shell__Lateral malleolus.r",
-        "body-shell__Lateral retromalleolar region.r",
-        "body-shell__Medial malleolus.r",
-        "body-shell__Lateral malleolus.l",
-        "body-shell__Lateral retromalleolar region.l",
-        "body-shell__Medial malleolus.l",
-        "body-shell__Medial retromalleolar region.r",
-        "body-shell__Medial retromalleolar region.l",
-        "body-shell__Anterior region of ankle.r",
-        "body-shell__Anterior region of ankle.l",
-        "body-shell__Lateral part of longitudinal arch of foot.r",
-        "body-shell__Medial part of longitudinal arch of foot.r",
-        "body-shell__Lateral part of longitudinal arch of foot.l",
-        "body-shell__Medial part of longitudinal arch of foot.l",
-        "body-shell__Sole.r",
-        "body-shell__Sole.l",
-        "body-shell__Proximal transverse arch of foot.r",
-        "body-shell__Distal transverse arch of foot.r",
-        "body-shell__Proximal transverse arch of foot.l",
+        "body-shell__Deltoid region.r",
+        "body-shell__Deltopectoral triangle.l",
+        "body-shell__Deltopectoral triangle.r",
         "body-shell__Distal transverse arch of foot.l",
-        "body-shell__Hallucial eminence.r",
-        "body-shell__Metatarsal region.r",
-        "body-shell__Hallucial eminence.l",
-        "body-shell__Metatarsal region.l",
+        "body-shell__Distal transverse arch of foot.r",
         "body-shell__Dorsal surfaces of digits of foot.l",
         "body-shell__Dorsal surfaces of digits of foot.r",
-        "body-shell__Plantar surfaces of digits of foot.l",
-        "body-shell__Plantar surfaces of digits of foot.r",
-        "body-shell__Heel region.r",
-        "body-shell__Dorsum of foot.r",
-        "body-shell__Heel region.l",
+        "body-shell__Dorsal surfaces of digits of hand.l",
+        "body-shell__Dorsal surfaces of digits of hand.r",
         "body-shell__Dorsum of foot.l",
-        "body-shell__Lateral border of foot.l",
-        "body-shell__Lateral border of foot.r",
-        "body-shell__Medial border of foot.l",
-        "body-shell__Medial border of foot.r",
-        "body-shell__Hip region.r",
-        "body-shell__Hip region.l",
-        "body-shell__Pubic hairs",
-        "body-shell__Hairs of eyebrow.r",
-        "body-shell__Hairs of eyebrow.l",
+        "body-shell__Dorsum of foot.r",
+        "body-shell__Dorsum of hand.l",
+        "body-shell__Dorsum of hand.r",
+        "body-shell__Eminentia conchae.l",
+        "body-shell__Eminentia conchae.r",
+        "body-shell__Eminentia fossae triangularis.l",
+        "body-shell__Eminentia fossae triangularis.r",
+        "body-shell__Eminentia scaphae.l",
+        "body-shell__Eminentia scaphae.r",
+        "body-shell__Epigastric region.l",
+        "body-shell__Epigastric region.r",
         "body-shell__Eyelashes.l",
         "body-shell__Eyelashes.r",
-        "body-shell__Nail plate.l",
-        "body-shell__Nail plate (foot).r",
+        "body-shell__Femoral triangle.l",
+        "body-shell__Femoral triangle.r",
+        "body-shell__Fossa antihelica.l",
+        "body-shell__Fossa antihelica.r",
+        "body-shell__Frontal region.l",
+        "body-shell__Frontal region.r",
+        "body-shell__Gluteal region.l",
+        "body-shell__Gluteal region.r",
+        "body-shell__Greater supraclavicular fossa.l",
+        "body-shell__Greater supraclavicular fossa.r",
+        "body-shell__Hairs of eyebrow.l",
+        "body-shell__Hairs of eyebrow.r",
+        "body-shell__Hairs of head",
+        "body-shell__Hallucial eminence.l",
+        "body-shell__Hallucial eminence.r",
+        "body-shell__Heel region.l",
+        "body-shell__Heel region.r",
+        "body-shell__Helix.l",
+        "body-shell__Helix.r",
+        "body-shell__Hip region.l",
+        "body-shell__Hip region.r",
+        "body-shell__Hypochondriac region.l",
+        "body-shell__Hypochondriac region.r",
+        "body-shell__Hypogastric region.l",
+        "body-shell__Hypogastric region.r",
+        "body-shell__Infra-orbital region.l",
+        "body-shell__Infra-orbital region.r",
+        "body-shell__Infraclavicular fossa.l",
+        "body-shell__Infraclavicular fossa.r",
+        "body-shell__Inframammary region.l",
+        "body-shell__Inframammary region.r",
+        "body-shell__Infrascapular region.l",
+        "body-shell__Infrascapular region.r",
+        "body-shell__Inguinal region.l",
+        "body-shell__Inguinal region.r",
+        "body-shell__Interscapular region.l",
+        "body-shell__Interscapular region.r",
+        "body-shell__Intertragic incisure.l",
+        "body-shell__Intertragic incisure.r",
+        "body-shell__Labial commissure.l",
+        "body-shell__Labial commissure.r",
+        "body-shell__Lateral bicipital groove.l",
+        "body-shell__Lateral bicipital groove.r",
+        "body-shell__Lateral border of foot.l",
+        "body-shell__Lateral border of foot.r",
+        "body-shell__Lateral border of forearm.l",
+        "body-shell__Lateral border of forearm.r",
+        "body-shell__Lateral malleolus.l",
+        "body-shell__Lateral malleolus.r",
+        "body-shell__Lateral part of longitudinal arch of foot.l",
+        "body-shell__Lateral part of longitudinal arch of foot.r",
+        "body-shell__Lateral region of abdomen.l",
+        "body-shell__Lateral region of abdomen.r",
+        "body-shell__Lateral region of neck.l",
+        "body-shell__Lateral region of neck.r",
+        "body-shell__Lateral region of thorax.l",
+        "body-shell__Lateral region of thorax.r",
+        "body-shell__Lateral retromalleolar region.l",
+        "body-shell__Lateral retromalleolar region.r",
+        "body-shell__Lobule of auricle.l",
+        "body-shell__Lobule of auricle.r",
+        "body-shell__Lumbar region.l",
+        "body-shell__Lumbar region.r",
+        "body-shell__Mammary region.l",
+        "body-shell__Mammary region.r",
+        "body-shell__Mastoid region.l",
+        "body-shell__Mastoid region.r",
+        "body-shell__Medial border of foot.l",
+        "body-shell__Medial border of foot.r",
+        "body-shell__Medial border of forearm.l",
+        "body-shell__Medial border of forearm.r",
+        "body-shell__Medial malleolus.l",
+        "body-shell__Medial malleolus.r",
+        "body-shell__Medial part of longitudinal arch of foot.l",
+        "body-shell__Medial part of longitudinal arch of foot.r",
+        "body-shell__Medial retromalleolar region.l",
+        "body-shell__Medial retromalleolar region.r",
+        "body-shell__Mental region.l",
+        "body-shell__Mental region.r",
+        "body-shell__Mentolabial sulcus.l",
+        "body-shell__Mentolabial sulcus.r",
+        "body-shell__Metatarsal region.l",
+        "body-shell__Metatarsal region.r",
+        "body-shell__Muscular triangle.l",
+        "body-shell__Muscular triangle.r",
         "body-shell__Nail plate (foot).l",
+        "body-shell__Nail plate (foot).r",
+        "body-shell__Nail plate.l",
         "body-shell__Nail plate.r",
-        "body-shell__Perionyx.l",
-        "body-shell__Perionyx.r",
+        "body-shell__Nasal region.l",
+        "body-shell__Nasal region.r",
+        "body-shell__Nasolabial sulcus.l",
+        "body-shell__Nasolabial sulcus.r",
+        "body-shell__Occipital region.l",
+        "body-shell__Occipital region.r",
+        "body-shell__Oral region.l",
+        "body-shell__Oral region.r",
+        "body-shell__Orbital region.l",
+        "body-shell__Orbital region.r",
+        "body-shell__Palm.l",
+        "body-shell__Palm.r",
+        "body-shell__Palmar surfaces of digits of hand.l",
+        "body-shell__Palmar surfaces of digits of hand.r",
+        "body-shell__Parietal region.l",
+        "body-shell__Parietal region.r",
+        "body-shell__Parotideomasseteric region.l",
+        "body-shell__Parotideomasseteric region.r",
+        "body-shell__Pectoral region.l",
+        "body-shell__Pectoral region.r",
         "body-shell__Perionyx (foot).l",
         "body-shell__Perionyx (foot).r",
-        "body-shell__Inframammary region.r",
-        "body-shell__Mammary region.r",
-        "body-shell__Pectoral region.r",
-        "body-shell__Inframammary region.l",
-        "body-shell__Mammary region.l",
-        "body-shell__Pectoral region.l",
-        "body-shell__Infraclavicular fossa.r",
-        "body-shell__Presternal region.r",
-        "body-shell__Deltopectoral triangle.r",
-        "body-shell__Infraclavicular fossa.l",
+        "body-shell__Perionyx.l",
+        "body-shell__Perionyx.r",
+        "body-shell__Plantar surfaces of digits of foot.l",
+        "body-shell__Plantar surfaces of digits of foot.r",
+        "body-shell__Popliteal fossa.l",
+        "body-shell__Popliteal fossa.r",
+        "body-shell__Posterior auricular groove.l",
+        "body-shell__Posterior auricular groove.r",
+        "body-shell__Posterior region of arm.l",
+        "body-shell__Posterior region of arm.r",
+        "body-shell__Posterior region of elbow.l",
+        "body-shell__Posterior region of elbow.r",
+        "body-shell__Posterior region of forearm.l",
+        "body-shell__Posterior region of forearm.r",
+        "body-shell__Posterior region of knee.l",
+        "body-shell__Posterior region of knee.r",
+        "body-shell__Posterior region of leg.l",
+        "body-shell__Posterior region of leg.r",
+        "body-shell__Posterior region of neck.l",
+        "body-shell__Posterior region of neck.r",
+        "body-shell__Posterior region of thigh.l",
+        "body-shell__Posterior region of thigh.r",
+        "body-shell__Posterior region of wrist.l",
+        "body-shell__Posterior region of wrist.r",
         "body-shell__Presternal region.l",
-        "body-shell__Deltopectoral triangle.l",
-        "body-shell__Lateral region of thorax.r",
-        "body-shell__Lateral region of thorax.l",
-        "body-shell__Hairs of head"
-      ],
-      "centerBlender": [
-        0.0,
-        0.001348,
-        0.871479
+        "body-shell__Presternal region.r",
+        "body-shell__Proximal transverse arch of foot.l",
+        "body-shell__Proximal transverse arch of foot.r",
+        "body-shell__Pubic hairs",
+        "body-shell__Sacral region.l",
+        "body-shell__Sacral region.r",
+        "body-shell__Scapha.l",
+        "body-shell__Scapha.r",
+        "body-shell__Scapular region.l",
+        "body-shell__Scapular region.r",
+        "body-shell__Sole.l",
+        "body-shell__Sole.r",
+        "body-shell__Sternocleidomastoid region.l",
+        "body-shell__Sternocleidomastoid region.r",
+        "body-shell__Submandibular triangle.l",
+        "body-shell__Submandibular triangle.r",
+        "body-shell__Submental triangle.l",
+        "body-shell__Submental triangle.r",
+        "body-shell__Temporal region.l",
+        "body-shell__Temporal region.r",
+        "body-shell__Tragus.l",
+        "body-shell__Tragus.r",
+        "body-shell__Triangular fossa.l",
+        "body-shell__Triangular fossa.r",
+        "body-shell__Umbilical region.l",
+        "body-shell__Umbilical region.r",
+        "body-shell__Urogenital region.l",
+        "body-shell__Urogenital region.r",
+        "body-shell__Vertebral region.l",
+        "body-shell__Vertebral region.r",
+        "body-shell__Zygomatic region.l",
+        "body-shell__Zygomatic region.r"
       ],
       "sizeBlender": [
         0.680118,
         0.293991,
         1.743723
       ],
-      "missing": []
+      "sourceObjects": [
+        "Angle of mouth.l",
+        "Angle of mouth.r",
+        "Anterior notch of auricle.l",
+        "Anterior notch of auricle.r",
+        "Anterior region of ankle.l",
+        "Anterior region of ankle.r",
+        "Anterior region of arm.l",
+        "Anterior region of arm.r",
+        "Anterior region of elbow.l",
+        "Anterior region of elbow.r",
+        "Anterior region of forearm.l",
+        "Anterior region of forearm.r",
+        "Anterior region of knee.l",
+        "Anterior region of knee.r",
+        "Anterior region of leg.l",
+        "Anterior region of leg.r",
+        "Anterior region of thigh.l",
+        "Anterior region of thigh.r",
+        "Anterior region of wrist.l",
+        "Anterior region of wrist.r",
+        "Antihelix.l",
+        "Antihelix.r",
+        "Antitragus.l",
+        "Antitragus.r",
+        "Apex of auricle.l",
+        "Apex of auricle.r",
+        "Auricular region.l",
+        "Auricular region.r",
+        "Auricular tubercle.l",
+        "Auricular tubercle.r",
+        "Buccal region.l",
+        "Buccal region.r",
+        "Carotid triangle.l",
+        "Carotid triangle.r",
+        "Cavity of concha.l",
+        "Cavity of concha.r",
+        "Concha of auricle.l",
+        "Concha of auricle.r",
+        "Crura of antihelix.l",
+        "Crura of antihelix.r",
+        "Cubital fossa.l",
+        "Cubital fossa.r",
+        "Cymba conchae.l",
+        "Cymba conchae.r",
+        "Deltoid region.l",
+        "Deltoid region.r",
+        "Deltopectoral triangle.l",
+        "Deltopectoral triangle.r",
+        "Distal transverse arch of foot.l",
+        "Distal transverse arch of foot.r",
+        "Dorsal surfaces of digits of foot.l",
+        "Dorsal surfaces of digits of foot.r",
+        "Dorsal surfaces of digits of hand.l",
+        "Dorsal surfaces of digits of hand.r",
+        "Dorsum of foot.l",
+        "Dorsum of foot.r",
+        "Dorsum of hand.l",
+        "Dorsum of hand.r",
+        "Eminentia conchae.l",
+        "Eminentia conchae.r",
+        "Eminentia fossae triangularis.l",
+        "Eminentia fossae triangularis.r",
+        "Eminentia scaphae.l",
+        "Eminentia scaphae.r",
+        "Epigastric region.l",
+        "Epigastric region.r",
+        "Eyelashes.l",
+        "Eyelashes.r",
+        "Femoral triangle.l",
+        "Femoral triangle.r",
+        "Fossa antihelica.l",
+        "Fossa antihelica.r",
+        "Frontal region.l",
+        "Frontal region.r",
+        "Gluteal region.l",
+        "Gluteal region.r",
+        "Greater supraclavicular fossa.l",
+        "Greater supraclavicular fossa.r",
+        "Hairs of eyebrow.l",
+        "Hairs of eyebrow.r",
+        "Hairs of head",
+        "Hallucial eminence.l",
+        "Hallucial eminence.r",
+        "Heel region.l",
+        "Heel region.r",
+        "Helix.l",
+        "Helix.r",
+        "Hip region.l",
+        "Hip region.r",
+        "Hypochondriac region.l",
+        "Hypochondriac region.r",
+        "Hypogastric region.l",
+        "Hypogastric region.r",
+        "Infra-orbital region.l",
+        "Infra-orbital region.r",
+        "Infraclavicular fossa.l",
+        "Infraclavicular fossa.r",
+        "Inframammary region.l",
+        "Inframammary region.r",
+        "Infrascapular region.l",
+        "Infrascapular region.r",
+        "Inguinal region.l",
+        "Inguinal region.r",
+        "Interscapular region.l",
+        "Interscapular region.r",
+        "Intertragic incisure.l",
+        "Intertragic incisure.r",
+        "Labial commissure.l",
+        "Labial commissure.r",
+        "Lateral bicipital groove.l",
+        "Lateral bicipital groove.r",
+        "Lateral border of foot.l",
+        "Lateral border of foot.r",
+        "Lateral border of forearm.l",
+        "Lateral border of forearm.r",
+        "Lateral malleolus.l",
+        "Lateral malleolus.r",
+        "Lateral part of longitudinal arch of foot.l",
+        "Lateral part of longitudinal arch of foot.r",
+        "Lateral region of abdomen.l",
+        "Lateral region of abdomen.r",
+        "Lateral region of neck.l",
+        "Lateral region of neck.r",
+        "Lateral region of thorax.l",
+        "Lateral region of thorax.r",
+        "Lateral retromalleolar region.l",
+        "Lateral retromalleolar region.r",
+        "Lobule of auricle.l",
+        "Lobule of auricle.r",
+        "Lumbar region.l",
+        "Lumbar region.r",
+        "Mammary region.l",
+        "Mammary region.r",
+        "Mastoid region.l",
+        "Mastoid region.r",
+        "Medial border of foot.l",
+        "Medial border of foot.r",
+        "Medial border of forearm.l",
+        "Medial border of forearm.r",
+        "Medial malleolus.l",
+        "Medial malleolus.r",
+        "Medial part of longitudinal arch of foot.l",
+        "Medial part of longitudinal arch of foot.r",
+        "Medial retromalleolar region.l",
+        "Medial retromalleolar region.r",
+        "Mental region.l",
+        "Mental region.r",
+        "Mentolabial sulcus.l",
+        "Mentolabial sulcus.r",
+        "Metatarsal region.l",
+        "Metatarsal region.r",
+        "Muscular triangle.l",
+        "Muscular triangle.r",
+        "Nail plate (foot).l",
+        "Nail plate (foot).r",
+        "Nail plate.l",
+        "Nail plate.r",
+        "Nasal region.l",
+        "Nasal region.r",
+        "Nasolabial sulcus.l",
+        "Nasolabial sulcus.r",
+        "Occipital region.l",
+        "Occipital region.r",
+        "Oral region.l",
+        "Oral region.r",
+        "Orbital region.l",
+        "Orbital region.r",
+        "Palm.l",
+        "Palm.r",
+        "Palmar surfaces of digits of hand.l",
+        "Palmar surfaces of digits of hand.r",
+        "Parietal region.l",
+        "Parietal region.r",
+        "Parotideomasseteric region.l",
+        "Parotideomasseteric region.r",
+        "Pectoral region.l",
+        "Pectoral region.r",
+        "Perionyx (foot).l",
+        "Perionyx (foot).r",
+        "Perionyx.l",
+        "Perionyx.r",
+        "Plantar surfaces of digits of foot.l",
+        "Plantar surfaces of digits of foot.r",
+        "Popliteal fossa.l",
+        "Popliteal fossa.r",
+        "Posterior auricular groove.l",
+        "Posterior auricular groove.r",
+        "Posterior region of arm.l",
+        "Posterior region of arm.r",
+        "Posterior region of elbow.l",
+        "Posterior region of elbow.r",
+        "Posterior region of forearm.l",
+        "Posterior region of forearm.r",
+        "Posterior region of knee.l",
+        "Posterior region of knee.r",
+        "Posterior region of leg.l",
+        "Posterior region of leg.r",
+        "Posterior region of neck.l",
+        "Posterior region of neck.r",
+        "Posterior region of thigh.l",
+        "Posterior region of thigh.r",
+        "Posterior region of wrist.l",
+        "Posterior region of wrist.r",
+        "Presternal region.l",
+        "Presternal region.r",
+        "Proximal transverse arch of foot.l",
+        "Proximal transverse arch of foot.r",
+        "Pubic hairs",
+        "Sacral region.l",
+        "Sacral region.r",
+        "Scapha.l",
+        "Scapha.r",
+        "Scapular region.l",
+        "Scapular region.r",
+        "Sole.l",
+        "Sole.r",
+        "Sternocleidomastoid region.l",
+        "Sternocleidomastoid region.r",
+        "Submandibular triangle.l",
+        "Submandibular triangle.r",
+        "Submental triangle.l",
+        "Submental triangle.r",
+        "Temporal region.l",
+        "Temporal region.r",
+        "Tragus.l",
+        "Tragus.r",
+        "Triangular fossa.l",
+        "Triangular fossa.r",
+        "Umbilical region.l",
+        "Umbilical region.r",
+        "Urogenital region.l",
+        "Urogenital region.r",
+        "Vertebral region.l",
+        "Vertebral region.r",
+        "Zygomatic region.l",
+        "Zygomatic region.r"
+      ],
+      "system": "regional-anatomy"
+    },
+    "brainstem": {
+      "centerBlender": [
+        0,
+        0.013924,
+        1.578131
+      ],
+      "missing": [],
+      "nodes": [
+        "brainstem__Midbrain.l",
+        "brainstem__Midbrain.r",
+        "brainstem__Pons.l",
+        "brainstem__Pons.r",
+        "brainstem__Medulla oblongata.l",
+        "brainstem__Medulla oblongata.r"
+      ],
+      "sizeBlender": [
+        0.04103,
+        0.044406,
+        0.07866
+      ],
+      "sourceObjects": [
+        "Midbrain.l",
+        "Midbrain.r",
+        "Pons.l",
+        "Pons.r",
+        "Medulla oblongata.l",
+        "Medulla oblongata.r"
+      ],
+      "system": "nervous"
+    },
+    "fourth-ventricle": {
+      "centerBlender": [
+        0,
+        0.024674,
+        1.582947
+      ],
+      "missing": [],
+      "nodes": [
+        "fourth-ventricle__Fourth ventricle"
+      ],
+      "sizeBlender": [
+        0.027411,
+        0.022678,
+        0.036626
+      ],
+      "sourceObjects": [
+        "Fourth ventricle"
+      ],
+      "system": "nervous"
+    },
+    "cerebral-aqueduct": {
+      "centerBlender": [
+        0,
+        0.012292,
+        1.609815
+      ],
+      "missing": [],
+      "nodes": [
+        "cerebral-aqueduct__Aqueduct of midbrain"
+      ],
+      "sizeBlender": [
+        0.002865,
+        0.006274,
+        0.017105
+      ],
+      "sourceObjects": [
+        "Aqueduct of midbrain"
+      ],
+      "system": "nervous"
+    },
+    "superior-colliculi": {
+      "centerBlender": [
+        0,
+        0.016625,
+        1.612525
+      ],
+      "missing": [],
+      "nodes": [
+        "superior-colliculi__Superior colliculus.l",
+        "superior-colliculi__Superior colliculus.r"
+      ],
+      "sizeBlender": [
+        0.034414,
+        0.006466,
+        0.006388
+      ],
+      "sourceObjects": [
+        "Superior colliculus.l",
+        "Superior colliculus.r"
+      ],
+      "system": "nervous"
+    },
+    "inferior-colliculi": {
+      "centerBlender": [
+        0,
+        0.016185,
+        1.608301
+      ],
+      "missing": [],
+      "nodes": [
+        "inferior-colliculi__Inferior colliculus.l",
+        "inferior-colliculi__Inferior colliculus.r"
+      ],
+      "sizeBlender": [
+        0.028713,
+        0.008245,
+        0.014057
+      ],
+      "sourceObjects": [
+        "Inferior colliculus.l",
+        "Inferior colliculus.r"
+      ],
+      "system": "nervous"
+    },
+    "medullary-olives": {
+      "centerBlender": [
+        0,
+        0.015716,
+        1.570173
+      ],
+      "missing": [],
+      "nodes": [
+        "medullary-olives__Olive.l",
+        "medullary-olives__Olive.r"
+      ],
+      "sizeBlender": [
+        0.024781,
+        0.010293,
+        0.013882
+      ],
+      "sourceObjects": [
+        "Olive.l",
+        "Olive.r"
+      ],
+      "system": "nervous"
+    },
+    "medullary-pyramids": {
+      "centerBlender": [
+        0,
+        0.011211,
+        1.56931
+      ],
+      "missing": [],
+      "nodes": [
+        "medullary-pyramids__Pyramid of medulla oblongata.l",
+        "medullary-pyramids__Pyramid of medulla oblongata.r"
+      ],
+      "sizeBlender": [
+        0.014223,
+        0.0145,
+        0.016717
+      ],
+      "sourceObjects": [
+        "Pyramid of medulla oblongata.l",
+        "Pyramid of medulla oblongata.r"
+      ],
+      "system": "nervous"
+    },
+    "red-nuclei": {
+      "centerBlender": [
+        0,
+        -0.000903,
+        1.61002
+      ],
+      "missing": [],
+      "nodes": [
+        "red-nuclei__Red nucleus.l",
+        "red-nuclei__Red nucleus.r"
+      ],
+      "sizeBlender": [
+        0.014866,
+        0.00681,
+        0.012858
+      ],
+      "sourceObjects": [
+        "Red nucleus.l",
+        "Red nucleus.r"
+      ],
+      "system": "nervous"
+    },
+    "oculomotor-nuclei": {
+      "centerBlender": [
+        0,
+        0.009198,
+        1.607205
+      ],
+      "missing": [],
+      "nodes": [
+        "oculomotor-nuclei__Nucleus of oculomotor nerve.l",
+        "oculomotor-nuclei__Nucleus of oculomotor nerve.r",
+        "oculomotor-nuclei__Accessory nucleus of oculomotor nerve.l",
+        "oculomotor-nuclei__Accessory nucleus of oculomotor nerve.r"
+      ],
+      "sizeBlender": [
+        0.005248,
+        0.002885,
+        0.011364
+      ],
+      "sourceObjects": [
+        "Nucleus of oculomotor nerve.l",
+        "Nucleus of oculomotor nerve.r",
+        "Accessory nucleus of oculomotor nerve.l",
+        "Accessory nucleus of oculomotor nerve.r"
+      ],
+      "system": "nervous"
+    },
+    "facial-motor-nuclei": {
+      "centerBlender": [
+        0,
+        0.01064,
+        1.580951
+      ],
+      "missing": [],
+      "nodes": [
+        "facial-motor-nuclei__Motor nucleus of facial nerve.l",
+        "facial-motor-nuclei__Motor nucleus of facial nerve.r"
+      ],
+      "sizeBlender": [
+        0.011486,
+        0.001606,
+        0.002308
+      ],
+      "sourceObjects": [
+        "Motor nucleus of facial nerve.l",
+        "Motor nucleus of facial nerve.r"
+      ],
+      "system": "nervous"
+    },
+    "abducens-nuclei": {
+      "centerBlender": [
+        0,
+        0.015943,
+        1.582179
+      ],
+      "missing": [],
+      "nodes": [
+        "abducens-nuclei__Nucleus of abducens nerve.l",
+        "abducens-nuclei__Nucleus of abducens nerve.r"
+      ],
+      "sizeBlender": [
+        0.004645,
+        0.001606,
+        0.002308
+      ],
+      "sourceObjects": [
+        "Nucleus of abducens nerve.l",
+        "Nucleus of abducens nerve.r"
+      ],
+      "system": "nervous"
+    },
+    "superior-salivatory-nuclei": {
+      "centerBlender": [
+        0,
+        0.011864,
+        1.578927
+      ],
+      "missing": [],
+      "nodes": [
+        "superior-salivatory-nuclei__Superior salivatory nucleus.l",
+        "superior-salivatory-nuclei__Superior salivatory nucleus.r"
+      ],
+      "sizeBlender": [
+        0.014275,
+        0.001124,
+        0.001616
+      ],
+      "sourceObjects": [
+        "Superior salivatory nucleus.l",
+        "Superior salivatory nucleus.r"
+      ],
+      "system": "nervous"
+    },
+    "vestibular-nuclei": {
+      "centerBlender": [
+        0,
+        0.010596,
+        1.590478
+      ],
+      "missing": [],
+      "nodes": [
+        "vestibular-nuclei__Vestibular nuclei.l",
+        "vestibular-nuclei__Vestibular nuclei.r"
+      ],
+      "sizeBlender": [
+        0.017262,
+        0.004354,
+        0.013685
+      ],
+      "sourceObjects": [
+        "Vestibular nuclei.l",
+        "Vestibular nuclei.r"
+      ],
+      "system": "nervous"
+    },
+    "interpeduncular-fossae": {
+      "centerBlender": [
+        0,
+        -0.004617,
+        1.614927
+      ],
+      "missing": [],
+      "nodes": [
+        "interpeduncular-fossae__Interpeduncular fossa.l",
+        "interpeduncular-fossae__Interpeduncular fossa.r"
+      ],
+      "sizeBlender": [
+        0.007171,
+        0.002305,
+        0.001359
+      ],
+      "sourceObjects": [
+        "Interpeduncular fossa.l",
+        "Interpeduncular fossa.r"
+      ],
+      "system": "nervous"
     }
-  },
-  "asset": "/models/z-anatomy-full-body.glb",
-  "objectCount": 317,
-  "blenderVersion": "5.2.0 LTS",
-  "license": "CC BY-SA 4.0"
+  }
 }

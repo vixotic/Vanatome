@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "version": "1.1.0",
+    "name": "Vanatome Human Atlas"
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "stagingRoot": "work/anatomy-staging",
+  "batches": {
+    "visceral-core": {
+      "description": "First practical batch of major thoracic, abdominal, and pelvic viscera.",
+      "liveAsset": "public/models/z-anatomy-visceral-core.glb",
+      "liveManifest": "public/models/z-anatomy-visceral-core-manifest.json",
+      "validation": {
+        "expectedObjectCount": 26,
+        "maximumAssetBytes": 20000000
+      },
+      "groups": [
+        {
+          "id": "heart",
+          "system": "cardiovascular",
+          "sourceObjects": ["Right atrium", "Right ventricle", "Left atrium", "Left ventricle"],
+          "material": {"color": [0.73, 0.045, 0.11, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "lungs",
+          "system": "respiratory",
+          "sourceObjects": ["Superior lobe of right lung", "Middle lobe of right lung", "Inferior lobe of right lung", "Superior lobe of left lung", "Inferior lobe of left lung"],
+          "material": {"color": [0.4, 0.66, 0.72, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "trachea",
+          "system": "respiratory",
+          "sourceObjects": ["Trachea"],
+          "material": {"color": [0.52, 0.68, 0.72, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "oesophagus",
+          "system": "digestive",
+          "sourceObjects": ["Oesophagus"],
+          "material": {"color": [0.7, 0.38, 0.38, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "liver",
+          "system": "digestive",
+          "sourceObjects": ["Liver"],
+          "material": {"color": [0.48, 0.12, 0.07, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "gallbladder",
+          "system": "digestive",
+          "sourceObjects": ["Gallbladder"],
+          "material": {"color": [0.22, 0.43, 0.16, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "stomach",
+          "system": "digestive",
+          "sourceObjects": ["Stomach"],
+          "material": {"color": [0.62, 0.3, 0.42, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "pancreas",
+          "system": "digestive",
+          "sourceObjects": ["Pancreas"],
+          "material": {"color": [0.92, 0.64, 0.33, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "spleen",
+          "system": "lymphatic",
+          "sourceObjects": ["Spleen"],
+          "material": {"color": [0.45, 0.11, 0.24, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "small-intestine",
+          "system": "digestive",
+          "sourceObjects": ["Duodenum", "Jejunum"],
+          "material": {"color": [0.82, 0.45, 0.3, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "large-intestine",
+          "system": "digestive",
+          "sourceObjects": ["Ascending colon", "Transverse colon", "Descending colon", "Sigmoid colon", "Vermiform appendix"],
+          "material": {"color": [0.55, 0.34, 0.25, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "kidneys",
+          "system": "urinary",
+          "sourceObjects": ["Kidney.l", "Kidney.r"],
+          "material": {"color": [0.45, 0.08, 0.07, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "bladder",
+          "system": "urinary",
+          "sourceObjects": ["Urinary bladder"],
+          "material": {"color": [0.64, 0.52, 0.28, 1.0], "roughness": 0.42}
+        }
+      ]
+    },
+    "torso-skeleton": {
+      "description": "Torso skeleton: vertebral column, thoracic cage, sacrum, coccyx, and paired hip bones.",
+      "liveAsset": "public/models/z-anatomy-torso-skeleton.glb",
+      "liveManifest": "public/models/z-anatomy-torso-skeleton-manifest.json",
+      "validation": {
+        "expectedObjectCount": 55,
+        "maximumAssetBytes": 20000000
+      },
+      "groups": [
+        {
+          "id": "skeleton",
+          "system": "skeletal",
+          "sourceObjects": [
+            "Vertebra C3",
+            "Vertebra C4",
+            "Vertebra C5",
+            "Vertebra C6",
+            "Vertebra C7",
+            "Atlas (C1)",
+            "Axis (C2)",
+            "Vertebra T1",
+            "Vertebra T2",
+            "Vertebra T3",
+            "Vertebra T4",
+            "Vertebra T5",
+            "Vertebra T6",
+            "Vertebra T7",
+            "Vertebra T8",
+            "Vertebra T9",
+            "Vertebra T10",
+            "Vertebra T11",
+            "Vertebra T12",
+            "Vertebra L1",
+            "Vertebra L2",
+            "Vertebra L3",
+            "Vertebra L4",
+            "Vertebra L5",
+            "Sacrum",
+            "Coccyx",
+            "Hip bone.l",
+            "Hip bone.r",
+            "Manubrium of sternum",
+            "Body of sternum",
+            "Xiphoid process",
+            "First rib.l",
+            "First rib.r",
+            "Second rib.l",
+            "Second rib.r",
+            "Third rib.l",
+            "Third rib.r",
+            "Fourth rib.l",
+            "Fourth rib.r",
+            "Fifth rib.l",
+            "Fifth rib.r",
+            "Sixth rib.l",
+            "Sixth rib.r",
+            "Seventh rib.l",
+            "Seventh rib.r",
+            "Eighth rib.l",
+            "Eighth rib.r",
+            "Ninth rib.l",
+            "Ninth rib.r",
+            "Tenth rib.l",
+            "Tenth rib.r",
+            "Eleventh rib.l",
+            "Eleventh rib.r",
+            "Twelfth rib.l",
+            "Twelfth rib.r"
+          ],
+          "material": {"color": [0.43, 0.64, 0.66, 1.0], "metallic": 0.05, "roughness": 0.58},
+          "decimate": 0.42
+        }
+      ]
+    },
+    "body-shell": {
+      "description": "Complete external regional body shell used for full-body spatial context.",
+      "liveAsset": "public/models/z-anatomy-body-shell.glb",
+      "liveManifest": "public/models/z-anatomy-body-shell-manifest.json",
+      "validation": {
+        "expectedObjectCount": 236,
+        "maximumAssetBytes": 20000000
+      },
+      "groups": [
+        {
+          "id": "body-shell",
+          "system": "regional-anatomy",
+          "sourceSelector": {
+            "collection": "9: Regions of human body",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 11,
+            "excludeSuffixes": [".j", ".g"]
+          },
+          "material": {"color": [0.11, 0.61, 0.72, 0.22], "roughness": 0.25}
+        }
+      ]
+    },
+    "brainstem-core": {
+      "description": "Brainstem surfaces, ventricular landmarks, colliculi, and selected paired nuclei.",
+      "liveAsset": "public/models/z-anatomy-brainstem-core.glb",
+      "liveManifest": "public/models/z-anatomy-brainstem-core-manifest.json",
+      "validation": {
+        "expectedObjectCount": 32,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "brainstem",
+          "system": "nervous",
+          "sourceObjects": ["Midbrain.l", "Midbrain.r", "Pons.l", "Pons.r", "Medulla oblongata.l", "Medulla oblongata.r"],
+          "material": {"color": [0.68, 0.48, 0.86, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "fourth-ventricle",
+          "system": "nervous",
+          "sourceObjects": ["Fourth ventricle"],
+          "material": {"color": [0.3, 0.72, 0.92, 1.0], "roughness": 0.4}
+        },
+        {
+          "id": "cerebral-aqueduct",
+          "system": "nervous",
+          "sourceObjects": ["Aqueduct of midbrain"],
+          "material": {"color": [0.25, 0.66, 0.9, 1.0], "roughness": 0.4}
+        },
+        {
+          "id": "superior-colliculi",
+          "system": "nervous",
+          "sourceObjects": ["Superior colliculus.l", "Superior colliculus.r"],
+          "material": {"color": [0.9, 0.52, 0.68, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "inferior-colliculi",
+          "system": "nervous",
+          "sourceObjects": ["Inferior colliculus.l", "Inferior colliculus.r"],
+          "material": {"color": [0.84, 0.44, 0.64, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "medullary-olives",
+          "system": "nervous",
+          "sourceObjects": ["Olive.l", "Olive.r"],
+          "material": {"color": [0.72, 0.54, 0.9, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "medullary-pyramids",
+          "system": "nervous",
+          "sourceObjects": ["Pyramid of medulla oblongata.l", "Pyramid of medulla oblongata.r"],
+          "material": {"color": [0.62, 0.46, 0.86, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "red-nuclei",
+          "system": "nervous",
+          "sourceObjects": ["Red nucleus.l", "Red nucleus.r"],
+          "material": {"color": [0.92, 0.26, 0.42, 1.0], "roughness": 0.42}
+        },
+        {
+          "id": "oculomotor-nuclei",
+          "system": "nervous",
+          "sourceObjects": ["Nucleus of oculomotor nerve.l", "Nucleus of oculomotor nerve.r", "Accessory nucleus of oculomotor nerve.l", "Accessory nucleus of oculomotor nerve.r"],
+          "material": {"color": [0.46, 0.82, 0.78, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "facial-motor-nuclei",
+          "system": "nervous",
+          "sourceObjects": ["Motor nucleus of facial nerve.l", "Motor nucleus of facial nerve.r"],
+          "material": {"color": [0.42, 0.76, 0.84, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "abducens-nuclei",
+          "system": "nervous",
+          "sourceObjects": ["Nucleus of abducens nerve.l", "Nucleus of abducens nerve.r"],
+          "material": {"color": [0.38, 0.7, 0.88, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "superior-salivatory-nuclei",
+          "system": "nervous",
+          "sourceObjects": ["Superior salivatory nucleus.l", "Superior salivatory nucleus.r"],
+          "material": {"color": [0.5, 0.8, 0.7, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "vestibular-nuclei",
+          "system": "nervous",
+          "sourceObjects": ["Vestibular nuclei.l", "Vestibular nuclei.r"],
+          "material": {"color": [0.34, 0.78, 0.82, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "interpeduncular-fossae",
+          "system": "nervous",
+          "sourceObjects": ["Interpeduncular fossa.l", "Interpeduncular fossa.r"],
+          "material": {"color": [0.74, 0.6, 0.9, 1.0], "roughness": 0.46}
+        }
+      ]
+    }
+  },
+  "releases": {
+    "demo-1.1.0": {
+      "description": "Four-iteration demo atlas release.",
+      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core"],
+      "liveAsset": "public/models/z-anatomy-full-body.glb",
+      "liveManifest": "public/models/z-anatomy-manifest.json",
+      "liveRegistry": "app/data/z-anatomy-registry.json",
+      "validation": {
+        "expectedObjectCount": 349,
+        "maximumAssetBytes": 30000000
+      }
+    }
+  }
+}

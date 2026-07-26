@@ -4,8 +4,9 @@ import {
   type VanatomeHierarchyNode,
   type VanatomeStructure,
 } from "@vixotic/vanatome-react";
+import releaseRegistry from "./z-anatomy-registry.json";
 
-export type AnatomyRegion = "thorax" | "abdomen" | "pelvis";
+export type AnatomyRegion = "head" | "thorax" | "abdomen" | "pelvis";
 
 export type AnatomyStructure = VanatomeStructure & {
   region: AnatomyRegion;
@@ -15,6 +16,24 @@ export type AnatomyStructure = VanatomeStructure & {
   function: NonNullable<VanatomeStructure["function"]>;
   fact: NonNullable<VanatomeStructure["fact"]>;
 };
+
+type ReleasedStructure = Omit<AnatomyStructure, "position" | "scale">;
+
+const releasedById = new Map(
+  releaseRegistry.structures.map((structure) => [structure.id, structure]),
+);
+
+function releasedStructure(structure: ReleasedStructure): AnatomyStructure {
+  const released = releasedById.get(structure.id);
+  if (!released) {
+    throw new Error(`Released atlas registry is missing ${structure.id}`);
+  }
+  return {
+    ...structure,
+    position: released.position as [number, number, number],
+    scale: [1, 1, 1],
+  };
+}
 
 export const anatomyRegistry: AnatomyStructure[] = [
   {
@@ -129,6 +148,234 @@ export const anatomyRegistry: AnatomyStructure[] = [
     function: "Stores urine from the kidneys until voluntary release.",
     fact: "Stretch-sensitive nerves report bladder filling to the nervous system.",
   },
+  releasedStructure({
+    id: "trachea",
+    name: "Trachea",
+    system: "Respiratory",
+    region: "thorax",
+    layer: "respiratory",
+    parentId: "thorax",
+    color: "#62d6e8",
+    summary: "A cartilage-supported airway descending from the larynx toward the lungs.",
+    function: "Conducts inhaled and exhaled air between the upper airway and bronchi.",
+    fact: "C-shaped cartilage rings help prevent the airway from collapsing.",
+  }),
+  releasedStructure({
+    id: "oesophagus",
+    name: "Oesophagus",
+    system: "Digestive",
+    region: "thorax",
+    layer: "digestive",
+    parentId: "thorax",
+    color: "#d57f8e",
+    summary: "A muscular tube passing through the thorax toward the stomach.",
+    function: "Moves swallowed material to the stomach through coordinated contractions.",
+    fact: "Its wave-like propulsive contractions are called peristalsis.",
+  }),
+  releasedStructure({
+    id: "gallbladder",
+    name: "Gallbladder",
+    system: "Digestive",
+    region: "abdomen",
+    layer: "digestive",
+    parentId: "abdomen",
+    color: "#63a957",
+    summary: "A small sac tucked beneath the liver.",
+    function: "Stores and concentrates bile before releasing it into the small intestine.",
+    fact: "Bile helps disperse dietary fats during digestion.",
+  }),
+  releasedStructure({
+    id: "pancreas",
+    name: "Pancreas",
+    system: "Digestive",
+    region: "abdomen",
+    layer: "digestive",
+    parentId: "abdomen",
+    color: "#efad5c",
+    summary: "An elongated gland lying behind the stomach.",
+    function: "Supplies digestive enzymes and produces hormones involved in glucose control.",
+    fact: "It serves both digestive and endocrine roles.",
+  }),
+  releasedStructure({
+    id: "spleen",
+    name: "Spleen",
+    system: "Lymphatic",
+    region: "abdomen",
+    layer: "lymphatic",
+    parentId: "abdomen",
+    color: "#a94f78",
+    summary: "A blood-rich lymphatic organ in the upper-left abdomen.",
+    function: "Filters circulating blood and supports immune responses.",
+    fact: "It also removes aging red blood cells from circulation.",
+  }),
+  releasedStructure({
+    id: "brainstem",
+    name: "Brainstem",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#ad7bdc",
+    summary: "The midbrain, pons, and medulla forming the lower central brain axis.",
+    function: "Relays signals and supports essential autonomic, motor, and sensory functions.",
+    fact: "It connects higher brain regions with the spinal cord.",
+  }),
+  releasedStructure({
+    id: "fourth-ventricle",
+    name: "Fourth Ventricle",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#4db8eb",
+    summary: "A cerebrospinal-fluid cavity between the brainstem and cerebellum.",
+    function: "Provides a channel and reservoir within the ventricular system.",
+    fact: "It continues inferiorly toward the spinal cord's central canal.",
+  }),
+  releasedStructure({
+    id: "cerebral-aqueduct",
+    name: "Cerebral Aqueduct",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#40a8e6",
+    summary: "A narrow cerebrospinal-fluid channel through the midbrain.",
+    function: "Connects the third and fourth ventricles.",
+    fact: "Its narrow caliber makes blockage clinically significant.",
+  }),
+  releasedStructure({
+    id: "superior-colliculi",
+    name: "Superior Colliculi",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#e685a7",
+    summary: "Paired rounded structures on the dorsal midbrain.",
+    function: "Coordinate orienting movements toward visual stimuli.",
+    fact: "They help align movements of the eyes and head.",
+  }),
+  releasedStructure({
+    id: "inferior-colliculi",
+    name: "Inferior Colliculi",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#d9709a",
+    summary: "Paired auditory relay structures on the dorsal midbrain.",
+    function: "Integrate auditory signals before they reach higher relay centers.",
+    fact: "They contribute to rapid orientation toward sounds.",
+  }),
+  releasedStructure({
+    id: "medullary-olives",
+    name: "Medullary Olives",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#b88ee5",
+    summary: "Paired surface prominences along the medulla oblongata.",
+    function: "Relay motor-learning signals toward the cerebellum.",
+    fact: "The underlying inferior olivary nuclei have strong cerebellar connections.",
+  }),
+  releasedStructure({
+    id: "medullary-pyramids",
+    name: "Medullary Pyramids",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#9f75d9",
+    summary: "Paired longitudinal ridges on the front of the medulla.",
+    function: "Carry major descending pathways for voluntary movement.",
+    fact: "Many fibers cross near the lower end of the medulla.",
+  }),
+  releasedStructure({
+    id: "red-nuclei",
+    name: "Red Nuclei",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#eb426b",
+    summary: "Paired motor-related nuclei within the midbrain.",
+    function: "Participate in motor coordination through cerebellar and descending circuits.",
+    fact: "Their reddish appearance is associated with iron-containing pigment.",
+  }),
+  releasedStructure({
+    id: "oculomotor-nuclei",
+    name: "Oculomotor Nuclei",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#75d1c7",
+    summary: "Paired motor and accessory nuclei in the midbrain.",
+    function: "Control most eye movements and contribute to pupil constriction.",
+    fact: "Their fibers travel in the third cranial nerve.",
+  }),
+  releasedStructure({
+    id: "facial-motor-nuclei",
+    name: "Facial Motor Nuclei",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#6bc2d6",
+    summary: "Paired motor nuclei located in the pons.",
+    function: "Drive muscles used for facial expression.",
+    fact: "Their axons emerge as part of the facial nerve.",
+  }),
+  releasedStructure({
+    id: "abducens-nuclei",
+    name: "Abducens Nuclei",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#61b3df",
+    summary: "Paired eye-movement nuclei in the lower pons.",
+    function: "Coordinate outward movement of the eyes.",
+    fact: "Each nucleus contributes fibers to the sixth cranial nerve.",
+  }),
+  releasedStructure({
+    id: "superior-salivatory-nuclei",
+    name: "Superior Salivatory Nuclei",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#80ccb2",
+    summary: "Paired autonomic nuclei associated with the facial nerve.",
+    function: "Contribute signals for tear and salivary secretion.",
+    fact: "Their output reaches glands through parasympathetic pathways.",
+  }),
+  releasedStructure({
+    id: "vestibular-nuclei",
+    name: "Vestibular Nuclei",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#57c7d1",
+    summary: "Paired groups of nuclei near the junction of the pons and medulla.",
+    function: "Integrate inner-ear signals used for balance, gaze, and posture.",
+    fact: "They link vestibular input with eye-movement and spinal pathways.",
+  }),
+  releasedStructure({
+    id: "interpeduncular-fossae",
+    name: "Interpeduncular Fossae",
+    system: "Nervous",
+    region: "head",
+    layer: "nervous",
+    parentId: "head",
+    color: "#bea0e6",
+    summary: "A paired model representation of the depression between the cerebral peduncles.",
+    function: "Marks an important ventral midbrain surface relationship.",
+    fact: "Several vessels and cranial-nerve landmarks lie near this region.",
+  }),
 ];
 
 export const anatomyById = Object.fromEntries(
@@ -136,6 +383,13 @@ export const anatomyById = Object.fromEntries(
 ) as Record<string, AnatomyStructure>;
 
 const hierarchyRegions: VanatomeStructure[] = [
+  {
+    id: "head",
+    name: "Head",
+    system: "Regional anatomy",
+    layer: "region",
+    position: [0, 5, 0],
+  },
   {
     id: "thorax",
     name: "Thorax",
@@ -169,12 +423,19 @@ export const anatomyLayers = [
   { id: "respiratory", label: "Respiratory" },
   { id: "digestive", label: "Digestive" },
   { id: "urinary", label: "Urinary" },
+  { id: "lymphatic", label: "Lymphatic" },
+  { id: "nervous", label: "Nervous" },
 ] as const;
+
+export const atlasMappedNodeCount = releaseRegistry.structures.reduce(
+  (total, structure) => total + structure.objectCount,
+  0,
+);
 
 export const vanatomeAtlas: VanatomeAtlas = {
   id: "vanatome-human",
   name: "Vanatome Human Atlas",
-  version: "1.0.0",
+  version: releaseRegistry.atlasVersion,
   modelUrl: "/models/z-anatomy-full-body.glb",
   structures: anatomyRegistry,
   attribution: "Z-Anatomy contributors, CC BY-SA 4.0",
