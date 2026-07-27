@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "..",
+    "baseUrl": ".",
+    "paths": {
+      "@vixotic/vanatome-react": ["../react/src/types.ts"]
+    }
+  },
+  "include": ["src", "tests/viewer-contract.ts"]
+}

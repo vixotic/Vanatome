@@ -21,9 +21,9 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "check": "tsc -p tsconfig.build.json --noEmit",
+    "check": "tsc -p tsconfig.check.json",
     "sync:demo": "node scripts/sync-demo-catalog.mjs",
-    "test": "npm run build && node --test tests/*.test.mjs",
+    "test": "npm run check && npm run build && node --test tests/*.test.mjs",
     "prepack": "npm run test"
   },
   "peerDependencies": {
