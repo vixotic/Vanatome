@@ -24,8 +24,8 @@ const { atlas, provenance } =
 Vanatome does not currently publish a default hosted catalog URL. The explicit
 URL is the production seam for a consumer-controlled CDN, static directory, or
 offline cache. Released catalog directories should be immutable. The repository
-demo catalog is a full-body compatibility adapter, not a claim of a hosted or
-system-split production service.
+demo catalog exposes the validated `1.1.0` release as a curated full-body bundle;
+it is not a claim of a hosted or system-split production service.
 
 ## Metadata
 
@@ -67,7 +67,9 @@ recursive hierarchy views. A parent structure may have no mesh of its own: it
 acts as an aggregate whose selection, focus, and isolation include all mapped
 descendants. Catalog bundles declare their system and layer coverage; bundle
 metadata repeats those values per structure so consumers can validate and
-present the hierarchy without inspecting a GLB.
+present the hierarchy without inspecting a GLB. Bundle metadata also carries
+the validated release build ID and mapped-node count; the loader rejects drift
+from the catalog before returning a viewer atlas.
 
 ## glTF
 

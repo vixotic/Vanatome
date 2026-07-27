@@ -22,6 +22,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "check": "tsc -p tsconfig.build.json --noEmit",
+    "sync:demo": "node scripts/sync-demo-catalog.mjs",
     "test": "npm run build && node --test tests/*.test.mjs",
     "prepack": "npm run test"
   },

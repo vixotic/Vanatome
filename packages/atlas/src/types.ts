@@ -11,9 +11,12 @@ export type AnatomyLayerId = string;
 export type AnatomyStructure = {
   id: AnatomyId;
   name: string;
+  kind?: "system" | "organ" | "part";
   system: AnatomySystemId;
   layer: AnatomyLayerId;
   parentId?: AnatomyId;
+  selectable?: boolean;
+  objectCount?: number;
   position: VanatomeVector3;
   color?: string;
   summary?: string;
@@ -52,6 +55,8 @@ export type AtlasBundleDescriptor = {
   metadataUrl: string;
   bytes?: number;
   sha256?: string;
+  structureCount?: number;
+  nodeCount?: number;
 };
 
 export type AtlasCatalog = {
@@ -60,6 +65,7 @@ export type AtlasCatalog = {
     id: string;
     name: string;
     version: string;
+    buildId: string;
   };
   systems: readonly AnatomySystem[];
   layers: readonly AnatomyLayer[];
@@ -71,7 +77,9 @@ export type AtlasBundleMetadata = {
   schemaVersion: 1;
   atlasId: string;
   atlasVersion: string;
+  buildId: string;
   bundleId: string;
+  nodeCount: number;
   structures: readonly AnatomyStructure[];
 };
 
@@ -83,6 +91,7 @@ export type VanatomeViewerAtlas = {
   id: string;
   name: string;
   version: string;
+  buildId: string;
   modelUrl: string;
   structures: readonly AnatomyStructure[];
   attribution: string;
@@ -136,6 +145,7 @@ export type AtlasLoaderOptions = {
   expectedAtlas?: {
     id: string;
     version?: string;
+    buildId?: string;
   };
 };
 

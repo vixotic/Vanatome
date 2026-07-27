@@ -131,8 +131,10 @@ const { atlas } = await humanAtlas.loadSystem("cardiovascular");
 There is no Vanatome-operated public atlas endpoint yet. Consumers explicitly
 choose a versioned catalog URL and can self-host the catalog, metadata, and GLBs
 on any static host. The repository includes a clearly labeled full-body demo
-catalog at `/atlas/demo-1.1.0/catalog.json`; it is a compatibility adapter, not
-a production system-split release. See the
+catalog at `/atlas/demo-1.1.0/catalog.json`. It exposes the validated
+hierarchy-aware `1.1.0` release (build `c87403fe2f003fba`) as one lazy-loaded
+curated bundle with 139 stable hierarchy entries mapped across 349 GLB nodes.
+See the
 [`@vixotic/vanatome-atlas` README](packages/atlas/README.md) for loading states,
 selective bundle loading, and self-hosting.
 

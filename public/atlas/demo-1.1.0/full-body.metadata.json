@@ -2,36 +2,2086 @@
   "schemaVersion": 1,
   "atlasId": "vanatome-human",
   "atlasVersion": "1.1.0",
-  "bundleId": "full-body-demo",
+  "buildId": "c87403fe2f003fba",
+  "bundleId": "curated-full-body",
+  "nodeCount": 349,
   "structures": [
-    { "id": "heart", "name": "Heart", "system": "cardiovascular", "layer": "cardiovascular", "position": [0.1594, 2.9353, 0.1734] },
-    { "id": "lungs", "name": "Lungs", "system": "respiratory", "layer": "respiratory", "position": [-0.0045, 2.993, 0.0673] },
-    { "id": "trachea", "name": "Trachea", "system": "respiratory", "layer": "respiratory", "position": [-0.0017, 3.7552, -0.0127] },
-    { "id": "oesophagus", "name": "Oesophagus", "system": "digestive", "layer": "digestive", "position": [0.0326, 3.2436, -0.0538] },
-    { "id": "liver", "name": "Liver", "system": "digestive", "layer": "digestive", "position": [-0.0797, 2.1217, 0.16] },
-    { "id": "gallbladder", "name": "Gallbladder", "system": "digestive", "layer": "digestive", "position": [-0.3162, 1.8599, 0.3938] },
-    { "id": "stomach", "name": "Stomach", "system": "digestive", "layer": "digestive", "position": [0.2684, 2.0649, 0.2532] },
-    { "id": "pancreas", "name": "Pancreas", "system": "digestive", "layer": "digestive", "position": [0.0952, 1.712, 0.1509] },
-    { "id": "spleen", "name": "Spleen", "system": "lymphatic", "layer": "lymphatic", "position": [0.5933, 2.0305, -0.0309] },
-    { "id": "small-intestine", "name": "Small Intestine", "system": "digestive", "layer": "digestive", "position": [0.0622, 0.9851, 0.3035] },
-    { "id": "large-intestine", "name": "Large Intestine", "system": "digestive", "layer": "digestive", "position": [0.0016, 0.6861, 0.0333] },
-    { "id": "kidneys", "name": "Kidneys", "system": "urinary", "layer": "urinary", "position": [0.0098, 1.6238, -0.087] },
-    { "id": "bladder", "name": "Urinary Bladder", "system": "urinary", "layer": "urinary", "position": [0.0027, -0.1155, 0.0009] },
-    { "id": "skeleton", "name": "Skeleton", "system": "skeletal", "layer": "skeletal", "position": [0, 2.1253, 0.1046] },
-    { "id": "body-shell", "name": "Body Shell", "system": "regional-anatomy", "layer": "regional-anatomy", "position": [0, 0.0004, -0.0094] },
-    { "id": "brainstem", "name": "Brainstem", "system": "nervous", "layer": "nervous", "position": [0, 4.9469, -0.0975] },
-    { "id": "fourth-ventricle", "name": "Fourth Ventricle", "system": "nervous", "layer": "nervous", "position": [0, 4.9806, -0.1727] },
-    { "id": "cerebral-aqueduct", "name": "Cerebral Aqueduct", "system": "nervous", "layer": "nervous", "position": [0, 5.1687, -0.086] },
-    { "id": "superior-colliculi", "name": "Superior Colliculi", "system": "nervous", "layer": "nervous", "position": [0, 5.1877, -0.1164] },
-    { "id": "inferior-colliculi", "name": "Inferior Colliculi", "system": "nervous", "layer": "nervous", "position": [0, 5.1581, -0.1133] },
-    { "id": "medullary-olives", "name": "Medullary Olives", "system": "nervous", "layer": "nervous", "position": [0, 4.8912, -0.11] },
-    { "id": "medullary-pyramids", "name": "Medullary Pyramids", "system": "nervous", "layer": "nervous", "position": [0, 4.8852, -0.0785] },
-    { "id": "red-nuclei", "name": "Red Nuclei", "system": "nervous", "layer": "nervous", "position": [0, 5.1701, 0.0063] },
-    { "id": "oculomotor-nuclei", "name": "Oculomotor Nuclei", "system": "nervous", "layer": "nervous", "position": [0, 5.1504, -0.0644] },
-    { "id": "facial-motor-nuclei", "name": "Facial Motor Nuclei", "system": "nervous", "layer": "nervous", "position": [0, 4.9667, -0.0745] },
-    { "id": "abducens-nuclei", "name": "Abducens Nuclei", "system": "nervous", "layer": "nervous", "position": [0, 4.9753, -0.1116] },
-    { "id": "superior-salivatory-nuclei", "name": "Superior Salivatory Nuclei", "system": "nervous", "layer": "nervous", "position": [0, 4.9525, -0.083] },
-    { "id": "vestibular-nuclei", "name": "Vestibular Nuclei", "system": "nervous", "layer": "nervous", "position": [0, 5.0333, -0.0742] },
-    { "id": "interpeduncular-fossae", "name": "Interpeduncular Fossae", "system": "nervous", "layer": "nervous", "position": [0, 5.2045, 0.0323] }
+    {
+      "id": "cardiovascular-system",
+      "name": "Cardiovascular",
+      "kind": "system",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.1278,
+        2.9348,
+        0.1977
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "digestive-system",
+      "name": "Digestive",
+      "kind": "system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.0409,
+        1.3633,
+        0.1311
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "lymphatic-system",
+      "name": "Lymphatic",
+      "kind": "system",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.5933,
+        2.0305,
+        -0.0309
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "nervous-system",
+      "name": "Nervous",
+      "kind": "system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.0482,
+        -0.0759
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "respiratory-system",
+      "name": "Respiratory",
+      "kind": "system",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        -0.0555,
+        3.0842,
+        0.0707
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "skeletal-system",
+      "name": "Skeletal",
+      "kind": "system",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.6663,
+        -0.1439
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "urinary-system",
+      "name": "Urinary",
+      "kind": "system",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.0077,
+        1.1877,
+        -0.0707
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "heart",
+      "name": "Heart",
+      "kind": "organ",
+      "parentId": "cardiovascular-system",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.1594,
+        2.9353,
+        0.1734
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "heart-left-atrium",
+      "name": "Left atrium",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.146,
+        3.0037,
+        0.0805
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "heart-left-ventricle",
+      "name": "Left ventricle",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.2968,
+        2.8708,
+        0.1969
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "heart-right-atrium",
+      "name": "Right atrium",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        -0.1012,
+        2.9683,
+        0.2039
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "heart-right-ventricle",
+      "name": "Right ventricle",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.1381,
+        2.8961,
+        0.3339
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lungs",
+      "name": "Lungs",
+      "kind": "organ",
+      "parentId": "respiratory-system",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        -0.0045,
+        2.993,
+        0.0673
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "lungs-inferior-lobe-of-left-lung",
+      "name": "Inferior lobe of left lung",
+      "kind": "part",
+      "parentId": "lungs",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        0.5188,
+        2.7461,
+        0.0573
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lungs-inferior-lobe-of-right-lung",
+      "name": "Inferior lobe of right lung",
+      "kind": "part",
+      "parentId": "lungs",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        -0.4686,
+        2.721,
+        0.0327
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lungs-middle-lobe-of-right-lung",
+      "name": "Middle lobe of right lung",
+      "kind": "part",
+      "parentId": "lungs",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        -0.4526,
+        2.7716,
+        0.1924
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lungs-superior-lobe-of-left-lung",
+      "name": "Superior lobe of left lung",
+      "kind": "part",
+      "parentId": "lungs",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        0.4614,
+        3.1769,
+        0.1128
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lungs-superior-lobe-of-right-lung",
+      "name": "Superior lobe of right lung",
+      "kind": "part",
+      "parentId": "lungs",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        -0.4414,
+        3.4255,
+        0.0452
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "trachea",
+      "name": "trachea",
+      "kind": "organ",
+      "parentId": "respiratory-system",
+      "system": "respiratory",
+      "layer": "respiratory",
+      "selectable": true,
+      "position": [
+        -0.0017,
+        3.7552,
+        -0.0127
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oesophagus",
+      "name": "oesophagus",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0326,
+        3.2436,
+        -0.0538
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "liver",
+      "name": "liver",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.0797,
+        2.1217,
+        0.16
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "gallbladder",
+      "name": "gallbladder",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.3162,
+        1.8599,
+        0.3938
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "stomach",
+      "name": "stomach",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.2684,
+        2.0649,
+        0.2532
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "pancreas",
+      "name": "pancreas",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0952,
+        1.712,
+        0.1509
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "spleen",
+      "name": "spleen",
+      "kind": "organ",
+      "parentId": "lymphatic-system",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.5933,
+        2.0305,
+        -0.0309
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "small-intestine",
+      "name": "Small Intestine",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0622,
+        0.9851,
+        0.3035
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "small-intestine-duodenum",
+      "name": "Duodenum",
+      "kind": "part",
+      "parentId": "small-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.1165,
+        1.5585,
+        0.2209
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "small-intestine-jejunum",
+      "name": "Jejunum",
+      "kind": "part",
+      "parentId": "small-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0622,
+        0.7979,
+        0.3495
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine",
+      "name": "Large Intestine",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0016,
+        0.6861,
+        0.0333
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "large-intestine-ascending-colon",
+      "name": "Ascending colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.6166,
+        1.0281,
+        0.1045
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-descending-colon",
+      "name": "Descending colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.3361,
+        0.92,
+        -0.0779
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-sigmoid-colon",
+      "name": "Sigmoid colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.032,
+        -0.0446,
+        -0.3294
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-transverse-colon",
+      "name": "Transverse colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0415,
+        1.6067,
+        0.3055
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-vermiform-appendix",
+      "name": "Vermiform appendix",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.3755,
+        0.5458,
+        0.022
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "kidneys",
+      "name": "Kidneys",
+      "kind": "organ",
+      "parentId": "urinary-system",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.0098,
+        1.6238,
+        -0.087
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "kidneys-kidney-left",
+      "name": "Kidney.l",
+      "kind": "part",
+      "parentId": "kidneys",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.4313,
+        1.6857,
+        -0.1278
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "kidneys-kidney-right",
+      "name": "Kidney.r",
+      "kind": "part",
+      "parentId": "kidneys",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        -0.413,
+        1.5567,
+        -0.0691
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "bladder",
+      "name": "bladder",
+      "kind": "organ",
+      "parentId": "urinary-system",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.0027,
+        -0.1155,
+        0.0009
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "kind": "organ",
+      "parentId": "skeletal-system",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.1253,
+        0.1046
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "skeleton-atlas-c1",
+      "name": "Atlas (C1)",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.7005,
+        -0.1499
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-axis-c2",
+      "name": "Axis (C2)",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0001,
+        4.6099,
+        -0.1821
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-body-of-sternum",
+      "name": "Body of sternum",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.9946,
+        0.6999
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-coccyx",
+      "name": "Coccyx",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0001,
+        -0.18,
+        -0.5355
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eighth-rib-left",
+      "name": "Eighth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5344,
+        2.3774,
+        -0.1026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eighth-rib-right",
+      "name": "Eighth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5344,
+        2.3774,
+        -0.1026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eleventh-rib-left",
+      "name": "Eleventh rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4887,
+        1.7755,
+        -0.2637
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eleventh-rib-right",
+      "name": "Eleventh rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4887,
+        1.7755,
+        -0.2637
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fifth-rib-left",
+      "name": "Fifth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5139,
+        3.0301,
+        0.0521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fifth-rib-right",
+      "name": "Fifth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5139,
+        3.0301,
+        0.0521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-first-rib-left",
+      "name": "First rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.3059,
+        3.8178,
+        0.0126
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-first-rib-right",
+      "name": "First rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.3059,
+        3.8178,
+        0.0126
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fourth-rib-left",
+      "name": "Fourth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4942,
+        3.2524,
+        0.0552
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fourth-rib-right",
+      "name": "Fourth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4942,
+        3.2524,
+        0.0552
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-hip-bone-left",
+      "name": "Hip bone.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4824,
+        0.2325,
+        -0.1075
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-hip-bone-right",
+      "name": "Hip bone.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4824,
+        0.2325,
+        -0.1075
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-manubrium-of-sternum",
+      "name": "Manubrium of sternum",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.0012,
+        3.5386,
+        0.4039
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-ninth-rib-left",
+      "name": "Ninth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5305,
+        2.1697,
+        -0.1898
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-ninth-rib-right",
+      "name": "Ninth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5305,
+        2.1697,
+        -0.1898
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-sacrum",
+      "name": "Sacrum",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.0001,
+        0.3631,
+        -0.3452
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-second-rib-left",
+      "name": "Second rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4084,
+        3.6351,
+        0.0749
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-second-rib-right",
+      "name": "Second rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4084,
+        3.6351,
+        0.0749
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-seventh-rib-left",
+      "name": "Seventh rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5535,
+        2.6053,
+        -0.0396
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-seventh-rib-right",
+      "name": "Seventh rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5535,
+        2.6053,
+        -0.0396
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-sixth-rib-left",
+      "name": "Sixth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5409,
+        2.8258,
+        0.0053
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-sixth-rib-right",
+      "name": "Sixth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5409,
+        2.8258,
+        0.0053
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-tenth-rib-left",
+      "name": "Tenth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5249,
+        1.9559,
+        -0.2135
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-tenth-rib-right",
+      "name": "Tenth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5249,
+        1.9559,
+        -0.2135
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-third-rib-left",
+      "name": "Third rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4536,
+        3.4453,
+        0.0478
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-third-rib-right",
+      "name": "Third rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4536,
+        3.4453,
+        0.0478
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-twelfth-rib-left",
+      "name": "Twelfth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.3669,
+        1.6377,
+        -0.3214
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-twelfth-rib-right",
+      "name": "Twelfth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.3669,
+        1.6377,
+        -0.3214
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c3",
+      "name": "Vertebra C3",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.4447,
+        -0.1882
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c4",
+      "name": "Vertebra C4",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0005,
+        4.3515,
+        -0.1853
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c5",
+      "name": "Vertebra C5",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.261,
+        -0.2084
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c6",
+      "name": "Vertebra C6",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.1622,
+        -0.2447
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c7",
+      "name": "Vertebra C7",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.0641,
+        -0.2945
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l1",
+      "name": "Vertebra L1",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.6276,
+        -0.2046
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l2",
+      "name": "Vertebra L2",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.4247,
+        -0.1688
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l3",
+      "name": "Vertebra L3",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0001,
+        1.2029,
+        -0.1619
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l4",
+      "name": "Vertebra L4",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.0052,
+        -0.1688
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l5",
+      "name": "Vertebra L5",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        0.7794,
+        -0.2036
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t1",
+      "name": "Vertebra T1",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.966,
+        -0.3315
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t10",
+      "name": "Vertebra T10",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0004,
+        2.2825,
+        -0.3716
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t11",
+      "name": "Vertebra T11",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.0852,
+        -0.3155
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t12",
+      "name": "Vertebra T12",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.8735,
+        -0.2571
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t2",
+      "name": "Vertebra T2",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.8404,
+        -0.3694
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t3",
+      "name": "Vertebra T3",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.6916,
+        -0.4304
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t4",
+      "name": "Vertebra T4",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.5266,
+        -0.4568
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t5",
+      "name": "Vertebra T5",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.3308,
+        -0.4625
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t6",
+      "name": "Vertebra T6",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.0997,
+        -0.4673
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t7",
+      "name": "Vertebra T7",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.9023,
+        -0.4544
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t8",
+      "name": "Vertebra T8",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.6908,
+        -0.4439
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t9",
+      "name": "Vertebra T9",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.4993,
+        -0.4102
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-xiphoid-process",
+      "name": "Xiphoid process",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.5257,
+        0.725
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "body-shell",
+      "name": "body-shell",
+      "kind": "organ",
+      "system": "regional-anatomy",
+      "layer": "regional-anatomy",
+      "selectable": false,
+      "position": [
+        0,
+        0.0004,
+        -0.0094
+      ],
+      "objectCount": 236
+    },
+    {
+      "id": "brainstem",
+      "name": "Brainstem",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9469,
+        -0.0975
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "brainstem-medulla-oblongata-left",
+      "name": "Medulla oblongata.l",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0456,
+        4.8119,
+        -0.1401
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-medulla-oblongata-right",
+      "name": "Medulla oblongata.r",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0456,
+        4.8119,
+        -0.1401
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-midbrain-left",
+      "name": "Midbrain.l",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.05,
+        5.1643,
+        -0.0489
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-midbrain-right",
+      "name": "Midbrain.r",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.05,
+        5.1643,
+        -0.0489
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-pons-left",
+      "name": "Pons.l",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0717,
+        5.0241,
+        -0.0589
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-pons-right",
+      "name": "Pons.r",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0717,
+        5.0241,
+        -0.0589
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "fourth-ventricle",
+      "name": "fourth-ventricle",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9806,
+        -0.1727
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebral-aqueduct",
+      "name": "cerebral-aqueduct",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1687,
+        -0.086
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-colliculi",
+      "name": "superior-colliculi",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1877,
+        -0.1164
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "superior-colliculi-superior-colliculus-left",
+      "name": "Superior colliculus.l",
+      "kind": "part",
+      "parentId": "superior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0609,
+        5.1877,
+        -0.1164
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-colliculi-superior-colliculus-right",
+      "name": "Superior colliculus.r",
+      "kind": "part",
+      "parentId": "superior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0609,
+        5.1877,
+        -0.1164
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "inferior-colliculi",
+      "name": "inferior-colliculi",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1581,
+        -0.1133
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "inferior-colliculi-inferior-colliculus-left",
+      "name": "Inferior colliculus.l",
+      "kind": "part",
+      "parentId": "inferior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0513,
+        5.1581,
+        -0.1133
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "inferior-colliculi-inferior-colliculus-right",
+      "name": "Inferior colliculus.r",
+      "kind": "part",
+      "parentId": "inferior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0513,
+        5.1581,
+        -0.1133
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-olives",
+      "name": "medullary-olives",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.8912,
+        -0.11
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "medullary-olives-olive-left",
+      "name": "Olive.l",
+      "kind": "part",
+      "parentId": "medullary-olives",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0597,
+        4.8912,
+        -0.11
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-olives-olive-right",
+      "name": "Olive.r",
+      "kind": "part",
+      "parentId": "medullary-olives",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0597,
+        4.8912,
+        -0.11
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-pyramids",
+      "name": "medullary-pyramids",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.8852,
+        -0.0785
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "medullary-pyramids-pyramid-of-medulla-oblongata-left",
+      "name": "Pyramid of medulla oblongata.l",
+      "kind": "part",
+      "parentId": "medullary-pyramids",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0262,
+        4.8852,
+        -0.0785
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-pyramids-pyramid-of-medulla-oblongata-right",
+      "name": "Pyramid of medulla oblongata.r",
+      "kind": "part",
+      "parentId": "medullary-pyramids",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0262,
+        4.8852,
+        -0.0785
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "red-nuclei",
+      "name": "red-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1701,
+        0.0063
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "red-nuclei-red-nucleus-left",
+      "name": "Red nucleus.l",
+      "kind": "part",
+      "parentId": "red-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0339,
+        5.1701,
+        0.0063
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "red-nuclei-red-nucleus-right",
+      "name": "Red nucleus.r",
+      "kind": "part",
+      "parentId": "red-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0339,
+        5.1701,
+        0.0063
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei",
+      "name": "oculomotor-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1504,
+        -0.0644
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "oculomotor-nuclei-accessory-nucleus-of-oculomotor-nerve-left",
+      "name": "Accessory nucleus of oculomotor nerve.l",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0057,
+        5.1614,
+        -0.0623
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei-accessory-nucleus-of-oculomotor-nerve-right",
+      "name": "Accessory nucleus of oculomotor nerve.r",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0057,
+        5.1614,
+        -0.0623
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei-nucleus-of-oculomotor-nerve-left",
+      "name": "Nucleus of oculomotor nerve.l",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0137,
+        5.1396,
+        -0.0651
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei-nucleus-of-oculomotor-nerve-right",
+      "name": "Nucleus of oculomotor nerve.r",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0137,
+        5.1396,
+        -0.0651
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "facial-motor-nuclei",
+      "name": "facial-motor-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9667,
+        -0.0745
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "facial-motor-nuclei-motor-nucleus-of-facial-nerve-left",
+      "name": "Motor nucleus of facial nerve.l",
+      "kind": "part",
+      "parentId": "facial-motor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0346,
+        4.9667,
+        -0.0745
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "facial-motor-nuclei-motor-nucleus-of-facial-nerve-right",
+      "name": "Motor nucleus of facial nerve.r",
+      "kind": "part",
+      "parentId": "facial-motor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0346,
+        4.9667,
+        -0.0745
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "abducens-nuclei",
+      "name": "abducens-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9753,
+        -0.1116
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "abducens-nuclei-nucleus-of-abducens-nerve-left",
+      "name": "Nucleus of abducens nerve.l",
+      "kind": "part",
+      "parentId": "abducens-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0106,
+        4.9753,
+        -0.1116
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "abducens-nuclei-nucleus-of-abducens-nerve-right",
+      "name": "Nucleus of abducens nerve.r",
+      "kind": "part",
+      "parentId": "abducens-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0106,
+        4.9753,
+        -0.1116
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-salivatory-nuclei",
+      "name": "superior-salivatory-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9525,
+        -0.083
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "superior-salivatory-nuclei-superior-salivatory-nucleus-left",
+      "name": "Superior salivatory nucleus.l",
+      "kind": "part",
+      "parentId": "superior-salivatory-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.046,
+        4.9525,
+        -0.083
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-salivatory-nuclei-superior-salivatory-nucleus-right",
+      "name": "Superior salivatory nucleus.r",
+      "kind": "part",
+      "parentId": "superior-salivatory-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.046,
+        4.9525,
+        -0.083
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "vestibular-nuclei",
+      "name": "vestibular-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.0333,
+        -0.0742
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "vestibular-nuclei-vestibular-nuclei-left",
+      "name": "Vestibular nuclei.l",
+      "kind": "part",
+      "parentId": "vestibular-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0377,
+        5.0333,
+        -0.0742
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "vestibular-nuclei-vestibular-nuclei-right",
+      "name": "Vestibular nuclei.r",
+      "kind": "part",
+      "parentId": "vestibular-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0377,
+        5.0333,
+        -0.0742
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "interpeduncular-fossae",
+      "name": "interpeduncular-fossae",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.2045,
+        0.0323
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "interpeduncular-fossae-interpeduncular-fossa-left",
+      "name": "Interpeduncular fossa.l",
+      "kind": "part",
+      "parentId": "interpeduncular-fossae",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.017,
+        5.2045,
+        0.0323
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "interpeduncular-fossae-interpeduncular-fossa-right",
+      "name": "Interpeduncular fossa.r",
+      "kind": "part",
+      "parentId": "interpeduncular-fossae",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.017,
+        5.2045,
+        0.0323
+      ],
+      "objectCount": 1
+    }
   ]
 }

@@ -5,6 +5,7 @@ export const OFFICIAL_HUMAN_ATLAS = {
   id: "vanatome-human",
   name: "Vanatome Human Atlas",
   version: "1.1.0",
+  buildId: "c87403fe2f003fba",
   catalogFile: "catalog.json",
 } as const;
 
@@ -22,6 +23,7 @@ export function createOfficialHumanAtlas(
     expectedAtlas: {
       id: OFFICIAL_HUMAN_ATLAS.id,
       version: OFFICIAL_HUMAN_ATLAS.version,
+      buildId: OFFICIAL_HUMAN_ATLAS.buildId,
     },
   });
 }
@@ -41,6 +43,7 @@ export function createDemoHumanAtlas(options?: {
     expectedAtlas: {
       id: OFFICIAL_HUMAN_ATLAS.id,
       version: OFFICIAL_HUMAN_ATLAS.version,
+      buildId: OFFICIAL_HUMAN_ATLAS.buildId,
     },
   });
 }

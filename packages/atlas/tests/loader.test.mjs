@@ -16,6 +16,7 @@ const catalog = {
     id: "vanatome-human",
     name: "Vanatome Human Atlas",
     version: "1.1.0",
+    buildId: "c87403fe2f003fba",
   },
   systems: [{ id: "cardiovascular", name: "Cardiovascular" }],
   layers: [{ id: "cardiovascular", name: "Cardiovascular" }],
@@ -42,15 +43,28 @@ const metadata = {
   schemaVersion: 1,
   atlasId: "vanatome-human",
   atlasVersion: "1.1.0",
+  buildId: "c87403fe2f003fba",
   bundleId: "cardiovascular",
+  nodeCount: 1,
   structures: [
+    {
+      id: "cardiovascular-system",
+      name: "Cardiovascular",
+      kind: "system",
+      system: "cardiovascular",
+      layer: "cardiovascular",
+      position: [0.16, 2.94, 0.17],
+      objectCount: 0,
+    },
     {
       id: "heart",
       name: "Heart",
+      kind: "organ",
       system: "cardiovascular",
       layer: "cardiovascular",
-      parentId: "thorax",
+      parentId: "cardiovascular-system",
       position: [0.16, 2.94, 0.17],
+      objectCount: 1,
     },
   ],
 };
@@ -122,7 +136,11 @@ test("loads a system lazily and returns a viewer-compatible atlas", async () => 
     loaded.atlas.modelUrl,
     "https://assets.example/atlas/1.1.0/cardiovascular.glb",
   );
-  assert.equal(loaded.atlas.structures[0].parentId, "thorax");
+  assert.equal(loaded.atlas.buildId, "c87403fe2f003fba");
+  assert.equal(
+    loaded.atlas.structures[1].parentId,
+    "cardiovascular-system",
+  );
   assert.equal(loaded.atlas.attribution, catalog.provenance.attribution);
   assert.deepEqual(states, [
     "loading-catalog",
@@ -157,7 +175,7 @@ test("rejects metadata that crosses a bundle system boundary", async () => {
             {
               ...metadata,
               structures: [
-                { ...metadata.structures[0], system: "respiratory" },
+                { ...metadata.structures[1], system: "respiratory" },
               ],
             },
             "",
@@ -184,20 +202,32 @@ test("repository demo catalog matches its metadata and immutable GLB", async () 
   const demoMetadata = JSON.parse(
     await readFile(new URL("full-body.metadata.json", demoDirectory), "utf8"),
   );
+  const releaseRegistry = JSON.parse(
+    await readFile(
+      new URL("../../../app/data/z-anatomy-registry.json", import.meta.url),
+      "utf8",
+    ),
+  );
   const model = await readFile(
     new URL("../../models/z-anatomy-full-body.glb", demoDirectory),
   );
+  const requests = [];
   const loader = createAtlasLoader({
     catalogUrl: "https://demo.local/atlas/demo-1.1.0/catalog.json",
-    fetch: async (input) =>
-      String(input).endsWith("catalog.json")
+    fetch: async (input) => {
+      requests.push(String(input));
+      return String(input).endsWith("catalog.json")
         ? jsonResponse(demoCatalog, "")
-        : jsonResponse(demoMetadata, ""),
+        : jsonResponse(demoMetadata, "");
+    },
   });
 
   const loaded = await loader.loadSystem("nervous");
+  const cached = await loader.loadSystem("digestive");
 
-  assert.equal(loaded.metadata.structures.length, 29);
+  assert.equal(loaded.metadata.buildId, "c87403fe2f003fba");
+  assert.equal(loaded.metadata.structures.length, 139);
+  assert.equal(loaded.metadata.nodeCount, 349);
   assert.equal(
     loaded.atlas.modelUrl,
     "https://demo.local/models/z-anatomy-full-body.glb",
@@ -207,4 +237,21 @@ test("repository demo catalog matches its metadata and immutable GLB", async () 
     loaded.descriptor.sha256,
   );
   assert.equal(model.length, loaded.descriptor.bytes);
+  assert.equal(cached, loaded);
+  assert.equal(requests.length, 2);
+  assert.deepEqual(
+    loaded.metadata.structures.map(
+      ({ id, name, kind, parentId, system, selectable, position, objectCount }) => ({
+        id,
+        name,
+        kind,
+        parentId: parentId ?? null,
+        system,
+        selectable,
+        position,
+        objectCount,
+      }),
+    ),
+    releaseRegistry.structures,
+  );
 });

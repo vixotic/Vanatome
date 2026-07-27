@@ -29,9 +29,18 @@ function isStructure(value: unknown): value is AnatomyStructure {
   return (
     isNonEmptyString(value.id) &&
     isNonEmptyString(value.name) &&
+    (value.kind === undefined ||
+      value.kind === "system" ||
+      value.kind === "organ" ||
+      value.kind === "part") &&
     isNonEmptyString(value.system) &&
     isNonEmptyString(value.layer) &&
     (value.parentId === undefined || isNonEmptyString(value.parentId)) &&
+    (value.selectable === undefined || typeof value.selectable === "boolean") &&
+    (value.objectCount === undefined ||
+      (typeof value.objectCount === "number" &&
+        Number.isInteger(value.objectCount) &&
+        value.objectCount >= 0)) &&
     Array.isArray(position) &&
     position.length === 3 &&
     position.every((part) => typeof part === "number" && Number.isFinite(part))
@@ -46,13 +55,28 @@ function isDescriptor(value: unknown): value is AtlasBundleDescriptor {
     isStringArray(value.systems) &&
     isStringArray(value.layers) &&
     isNonEmptyString(value.modelUrl) &&
-    isNonEmptyString(value.metadataUrl)
+    isNonEmptyString(value.metadataUrl) &&
+    (value.bytes === undefined ||
+      (typeof value.bytes === "number" &&
+        Number.isInteger(value.bytes) &&
+        value.bytes >= 0)) &&
+    (value.sha256 === undefined ||
+      (typeof value.sha256 === "string" &&
+        /^[a-f0-9]{64}$/u.test(value.sha256))) &&
+    (value.structureCount === undefined ||
+      (typeof value.structureCount === "number" &&
+        Number.isInteger(value.structureCount) &&
+        value.structureCount >= 0)) &&
+    (value.nodeCount === undefined ||
+      (typeof value.nodeCount === "number" &&
+        Number.isInteger(value.nodeCount) &&
+        value.nodeCount >= 0))
   );
 }
 
 function parseCatalog(
   value: unknown,
-  expectedAtlas?: { id: string; version?: string },
+  expectedAtlas?: { id: string; version?: string; buildId?: string },
 ): AtlasCatalog {
   if (
     !isRecord(value) ||
@@ -61,6 +85,7 @@ function parseCatalog(
     !isNonEmptyString(value.atlas.id) ||
     !isNonEmptyString(value.atlas.name) ||
     !isNonEmptyString(value.atlas.version) ||
+    !isNonEmptyString(value.atlas.buildId) ||
     !Array.isArray(value.systems) ||
     !value.systems.every(
       (system) =>
@@ -105,11 +130,13 @@ function parseCatalog(
     expectedAtlas &&
     (value.atlas.id !== expectedAtlas.id ||
       (expectedAtlas.version !== undefined &&
-        value.atlas.version !== expectedAtlas.version))
+        value.atlas.version !== expectedAtlas.version) ||
+      (expectedAtlas.buildId !== undefined &&
+        value.atlas.buildId !== expectedAtlas.buildId))
   ) {
     throw new AtlasLoaderError(
       "catalog-invalid",
-      `The atlas catalog does not match expected release ${expectedAtlas.id}@${expectedAtlas.version ?? "*"}.`,
+      `The atlas catalog does not match expected release ${expectedAtlas.id}@${expectedAtlas.version ?? "*"} (${expectedAtlas.buildId ?? "any build"}).`,
     );
   }
 
@@ -126,7 +153,11 @@ function parseMetadata(
     value.schemaVersion !== 1 ||
     value.atlasId !== catalog.atlas.id ||
     value.atlasVersion !== catalog.atlas.version ||
+    value.buildId !== catalog.atlas.buildId ||
     value.bundleId !== bundle.id ||
+    typeof value.nodeCount !== "number" ||
+    !Number.isInteger(value.nodeCount) ||
+    value.nodeCount < 0 ||
     !Array.isArray(value.structures) ||
     !value.structures.every(isStructure)
   ) {
@@ -137,6 +168,8 @@ function parseMetadata(
   }
 
   const structureIds = new Set<string>();
+  const structuresById = new Map<string, AnatomyStructure>();
+  let mappedNodeCount = 0;
   for (const structure of value.structures) {
     if (structureIds.has(structure.id)) {
       throw new AtlasLoaderError(
@@ -154,6 +187,46 @@ function parseMetadata(
       );
     }
     structureIds.add(structure.id);
+    structuresById.set(structure.id, structure);
+    mappedNodeCount += structure.objectCount ?? 0;
+  }
+
+  for (const structure of value.structures) {
+    if (structure.parentId && !structureIds.has(structure.parentId)) {
+      throw new AtlasLoaderError(
+        "metadata-invalid",
+        `Structure "${structure.id}" references missing parent "${structure.parentId}".`,
+      );
+    }
+    const ancestors = new Set<string>([structure.id]);
+    let parentId = structure.parentId;
+    while (parentId) {
+      if (ancestors.has(parentId)) {
+        throw new AtlasLoaderError(
+          "metadata-invalid",
+          `Structure "${structure.id}" belongs to a cyclic hierarchy.`,
+        );
+      }
+      ancestors.add(parentId);
+      parentId = structuresById.get(parentId)?.parentId;
+    }
+  }
+
+  if (mappedNodeCount !== value.nodeCount) {
+    throw new AtlasLoaderError(
+      "metadata-invalid",
+      `Bundle "${bundle.id}" node count does not match its structure metadata.`,
+    );
+  }
+  if (
+    (bundle.structureCount !== undefined &&
+      value.structures.length !== bundle.structureCount) ||
+    (bundle.nodeCount !== undefined && value.nodeCount !== bundle.nodeCount)
+  ) {
+    throw new AtlasLoaderError(
+      "metadata-invalid",
+      `Bundle "${bundle.id}" structure or node counts do not match its catalog descriptor.`,
+    );
   }
 
   return value as AtlasBundleMetadata;
@@ -189,6 +262,7 @@ export function createAtlasLoader(options: AtlasLoaderOptions): AtlasLoader {
   let state: AtlasLoaderState = { status: "idle" };
   let catalog: AtlasCatalog | undefined;
   let resolvedCatalogUrl = options.catalogUrl;
+  const loadedBundles = new Map<string, LoadedAtlasBundle>();
   const listeners = new Set<AtlasLoaderListener>();
 
   function setState(next: AtlasLoaderState): void {
@@ -259,6 +333,16 @@ export function createAtlasLoader(options: AtlasLoaderOptions): AtlasLoader {
       throw error;
     }
 
+    const cached = loadedBundles.get(bundle.id);
+    if (cached) {
+      setState({
+        status: "ready",
+        catalog: loadedCatalog,
+        bundle: cached,
+      });
+      return cached;
+    }
+
     setState({ status: "loading-bundle", catalog: loadedCatalog, bundle });
     try {
       const metadataUrl = resolveUrl(bundle.metadataUrl, resolvedCatalogUrl);
@@ -292,11 +376,13 @@ export function createAtlasLoader(options: AtlasLoaderOptions): AtlasLoader {
           id: `${loadedCatalog.atlas.id}:${bundle.id}`,
           name: `${loadedCatalog.atlas.name} — ${bundle.name}`,
           version: loadedCatalog.atlas.version,
+          buildId: loadedCatalog.atlas.buildId,
           modelUrl: resolveUrl(bundle.modelUrl, resolvedCatalogUrl),
           structures: metadata.structures,
           attribution: loadedCatalog.provenance.attribution,
         },
       };
+      loadedBundles.set(bundle.id, loaded);
       setState({
         status: "ready",
         catalog: loadedCatalog,

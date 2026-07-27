@@ -89,14 +89,16 @@ Calling a load method again provides an explicit retry path.
 
 `loadSystem("nervous")` resolves the catalog first, then fetches only the
 metadata for the bundle that declares that system. The viewer fetches that
-bundle's GLB only after its atlas object is rendered. A production catalog
-should map each selectively loadable system to one bundle. Use
-`loadBundle(bundleId)` for catalogs that intentionally split one system across
-multiple bundles.
+bundle's GLB only after its atlas object is rendered. Metadata and loaded
+bundles are cached by the loader, so another system lookup that resolves to the
+same bundle does not fetch its metadata again.
 
-The repository demo uses one existing full-body compatibility bundle, so all
-of its system lookups resolve to the same GLB. It demonstrates the catalog
-contract but does not pretend to provide production system-level splitting:
+The current `1.1.0` release exposes one curated full-body bundle: build
+`c87403fe2f003fba`, with 139 stable hierarchy structures mapped across 349 GLB
+nodes. Every system lookup resolves to that immutable bundle. Future catalogs
+can map systems to separate GLBs without changing the loader API; use
+`loadBundle(bundleId)` when a catalog intentionally splits one system across
+multiple bundles.
 
 ```ts
 import { createDemoHumanAtlas } from "@vixotic/vanatome-atlas";
@@ -110,12 +112,13 @@ const { atlas } = await demo.loadSystem("digestive");
 Copy a versioned directory to static hosting and keep released files immutable:
 
 ```text
-public/vanatome-atlas/1.1.0/
-├── catalog.json
-├── cardiovascular.glb
-├── cardiovascular.metadata.json
-├── nervous.glb
-└── nervous.metadata.json
+public/
+├── ATTRIBUTION.txt
+├── atlas/1.1.0/
+│   ├── catalog.json
+│   └── full-body.metadata.json
+└── models/
+    └── z-anatomy-full-body.glb
 ```
 
 Catalog URLs are resolved relative to the fetched `catalog.json`, so the whole
@@ -127,8 +130,10 @@ is required.
 
 Each structure ID is a public compatibility key used by glTF
 `extras.anatomyId`, selection state, URLs, and saved views. Keep IDs stable
-across compatible releases. Metadata supports `parentId`, system, and layer
-fields so hosts can build hierarchy and visibility controls.
+across compatible releases. Metadata includes `kind`, `parentId`, system,
+layer, selectable state, and mapped-node counts. The loader rejects missing
+parents, cycles, release build mismatches, or node-count drift before returning
+an atlas to the viewer.
 
 ## Licensing
 
