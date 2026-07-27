@@ -8,8 +8,12 @@ assets.
 ## Install
 
 ```bash
-npm install @vixotic/vanatome-atlas @vixotic/vanatome-react three @react-three/fiber @react-three/drei
+npm install @vixotic/vanatome-atlas @vixotic/vanatome-react@^0.1.3 react react-dom three @react-three/fiber @react-three/drei
 ```
+
+The Atlas package declares `@vixotic/vanatome-react` `^0.1.3` as a peer. Its
+build checks the returned atlas object against the published viewer contract
+without adding React or Three.js to the Atlas runtime.
 
 Vanatome does not yet operate a public hosted atlas endpoint. Choose a catalog
 URL you control; it can point at a CDN, object storage, or static files shipped

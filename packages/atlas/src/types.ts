@@ -1,3 +1,5 @@
+import type { VanatomeAtlas as PublishedViewerAtlas } from "@vixotic/vanatome-react";
+
 export type VanatomeVector3 = readonly [number, number, number];
 
 /**
@@ -87,7 +89,7 @@ export type AtlasBundleMetadata = {
  * The structural subset consumed by @vixotic/vanatome-react. It intentionally
  * has no runtime dependency on React or Three.js.
  */
-export type VanatomeViewerAtlas = {
+type VanatomeViewerAtlasContract = {
   id: string;
   name: string;
   version: string;
@@ -96,6 +98,11 @@ export type VanatomeViewerAtlas = {
   structures: readonly AnatomyStructure[];
   attribution: string;
 };
+
+export type VanatomeViewerAtlas =
+  VanatomeViewerAtlasContract extends PublishedViewerAtlas
+    ? VanatomeViewerAtlasContract
+    : never;
 
 export type LoadedAtlasBundle = {
   descriptor: AtlasBundleDescriptor;

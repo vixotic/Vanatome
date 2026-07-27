@@ -113,7 +113,7 @@ The separate `@vixotic/vanatome-atlas` package provides versioned catalog
 contracts and a browser loader without placing growing GLB files in npm:
 
 ```bash
-npm install @vixotic/vanatome-atlas @vixotic/vanatome-react
+npm install @vixotic/vanatome-atlas @vixotic/vanatome-react@^0.1.3 react react-dom three @react-three/fiber @react-three/drei
 ```
 
 ```tsx

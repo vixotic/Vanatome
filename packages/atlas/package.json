@@ -26,7 +26,11 @@
     "test": "npm run build && node --test tests/*.test.mjs",
     "prepack": "npm run test"
   },
+  "peerDependencies": {
+    "@vixotic/vanatome-react": "^0.1.3"
+  },
   "devDependencies": {
+    "@vixotic/vanatome-react": "0.1.3",
     "typescript": "^5.9.3"
   },
   "publishConfig": {
