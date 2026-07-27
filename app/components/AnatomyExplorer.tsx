@@ -23,18 +23,19 @@ import {
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
+import {
+  AtlasLoaderError,
+  createDemoHumanAtlas,
+  type AtlasLoaderState,
+  type LoadedAtlasBundle,
+} from "@vixotic/vanatome-atlas";
 import { useVanatomeController } from "@vixotic/vanatome-react";
 import type { VanatomeHierarchyNode } from "@vixotic/vanatome-react";
 import {
-  anatomyById,
-  anatomyHierarchy,
-  anatomyLayers,
-  anatomyRegistry,
-  atlasMappedNodeCount,
+  createAnatomyData,
+  type AnatomyData,
   type AnatomyStructure,
 } from "../data/anatomy";
-
-const initialLayers = anatomyLayers.map((layer) => layer.id);
 
 const AnatomyScene = dynamic(
   () => import("./AnatomyScene").then((module) => module.AnatomyScene),
@@ -50,6 +51,124 @@ const AnatomyScene = dynamic(
 );
 
 export function AnatomyExplorer() {
+  const loader = useMemo(() => createDemoHumanAtlas(), []);
+  const [loaderState, setLoaderState] = useState<AtlasLoaderState>(
+    loader.getState(),
+  );
+  const [bundle, setBundle] = useState<LoadedAtlasBundle | null>(null);
+  const [attempt, setAttempt] = useState(0);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const unsubscribe = loader.subscribe(setLoaderState);
+    void loader
+      .loadBundle("curated-full-body", { signal: controller.signal })
+      .then(setBundle)
+      .catch((reason: unknown) => {
+        if (
+          reason instanceof AtlasLoaderError &&
+          reason.code === "aborted"
+        ) {
+          return;
+        }
+      });
+    return () => {
+      unsubscribe();
+      controller.abort();
+    };
+  }, [attempt, loader]);
+
+  if (!bundle) {
+    return (
+      <AtlasLoadScreen
+        state={loaderState}
+        onRetry={() => setAttempt((value) => value + 1)}
+      />
+    );
+  }
+
+  return <LoadedAnatomyExplorer bundle={bundle} />;
+}
+
+function AtlasLoadScreen({
+  state,
+  onRetry,
+}: {
+  state: AtlasLoaderState;
+  onRetry: () => void;
+}) {
+  const failed = state.status === "error";
+  const message = state.status === "loading-bundle"
+    ? "Loading full-body anatomy"
+    : state.status === "catalog-ready"
+      ? "Preparing full-body anatomy"
+      : failed
+        ? "Atlas connection unavailable"
+        : "Loading atlas catalog";
+
+  return (
+    <main className="app-shell atlas-load-shell" aria-live="polite">
+      <div className="ambient ambient-one" />
+      <div className="ambient ambient-two" />
+      <header className="topbar">
+        <div className="brand">
+          <div className="brand-mark" aria-hidden="true">
+            <Box size={20} strokeWidth={1.6} />
+          </div>
+          <div>
+            <div className="brand-name">Vanatome</div>
+            <div className="brand-subtitle">HUMAN SYSTEMS ATLAS</div>
+          </div>
+        </div>
+        <div className={`status-pill ${failed ? "status-error" : ""}`}>
+          <span className="status-dot" />
+          {failed ? "ATLAS OFFLINE" : "ATLAS CONNECTING"}
+        </div>
+      </header>
+      <section className="atlas-load-state">
+        {!failed && <div className="scanner-ring" aria-hidden="true" />}
+        <span className="eyebrow">
+          {failed ? "CONNECTION ERROR" : "CURATED FULL-BODY RELEASE"}
+        </span>
+        <h1>{message}</h1>
+        <p>
+          {failed
+            ? state.error.message
+            : "Retrieving the versioned catalog and validated anatomy metadata."}
+        </p>
+        {failed && (
+          <button type="button" className="atlas-retry" onClick={onRetry}>
+            <RotateCcw size={15} />
+            RETRY ATLAS
+          </button>
+        )}
+      </section>
+      <footer className="footer">
+        <span>Z-ANATOMY • CURATED HUMAN ATLAS</span>
+        <a href="/ATTRIBUTION.txt" target="_blank" rel="noreferrer">
+          OPEN MODEL ATTRIBUTION
+        </a>
+      </footer>
+    </main>
+  );
+}
+
+function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
+  const anatomy = useMemo<AnatomyData>(
+    () => createAnatomyData(bundle),
+    [bundle],
+  );
+  const {
+    registry: anatomyRegistry,
+    byId: anatomyById,
+    hierarchy: anatomyHierarchy,
+    layers: anatomyLayers,
+    mappedNodeCount: atlasMappedNodeCount,
+  } = anatomy;
+  const initialLayers = useMemo(
+    () => anatomyLayers.map((layer) => layer.id),
+    [anatomyLayers],
+  );
   const viewer = useVanatomeController(initialLayers);
   const [query, setQuery] = useState("");
   const [leftOpen, setLeftOpen] = useState(true);
@@ -78,7 +197,7 @@ export function AnatomyExplorer() {
         organ.name.toLowerCase().includes(needle) ||
         organ.system.toLowerCase().includes(needle),
     );
-  }, [query]);
+  }, [anatomyRegistry, query]);
 
   const choose = (id: string | null) => {
     viewer.select(id);
@@ -293,6 +412,7 @@ export function AnatomyExplorer() {
 
         <section className="viewer" aria-label="Interactive 3D human anatomy model">
           <AnatomyScene
+            atlas={anatomy.atlas}
             selectedId={viewer.selectedId}
             isolatedId={viewer.isolatedId}
             visibleLayers={viewer.visibleLayers}
@@ -446,7 +566,7 @@ export function AnatomyExplorer() {
 
       <footer className="footer">
         <span>Z-ANATOMY MODEL • {atlasMappedNodeCount} MAPPED NODES • FULL-BODY SHELL</span>
-        <a href="/ATTRIBUTION.txt" target="_blank" rel="noreferrer">
+        <a href={anatomy.attributionUrl} target="_blank" rel="noreferrer">
           OPEN MODEL ATTRIBUTION
         </a>
       </footer>

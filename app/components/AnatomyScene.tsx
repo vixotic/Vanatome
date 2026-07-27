@@ -1,9 +1,12 @@
 "use client";
 
-import { VanatomeViewer } from "@vixotic/vanatome-react";
-import { vanatomeAtlas } from "../data/anatomy";
+import {
+  VanatomeViewer,
+  type VanatomeAtlas,
+} from "@vixotic/vanatome-react";
 
 type Props = {
+  atlas: VanatomeAtlas;
   selectedId: string | null;
   isolatedId: string | null;
   visibleLayers: readonly string[];
@@ -12,10 +15,10 @@ type Props = {
   onSelect: (id: string | null) => void;
 };
 
-export function AnatomyScene(props: Props) {
+export function AnatomyScene({ atlas, ...props }: Props) {
   return (
     <VanatomeViewer
-      atlas={vanatomeAtlas}
+      atlas={atlas}
       modelScale={7}
       modelPosition={[0, -6.1, 0]}
       initialCameraPosition={[0, 0, 18]}

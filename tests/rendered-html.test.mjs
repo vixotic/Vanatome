@@ -22,7 +22,7 @@ async function render() {
   );
 }
 
-test("server-renders the anatomy explorer shell", async () => {
+test("server-renders the atlas loading shell", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -30,19 +30,10 @@ test("server-renders the anatomy explorer shell", async () => {
   const html = await response.text();
   assert.match(html, /<title>Vanatome \/\/ Human Anatomy Explorer<\/title>/i);
   assert.match(html, /Vanatome/);
-  assert.match(html, /Search anatomy/);
-  assert.match(html, /Anatomy layers/);
-  assert.match(html, /HIERARCHY/);
-  assert.match(html, /Cardiovascular/);
-  assert.match(html, /Digestive/);
-  assert.match(html, /Nervous/);
-  assert.match(html, /Skeletal/);
-  assert.match(html, /Heart/);
-  assert.match(html, /role="tree"/);
-  assert.match(html, /Interactive 3D human anatomy model/);
-  assert.match(html, /No structure selected/);
-  assert.match(html, /Educational visualization/);
-  assert.match(html, />349</);
-  assert.match(html, /MAPPED NODES/);
+  assert.match(html, /ATLAS CONNECTING/);
+  assert.match(html, /CURATED FULL-BODY RELEASE/);
+  assert.match(html, /Loading atlas catalog/);
+  assert.match(html, /versioned catalog and validated anatomy metadata/i);
+  assert.match(html, /OPEN MODEL ATTRIBUTION/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });

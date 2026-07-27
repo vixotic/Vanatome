@@ -4,7 +4,10 @@ import {
   type VanatomeHierarchyNode,
   type VanatomeStructure,
 } from "@vixotic/vanatome-react";
-import releaseRegistry from "./z-anatomy-registry.json";
+import type {
+  AnatomyStructure as AtlasStructure,
+  LoadedAtlasBundle,
+} from "@vixotic/vanatome-atlas";
 
 export type AnatomyRegion = "head" | "thorax" | "abdomen" | "pelvis";
 
@@ -17,38 +20,26 @@ export type AnatomyStructure = VanatomeStructure & {
   fact: NonNullable<VanatomeStructure["fact"]>;
 };
 
-type ReleasedStructure = Omit<AnatomyStructure, "position" | "scale">;
-
-type ReleaseRegistryStructure = {
-  id: string;
-  name?: string;
-  kind?: "system" | "organ" | "part";
-  parentId?: string | null;
-  system: string;
-  selectable?: boolean;
-  position: [number, number, number];
-  objectCount: number;
+type CuratedStructure = Omit<AnatomyStructure, "position" | "scale"> & {
+  position?: [number, number, number];
+  scale?: [number, number, number];
 };
 
-const releasedStructures = releaseRegistry.structures as ReleaseRegistryStructure[];
-const releasedById = new Map(
-  releasedStructures.map((structure) => [structure.id, structure]),
-);
+export type AnatomyData = {
+  registry: AnatomyStructure[];
+  byId: Record<string, AnatomyStructure>;
+  hierarchy: VanatomeHierarchyNode[];
+  layers: readonly { id: string; label: string }[];
+  mappedNodeCount: number;
+  atlas: VanatomeAtlas;
+  attributionUrl: string;
+};
 
-function releasedStructure(structure: ReleasedStructure): AnatomyStructure {
-  const released = releasedById.get(structure.id);
-  if (!released) {
-    throw new Error(`Released atlas registry is missing ${structure.id}`);
-  }
-  return {
-    ...structure,
-    parentId: released.parentId ?? structure.parentId,
-    position: released.position as [number, number, number],
-    scale: [1, 1, 1],
-  };
+function releasedStructure(structure: CuratedStructure): CuratedStructure {
+  return structure;
 }
 
-const curatedRegistry: AnatomyStructure[] = [
+const curatedRegistry: CuratedStructure[] = [
   {
     id: "heart",
     name: "Heart",
@@ -391,17 +382,6 @@ const curatedRegistry: AnatomyStructure[] = [
   }),
 ];
 
-const normalizedCuratedRegistry = curatedRegistry.map((structure) => {
-  const released = releasedById.get(structure.id);
-  return released
-    ? {
-        ...structure,
-        parentId: released.parentId ?? structure.parentId,
-        position: released.position,
-      }
-    : structure;
-});
-
 const systemColors: Record<string, string> = {
   cardiovascular: "#ff4f87",
   respiratory: "#63e6ff",
@@ -427,60 +407,7 @@ function systemName(value: string) {
     .join(" ");
 }
 
-const curatedById = new Map(
-  normalizedCuratedRegistry.map((structure) => [structure.id, structure]),
-);
-
-function nearestCuratedAncestor(structure: ReleaseRegistryStructure) {
-  let parentId = structure.parentId;
-  while (parentId) {
-    const curated = curatedById.get(parentId);
-    if (curated) return curated;
-    parentId = releasedById.get(parentId)?.parentId;
-  }
-  return undefined;
-}
-
-const generatedRegistry: AnatomyStructure[] = releasedStructures
-  .filter((structure) => structure.selectable !== false && !curatedById.has(structure.id))
-  .map((structure) => {
-    const ancestor = nearestCuratedAncestor(structure);
-    const name = displayName(structure.name ?? structure.id);
-    const system = systemName(structure.system);
-    const parentName = structure.parentId
-      ? displayName(releasedById.get(structure.parentId)?.name ?? structure.parentId)
-      : system;
-    return {
-      id: structure.id,
-      name,
-      system,
-      layer: structure.system,
-      parentId: structure.parentId ?? undefined,
-      color: ancestor?.color ?? systemColors[structure.system] ?? "#58e7ff",
-      position: structure.position,
-      scale: [1, 1, 1],
-      summary: structure.kind === "system"
-        ? `${name} structures available in the current atlas.`
-        : `${name}, represented as part of ${parentName}.`,
-      function: ancestor?.function ?? `Explore the mapped anatomy of the ${name.toLowerCase()}.`,
-      fact: ancestor?.fact ?? `This structure retains its own stable atlas identifier and selectable mesh.`,
-    };
-  });
-
-export const anatomyRegistry: AnatomyStructure[] = [
-  ...normalizedCuratedRegistry,
-  ...generatedRegistry,
-];
-
-export const anatomyById = Object.fromEntries(
-  anatomyRegistry.map((structure) => [structure.id, structure]),
-) as Record<string, AnatomyStructure>;
-
-export const anatomyHierarchy = createVanatomeHierarchy(
-  anatomyRegistry,
-) as VanatomeHierarchyNode[];
-
-export const anatomyLayers = [
+const layerDefinitions = [
   { id: "cardiovascular", label: "Cardio" },
   { id: "respiratory", label: "Respiratory" },
   { id: "digestive", label: "Digestive" },
@@ -490,16 +417,100 @@ export const anatomyLayers = [
   { id: "skeletal", label: "Skeletal" },
 ] as const;
 
-export const atlasMappedNodeCount = releaseRegistry.structures.reduce(
-  (total, structure) => total + structure.objectCount,
-  0,
-);
+export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
+  const releasedStructures = bundle.metadata.structures;
+  const releasedById = new Map(
+    releasedStructures.map((structure) => [structure.id, structure]),
+  );
 
-export const vanatomeAtlas: VanatomeAtlas = {
-  id: "vanatome-human",
-  name: "Vanatome Human Atlas",
-  version: releaseRegistry.atlasVersion,
-  modelUrl: "/models/z-anatomy-full-body.glb",
-  structures: anatomyRegistry,
-  attribution: "Z-Anatomy contributors, CC BY-SA 4.0",
-};
+  const normalizedCuratedRegistry = curatedRegistry.map((structure) => {
+    const released = releasedById.get(structure.id);
+    if (!released) {
+      throw new Error(`Loaded atlas metadata is missing ${structure.id}`);
+    }
+    return {
+      ...structure,
+      parentId: released.parentId ?? structure.parentId,
+      layer: released.layer,
+      position: [...released.position] as [number, number, number],
+      scale: [1, 1, 1] as [number, number, number],
+    };
+  });
+
+  const curatedById = new Map(
+    normalizedCuratedRegistry.map((structure) => [structure.id, structure]),
+  );
+
+  function nearestCuratedAncestor(structure: AtlasStructure) {
+    let parentId = structure.parentId;
+    while (parentId) {
+      const curated = curatedById.get(parentId);
+      if (curated) return curated;
+      parentId = releasedById.get(parentId)?.parentId;
+    }
+    return undefined;
+  }
+
+  const generatedRegistry: AnatomyStructure[] = releasedStructures
+    .filter(
+      (structure) =>
+        structure.selectable !== false && !curatedById.has(structure.id),
+    )
+    .map((structure) => {
+      const ancestor = nearestCuratedAncestor(structure);
+      const name = displayName(structure.name ?? structure.id);
+      const system = systemName(structure.system);
+      const parentName = structure.parentId
+        ? displayName(
+            releasedById.get(structure.parentId)?.name ?? structure.parentId,
+          )
+        : system;
+      return {
+        id: structure.id,
+        name,
+        system,
+        layer: structure.layer,
+        parentId: structure.parentId,
+        color: ancestor?.color ?? structure.color ??
+          systemColors[structure.system] ?? "#58e7ff",
+        position: [...structure.position] as [number, number, number],
+        scale: [1, 1, 1],
+        summary: structure.summary ??
+          (structure.kind === "system"
+            ? `${name} structures available in the current atlas.`
+            : `${name}, represented as part of ${parentName}.`),
+        function: structure.function ?? ancestor?.function ??
+          `Explore the mapped anatomy of the ${name.toLowerCase()}.`,
+        fact: structure.fact ?? ancestor?.fact ??
+          "This structure retains its own stable atlas identifier and selectable mesh.",
+      };
+    });
+
+  const registry: AnatomyStructure[] = [
+    ...normalizedCuratedRegistry,
+    ...generatedRegistry,
+  ];
+  const byId = Object.fromEntries(
+    registry.map((structure) => [structure.id, structure]),
+  ) as Record<string, AnatomyStructure>;
+  const hierarchy = createVanatomeHierarchy(
+    registry,
+  ) as VanatomeHierarchyNode[];
+  const availableLayers = new Set(bundle.descriptor.layers);
+  const layers = layerDefinitions.filter((layer) =>
+    availableLayers.has(layer.id)
+  );
+
+  return {
+    registry,
+    byId,
+    hierarchy,
+    layers,
+    mappedNodeCount: bundle.metadata.nodeCount,
+    atlas: {
+      ...bundle.atlas,
+      structures: registry,
+    },
+    attributionUrl: bundle.provenance.noticeUrl ?? "/ATTRIBUTION.txt",
+  };
+}

@@ -732,6 +732,70 @@ button {
   color: var(--cyan);
 }
 
+.atlas-load-shell {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.atlas-load-state {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 13px;
+  padding: 32px;
+  text-align: center;
+}
+
+.atlas-load-state h1 {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 48px);
+  font-weight: 280;
+  letter-spacing: -0.04em;
+}
+
+.atlas-load-state p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.status-pill.status-error {
+  border-color: rgba(255, 103, 133, 0.32);
+  color: #ff8da4;
+  background: rgba(255, 79, 115, 0.07);
+}
+
+.status-error .status-dot {
+  background: #ff5d7d;
+  box-shadow: 0 0 10px #ff5d7d;
+  animation: none;
+}
+
+.atlas-retry {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(88, 231, 255, 0.35);
+  background: rgba(88, 231, 255, 0.07);
+  color: var(--cyan);
+  padding: 10px 14px;
+  cursor: pointer;
+  font: 9px var(--font-geist-mono);
+  letter-spacing: 0.13em;
+}
+
+.atlas-retry:hover,
+.atlas-retry:focus-visible {
+  border-color: var(--cyan);
+  background: rgba(88, 231, 255, 0.13);
+  outline: none;
+}
+
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
