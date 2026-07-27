@@ -15,9 +15,9 @@ The Atlas package declares `@vixotic/vanatome-react` `^0.1.3` as a peer. Its
 build checks the returned atlas object against the published viewer contract
 without adding React or Three.js to the Atlas runtime.
 
-Vanatome does not yet operate a public hosted atlas endpoint. Choose a catalog
-URL you control; it can point at a CDN, object storage, or static files shipped
-with your application.
+Use the official public catalog or choose a catalog URL you control. A custom
+URL can point at another CDN, object store, or static files shipped with your
+application.
 
 ```tsx
 import { useEffect, useState } from "react";
@@ -29,7 +29,8 @@ import {
 import { VanatomeViewer } from "@vixotic/vanatome-react";
 
 const humanAtlas = createOfficialHumanAtlas({
-  catalogUrl: "/vanatome-atlas/1.1.0/catalog.json",
+  catalogUrl:
+    "https://atlas.vanatome.vixotic.in/releases/1.1.0/catalog.json",
 });
 
 export function CardiovascularAtlas() {

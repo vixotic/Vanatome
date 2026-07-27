@@ -14,17 +14,10 @@ Changing an anatomy ID is an atlas compatibility change and requires review.
 - A local Z-Anatomy `Startup.blend` obtained from the upstream project.
 - Node.js 22.13 or newer.
 
-The initial source used to prove this pipeline was:
-
-`/Users/vix/Documents/Codex/2026-07-26/anatomy-hologram-explorer/work/z-anatomy-source/Z-Anatomy/Startup.blend`
-
-That local path is documentation, not build input. The deterministic manifest
-records the source filename and SHA-256, never a machine-specific absolute path.
-No separate downloaded archive was present in the inspected source workspace;
-the extracted `Startup.blend` was the only conversion source payload.
-The previous one-off scripts and inspection logs remain ignored in
-`/Users/vix/Documents/Vanatomi/work/`; reusable behavior now lives under
-`tools/anatomy/`.
+The initial pipeline proof used an extracted `Startup.blend` as its only source
+payload. The deterministic manifest records the source filename and SHA-256,
+never a machine-specific absolute path. Local inspection output remains ignored
+under `work/`; reusable behavior lives under `tools/anatomy/`.
 
 ## Stage and validate
 

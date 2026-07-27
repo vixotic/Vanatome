@@ -35,5 +35,9 @@ test("server-renders the atlas loading shell", async () => {
   assert.match(html, /Loading atlas catalog/);
   assert.match(html, /versioned catalog and validated anatomy metadata/i);
   assert.match(html, /OPEN MODEL ATTRIBUTION/);
-  assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
+  assert.match(
+    html,
+    /https:\/\/atlas\.vanatome\.vixotic\.in\/ATTRIBUTION\.txt/,
+  );
+  assert.doesNotMatch(html, /react-loading-skeleton/i);
 });

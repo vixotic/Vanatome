@@ -25,7 +25,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import {
   AtlasLoaderError,
-  createDemoHumanAtlas,
+  createOfficialHumanAtlas,
   type AtlasLoaderState,
   type LoadedAtlasBundle,
 } from "@vixotic/vanatome-atlas";
@@ -36,6 +36,10 @@ import {
   type AnatomyData,
   type AnatomyStructure,
 } from "../data/anatomy";
+import {
+  ATLAS_ATTRIBUTION_URL,
+  ATLAS_CATALOG_URL,
+} from "../config/atlas";
 
 const AnatomyScene = dynamic(
   () => import("./AnatomyScene").then((module) => module.AnatomyScene),
@@ -51,7 +55,10 @@ const AnatomyScene = dynamic(
 );
 
 export function AnatomyExplorer() {
-  const loader = useMemo(() => createDemoHumanAtlas(), []);
+  const loader = useMemo(
+    () => createOfficialHumanAtlas({ catalogUrl: ATLAS_CATALOG_URL }),
+    [],
+  );
   const [loaderState, setLoaderState] = useState<AtlasLoaderState>(
     loader.getState(),
   );
@@ -145,7 +152,7 @@ function AtlasLoadScreen({
       </section>
       <footer className="footer">
         <span>Z-ANATOMY • CURATED HUMAN ATLAS</span>
-        <a href="/ATTRIBUTION.txt" target="_blank" rel="noreferrer">
+        <a href={ATLAS_ATTRIBUTION_URL} target="_blank" rel="noreferrer">
           OPEN MODEL ATTRIBUTION
         </a>
       </footer>

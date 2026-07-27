@@ -9,7 +9,8 @@
 A focused anatomy product and embeddable React viewer powered by a curated,
 Z-Anatomy-derived atlas.
 
-[Quick start](#quick-start) · [Viewer package](#embed-vanatome) ·
+[Live demo](https://vanatome.vixotic.in) · [Quick start](#quick-start) ·
+[Viewer package](#embed-vanatome) ·
 [Atlas package](#load-the-human-atlas) ·
 [Atlas contract](docs/atlas-contract.md) · [Contributing](CONTRIBUTING.md)
 
@@ -121,20 +122,21 @@ import { createOfficialHumanAtlas } from "@vixotic/vanatome-atlas";
 import { VanatomeViewer } from "@vixotic/vanatome-react";
 
 const humanAtlas = createOfficialHumanAtlas({
-  catalogUrl: "/vanatome-atlas/1.1.0/catalog.json",
+  catalogUrl:
+    "https://atlas.vanatome.vixotic.in/releases/1.1.0/catalog.json",
 });
 
 const { atlas } = await humanAtlas.loadSystem("cardiovascular");
 // <VanatomeViewer atlas={atlas} />
 ```
 
-There is no Vanatome-operated public atlas endpoint yet. Consumers explicitly
-choose a versioned catalog URL and can self-host the catalog, metadata, and GLBs
-on any static host. The repository includes a clearly labeled full-body demo
-catalog at `/atlas/demo-1.1.0/catalog.json`. It exposes the validated
-hierarchy-aware `1.1.0` release (build `c87403fe2f003fba`) as one lazy-loaded
-curated bundle with 139 stable hierarchy entries mapped across 349 GLB nodes.
-See the
+The official public catalog is served from
+`atlas.vanatome.vixotic.in`. Consumers can use that immutable release or
+self-host the same catalog, metadata, attribution, and GLB files on any static
+host. The repository retains the same full-body catalog locally for development
+and release validation. It exposes the hierarchy-aware `1.1.0` release (build
+`c87403fe2f003fba`) as one lazy-loaded curated bundle with 139 stable hierarchy
+entries mapped across 349 GLB nodes. See the
 [`@vixotic/vanatome-atlas` README](packages/atlas/README.md) for loading states,
 selective bundle loading, and self-hosting.
 
@@ -183,7 +185,9 @@ asset provenance explicit while allowing fully static or offline hosting.
 
 The Vanatome product demo consumes this same package through the repository
 workspace. Its production build and interaction surface act as the reference
-integration for selection, focus, isolation, reset, hierarchy, and layers.
+integration for selection, focus, isolation, reset, hierarchy, and layers. The
+deployed demo loads its validated anatomy release from Cloudflare R2; local
+development uses the equivalent checked-in release fixture.
 
 ## Atlas conversion
 
