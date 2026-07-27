@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "buildId": "c87403fe2f003fba"
+  },
+  "systems": [
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular"
+    },
+    {
+      "id": "digestive",
+      "name": "Digestive"
+    },
+    {
+      "id": "lymphatic",
+      "name": "Lymphatic"
+    },
+    {
+      "id": "nervous",
+      "name": "Nervous"
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory"
+    },
+    {
+      "id": "skeletal",
+      "name": "Skeletal"
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary"
+    },
+    {
+      "id": "regional-anatomy",
+      "name": "Regional Anatomy"
+    }
+  ],
+  "layers": [
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular"
+    },
+    {
+      "id": "digestive",
+      "name": "Digestive"
+    },
+    {
+      "id": "lymphatic",
+      "name": "Lymphatic"
+    },
+    {
+      "id": "nervous",
+      "name": "Nervous"
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory"
+    },
+    {
+      "id": "skeletal",
+      "name": "Skeletal"
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary"
+    },
+    {
+      "id": "regional-anatomy",
+      "name": "Regional Anatomy"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "curated-full-body",
+      "name": "Curated full-body atlas",
+      "systems": [
+        "cardiovascular",
+        "digestive",
+        "lymphatic",
+        "nervous",
+        "respiratory",
+        "skeletal",
+        "urinary",
+        "regional-anatomy"
+      ],
+      "layers": [
+        "cardiovascular",
+        "digestive",
+        "lymphatic",
+        "nervous",
+        "respiratory",
+        "skeletal",
+        "urinary",
+        "regional-anatomy"
+      ],
+      "modelUrl": "../../models/z-anatomy-full-body.glb",
+      "metadataUrl": "./full-body.metadata.json",
+      "bytes": 11097068,
+      "sha256": "929675931c5dedc39cb2f402eefaf4de092b39c0c503997192f152a0ca79c462",
+      "structureCount": 139,
+      "nodeCount": 349
+    }
+  ],
+  "provenance": {
+    "sourceName": "Z-Anatomy",
+    "sourceUrl": "https://github.com/Z-Anatomy/Models",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy.",
+    "modifications": [
+      "Web export",
+      "Stable structure and hierarchy identifiers",
+      "Material adjustments",
+      "Curve-to-mesh conversion",
+      "Geometry optimization"
+    ],
+    "noticeUrl": "../../ATTRIBUTION.txt"
+  }
+}

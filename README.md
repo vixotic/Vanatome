@@ -10,6 +10,7 @@ A focused anatomy product and embeddable React viewer powered by a curated,
 Z-Anatomy-derived atlas.
 
 [Quick start](#quick-start) · [Viewer package](#embed-vanatome) ·
+[Atlas package](#load-the-human-atlas) ·
 [Atlas contract](docs/atlas-contract.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
@@ -52,9 +53,7 @@ npm test
 
 ## Embed Vanatome
 
-The React package is prepared for npm as `@vixotic/vanatome-react`.
-
-After the first public release, install it with:
+Install the published React viewer:
 
 ```bash
 npm install @vixotic/vanatome-react three @react-three/fiber @react-three/drei
@@ -108,6 +107,37 @@ search, breadcrumbs, hierarchy, layer switches, isolate/reset controls, and
 sidebar content fully composable. See the [atlas contract](docs/atlas-contract.md)
 for required metadata and glTF `anatomyId` extras.
 
+## Load the human atlas
+
+The separate `@vixotic/vanatome-atlas` package provides versioned catalog
+contracts and a browser loader without placing growing GLB files in npm:
+
+```bash
+npm install @vixotic/vanatome-atlas @vixotic/vanatome-react@^0.1.3 react react-dom three @react-three/fiber @react-three/drei
+```
+
+```tsx
+import { createOfficialHumanAtlas } from "@vixotic/vanatome-atlas";
+import { VanatomeViewer } from "@vixotic/vanatome-react";
+
+const humanAtlas = createOfficialHumanAtlas({
+  catalogUrl: "/vanatome-atlas/1.1.0/catalog.json",
+});
+
+const { atlas } = await humanAtlas.loadSystem("cardiovascular");
+// <VanatomeViewer atlas={atlas} />
+```
+
+There is no Vanatome-operated public atlas endpoint yet. Consumers explicitly
+choose a versioned catalog URL and can self-host the catalog, metadata, and GLBs
+on any static host. The repository includes a clearly labeled full-body demo
+catalog at `/atlas/demo-1.1.0/catalog.json`. It exposes the validated
+hierarchy-aware `1.1.0` release (build `c87403fe2f003fba`) as one lazy-loaded
+curated bundle with 139 stable hierarchy entries mapped across 349 GLB nodes.
+See the
+[`@vixotic/vanatome-atlas` README](packages/atlas/README.md) for loading states,
+selective bundle loading, and self-hosting.
+
 ## Interaction guide
 
 - Drag to orbit and scroll or pinch to zoom.
@@ -145,6 +175,11 @@ for professional medical guidance.
 
 The package is browser-only at render time, has no Next.js dependency, and loads
 static glTF assets from a URL supplied by the host.
+
+`@vixotic/vanatome-atlas` resolves a small versioned catalog, lazy-loads bundle
+metadata, and returns an atlas object compatible with the React viewer. Its
+catalog contracts keep stable anatomy IDs, hierarchy, systems, layers, and
+asset provenance explicit while allowing fully static or offline hosting.
 
 The Vanatome product demo consumes this same package through the repository
 workspace. Its production build and interaction surface act as the reference

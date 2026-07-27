@@ -1,8 +1,31 @@
-# Vanatome atlas contract
+# Vanatome atlas and catalog contract
 
-A Vanatome atlas is a curated, versioned pair: one browser-ready glTF model and
-one typed metadata registry. The viewer is intentionally designed for Vanatome
-human anatomy data, not arbitrary uploaded 3D models.
+A viewer atlas is a curated, versioned pair: one browser-ready glTF model and one
+typed metadata registry. A release catalog can describe several of these
+bundles so applications load only the anatomy systems they need. The viewer is
+intentionally designed for Vanatome human anatomy data, not arbitrary uploaded
+3D models.
+
+## Catalog loading
+
+`@vixotic/vanatome-atlas` resolves catalog-relative metadata and model URLs and
+returns a viewer-compatible atlas:
+
+```ts
+import { createOfficialHumanAtlas } from "@vixotic/vanatome-atlas";
+
+const humanAtlas = createOfficialHumanAtlas({
+  catalogUrl: "/vanatome-atlas/1.1.0/catalog.json",
+});
+const { atlas, provenance } =
+  await humanAtlas.loadSystem("cardiovascular");
+```
+
+Vanatome does not currently publish a default hosted catalog URL. The explicit
+URL is the production seam for a consumer-controlled CDN, static directory, or
+offline cache. Released catalog directories should be immutable. The repository
+demo catalog exposes the validated `1.1.0` release as a curated full-body bundle;
+it is not a claim of a hosted or system-split production service.
 
 ## Metadata
 
@@ -42,7 +65,11 @@ change because selections, URLs, saved views, and glTF nodes may refer to it.
 Positions are model-space camera targets. `parentId` is optional and drives
 recursive hierarchy views. A parent structure may have no mesh of its own: it
 acts as an aggregate whose selection, focus, and isolation include all mapped
-descendants.
+descendants. Catalog bundles declare their system and layer coverage; bundle
+metadata repeats those values per structure so consumers can validate and
+present the hierarchy without inspecting a GLB. Bundle metadata also carries
+the validated release build ID and mapped-node count; the loader rejects drift
+from the catalog before returning a viewer atlas.
 
 ## glTF
 
@@ -68,9 +95,10 @@ version.
 
 ## Licensing boundary
 
-`@vixotic/vanatome-react` is viewer code. Atlas models and related metadata are data
-artifacts with their own provenance and license notices. A distributor of a
-Z-Anatomy-derived atlas should preserve attribution, identify modifications,
-link to CC BY-SA 4.0, and apply its ShareAlike requirements to the adapted atlas
-material. See the repository’s `ASSET-LICENSE.md`; consult the source licenses
-for the authoritative terms.
+`@vixotic/vanatome-react` and `@vixotic/vanatome-atlas` are software packages.
+Atlas models, catalogs, and related metadata are separate data artifacts with
+their own provenance and license notices. A distributor of a Z-Anatomy-derived
+atlas should preserve attribution, identify modifications, link to CC BY-SA
+4.0, and apply its ShareAlike requirements to the adapted atlas material. See
+the repository’s `ASSET-LICENSE.md`; consult the source licenses for the
+authoritative terms.
