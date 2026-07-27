@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Vanatome // Human Anatomy Explorer",
   description:
-    "A cinematic, interactive 3D atlas with a full-body holographic shell and selectable torso organs.",
+    "A recursive, interactive 3D atlas for exploring anatomical systems, organs, and their selectable parts.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

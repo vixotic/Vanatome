@@ -22,6 +22,18 @@ export async function sha256File(path) {
   return sha256(await readFile(path));
 }
 
+export function stablePartId(parentId, sourceName) {
+  const normalized = sourceName
+    .replace(/\.l$/iu, " left")
+    .replace(/\.r$/iu, " right")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/gu, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/gu, "-")
+    .replace(/^-|-$/gu, "");
+  return `${parentId}-${normalized}`;
+}
+
 export function parseGlbJson(buffer) {
   if (buffer.length < 20 || buffer.toString("utf8", 0, 4) !== "glTF") {
     throw new Error("Asset is not a valid binary glTF file");
@@ -53,6 +65,12 @@ export function assertConfig(config, batchId) {
     if (!group.system || hasSourceObjects === hasSourceSelector) {
       errors.push(`${group.id}: system and exactly one source definition are required`);
     }
+    if (group.expandSourceParts && group.sourceObjects) {
+      const partIds = group.sourceObjects.map((name) => stablePartId(group.id, name));
+      if (new Set(partIds).size !== partIds.length) {
+        errors.push(`${group.id}: expanded source objects produce duplicate stable IDs`);
+      }
+    }
   }
   if (errors.length) throw new Error(errors.join("\n"));
   return batch;
@@ -70,7 +88,6 @@ export async function validateStaging({
   const asset = await readFile(`${directory}/atlas.glb`);
   const gltf = parseGlbJson(asset);
   const errors = [];
-  const expectedIds = batch.groups.map((group) => group.id);
   const derivedBuildId = sha256(canonicalJson({
     atlas: config.atlas,
     batch: batchId,
@@ -82,6 +99,7 @@ export async function validateStaging({
     .filter((node) => node.extras?.anatomyId)
     .map((node) => ({ id: node.extras.anatomyId, name: node.name }));
   const actualIds = [...new Set(nodeRows.map((node) => node.id))].sort();
+  const expectedIds = [];
 
   if (manifest.schemaVersion !== 1) errors.push("manifest schemaVersion must be 1");
   if (manifest.build.id !== buildId) errors.push("manifest build ID does not match staging directory");
@@ -96,7 +114,6 @@ export async function validateStaging({
   if (asset.length > batch.validation.maximumAssetBytes) errors.push("asset exceeds configured maximum size");
   if (manifest.objectCount !== batch.validation.expectedObjectCount) errors.push("object count does not match validation gate");
   if (nodeRows.length !== batch.validation.expectedObjectCount) errors.push("GLB anatomy node count does not match validation gate");
-  if (JSON.stringify(actualIds) !== JSON.stringify([...expectedIds].sort())) errors.push("GLB anatomy IDs do not match config");
   for (const [name, fingerprint] of Object.entries(manifest.build.fingerprints ?? {})) {
     if (!/^[a-f0-9]{64}$/u.test(fingerprint)) errors.push(`${name}: invalid SHA-256 fingerprint`);
   }
@@ -108,19 +125,24 @@ export async function validateStaging({
 
   for (const group of batch.groups) {
     const sourceObjects = group.sourceObjects ?? manifest.groups[group.id]?.sourceObjects ?? [];
-    const expectedNames = sourceObjects
-      .map((name) => `${group.id}__${name}`)
-      .sort();
-    const actualNames = nodeRows
-      .filter((node) => node.id === group.id)
-      .map((node) => node.name)
-      .sort();
-    if (JSON.stringify(actualNames) !== JSON.stringify(expectedNames)) {
-      errors.push(`${group.id}: exported nodes do not match configured source objects`);
+    const expand = group.expandSourceParts && sourceObjects.length > 1;
+    for (const sourceName of sourceObjects) {
+      const anatomyId = expand ? stablePartId(group.id, sourceName) : group.id;
+      expectedIds.push(anatomyId);
+      const expectedName = `${anatomyId}__${sourceName}`;
+      const matchingNodes = nodeRows.filter(
+        (node) => node.id === anatomyId && node.name === expectedName,
+      );
+      if (matchingNodes.length !== 1) {
+        errors.push(`${anatomyId}: exported node does not match ${sourceName}`);
+      }
     }
     if (manifest.groups[group.id]?.missing?.length) {
       errors.push(`${group.id}: source objects are missing`);
     }
+  }
+  if (JSON.stringify(actualIds) !== JSON.stringify([...new Set(expectedIds)].sort())) {
+    errors.push("GLB anatomy IDs do not match expanded config");
   }
   if (errors.length) throw new Error(errors.join("\n"));
   return {

@@ -1,7 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { assertConfig, canonicalJson, parseGlbJson, sha256 } from "../lib.mjs";
+import {
+  assertConfig,
+  canonicalJson,
+  parseGlbJson,
+  sha256,
+  stablePartId,
+} from "../lib.mjs";
 import { mergeComponentGroups, registryFor } from "../release-lib.mjs";
 
 function syntheticGlb(json) {
@@ -70,10 +76,22 @@ test("release registry is derived from stable group metadata", () => {
       },
     },
   );
-  assert.deepEqual(registry.structures, [{
+  assert.deepEqual(registry.structures[1], {
     id: "brainstem",
+    name: "brainstem",
+    kind: "organ",
+    parentId: null,
     system: "nervous",
+    selectable: true,
     position: [7, 14.9, -14],
     objectCount: 2,
-  }]);
+  });
+});
+
+test("source-derived part IDs preserve laterality deterministically", () => {
+  assert.equal(stablePartId("kidneys", "Kidney.l"), "kidneys-kidney-left");
+  assert.equal(
+    stablePartId("brainstem", "Medulla oblongata.r"),
+    "brainstem-medulla-oblongata-right",
+  );
 });

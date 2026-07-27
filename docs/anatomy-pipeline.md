@@ -112,6 +112,21 @@ copies. The generated registry consumed by the demo is validated against the
 release groups and fingerprinted in the manifest. Git also keeps the previous
 tracked release recoverable.
 
+## Selectable hierarchy
+
+Set `expandSourceParts: true` on a multi-object anatomy group to retain the
+existing group ID as an aggregate parent and generate a stable selectable ID
+for every source object. Laterality suffixes are normalized, so `Kidney.l`
+becomes `kidneys-kidney-left`. The exporter records the child `anatomyId`,
+`anatomyParentId`, original source name, and system in glTF extras.
+
+The generated registry contains system roots, aggregate organs, individual
+parts, parent IDs, model-space focus positions, and mapped-object counts.
+Non-interactive context such as the body shell remains renderable with
+`selectable: false`. Validation rejects duplicate generated IDs and verifies
+that every configured source object produces exactly one correctly identified
+mesh.
+
 ## Daily operation
 
 The stage command is safe for recurring local execution because outputs are

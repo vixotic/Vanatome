@@ -126,7 +126,7 @@ and urinary structures. The product architecture supports:
 
 - richer skeletal and muscular layer navigation;
 - nervous, vascular, lymphatic, and reproductive system layers;
-- deeper regional hierarchy and structure-to-structure navigation;
+- recursive system → organ → part navigation with descendant focus/isolation;
 - versioned atlas bundles with stable public structure identifiers;
 - accessible annotations and education-focused structure content.
 

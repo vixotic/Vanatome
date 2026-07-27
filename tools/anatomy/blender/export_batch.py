@@ -7,7 +7,9 @@ is the sole explicitly requested script.
 import argparse
 import json
 import os
+import re
 import sys
+import unicodedata
 
 import bpy
 from mathutils import Vector
@@ -23,6 +25,17 @@ def arguments():
 
 def rounded_vector(vector):
     return [round(float(value), 6) for value in vector]
+
+def stable_part_id(parent_id, source_name):
+    normalized = re.sub(r"\.l$", " left", source_name, flags=re.IGNORECASE)
+    normalized = re.sub(r"\.r$", " right", normalized, flags=re.IGNORECASE)
+    normalized = "".join(
+        character
+        for character in unicodedata.normalize("NFKD", normalized)
+        if not unicodedata.combining(character)
+    ).lower()
+    normalized = re.sub(r"[^a-z0-9]+", "-", normalized).strip("-")
+    return f"{parent_id}-{normalized}"
 
 
 def world_bounds(objects):
@@ -50,12 +63,14 @@ def material_for(group):
     return material
 
 
-def duplicate_for_export(source, group, material, collection):
+def duplicate_for_export(source, group, structure_id, parent_id, material, collection):
     duplicate = source.copy()
     duplicate.data = source.data.copy()
     duplicate.animation_data_clear()
-    duplicate.name = f"{group['id']}__{source.name}"
-    duplicate["anatomyId"] = group["id"]
+    duplicate.name = f"{structure_id}__{source.name}"
+    duplicate["anatomyId"] = structure_id
+    if parent_id:
+        duplicate["anatomyParentId"] = parent_id
     duplicate["sourceName"] = source.name
     duplicate["anatomySystem"] = group["system"]
     world = source.matrix_world.copy()
@@ -70,8 +85,10 @@ def duplicate_for_export(source, group, material, collection):
         duplicate.select_set(True)
         bpy.ops.object.convert(target="MESH")
         duplicate = bpy.context.view_layer.objects.active
-        duplicate.name = f"{group['id']}__{source.name}"
-        duplicate["anatomyId"] = group["id"]
+        duplicate.name = f"{structure_id}__{source.name}"
+        duplicate["anatomyId"] = structure_id
+        if parent_id:
+            duplicate["anatomyParentId"] = parent_id
         duplicate["sourceName"] = source.name
         duplicate["anatomySystem"] = group["system"]
         duplicate.select_set(False)
@@ -138,21 +155,81 @@ def main():
         missing = []
         material = material_for(group)
         resolved_sources = source_objects(group)
+        expand_sources = group.get("expandSourceParts", False) and len(resolved_sources) > 1
+        structure_objects = {}
         for source_name, source in resolved_sources:
             if source is None or source.type not in {"MESH", "CURVE"}:
                 missing.append(source_name)
                 continue
-            duplicate = duplicate_for_export(source, group, material, export_collection)
+            structure_id = (
+                stable_part_id(group["id"], source_name)
+                if expand_sources
+                else group["id"]
+            )
+            parent_id = group["id"] if expand_sources else group.get(
+                "parentId",
+                f"{group['system']}-system" if group.get("selectable", True) else None,
+            )
+            duplicate = duplicate_for_export(
+                source,
+                group,
+                structure_id,
+                parent_id,
+                material,
+                export_collection,
+            )
             exported.append(duplicate)
             group_objects.append(duplicate)
+            structure_objects.setdefault(structure_id, []).append(duplicate)
         center, size = world_bounds(group_objects)
+        structures = {}
+        if expand_sources:
+            structures[group["id"]] = {
+                "name": group.get("name", group["id"]),
+                "kind": group.get("kind", "organ"),
+                "parentId": group.get("parentId", f"{group['system']}-system"),
+                "system": group["system"],
+                "nodes": [],
+                "sourceObjects": [],
+                "centerBlender": center,
+                "sizeBlender": size,
+                "selectable": group.get("selectable", True),
+            }
+        for structure_id, objects in structure_objects.items():
+            structure_center, structure_size = world_bounds(objects)
+            source_names = [
+                name
+                for name, _source in resolved_sources
+                if (
+                    stable_part_id(group["id"], name)
+                    if expand_sources
+                    else group["id"]
+                ) == structure_id
+            ]
+            structures[structure_id] = {
+                "name": source_names[0] if expand_sources else group.get("name", group["id"]),
+                "kind": "part" if expand_sources else group.get("kind", "organ"),
+                "parentId": group["id"] if expand_sources else group.get(
+                    "parentId",
+                    f"{group['system']}-system" if group.get("selectable", True) else None,
+                ),
+                "system": group["system"],
+                "nodes": [obj.name for obj in objects],
+                "sourceObjects": source_names,
+                "centerBlender": structure_center,
+                "sizeBlender": structure_size,
+                "selectable": group.get("selectable", True),
+            }
         report_groups[group["id"]] = {
+            "name": group.get("name", group["id"]),
             "system": group["system"],
             "nodes": [obj.name for obj in group_objects],
             "sourceObjects": [name for name, _source in resolved_sources],
             "centerBlender": center,
             "sizeBlender": size,
             "missing": missing,
+            "selectable": group.get("selectable", True),
+            "structures": structures,
         }
 
     if not exported:

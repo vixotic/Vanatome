@@ -21,9 +21,17 @@ const atlas = {
       name: "Heart",
       system: "Cardiovascular",
       layer: "organs",
-      parentId: "thorax",
+      parentId: "cardiovascular-system",
       position: [0.16, 2.94, 0.17],
       summary: "A muscular organ behind the sternum."
+    },
+    {
+      id: "heart-left-atrium",
+      name: "Left atrium",
+      system: "Cardiovascular",
+      layer: "organs",
+      parentId: "heart",
+      position: [0.14, 2.96, 0.18]
     }
   ]
 } satisfies VanatomeAtlas;
@@ -32,7 +40,9 @@ const atlas = {
 Structure IDs are stable public identifiers. Changing an ID is a breaking atlas
 change because selections, URLs, saved views, and glTF nodes may refer to it.
 Positions are model-space camera targets. `parentId` is optional and drives
-consumer-built hierarchy views.
+recursive hierarchy views. A parent structure may have no mesh of its own: it
+acts as an aggregate whose selection, focus, and isolation include all mapped
+descendants.
 
 ## glTF
 
@@ -40,13 +50,17 @@ Every selectable mesh or one of its ancestors must contain this glTF `extras`
 value:
 
 ```json
-{ "anatomyId": "heart" }
+{
+  "anatomyId": "heart-left-atrium",
+  "anatomyParentId": "heart"
+}
 ```
 
-The value must match a metadata structure ID. A structure may span multiple
-meshes; all of them can share the same `anatomyId`. Decorative meshes without a
-known ID remain visible but are not selectable. Layer and isolation controls
-operate on identified structures.
+The ID must match a metadata structure ID. Meshes share an `anatomyId` only when
+they represent the same selectable structure. Distinct anatomical parts receive
+distinct stable IDs and retain their parent evidence in glTF extras and the
+registry. Decorative meshes without a known selectable ID remain visible.
+Layer, parent selection, and isolation operate across hierarchy descendants.
 
 Serve the `.glb` from the same origin or with suitable CORS headers. Geometry,
 materials, textures, and atlas metadata should be immutable for a released atlas

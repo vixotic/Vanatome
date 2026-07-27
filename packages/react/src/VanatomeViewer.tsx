@@ -7,6 +7,10 @@ import {
 } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
+import {
+  createVanatomeHierarchy,
+  getVanatomeDescendantIds,
+} from "./hierarchy.js";
 import type {
   VanatomeStructure,
   VanatomeViewerProps,
@@ -46,6 +50,14 @@ function AtlasModel({
   const structures = useMemo(
     () => new Map(atlas.structures.map((structure) => [structure.id, structure])),
     [atlas.structures],
+  );
+  const hierarchy = useMemo(
+    () => createVanatomeHierarchy(atlas.structures),
+    [atlas.structures],
+  );
+  const selectedIds = useMemo(
+    () => new Set(selectedId ? getVanatomeDescendantIds(hierarchy, selectedId) : []),
+    [hierarchy, selectedId],
   );
   const isolatedIds = useMemo(() => {
     if (!isolatedId) return null;
@@ -109,7 +121,7 @@ function AtlasModel({
           material.emissive.set("#2cbad5");
           material.emissiveIntensity = 0.28;
           material.wireframe = false;
-        } else if (id === selectedId) {
+        } else if (selectedIds.has(id)) {
           material.transparent = false;
           material.opacity = 1;
           material.depthWrite = true;
@@ -127,14 +139,14 @@ function AtlasModel({
         material.needsUpdate = true;
       }
     });
-  }, [isolatedIds, model, selectedId, structures, visibleLayers]);
+  }, [isolatedIds, model, selectedIds, structures, visibleLayers]);
 
   useFrame(({ clock }) => {
     const pulse = 1.55 + Math.sin(clock.elapsedTime * 4.2) * 0.65;
     model.traverse((object) => {
       if (
         !(object instanceof THREE.Mesh) ||
-        anatomyIdFor(object) !== selectedId
+        !selectedIds.has(anatomyIdFor(object) ?? "")
       ) {
         return;
       }

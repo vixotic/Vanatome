@@ -11,6 +11,12 @@ export function mergeComponentGroups(componentManifests) {
     for (const [id, group] of Object.entries(manifest.groups)) {
       if (anatomyIds.has(id)) throw new Error(`duplicate anatomy ID across batches: ${id}`);
       anatomyIds.add(id);
+      for (const structureId of Object.keys(group.structures ?? { [id]: group })) {
+        if (structureId !== id && anatomyIds.has(structureId)) {
+          throw new Error(`duplicate anatomy ID across batches: ${structureId}`);
+        }
+        anatomyIds.add(structureId);
+      }
       for (const sourceName of group.sourceObjects) {
         if (sourceObjects.has(sourceName)) {
           throw new Error(`duplicate source object across batches: ${sourceName}`);
@@ -41,16 +47,48 @@ export function releaseBuildId({ config, releaseId, components, fingerprints, bl
 }
 
 export function registryFor(config, releaseId, buildId, groups) {
-  const structures = Object.entries(groups).map(([id, group]) => ({
-    id,
-    system: group.system,
-    position: [
-      Number((group.centerBlender[0] * 7).toFixed(4)),
-      Number((group.centerBlender[2] * 7 - 6.1).toFixed(4)),
-      Number((-group.centerBlender[1] * 7).toFixed(4)),
-    ],
-    objectCount: group.nodes.length,
-  }));
+  const releasedStructures = Object.entries(groups).flatMap(([id, group]) =>
+    Object.entries(group.structures ?? { [id]: group }).map(([structureId, structure]) => ({
+      id: structureId,
+      name: structure.name ?? structureId,
+      kind: structure.kind ?? "organ",
+      parentId: structure.parentId ?? null,
+      system: structure.system ?? group.system,
+      selectable: structure.selectable ?? group.selectable ?? true,
+      position: [
+        Number((structure.centerBlender[0] * 7).toFixed(4)),
+        Number((structure.centerBlender[2] * 7 - 6.1).toFixed(4)),
+        Number((-structure.centerBlender[1] * 7).toFixed(4)),
+      ],
+      objectCount: structure.nodes.length,
+    })),
+  );
+  const systems = [...new Set(
+    releasedStructures
+      .filter((structure) => structure.selectable)
+      .map((structure) => structure.system),
+  )].sort().map((system) => {
+    const descendants = releasedStructures.filter(
+      (structure) => structure.system === system && structure.selectable,
+    );
+    const position = [0, 1, 2].map((axis) =>
+      Number((
+        descendants.reduce((sum, structure) => sum + structure.position[axis], 0) /
+        descendants.length
+      ).toFixed(4)),
+    );
+    return {
+      id: `${system}-system`,
+      name: system.split("-").map((word) => `${word[0].toUpperCase()}${word.slice(1)}`).join(" "),
+      kind: "system",
+      parentId: null,
+      system,
+      selectable: true,
+      position,
+      objectCount: 0,
+    };
+  });
+  const structures = [...systems, ...releasedStructures];
   return {
     schemaVersion: 1,
     atlasId: config.atlas.id,
@@ -76,8 +114,14 @@ export async function validateRelease({
   const registry = JSON.parse(await readFile(`${directory}/registry.json`, "utf8"));
   const gltf = parseGlbJson(asset);
   const expectedGroups = mergeComponentGroups(componentManifests);
-  const expectedIds = Object.keys(expectedGroups).sort();
   const expectedRegistry = registryFor(config, releaseId, buildId, expectedGroups);
+  const expectedStructures = Object.values(expectedGroups).flatMap((group) =>
+    Object.entries(group.structures ?? {}).map(([id, structure]) => ({ id, ...structure })),
+  );
+  const expectedIds = expectedStructures
+    .filter((structure) => structure.nodes.length)
+    .map((structure) => structure.id)
+    .sort();
   const nodeRows = (gltf.nodes ?? [])
     .filter((node) => node.extras?.anatomyId)
     .map((node) => ({ id: node.extras.anatomyId, name: node.name }));
@@ -116,7 +160,7 @@ export async function validateRelease({
   if (nodeRows.length !== release.validation.expectedObjectCount) errors.push("GLB anatomy node count is invalid");
   if (JSON.stringify(actualIds) !== JSON.stringify(expectedIds)) errors.push("release anatomy IDs do not match components");
   if (registry.release !== releaseId || registry.buildId !== buildId) errors.push("registry release identity does not match");
-  if (registry.structures.length !== expectedIds.length) errors.push("registry structure count does not match release groups");
+  if (registry.structures.length !== expectedRegistry.structures.length) errors.push("registry structure count does not match release groups");
   if (canonicalJson(registry) !== canonicalJson(expectedRegistry)) {
     errors.push("registry contents do not match generated release groups");
   }
@@ -129,11 +173,14 @@ export async function validateRelease({
       errors.push(`${name}: release fingerprint does not match current tooling`);
     }
   }
-  for (const [id, group] of Object.entries(expectedGroups)) {
-    const expectedNodes = [...group.nodes].sort();
-    const actualNodes = nodeRows.filter((node) => node.id === id).map((node) => node.name).sort();
+  for (const structure of expectedStructures) {
+    const expectedNodes = [...structure.nodes].sort();
+    const actualNodes = nodeRows
+      .filter((node) => node.id === structure.id)
+      .map((node) => node.name)
+      .sort();
     if (JSON.stringify(actualNodes) !== JSON.stringify(expectedNodes)) {
-      errors.push(`${id}: release nodes do not match validated component`);
+      errors.push(`${structure.id}: release nodes do not match validated component`);
     }
   }
   if (errors.length) throw new Error(errors.join("\n"));

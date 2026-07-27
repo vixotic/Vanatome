@@ -26,13 +26,17 @@
       "groups": [
         {
           "id": "heart",
+          "name": "Heart",
           "system": "cardiovascular",
+          "expandSourceParts": true,
           "sourceObjects": ["Right atrium", "Right ventricle", "Left atrium", "Left ventricle"],
           "material": {"color": [0.73, 0.045, 0.11, 1.0], "roughness": 0.42}
         },
         {
           "id": "lungs",
+          "name": "Lungs",
           "system": "respiratory",
+          "expandSourceParts": true,
           "sourceObjects": ["Superior lobe of right lung", "Middle lobe of right lung", "Inferior lobe of right lung", "Superior lobe of left lung", "Inferior lobe of left lung"],
           "material": {"color": [0.4, 0.66, 0.72, 1.0], "roughness": 0.42}
         },
@@ -80,19 +84,25 @@
         },
         {
           "id": "small-intestine",
+          "name": "Small Intestine",
           "system": "digestive",
+          "expandSourceParts": true,
           "sourceObjects": ["Duodenum", "Jejunum"],
           "material": {"color": [0.82, 0.45, 0.3, 1.0], "roughness": 0.42}
         },
         {
           "id": "large-intestine",
+          "name": "Large Intestine",
           "system": "digestive",
+          "expandSourceParts": true,
           "sourceObjects": ["Ascending colon", "Transverse colon", "Descending colon", "Sigmoid colon", "Vermiform appendix"],
           "material": {"color": [0.55, 0.34, 0.25, 1.0], "roughness": 0.42}
         },
         {
           "id": "kidneys",
+          "name": "Kidneys",
           "system": "urinary",
+          "expandSourceParts": true,
           "sourceObjects": ["Kidney.l", "Kidney.r"],
           "material": {"color": [0.45, 0.08, 0.07, 1.0], "roughness": 0.42}
         },
@@ -115,7 +125,9 @@
       "groups": [
         {
           "id": "skeleton",
+          "name": "Skeleton",
           "system": "skeletal",
+          "expandSourceParts": true,
           "sourceObjects": [
             "Vertebra C3",
             "Vertebra C4",
@@ -190,6 +202,7 @@
         {
           "id": "body-shell",
           "system": "regional-anatomy",
+          "selectable": false,
           "sourceSelector": {
             "collection": "9: Regions of human body",
             "recursive": false,
@@ -212,7 +225,9 @@
       "groups": [
         {
           "id": "brainstem",
+          "name": "Brainstem",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Midbrain.l", "Midbrain.r", "Pons.l", "Pons.r", "Medulla oblongata.l", "Medulla oblongata.r"],
           "material": {"color": [0.68, 0.48, 0.86, 1.0], "roughness": 0.46}
         },
@@ -231,66 +246,77 @@
         {
           "id": "superior-colliculi",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Superior colliculus.l", "Superior colliculus.r"],
           "material": {"color": [0.9, 0.52, 0.68, 1.0], "roughness": 0.44}
         },
         {
           "id": "inferior-colliculi",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Inferior colliculus.l", "Inferior colliculus.r"],
           "material": {"color": [0.84, 0.44, 0.64, 1.0], "roughness": 0.44}
         },
         {
           "id": "medullary-olives",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Olive.l", "Olive.r"],
           "material": {"color": [0.72, 0.54, 0.9, 1.0], "roughness": 0.46}
         },
         {
           "id": "medullary-pyramids",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Pyramid of medulla oblongata.l", "Pyramid of medulla oblongata.r"],
           "material": {"color": [0.62, 0.46, 0.86, 1.0], "roughness": 0.46}
         },
         {
           "id": "red-nuclei",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Red nucleus.l", "Red nucleus.r"],
           "material": {"color": [0.92, 0.26, 0.42, 1.0], "roughness": 0.42}
         },
         {
           "id": "oculomotor-nuclei",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Nucleus of oculomotor nerve.l", "Nucleus of oculomotor nerve.r", "Accessory nucleus of oculomotor nerve.l", "Accessory nucleus of oculomotor nerve.r"],
           "material": {"color": [0.46, 0.82, 0.78, 1.0], "roughness": 0.44}
         },
         {
           "id": "facial-motor-nuclei",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Motor nucleus of facial nerve.l", "Motor nucleus of facial nerve.r"],
           "material": {"color": [0.42, 0.76, 0.84, 1.0], "roughness": 0.44}
         },
         {
           "id": "abducens-nuclei",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Nucleus of abducens nerve.l", "Nucleus of abducens nerve.r"],
           "material": {"color": [0.38, 0.7, 0.88, 1.0], "roughness": 0.44}
         },
         {
           "id": "superior-salivatory-nuclei",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Superior salivatory nucleus.l", "Superior salivatory nucleus.r"],
           "material": {"color": [0.5, 0.8, 0.7, 1.0], "roughness": 0.44}
         },
         {
           "id": "vestibular-nuclei",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Vestibular nuclei.l", "Vestibular nuclei.r"],
           "material": {"color": [0.34, 0.78, 0.82, 1.0], "roughness": 0.44}
         },
         {
           "id": "interpeduncular-fossae",
           "system": "nervous",
+          "expandSourceParts": true,
           "sourceObjects": ["Interpeduncular fossa.l", "Interpeduncular fossa.r"],
           "material": {"color": [0.74, 0.6, 0.9, 1.0], "roughness": 0.46}
         }
