@@ -3,6 +3,7 @@
 import {
   Activity,
   Box,
+  ChevronDown,
   ChevronRight,
   Crosshair,
   Eye,
@@ -23,6 +24,7 @@ import {
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { useVanatomeController } from "@vixotic/vanatome-react";
+import type { VanatomeHierarchyNode } from "@vixotic/vanatome-react";
 import {
   anatomyById,
   anatomyHierarchy,
@@ -54,6 +56,9 @@ export function AnatomyExplorer() {
   const [rightOpen, setRightOpen] = useState(true);
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
+  const [expandedIds, setExpandedIds] = useState(
+    () => new Set(anatomyHierarchy.map((structure) => structure.id)),
+  );
   const selected = viewer.selectedId ? anatomyById[viewer.selectedId] : null;
   const rightPanelExpanded = isCompact ? mobilePanelOpen : rightOpen;
 
@@ -78,28 +83,74 @@ export function AnatomyExplorer() {
   const choose = (id: string | null) => {
     viewer.select(id);
     if (!id) return;
+    setExpandedIds((current) => {
+      const next = new Set(current);
+      let parentId = anatomyById[id]?.parentId;
+      while (parentId) {
+        next.add(parentId);
+        parentId = anatomyById[parentId]?.parentId;
+      }
+      return next;
+    });
     setRightOpen(true);
     setMobilePanelOpen(true);
     setQuery("");
   };
 
-  const renderStructure = (organ: AnatomyStructure, index: number) => (
-    <button
-      key={organ.id}
-      type="button"
-      role="option"
-      aria-selected={organ.id === viewer.selectedId}
-      className={`structure-item ${organ.id === viewer.selectedId ? "active" : ""}`}
-      onClick={() => choose(organ.id)}
-    >
-      <span className="item-index">{String(index + 1).padStart(2, "0")}</span>
-      <span className="item-copy">
-        <strong>{organ.name}</strong>
-        <small>{organ.system}</small>
-      </span>
-      <ChevronRight size={15} aria-hidden="true" />
-    </button>
-  );
+  const renderStructure = (
+    structure: AnatomyStructure | VanatomeHierarchyNode,
+    index: number,
+    depth = 0,
+    flat = false,
+  ) => {
+    const children = "children" in structure ? structure.children : [];
+    const hasChildren = children.length > 0;
+    const expanded = expandedIds.has(structure.id);
+    const selectAndToggle = () => {
+      choose(structure.id);
+      if (!hasChildren) return;
+      setExpandedIds((current) => {
+        const next = new Set(current);
+        if (next.has(structure.id)) next.delete(structure.id);
+        else next.add(structure.id);
+        return next;
+      });
+    };
+    return (
+      <div className="structure-branch" key={structure.id}>
+        <button
+          type="button"
+          role={flat ? "option" : "treeitem"}
+          aria-selected={structure.id === viewer.selectedId}
+          aria-expanded={hasChildren ? expanded : undefined}
+          className={`structure-item depth-${Math.min(depth, 3)} ${
+            structure.id === viewer.selectedId ? "active" : ""
+          }`}
+          onClick={selectAndToggle}
+        >
+          <span className="item-index">{String(index + 1).padStart(2, "0")}</span>
+          <span className="item-copy">
+            <strong>{structure.name}</strong>
+            <small>{structure.system}</small>
+          </span>
+          {hasChildren && expanded
+            ? <ChevronDown size={15} aria-hidden="true" />
+            : <ChevronRight size={15} aria-hidden="true" />}
+        </button>
+        {!flat && hasChildren && expanded && (
+          <div className="structure-children" role="group">
+            {children.map((child) =>
+              renderStructure(
+                child,
+                anatomyRegistry.findIndex((candidate) => candidate.id === child.id),
+                depth + 1,
+              ),
+            )}
+          </div>
+        )}
+      </div>
+    );
+  };
 
   const toggleRightPanel = () => {
     if (isCompact) {
@@ -214,22 +265,18 @@ export function AnatomyExplorer() {
               <span>{String(matches.length).padStart(2, "0")}</span>
             </div>
 
-            <div className="structure-list" role="listbox" aria-label="Anatomy structures">
+            <div
+              className="structure-list"
+              role={query ? "listbox" : "tree"}
+              aria-label="Anatomy structures"
+            >
               {query
-                ? matches.map(renderStructure)
-                : anatomyHierarchy.map((region) => (
-                    <div className="structure-group" key={region.id}>
-                      <div className="structure-group-label">{region.name}</div>
-                      {region.children.map((organ) =>
-                        renderStructure(
-                          organ as AnatomyStructure,
-                          anatomyRegistry.findIndex(
-                            (candidate) => candidate.id === organ.id,
-                          ),
-                        ),
-                      )}
-                    </div>
-                  ))}
+                ? matches.map((structure, index) =>
+                    renderStructure(structure, index, 0, true),
+                  )
+                : anatomyHierarchy.map((structure, index) =>
+                    renderStructure(structure, index),
+                  )}
               {matches.length === 0 && (
                 <div className="empty-search">
                   No structures match “{query}”.

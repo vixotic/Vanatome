@@ -9,7 +9,7 @@ import releaseRegistry from "./z-anatomy-registry.json";
 export type AnatomyRegion = "head" | "thorax" | "abdomen" | "pelvis";
 
 export type AnatomyStructure = VanatomeStructure & {
-  region: AnatomyRegion;
+  region?: AnatomyRegion;
   scale: [number, number, number];
   color: string;
   summary: NonNullable<VanatomeStructure["summary"]>;
@@ -19,8 +19,20 @@ export type AnatomyStructure = VanatomeStructure & {
 
 type ReleasedStructure = Omit<AnatomyStructure, "position" | "scale">;
 
+type ReleaseRegistryStructure = {
+  id: string;
+  name?: string;
+  kind?: "system" | "organ" | "part";
+  parentId?: string | null;
+  system: string;
+  selectable?: boolean;
+  position: [number, number, number];
+  objectCount: number;
+};
+
+const releasedStructures = releaseRegistry.structures as ReleaseRegistryStructure[];
 const releasedById = new Map(
-  releaseRegistry.structures.map((structure) => [structure.id, structure]),
+  releasedStructures.map((structure) => [structure.id, structure]),
 );
 
 function releasedStructure(structure: ReleasedStructure): AnatomyStructure {
@@ -30,12 +42,13 @@ function releasedStructure(structure: ReleasedStructure): AnatomyStructure {
   }
   return {
     ...structure,
+    parentId: released.parentId ?? structure.parentId,
     position: released.position as [number, number, number],
     scale: [1, 1, 1],
   };
 }
 
-export const anatomyRegistry: AnatomyStructure[] = [
+const curatedRegistry: AnatomyStructure[] = [
   {
     id: "heart",
     name: "Heart",
@@ -378,45 +391,94 @@ export const anatomyRegistry: AnatomyStructure[] = [
   }),
 ];
 
+const normalizedCuratedRegistry = curatedRegistry.map((structure) => {
+  const released = releasedById.get(structure.id);
+  return released
+    ? {
+        ...structure,
+        parentId: released.parentId ?? structure.parentId,
+        position: released.position,
+      }
+    : structure;
+});
+
+const systemColors: Record<string, string> = {
+  cardiovascular: "#ff4f87",
+  respiratory: "#63e6ff",
+  digestive: "#ffb36a",
+  urinary: "#6ea8ff",
+  lymphatic: "#62d9a7",
+  nervous: "#b784ff",
+  skeletal: "#9befff",
+};
+
+function displayName(value: string) {
+  const side = value.match(/\.(l|r)$/iu)?.[1]?.toLowerCase();
+  const withoutSide = value.replace(/\.(l|r)$/iu, "");
+  const spaced = withoutSide.replace(/[-_]+/gu, " ");
+  const titled = spaced.replace(/\b\w/gu, (letter) => letter.toUpperCase());
+  return side ? `${titled} (${side === "l" ? "left" : "right"})` : titled;
+}
+
+function systemName(value: string) {
+  return value
+    .split("-")
+    .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+    .join(" ");
+}
+
+const curatedById = new Map(
+  normalizedCuratedRegistry.map((structure) => [structure.id, structure]),
+);
+
+function nearestCuratedAncestor(structure: ReleaseRegistryStructure) {
+  let parentId = structure.parentId;
+  while (parentId) {
+    const curated = curatedById.get(parentId);
+    if (curated) return curated;
+    parentId = releasedById.get(parentId)?.parentId;
+  }
+  return undefined;
+}
+
+const generatedRegistry: AnatomyStructure[] = releasedStructures
+  .filter((structure) => structure.selectable !== false && !curatedById.has(structure.id))
+  .map((structure) => {
+    const ancestor = nearestCuratedAncestor(structure);
+    const name = displayName(structure.name ?? structure.id);
+    const system = systemName(structure.system);
+    const parentName = structure.parentId
+      ? displayName(releasedById.get(structure.parentId)?.name ?? structure.parentId)
+      : system;
+    return {
+      id: structure.id,
+      name,
+      system,
+      layer: structure.system,
+      parentId: structure.parentId ?? undefined,
+      color: ancestor?.color ?? systemColors[structure.system] ?? "#58e7ff",
+      position: structure.position,
+      scale: [1, 1, 1],
+      summary: structure.kind === "system"
+        ? `${name} structures available in the current atlas.`
+        : `${name}, represented as part of ${parentName}.`,
+      function: ancestor?.function ?? `Explore the mapped anatomy of the ${name.toLowerCase()}.`,
+      fact: ancestor?.fact ?? `This structure retains its own stable atlas identifier and selectable mesh.`,
+    };
+  });
+
+export const anatomyRegistry: AnatomyStructure[] = [
+  ...normalizedCuratedRegistry,
+  ...generatedRegistry,
+];
+
 export const anatomyById = Object.fromEntries(
   anatomyRegistry.map((structure) => [structure.id, structure]),
 ) as Record<string, AnatomyStructure>;
 
-const hierarchyRegions: VanatomeStructure[] = [
-  {
-    id: "head",
-    name: "Head",
-    system: "Regional anatomy",
-    layer: "region",
-    position: [0, 5, 0],
-  },
-  {
-    id: "thorax",
-    name: "Thorax",
-    system: "Regional anatomy",
-    layer: "region",
-    position: [0, 2.8, 0],
-  },
-  {
-    id: "abdomen",
-    name: "Abdomen",
-    system: "Regional anatomy",
-    layer: "region",
-    position: [0, 1.5, 0],
-  },
-  {
-    id: "pelvis",
-    name: "Pelvis",
-    system: "Regional anatomy",
-    layer: "region",
-    position: [0, 0, 0],
-  },
-];
-
-export const anatomyHierarchy = createVanatomeHierarchy([
-  ...hierarchyRegions,
-  ...anatomyRegistry,
-]) as VanatomeHierarchyNode[];
+export const anatomyHierarchy = createVanatomeHierarchy(
+  anatomyRegistry,
+) as VanatomeHierarchyNode[];
 
 export const anatomyLayers = [
   { id: "cardiovascular", label: "Cardio" },
@@ -425,6 +487,7 @@ export const anatomyLayers = [
   { id: "urinary", label: "Urinary" },
   { id: "lymphatic", label: "Lymphatic" },
   { id: "nervous", label: "Nervous" },
+  { id: "skeletal", label: "Skeletal" },
 ] as const;
 
 export const atlasMappedNodeCount = releaseRegistry.structures.reduce(
