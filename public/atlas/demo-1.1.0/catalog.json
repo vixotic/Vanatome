@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0"
+  },
+  "systems": [
+    { "id": "cardiovascular", "name": "Cardiovascular" },
+    { "id": "respiratory", "name": "Respiratory" },
+    { "id": "digestive", "name": "Digestive" },
+    { "id": "lymphatic", "name": "Lymphatic" },
+    { "id": "urinary", "name": "Urinary" },
+    { "id": "skeletal", "name": "Skeletal" },
+    { "id": "regional-anatomy", "name": "Regional anatomy" },
+    { "id": "nervous", "name": "Nervous" }
+  ],
+  "layers": [
+    { "id": "cardiovascular", "name": "Cardiovascular" },
+    { "id": "respiratory", "name": "Respiratory" },
+    { "id": "digestive", "name": "Digestive" },
+    { "id": "lymphatic", "name": "Lymphatic" },
+    { "id": "urinary", "name": "Urinary" },
+    { "id": "skeletal", "name": "Skeletal" },
+    { "id": "regional-anatomy", "name": "Regional anatomy" },
+    { "id": "nervous", "name": "Nervous" }
+  ],
+  "bundles": [
+    {
+      "id": "full-body-demo",
+      "name": "Full-body demo compatibility bundle",
+      "systems": ["cardiovascular", "respiratory", "digestive", "lymphatic", "urinary", "skeletal", "regional-anatomy", "nervous"],
+      "layers": ["cardiovascular", "respiratory", "digestive", "lymphatic", "urinary", "skeletal", "regional-anatomy", "nervous"],
+      "modelUrl": "../../models/z-anatomy-full-body.glb",
+      "metadataUrl": "./full-body.metadata.json",
+      "bytes": 11089712,
+      "sha256": "af0384016d3a51497891329a45446255c21fb089b06f69fa4fd2b7e815fc1303"
+    }
+  ],
+  "provenance": {
+    "sourceName": "Z-Anatomy",
+    "sourceUrl": "https://github.com/Z-Anatomy/Models",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy.",
+    "modifications": ["Web export", "Structure selection identifiers", "Material adjustments", "Curve-to-mesh conversion", "Geometry optimization"],
+    "noticeUrl": "../../ATTRIBUTION.txt"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "@vixotic/vanatome-atlas",
+  "version": "0.1.0",
+  "description": "Versioned human anatomy catalogs and browser loaders for Vanatome.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "ASSET-LICENSE.md"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.build.json --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "prepack": "npm run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vixotic/Vanatome.git",
+    "directory": "packages/atlas"
+  },
+  "keywords": [
+    "anatomy",
+    "atlas",
+    "vanatome",
+    "z-anatomy",
+    "gltf",
+    "glb"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
