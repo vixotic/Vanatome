@@ -1,91 +1,101 @@
 <div align="center">
 
-<img src="public/favicon.svg" alt="Vanatome" width="76" height="76">
+<img src="public/favicon.svg" alt="Vanatome" width="72" height="72">
 
 # Vanatome
 
-**Explore human anatomy as an interactive, layered system.**
+### Human anatomy, rendered like a hologram.
 
-A focused anatomy product and embeddable React viewer powered by a curated,
-Z-Anatomy-derived atlas.
+An interactive human atlas for the web—and an embeddable React viewer for
+building anatomy experiences of your own.
 
-[Live demo](https://vanatome.vixotic.in) · [Quick start](#quick-start) ·
-[Viewer package](#embed-vanatome) ·
-[Atlas package](#load-the-human-atlas) ·
-[Atlas contract](docs/atlas-contract.md) · [Contributing](CONTRIBUTING.md)
+[![Live demo](https://img.shields.io/badge/EXPLORE_LIVE-vanatome.vixotic.in-58e7ff?style=for-the-badge&labelColor=071018)](https://vanatome.vixotic.in)
+[![Viewer on npm](https://img.shields.io/npm/v/@vixotic/vanatome-react?style=for-the-badge&label=VIEWER&color=58e7ff&labelColor=071018)](https://www.npmjs.com/package/@vixotic/vanatome-react)
+[![Atlas on npm](https://img.shields.io/npm/v/@vixotic/vanatome-atlas?style=for-the-badge&label=ATLAS&color=c77dff&labelColor=071018)](https://www.npmjs.com/package/@vixotic/vanatome-atlas)
+[![MIT](https://img.shields.io/badge/CODE-MIT-42d3a3?style=for-the-badge&labelColor=071018)](LICENSE)
 
 </div>
 
----
+<br>
 
-Vanatome turns a browser-ready human atlas into an interface for discovery:
-select a structure in the model or sidebar, move the camera into focus, isolate
-what matters, and move through anatomical systems without losing context. It is
-static and frontend-friendly—no backend, account, analytics service, or paid
-platform is required.
+<a href="https://vanatome.vixotic.in">
+  <img src="docs/media/vanatome-overview.png" alt="Vanatome full-body holographic anatomy explorer">
+</a>
 
-## See anatomy in context
+<div align="center">
+  <sub>Drag it. Pick an organ. Peel the body back to what matters.</sub>
+</div>
 
-| Explore | Understand | Embed |
-| --- | --- | --- |
-| Rotate, zoom, select, focus, isolate, and reset the atlas. | Search structures, navigate hierarchy, filter layers, and pair the model with concise details. | Compose the headless React scene with your own sidebar, controls, and content. |
+## Built from an obsession with holograms
 
-The product demo presents the atlas as a full-screen systems console with a
-structure browser, responsive detail panel, direct model picking, focus
-transitions, and a persistent spatial overview.
+Vanatome began with a simple fixation: a hologram should feel like something
+you can reach into—not a sci-fi prop playing behind glass.
 
-## Quick start
+Human anatomy became the perfect canvas. The body is dense, layered, spatial,
+and full of relationships that flatten badly into diagrams. Vanatome keeps
+those relationships alive: the translucent shell, the structures beneath it,
+the hierarchy beside it, and the details exactly where you need them.
 
-Vanatome requires Node.js 22.13 or newer.
+This is not a generic 3D model viewer. It is a focused anatomy product built
+around a curated, Z-Anatomy-derived human atlas.
+
+## The body is the interface
+
+| **See through it** | **Lock onto it** | **Strip it back** |
+|:---|:---|:---|
+| A translucent full-body shell keeps every structure in spatial context. | Select from the model or hierarchy, then focus the camera on the anatomy that matters. | Isolate a structure, switch system layers, and reset to the complete body at any time. |
+
+| **Navigate the hierarchy** | **Bring your own UI** | **Stay static** |
+|:---|:---|:---|
+| Search 139 stable anatomy entries across seven curated systems. | The React viewer is controlled, composable, and designed to live inside your product. | No backend, account system, analytics service, or paid platform is required. |
+
+<table>
+  <tr>
+    <td width="68%">
+      <img src="docs/media/vanatome-structure-focus.png" alt="Vanatome with the stomach selected and anatomy details visible">
+    </td>
+    <td width="32%">
+      <img src="docs/media/vanatome-mobile.png" alt="Vanatome responsive holographic anatomy view on mobile">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Selection, focus, hierarchy, layers, and structure context.</sub></td>
+    <td align="center"><sub>The full holographic view, responsive by design.</sub></td>
+  </tr>
+</table>
+
+## Put Vanatome in your React app
 
 ```bash
-git clone https://github.com/vixotic/Vanatome.git
-cd Vanatome
-npm install
-npm run dev
-```
-
-Open the local address printed by the development server. To validate a
-production build:
-
-```bash
-npm test
-```
-
-## Embed Vanatome
-
-Install the published React viewer:
-
-```bash
-npm install @vixotic/vanatome-react three @react-three/fiber @react-three/drei
+npm install @vixotic/vanatome-react @vixotic/vanatome-atlas \
+  three @react-three/fiber @react-three/drei
 ```
 
 ```tsx
+import { useEffect, useState } from "react";
+import { createOfficialHumanAtlas } from "@vixotic/vanatome-atlas";
 import {
   VanatomeViewer,
   useVanatomeController,
   type VanatomeAtlas,
 } from "@vixotic/vanatome-react";
 
-const atlas: VanatomeAtlas = {
-  id: "vanatome-human",
-  name: "Vanatome Human Atlas",
-  version: "1.0.0",
-  modelUrl: "/models/vanatome-human.glb",
-  attribution: "Z-Anatomy contributors, CC BY-SA 4.0",
-  structures: [
-    {
-      id: "heart",
-      name: "Heart",
-      system: "Cardiovascular",
-      layer: "organs",
-      position: [0.16, 2.94, 0.17],
-    },
-  ],
-};
+const atlasLoader = createOfficialHumanAtlas({
+  catalogUrl:
+    "https://atlas.vanatome.vixotic.in/releases/1.1.0/catalog.json",
+});
 
-export function AnatomyView() {
-  const viewer = useVanatomeController(["organs", "skeleton"]);
+export function Anatomy() {
+  const [atlas, setAtlas] = useState<VanatomeAtlas | null>(null);
+  const viewer = useVanatomeController([]);
+
+  useEffect(() => {
+    atlasLoader
+      .loadBundle("curated-full-body")
+      .then(({ atlas }) => setAtlas(atlas));
+  }, []);
+
+  if (!atlas) return <p>Loading atlas…</p>;
 
   return (
     <div style={{ height: 640 }}>
@@ -103,118 +113,83 @@ export function AnatomyView() {
 }
 ```
 
-The host owns navigation and UI state; the package owns the 3D scene. This keeps
-search, breadcrumbs, hierarchy, layer switches, isolate/reset controls, and
-sidebar content fully composable. See the [atlas contract](docs/atlas-contract.md)
-for required metadata and glTF `anatomyId` extras.
+The package owns the 3D anatomy scene. Your app owns the surrounding
+experience—search, breadcrumbs, hierarchy, sidebars, educational content, and
+controls.
 
-## Load the human atlas
+## Two packages. One atlas.
 
-The separate `@vixotic/vanatome-atlas` package provides versioned catalog
-contracts and a browser loader without placing growing GLB files in npm:
+| Package | What it gives you |
+|:---|:---|
+| [`@vixotic/vanatome-react`](packages/react/README.md) | The controlled React Three Fiber viewer, interaction controller, hierarchy utilities, and TypeScript contracts. |
+| [`@vixotic/vanatome-atlas`](packages/atlas/README.md) | The versioned catalog loader, stable anatomy metadata, provenance, and a viewer-ready atlas object. |
+
+Atlas releases keep the growing GLB assets outside npm. Load the official
+immutable release from `atlas.vanatome.vixotic.in`, or self-host the same
+catalog, metadata, attribution, and model files on any static host.
+
+## What ships today
+
+```text
+139  stable anatomy entries
+349  mapped GLB nodes
+  7  curated anatomy systems
+  0  required servers
+```
+
+- Direct model picking, orbit, zoom, focus, isolate, and reset
+- Recursive system → organ → part hierarchy
+- Cardiovascular, digestive, lymphatic, nervous, respiratory, skeletal, and
+  urinary layers
+- Stable public anatomy IDs for URLs, saved views, and product content
+- Desktop and responsive interaction layouts
+- Explicit loading, error, retry, and attribution states
+
+## Run the product demo
 
 ```bash
-npm install @vixotic/vanatome-atlas @vixotic/vanatome-react@^0.1.3 react react-dom three @react-three/fiber @react-three/drei
+git clone https://github.com/vixotic/Vanatome.git
+cd Vanatome
+npm install
+npm run dev
 ```
 
-```tsx
-import { createOfficialHumanAtlas } from "@vixotic/vanatome-atlas";
-import { VanatomeViewer } from "@vixotic/vanatome-react";
+The demo is the reference integration for both public packages. Production
+loads the same public atlas endpoint available to external consumers; local
+development uses the equivalent checked-in fixture.
 
-const humanAtlas = createOfficialHumanAtlas({
-  catalogUrl:
-    "https://atlas.vanatome.vixotic.in/releases/1.1.0/catalog.json",
-});
+## Go deeper
 
-const { atlas } = await humanAtlas.loadSystem("cardiovascular");
-// <VanatomeViewer atlas={atlas} />
-```
+- [Atlas and asset contract](docs/atlas-contract.md)
+- [Anatomy conversion and release pipeline](docs/anatomy-pipeline.md)
+- [Viewer package guide](packages/react/README.md)
+- [Atlas loader guide](packages/atlas/README.md)
+- [Contributing](CONTRIBUTING.md)
 
-The official public catalog is served from
-`atlas.vanatome.vixotic.in`. Consumers can use that immutable release or
-self-host the same catalog, metadata, attribution, and GLB files on any static
-host. The repository retains the same full-body catalog locally for development
-and release validation. It exposes the hierarchy-aware `1.1.0` release (build
-`c87403fe2f003fba`) as one lazy-loaded curated bundle with 139 stable hierarchy
-entries mapped across 349 GLB nodes. See the
-[`@vixotic/vanatome-atlas` README](packages/atlas/README.md) for loading states,
-selective bundle loading, and self-hosting.
-
-## Interaction guide
-
-- Drag to orbit and scroll or pinch to zoom.
-- Choose a named structure in the model or structure browser to select it.
-- Focus moves the camera to the selected structure; manual camera movement
-  cancels the transition.
-- Isolate hides other identified structures. Reset restores the overview.
-- Layer controls can reveal systems independently while the hierarchy preserves
-  anatomical context.
-
-## Atlas capabilities
-
-Vanatome’s current atlas foundation covers a complete external body shell,
-torso skeleton structures, and major cardiovascular, respiratory, digestive,
-and urinary structures. The product architecture supports:
-
-- richer skeletal and muscular layer navigation;
-- nervous, vascular, lymphatic, and reproductive system layers;
-- recursive system → organ → part navigation with descendant focus/isolation;
-- versioned atlas bundles with stable public structure identifiers;
-- accessible annotations and education-focused structure content.
-
-Vanatome is an educational visualization, not a diagnostic tool or a substitute
-for professional medical guidance.
-
-## Architecture for consumers
-
-`@vixotic/vanatome-react` exports:
-
-- `VanatomeViewer`, a controlled React Three Fiber scene;
-- `useVanatomeController`, state helpers for select, focus, isolate, layer, and
-  reset interactions;
-- hierarchy utilities for sidebar and breadcrumb experiences;
-- TypeScript contracts for atlases, structures, vectors, and viewer props.
-
-The package is browser-only at render time, has no Next.js dependency, and loads
-static glTF assets from a URL supplied by the host.
-
-`@vixotic/vanatome-atlas` resolves a small versioned catalog, lazy-loads bundle
-metadata, and returns an atlas object compatible with the React viewer. Its
-catalog contracts keep stable anatomy IDs, hierarchy, systems, layers, and
-asset provenance explicit while allowing fully static or offline hosting.
-
-The Vanatome product demo consumes this same package through the repository
-workspace. Its production build and interaction surface act as the reference
-integration for selection, focus, isolation, reset, hierarchy, and layers. The
-deployed demo loads its validated anatomy release from Cloudflare R2; local
-development uses the equivalent checked-in release fixture.
-
-## Atlas conversion
-
-The checked-in [safe conversion pipeline](docs/anatomy-pipeline.md) turns
-declarative Z-Anatomy batches into fingerprinted, versioned staging candidates.
-It keeps embedded Blend scripts disabled, validates anatomy IDs and attribution,
-and requires a separate explicitly confirmed promotion before any candidate can
-enter `public/models/`. No recurring schedule is enabled by the repository.
-
-## Licensing and attribution
+## Open source, with explicit atlas terms
 
 Viewer source code is available under the [MIT License](LICENSE).
 
-The included atlas files are adapted from
-[Z-Anatomy](https://github.com/Z-Anatomy/Models), credited to Gauthier Kervyn,
-Marcin Zielinski, additional Z-Anatomy contributors, and documented upstream
-sources. Z-Anatomy-derived atlas material is subject to
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and is not
-relicensed under MIT. Preserve attribution, indicate modifications, and follow
-the applicable ShareAlike terms when redistributing adapted atlas material.
-See [ASSET-LICENSE.md](ASSET-LICENSE.md) and
-[public/ATTRIBUTION.txt](public/ATTRIBUTION.txt) for the repository’s provenance
-notes; the upstream licenses remain authoritative.
+The atlas is adapted from [Z-Anatomy](https://github.com/Z-Anatomy/Models) and
+remains subject to
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Preserve
+attribution, indicate modifications, and follow the applicable ShareAlike terms
+when redistributing adapted atlas material. The upstream licenses remain
+authoritative.
 
-## Contributing
+See [ASSET-LICENSE.md](ASSET-LICENSE.md) and the
+[full attribution notice](https://atlas.vanatome.vixotic.in/ATTRIBUTION.txt)
+for provenance and modification details.
 
-Contributions that improve the viewer, accessibility, anatomy navigation,
-documentation, or atlas quality are welcome. Read
-[CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and include
-clear provenance for any proposed atlas material.
+---
+
+<div align="center">
+
+**If anatomy should feel less like a diagram and more like a presence, come
+build with us.**
+
+[Explore Vanatome](https://vanatome.vixotic.in) ·
+[Install the viewer](https://www.npmjs.com/package/@vixotic/vanatome-react) ·
+[Contribute](CONTRIBUTING.md)
+
+</div>
