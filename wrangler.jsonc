@@ -12,12 +12,6 @@
   "images": {
     "binding": "IMAGES"
   },
-  "r2_buckets": [
-    {
-      "binding": "ATLAS",
-      "bucket_name": "vanatome-atlas"
-    }
-  ],
   "routes": [
     {
       "pattern": "vanatome.vixotic.in",
