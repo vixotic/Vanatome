@@ -126,11 +126,16 @@ def source_objects(group):
         raise RuntimeError(f"Source collection not found: {selector['collection']}")
     candidates = collection.all_objects if selector.get("recursive") else collection.objects
     allowed_types = set(selector.get("types", ["MESH", "CURVE"]))
+    excluded_names = set(selector.get("excludeNames", []))
     excluded_suffixes = tuple(selector.get("excludeSuffixes", []))
     minimum_polygons = selector.get("minimumPolygons", 0)
     selected = []
     for source in candidates:
-        if source.type not in allowed_types or source.name.endswith(excluded_suffixes):
+        if (
+            source.type not in allowed_types
+            or source.name in excluded_names
+            or source.name.endswith(excluded_suffixes)
+        ):
             continue
         if source.type == "MESH" and len(source.data.polygons) < minimum_polygons:
             continue

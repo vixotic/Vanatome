@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.2.0",
+    "buildId": "e9a45d0a551acb8f"
+  },
+  "systems": [
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular",
+      "bundleId": "cardiovascular"
+    },
+    {
+      "id": "digestive",
+      "name": "Digestive",
+      "bundleId": "digestive"
+    },
+    {
+      "id": "lymphatic",
+      "name": "Lymphatic",
+      "bundleId": "lymphatic"
+    },
+    {
+      "id": "nervous",
+      "name": "Nervous",
+      "bundleId": "nervous"
+    },
+    {
+      "id": "regional-anatomy",
+      "name": "Regional Anatomy",
+      "bundleId": "regional-anatomy"
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory",
+      "bundleId": "respiratory"
+    },
+    {
+      "id": "skeletal",
+      "name": "Skeletal",
+      "bundleId": "skeletal"
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary",
+      "bundleId": "urinary"
+    }
+  ],
+  "layers": [
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular"
+    },
+    {
+      "id": "digestive",
+      "name": "Digestive"
+    },
+    {
+      "id": "lymphatic",
+      "name": "Lymphatic"
+    },
+    {
+      "id": "nervous",
+      "name": "Nervous"
+    },
+    {
+      "id": "regional-anatomy",
+      "name": "Regional Anatomy"
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory"
+    },
+    {
+      "id": "skeletal",
+      "name": "Skeletal"
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular system",
+      "systems": [
+        "cardiovascular"
+      ],
+      "layers": [
+        "cardiovascular"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-cardiovascular.glb",
+      "metadataUrl": "./cardiovascular.metadata.json",
+      "bytes": 4606860,
+      "sha256": "325cfed3483f5548259da12e7f1d36d8de88cc798c9733904ef1cebb4e2d2af4",
+      "structureCount": 6,
+      "nodeCount": 4
+    },
+    {
+      "id": "digestive",
+      "name": "Digestive system",
+      "systems": [
+        "digestive"
+      ],
+      "layers": [
+        "digestive"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-digestive.glb",
+      "metadataUrl": "./digestive.metadata.json",
+      "bytes": 5755916,
+      "sha256": "0b44c6778f70963ca7923c3b811d49815d087f8cd739aa33592d7b8c61316e29",
+      "structureCount": 15,
+      "nodeCount": 12
+    },
+    {
+      "id": "lymphatic",
+      "name": "Lymphatic system",
+      "systems": [
+        "lymphatic"
+      ],
+      "layers": [
+        "lymphatic"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-lymphatic.glb",
+      "metadataUrl": "./lymphatic.metadata.json",
+      "bytes": 3917792,
+      "sha256": "6323e0b1d5b59186fecea0b4c2b6b725aac1b1fdf74720f2fc352f195d579696",
+      "structureCount": 56,
+      "nodeCount": 54
+    },
+    {
+      "id": "nervous",
+      "name": "Nervous system",
+      "systems": [
+        "nervous"
+      ],
+      "layers": [
+        "nervous"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-nervous.glb",
+      "metadataUrl": "./nervous.metadata.json",
+      "bytes": 4366276,
+      "sha256": "0b3892c7f37caa3ac5db488e8cd5541913aa92eb5bd40ed090b93139d983794d",
+      "structureCount": 45,
+      "nodeCount": 32
+    },
+    {
+      "id": "regional-anatomy",
+      "name": "Regional Anatomy system",
+      "systems": [
+        "regional-anatomy"
+      ],
+      "layers": [
+        "regional-anatomy"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-regional-anatomy.glb",
+      "metadataUrl": "./regional-anatomy.metadata.json",
+      "bytes": 6145080,
+      "sha256": "c398c10a4ba24161c024b73fb6f2f2a3e945ba524b7f08f63e110761f4b4b9c4",
+      "structureCount": 1,
+      "nodeCount": 236
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory system",
+      "systems": [
+        "respiratory"
+      ],
+      "layers": [
+        "respiratory"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-respiratory.glb",
+      "metadataUrl": "./respiratory.metadata.json",
+      "bytes": 4141712,
+      "sha256": "417028883a36555f25ffa3caafd2d3c221f6d94cce3b1512af9286f94b83a6b5",
+      "structureCount": 8,
+      "nodeCount": 6
+    },
+    {
+      "id": "skeletal",
+      "name": "Skeletal system",
+      "systems": [
+        "skeletal"
+      ],
+      "layers": [
+        "skeletal"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-skeletal.glb",
+      "metadataUrl": "./skeletal.metadata.json",
+      "bytes": 3881392,
+      "sha256": "0e574eeae96c9dbe1968ad6a4d4b1dee4b60011ced527162ac4567bc5cfaa822",
+      "structureCount": 184,
+      "nodeCount": 181
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary system",
+      "systems": [
+        "urinary"
+      ],
+      "layers": [
+        "urinary"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-urinary.glb",
+      "metadataUrl": "./urinary.metadata.json",
+      "bytes": 3441436,
+      "sha256": "c5a3137dcfd606906bc4f33e39745078ee6bce5968b06effd71483be2b57f786",
+      "structureCount": 5,
+      "nodeCount": 3
+    },
+    {
+      "id": "curated-full-body",
+      "name": "Curated full-body atlas",
+      "systems": [
+        "cardiovascular",
+        "digestive",
+        "lymphatic",
+        "nervous",
+        "regional-anatomy",
+        "respiratory",
+        "skeletal",
+        "urinary"
+      ],
+      "layers": [
+        "cardiovascular",
+        "digestive",
+        "lymphatic",
+        "nervous",
+        "regional-anatomy",
+        "respiratory",
+        "skeletal",
+        "urinary"
+      ],
+      "modelUrl": "../../models/z-anatomy-1.2.0-full-body.glb",
+      "metadataUrl": "./full-body.metadata.json",
+      "bytes": 13407900,
+      "sha256": "a42984e137c13061bdc95c791ae85fea124d1573ed093abd7b54c84c1107ab2e",
+      "structureCount": 320,
+      "nodeCount": 528
+    }
+  ],
+  "profiles": [
+    {
+      "id": "full-body",
+      "name": "Full body",
+      "bundleId": "curated-full-body",
+      "description": "All released systems plus cross-system and regional context."
+    }
+  ],
+  "defaultProfileId": "full-body",
+  "provenance": {
+    "sourceName": "Z-Anatomy",
+    "sourceUrl": "https://github.com/Z-Anatomy/Models",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy.",
+    "modifications": [
+      "Web export",
+      "Stable structure and hierarchy identifiers",
+      "Material adjustments",
+      "Curve-to-mesh conversion",
+      "Geometry optimization",
+      "System bundle partitioning"
+    ],
+    "noticeUrl": "../../ATTRIBUTION.txt"
+  }
+}

@@ -4,7 +4,7 @@ import {
   type AtlasBundleDescriptor,
   type AtlasBundleMetadata,
   type AtlasCatalog,
-  type AtlasLoader,
+  type AtlasLoaderWithProfiles,
   type AtlasLoaderListener,
   type AtlasLoaderOptions,
   type AtlasLoaderState,
@@ -74,6 +74,16 @@ function isDescriptor(value: unknown): value is AtlasBundleDescriptor {
   );
 }
 
+function isProfile(value: unknown): boolean {
+  return (
+    isRecord(value) &&
+    isNonEmptyString(value.id) &&
+    isNonEmptyString(value.name) &&
+    isNonEmptyString(value.bundleId) &&
+    (value.description === undefined || isNonEmptyString(value.description))
+  );
+}
+
 function parseCatalog(
   value: unknown,
   expectedAtlas?: { id: string; version?: string; buildId?: string },
@@ -91,7 +101,8 @@ function parseCatalog(
       (system) =>
         isRecord(system) &&
         isNonEmptyString(system.id) &&
-        isNonEmptyString(system.name),
+        isNonEmptyString(system.name) &&
+        (system.bundleId === undefined || isNonEmptyString(system.bundleId)),
     ) ||
     !Array.isArray(value.layers) ||
     !value.layers.every(
@@ -102,6 +113,10 @@ function parseCatalog(
     ) ||
     !Array.isArray(value.bundles) ||
     !value.bundles.every(isDescriptor) ||
+    (value.profiles !== undefined &&
+      (!Array.isArray(value.profiles) || !value.profiles.every(isProfile))) ||
+    (value.defaultProfileId !== undefined &&
+      !isNonEmptyString(value.defaultProfileId)) ||
     !isRecord(value.provenance) ||
     !isNonEmptyString(value.provenance.sourceName) ||
     !isNonEmptyString(value.provenance.sourceUrl) ||
@@ -124,6 +139,41 @@ function parseCatalog(
       );
     }
     bundleIds.add(bundle.id);
+  }
+
+  for (const system of value.systems) {
+    if (
+      system.bundleId !== undefined &&
+      (!bundleIds.has(system.bundleId) ||
+        !value.bundles
+          .find((bundle) => bundle.id === system.bundleId)
+          ?.systems.includes(system.id))
+    ) {
+      throw new AtlasLoaderError(
+        "catalog-invalid",
+        `System "${system.id}" references an invalid bundle "${system.bundleId}".`,
+      );
+    }
+  }
+
+  const profileIds = new Set<string>();
+  for (const profile of value.profiles ?? []) {
+    if (profileIds.has(profile.id) || !bundleIds.has(profile.bundleId)) {
+      throw new AtlasLoaderError(
+        "catalog-invalid",
+        `Profile "${profile.id}" is duplicated or references an unknown bundle.`,
+      );
+    }
+    profileIds.add(profile.id);
+  }
+  if (
+    value.defaultProfileId !== undefined &&
+    !profileIds.has(value.defaultProfileId)
+  ) {
+    throw new AtlasLoaderError(
+      "catalog-invalid",
+      `Default profile "${value.defaultProfileId}" is not present in the catalog.`,
+    );
   }
 
   if (
@@ -258,7 +308,9 @@ function fetchError(
     : new AtlasLoaderError(code, message, cause);
 }
 
-export function createAtlasLoader(options: AtlasLoaderOptions): AtlasLoader {
+export function createAtlasLoader(
+  options: AtlasLoaderOptions,
+): AtlasLoaderWithProfiles {
   let state: AtlasLoaderState = { status: "idle" };
   let catalog: AtlasCatalog | undefined;
   let resolvedCatalogUrl = options.catalogUrl;
@@ -411,6 +463,12 @@ export function createAtlasLoader(options: AtlasLoaderOptions): AtlasLoader {
     loadOptions?: { signal?: AbortSignal },
   ): Promise<LoadedAtlasBundle> {
     const loadedCatalog = await loadCatalog(loadOptions);
+    const system = loadedCatalog.systems.find(
+      (candidate) => candidate.id === systemId,
+    );
+    if (system?.bundleId) {
+      return loadBundle(system.bundleId, loadOptions);
+    }
     const bundles = loadedCatalog.bundles.filter((bundle) =>
       bundle.systems.includes(systemId),
     );
@@ -443,6 +501,33 @@ export function createAtlasLoader(options: AtlasLoaderOptions): AtlasLoader {
     return loadBundle(bundles[0].id, loadOptions);
   }
 
+  async function loadProfile(
+    profileId?: string,
+    loadOptions?: { signal?: AbortSignal },
+  ): Promise<LoadedAtlasBundle> {
+    const loadedCatalog = await loadCatalog(loadOptions);
+    const targetId = profileId ?? loadedCatalog.defaultProfileId;
+    const profile = loadedCatalog.profiles?.find(
+      (candidate) => candidate.id === targetId,
+    );
+    if (!profile) {
+      const error = new AtlasLoaderError(
+        "profile-not-found",
+        targetId
+          ? `Atlas profile "${targetId}" is not present in release ${loadedCatalog.atlas.version}.`
+          : `Release ${loadedCatalog.atlas.version} does not declare a default atlas profile.`,
+      );
+      setState({
+        status: "error",
+        operation: "profile",
+        error,
+        catalog: loadedCatalog,
+      });
+      throw error;
+    }
+    return loadBundle(profile.bundleId, loadOptions);
+  }
+
   return {
     getState: () => state,
     subscribe(listener) {
@@ -452,5 +537,6 @@ export function createAtlasLoader(options: AtlasLoaderOptions): AtlasLoader {
     loadCatalog,
     loadBundle,
     loadSystem,
+    loadProfile,
   };
 }

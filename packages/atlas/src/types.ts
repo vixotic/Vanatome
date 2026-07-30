@@ -28,6 +28,7 @@ export type AnatomySystem = {
   id: AnatomySystemId;
   name: string;
   description?: string;
+  bundleId?: string;
 };
 
 export type AnatomyLayer = {
@@ -59,6 +60,13 @@ export type AtlasBundleDescriptor = {
   nodeCount?: number;
 };
 
+export type AtlasProfileDescriptor = {
+  id: string;
+  name: string;
+  bundleId: string;
+  description?: string;
+};
+
 export type AtlasCatalog = {
   schemaVersion: 1;
   atlas: {
@@ -70,6 +78,8 @@ export type AtlasCatalog = {
   systems: readonly AnatomySystem[];
   layers: readonly AnatomyLayer[];
   bundles: readonly AtlasBundleDescriptor[];
+  profiles?: readonly AtlasProfileDescriptor[];
+  defaultProfileId?: string;
   provenance: AtlasProvenance;
 };
 
@@ -109,13 +119,14 @@ export type AtlasLoaderErrorCode =
   | "catalog-fetch"
   | "catalog-invalid"
   | "bundle-not-found"
+  | "profile-not-found"
   | "system-not-found"
   | "system-ambiguous"
   | "metadata-fetch"
   | "metadata-invalid"
   | "aborted";
 
-export type AtlasLoaderOperation = "catalog" | "bundle";
+export type AtlasLoaderOperation = "catalog" | "bundle" | "profile";
 
 export type AtlasLoaderState =
   | { status: "idle" }
@@ -161,6 +172,13 @@ export interface AtlasLoader {
   ): Promise<LoadedAtlasBundle>;
   loadSystem(
     systemId: AnatomySystemId,
+    options?: { signal?: AbortSignal },
+  ): Promise<LoadedAtlasBundle>;
+}
+
+export interface AtlasLoaderWithProfiles extends AtlasLoader {
+  loadProfile(
+    profileId?: string,
     options?: { signal?: AbortSignal },
   ): Promise<LoadedAtlasBundle>;
 }
