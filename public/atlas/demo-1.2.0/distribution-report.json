@@ -1,0 +1,70 @@
+{
+  "status": "distributed",
+  "release": "demo-1.2.0",
+  "version": "1.2.0",
+  "buildId": "e9a45d0a551acb8f",
+  "fullBody": {
+    "file": "z-anatomy-1.2.0-full-body.glb",
+    "bytes": 13407900,
+    "nodeCount": 528,
+    "anatomyIdCount": 293
+  },
+  "systems": [
+    {
+      "id": "cardiovascular",
+      "file": "z-anatomy-1.2.0-cardiovascular.glb",
+      "bytes": 4606860,
+      "nodeCount": 4,
+      "anatomyIdCount": 4
+    },
+    {
+      "id": "digestive",
+      "file": "z-anatomy-1.2.0-digestive.glb",
+      "bytes": 5755916,
+      "nodeCount": 12,
+      "anatomyIdCount": 12
+    },
+    {
+      "id": "lymphatic",
+      "file": "z-anatomy-1.2.0-lymphatic.glb",
+      "bytes": 3917792,
+      "nodeCount": 54,
+      "anatomyIdCount": 54
+    },
+    {
+      "id": "nervous",
+      "file": "z-anatomy-1.2.0-nervous.glb",
+      "bytes": 4366276,
+      "nodeCount": 32,
+      "anatomyIdCount": 32
+    },
+    {
+      "id": "regional-anatomy",
+      "file": "z-anatomy-1.2.0-regional-anatomy.glb",
+      "bytes": 6145080,
+      "nodeCount": 236,
+      "anatomyIdCount": 1
+    },
+    {
+      "id": "respiratory",
+      "file": "z-anatomy-1.2.0-respiratory.glb",
+      "bytes": 4141712,
+      "nodeCount": 6,
+      "anatomyIdCount": 6
+    },
+    {
+      "id": "skeletal",
+      "file": "z-anatomy-1.2.0-skeletal.glb",
+      "bytes": 3881392,
+      "nodeCount": 181,
+      "anatomyIdCount": 181
+    },
+    {
+      "id": "urinary",
+      "file": "z-anatomy-1.2.0-urinary.glb",
+      "bytes": 3441436,
+      "nodeCount": 3,
+      "anatomyIdCount": 3
+    }
+  ]
+}

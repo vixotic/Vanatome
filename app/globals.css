@@ -105,14 +105,22 @@ button {
 }
 
 .brand-mark {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border: 1px solid rgba(88, 231, 255, 0.4);
-  color: var(--cyan);
-  background: rgba(88, 231, 255, 0.06);
-  box-shadow: 0 0 25px rgba(88, 231, 255, 0.12), inset 0 0 15px rgba(88, 231, 255, 0.04);
+  background:
+    linear-gradient(135deg, rgba(88, 231, 255, 0.09), rgba(88, 231, 255, 0.025));
+  box-shadow:
+    0 0 25px rgba(88, 231, 255, 0.12),
+    inset 0 0 15px rgba(88, 231, 255, 0.04);
+}
+
+.brand-mark img {
+  width: 25px;
+  height: 25px;
+  display: block;
 }
 
 .brand-name {
@@ -260,6 +268,13 @@ button {
   margin: 17px 1px 0;
 }
 
+.layer-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 .layer-label {
   display: flex;
   align-items: center;
@@ -267,6 +282,21 @@ button {
   color: #53737d;
   font: 8px var(--font-geist-mono);
   letter-spacing: 0.15em;
+}
+
+.layer-reset {
+  border: 0;
+  background: transparent;
+  color: var(--cyan);
+  padding: 2px;
+  cursor: pointer;
+  font: 7px var(--font-geist-mono);
+  letter-spacing: 0.12em;
+}
+
+.layer-reset:disabled {
+  color: #355963;
+  cursor: default;
 }
 
 .layer-chips {
@@ -294,6 +324,10 @@ button {
   color: var(--cyan);
   background: rgba(88, 231, 255, 0.09);
   outline: none;
+}
+
+.layer-chip[aria-disabled="true"] {
+  cursor: default;
 }
 
 .rail-heading {
@@ -545,6 +579,10 @@ button {
   gap: 7px;
 }
 
+.viewer-controls .touch-move-hint {
+  display: none;
+}
+
 .scan-status {
   position: absolute;
   right: 22px;
@@ -558,6 +596,92 @@ button {
   width: 30px;
   height: 2px;
   background: linear-gradient(90deg, var(--cyan) 64%, rgba(88, 231, 255, 0.12) 64%);
+}
+
+.viewer-context-dismiss {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+}
+
+.viewer-context-menu {
+  position: fixed;
+  width: 268px;
+  padding: 8px;
+  border: 1px solid rgba(88, 231, 255, 0.28);
+  background:
+    linear-gradient(145deg, rgba(10, 29, 38, 0.98), rgba(3, 11, 16, 0.98));
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.52),
+    inset 0 0 30px rgba(88, 231, 255, 0.025);
+  backdrop-filter: blur(18px);
+}
+
+.viewer-context-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 11px 12px;
+  border-bottom: 1px solid rgba(88, 231, 255, 0.1);
+}
+
+.viewer-context-heading span {
+  color: #527b86;
+  font: 7px var(--font-geist-mono);
+  letter-spacing: 0.18em;
+}
+
+.viewer-context-heading strong {
+  overflow: hidden;
+  color: #d9faff;
+  font: 500 13px var(--font-geist-sans);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viewer-context-menu button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 11px;
+  border: 0;
+  border-bottom: 1px solid rgba(88, 231, 255, 0.07);
+  background: transparent;
+  color: #7ba0aa;
+  text-align: left;
+  cursor: pointer;
+}
+
+.viewer-context-menu button strong {
+  color: #a9d5de;
+  font: 500 10px var(--font-geist-sans);
+}
+
+.viewer-context-menu button span {
+  color: #52717a;
+  font: 7px/1.45 var(--font-geist-mono);
+  letter-spacing: 0.04em;
+}
+
+.viewer-context-menu button:hover,
+.viewer-context-menu button:focus-visible {
+  background: rgba(88, 231, 255, 0.08);
+  outline: 1px solid rgba(88, 231, 255, 0.24);
+}
+
+.viewer-context-menu button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.viewer-context-menu .viewer-context-reset {
+  margin-top: 4px;
+  border-bottom: 0;
+}
+
+.viewer-context-menu .viewer-context-reset strong {
+  color: var(--cyan);
 }
 
 .info-panel {
@@ -983,9 +1107,13 @@ button {
     transform: none;
   }
 
-  .viewer-controls span:nth-child(2),
+  .viewer-controls > span:not(.touch-move-hint),
   .scan-status {
     display: none;
+  }
+
+  .viewer-controls .touch-move-hint {
+    display: flex;
   }
 
   .reticle {

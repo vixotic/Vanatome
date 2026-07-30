@@ -1,0 +1,2769 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.2.0",
+  "buildId": "e9a45d0a551acb8f",
+  "bundleId": "skeletal",
+  "nodeCount": 181,
+  "structures": [
+    {
+      "id": "skeletal-system",
+      "name": "Skeletal",
+      "kind": "system",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        -1.1315,
+        0.1616
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "kind": "organ",
+      "parentId": "skeletal-system",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.1253,
+        0.1046
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "skeleton-atlas-c1",
+      "name": "Atlas (C1)",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.7005,
+        -0.1499
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-axis-c2",
+      "name": "Axis (C2)",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0001,
+        4.6099,
+        -0.1821
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-body-of-sternum",
+      "name": "Body of sternum",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.9946,
+        0.6999
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-coccyx",
+      "name": "Coccyx",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0001,
+        -0.18,
+        -0.5355
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eighth-rib-left",
+      "name": "Eighth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5344,
+        2.3774,
+        -0.1026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eighth-rib-right",
+      "name": "Eighth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5344,
+        2.3774,
+        -0.1026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eleventh-rib-left",
+      "name": "Eleventh rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4887,
+        1.7755,
+        -0.2637
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-eleventh-rib-right",
+      "name": "Eleventh rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4887,
+        1.7755,
+        -0.2637
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fifth-rib-left",
+      "name": "Fifth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5139,
+        3.0301,
+        0.0521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fifth-rib-right",
+      "name": "Fifth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5139,
+        3.0301,
+        0.0521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-first-rib-left",
+      "name": "First rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.3059,
+        3.8178,
+        0.0126
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-first-rib-right",
+      "name": "First rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.3059,
+        3.8178,
+        0.0126
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fourth-rib-left",
+      "name": "Fourth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4942,
+        3.2524,
+        0.0552
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-fourth-rib-right",
+      "name": "Fourth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4942,
+        3.2524,
+        0.0552
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-hip-bone-left",
+      "name": "Hip bone.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4824,
+        0.2325,
+        -0.1075
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-hip-bone-right",
+      "name": "Hip bone.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4824,
+        0.2325,
+        -0.1075
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-manubrium-of-sternum",
+      "name": "Manubrium of sternum",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.0012,
+        3.5386,
+        0.4039
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-ninth-rib-left",
+      "name": "Ninth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5305,
+        2.1697,
+        -0.1898
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-ninth-rib-right",
+      "name": "Ninth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5305,
+        2.1697,
+        -0.1898
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-sacrum",
+      "name": "Sacrum",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.0001,
+        0.3631,
+        -0.3452
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-second-rib-left",
+      "name": "Second rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4084,
+        3.6351,
+        0.0749
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-second-rib-right",
+      "name": "Second rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4084,
+        3.6351,
+        0.0749
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-seventh-rib-left",
+      "name": "Seventh rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5535,
+        2.6053,
+        -0.0396
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-seventh-rib-right",
+      "name": "Seventh rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5535,
+        2.6053,
+        -0.0396
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-sixth-rib-left",
+      "name": "Sixth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5409,
+        2.8258,
+        0.0053
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-sixth-rib-right",
+      "name": "Sixth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5409,
+        2.8258,
+        0.0053
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-tenth-rib-left",
+      "name": "Tenth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5249,
+        1.9559,
+        -0.2135
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-tenth-rib-right",
+      "name": "Tenth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5249,
+        1.9559,
+        -0.2135
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-third-rib-left",
+      "name": "Third rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4536,
+        3.4453,
+        0.0478
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-third-rib-right",
+      "name": "Third rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4536,
+        3.4453,
+        0.0478
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-twelfth-rib-left",
+      "name": "Twelfth rib.l",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.3669,
+        1.6377,
+        -0.3214
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-twelfth-rib-right",
+      "name": "Twelfth rib.r",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.3669,
+        1.6377,
+        -0.3214
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c3",
+      "name": "Vertebra C3",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.4447,
+        -0.1882
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c4",
+      "name": "Vertebra C4",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0005,
+        4.3515,
+        -0.1853
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c5",
+      "name": "Vertebra C5",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.261,
+        -0.2084
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c6",
+      "name": "Vertebra C6",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.1622,
+        -0.2447
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-c7",
+      "name": "Vertebra C7",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        4.0641,
+        -0.2945
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l1",
+      "name": "Vertebra L1",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.6276,
+        -0.2046
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l2",
+      "name": "Vertebra L2",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.4247,
+        -0.1688
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l3",
+      "name": "Vertebra L3",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0001,
+        1.2029,
+        -0.1619
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l4",
+      "name": "Vertebra L4",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.0052,
+        -0.1688
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-l5",
+      "name": "Vertebra L5",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        0.7794,
+        -0.2036
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t1",
+      "name": "Vertebra T1",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.966,
+        -0.3315
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t10",
+      "name": "Vertebra T10",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.0004,
+        2.2825,
+        -0.3716
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t11",
+      "name": "Vertebra T11",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.0852,
+        -0.3155
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t12",
+      "name": "Vertebra T12",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        1.8735,
+        -0.2571
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t2",
+      "name": "Vertebra T2",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.8404,
+        -0.3694
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t3",
+      "name": "Vertebra T3",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.6916,
+        -0.4304
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t4",
+      "name": "Vertebra T4",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.5266,
+        -0.4568
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t5",
+      "name": "Vertebra T5",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.3308,
+        -0.4625
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t6",
+      "name": "Vertebra T6",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        3.0997,
+        -0.4673
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t7",
+      "name": "Vertebra T7",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.9023,
+        -0.4544
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t8",
+      "name": "Vertebra T8",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.6908,
+        -0.4439
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-vertebra-t9",
+      "name": "Vertebra T9",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.4993,
+        -0.4102
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "skeleton-xiphoid-process",
+      "name": "Xiphoid process",
+      "kind": "part",
+      "parentId": "skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        2.5257,
+        0.725
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton",
+      "name": "Appendicular Skeleton",
+      "kind": "organ",
+      "parentId": "skeletal-system",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0,
+        -1.0795,
+        0.0857
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "appendicular-skeleton-calcaneus-left",
+      "name": "Calcaneus.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5493,
+        -5.8411,
+        -0.376
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-calcaneus-right",
+      "name": "Calcaneus.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5493,
+        -5.8411,
+        -0.376
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-capitate-bone-left",
+      "name": "Capitate bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.854,
+        -0.1949,
+        0.1257
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-capitate-bone-right",
+      "name": "Capitate bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.854,
+        -0.1949,
+        0.1257
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-clavicle-left",
+      "name": "Clavicle.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5794,
+        3.7501,
+        -0.0061
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-clavicle-right",
+      "name": "Clavicle.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5794,
+        3.7501,
+        -0.0061
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-cuboid-bone-left",
+      "name": "Cuboid bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.6695,
+        -5.7897,
+        -0.0446
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-cuboid-bone-right",
+      "name": "Cuboid bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.6695,
+        -5.7897,
+        -0.0446
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-left",
+      "name": "Distal phalanx of fifth finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.9973,
+        -6.0159,
+        0.6373
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-right",
+      "name": "Distal phalanx of fifth finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.9973,
+        -6.0159,
+        0.6373
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-left",
+      "name": "Distal phalanx of fifth finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.6126,
+        -0.9934,
+        0.5332
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-right",
+      "name": "Distal phalanx of fifth finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.6126,
+        -0.9934,
+        0.5332
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-left",
+      "name": "Distal phalanx of first finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5606,
+        -5.9902,
+        0.8482
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-right",
+      "name": "Distal phalanx of first finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5606,
+        -5.9902,
+        0.8482
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-left",
+      "name": "Distal phalanx of first finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        2.2933,
+        -0.6476,
+        0.4603
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-right",
+      "name": "Distal phalanx of first finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -2.2933,
+        -0.6476,
+        0.4603
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-left",
+      "name": "Distal phalanx of fourth finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.9252,
+        -6.0097,
+        0.767
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-right",
+      "name": "Distal phalanx of fourth finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.9252,
+        -6.0097,
+        0.767
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-left",
+      "name": "Distal phalanx of fourth finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.8035,
+        -1.0911,
+        0.6143
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-right",
+      "name": "Distal phalanx of fourth finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.8035,
+        -1.0911,
+        0.6143
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-left",
+      "name": "Distal phalanx of second finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.7266,
+        -6.0072,
+        0.9133
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-right",
+      "name": "Distal phalanx of second finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.7266,
+        -6.0072,
+        0.9133
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-left",
+      "name": "Distal phalanx of second finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        2.2145,
+        -1.0954,
+        0.5538
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-right",
+      "name": "Distal phalanx of second finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -2.2145,
+        -1.0954,
+        0.5538
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-left",
+      "name": "Distal phalanx of third finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.8316,
+        -6.0121,
+        0.8699
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-right",
+      "name": "Distal phalanx of third finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.8316,
+        -6.0121,
+        0.8699
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-left",
+      "name": "Distal phalanx of third finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.9963,
+        -1.1605,
+        0.6166
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-right",
+      "name": "Distal phalanx of third finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.9963,
+        -1.1605,
+        0.6166
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-femur-left",
+      "name": "Femur.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.6327,
+        -1.5,
+        -0.1419
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-femur-right",
+      "name": "Femur.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.6327,
+        -1.5,
+        -0.1419
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fibula-left",
+      "name": "Fibula.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.7471,
+        -4.4448,
+        -0.3026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fibula-right",
+      "name": "Fibula.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.7471,
+        -4.4448,
+        -0.3026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fifth-metacarpal-bone-left",
+      "name": "Fifth metacarpal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.7008,
+        -0.4398,
+        0.2218
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fifth-metacarpal-bone-right",
+      "name": "Fifth metacarpal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.7008,
+        -0.4398,
+        0.2218
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fifth-metatarsal-bone-left",
+      "name": "Fifth metatarsal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.8361,
+        -5.9217,
+        0.1598
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fifth-metatarsal-bone-right",
+      "name": "Fifth metatarsal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.8361,
+        -5.9217,
+        0.1598
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-first-metacarpal-bone-left",
+      "name": "First metacarpal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        2.1036,
+        -0.3001,
+        0.2681
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-first-metacarpal-bone-right",
+      "name": "First metacarpal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -2.1036,
+        -0.3001,
+        0.2681
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-first-metatarsal-bone-left",
+      "name": "First metatarsal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4987,
+        -5.8404,
+        0.3684
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-first-metatarsal-bone-right",
+      "name": "First metatarsal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4987,
+        -5.8404,
+        0.3684
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fourth-metacarpal-bone-left",
+      "name": "Fourth metacarpal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.7901,
+        -0.4709,
+        0.1982
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fourth-metacarpal-bone-right",
+      "name": "Fourth metacarpal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.7901,
+        -0.4709,
+        0.1982
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fourth-metatarsal-bone-left",
+      "name": "Fourth metatarsal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.765,
+        -5.8837,
+        0.2655
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-fourth-metatarsal-bone-right",
+      "name": "Fourth metatarsal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.765,
+        -5.8837,
+        0.2655
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-hamate-bone-left",
+      "name": "Hamate bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.766,
+        -0.2127,
+        0.1523
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-hamate-bone-right",
+      "name": "Hamate bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.766,
+        -0.2127,
+        0.1523
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-humerus-left",
+      "name": "Humerus.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.377,
+        2.6211,
+        -0.1926
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-humerus-right",
+      "name": "Humerus.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.377,
+        2.6211,
+        -0.1926
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-intermediate-cuneiform-bone-left",
+      "name": "Intermediate cuneiform bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5853,
+        -5.6892,
+        0.0788
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-intermediate-cuneiform-bone-right",
+      "name": "Intermediate cuneiform bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5853,
+        -5.6892,
+        0.0788
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-lateral-cuneiform-bone-left",
+      "name": "Lateral cuneiform bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.654,
+        -5.7244,
+        0.0492
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-lateral-cuneiform-bone-right",
+      "name": "Lateral cuneiform bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.654,
+        -5.7244,
+        0.0492
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-lunate-bone-left",
+      "name": "Lunate bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.7675,
+        -0.1209,
+        0.1247
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-lunate-bone-right",
+      "name": "Lunate bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.7675,
+        -0.1209,
+        0.1247
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-medial-cuneiform-bone-left",
+      "name": "Medial cuneiform bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.4943,
+        -5.7389,
+        0.1084
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-medial-cuneiform-bone-right",
+      "name": "Medial cuneiform bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.4943,
+        -5.7389,
+        0.1084
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-left",
+      "name": "Middle phalanx of fifth finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.9879,
+        -6.0099,
+        0.5857
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-right",
+      "name": "Middle phalanx of fifth finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.9879,
+        -6.0099,
+        0.5857
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-left",
+      "name": "Middle phalanx of fifth finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.6247,
+        -0.8891,
+        0.445
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-right",
+      "name": "Middle phalanx of fifth finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.6247,
+        -0.8891,
+        0.445
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-left",
+      "name": "Middle phalanx of fourth finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.9092,
+        -6.0021,
+        0.6952
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-right",
+      "name": "Middle phalanx of fourth finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.9092,
+        -6.0021,
+        0.6952
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-left",
+      "name": "Middle phalanx of fourth finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.7975,
+        -1.002,
+        0.4841
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-right",
+      "name": "Middle phalanx of fourth finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.7975,
+        -1.002,
+        0.4841
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-left",
+      "name": "Middle phalanx of second finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.707,
+        -5.9853,
+        0.8243
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-right",
+      "name": "Middle phalanx of second finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.707,
+        -5.9853,
+        0.8243
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-left",
+      "name": "Middle phalanx of second finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        2.1813,
+        -1.0059,
+        0.4343
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-right",
+      "name": "Middle phalanx of second finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -2.1813,
+        -1.0059,
+        0.4343
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-left",
+      "name": "Middle phalanx of third finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.8127,
+        -5.9942,
+        0.7848
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-right",
+      "name": "Middle phalanx of third finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.8127,
+        -5.9942,
+        0.7848
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-left",
+      "name": "Middle phalanx of third finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.9766,
+        -1.0503,
+        0.4895
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-right",
+      "name": "Middle phalanx of third finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.9766,
+        -1.0503,
+        0.4895
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-navicular-bone-left",
+      "name": "Navicular bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5112,
+        -5.6645,
+        -0.0216
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-navicular-bone-right",
+      "name": "Navicular bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5112,
+        -5.6645,
+        -0.0216
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-patella-left",
+      "name": "Patella.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.591,
+        -2.99,
+        0.051
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-patella-right",
+      "name": "Patella.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.591,
+        -2.99,
+        0.051
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-pisiform-bone-left",
+      "name": "Pisiform bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.707,
+        -0.1792,
+        0.2246
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-pisiform-bone-right",
+      "name": "Pisiform bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.707,
+        -0.1792,
+        0.2246
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-left",
+      "name": "Proximal phalanx of fifth finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.9483,
+        -5.9955,
+        0.4789
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-right",
+      "name": "Proximal phalanx of fifth finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.9483,
+        -5.9955,
+        0.4789
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-left",
+      "name": "Proximal phalanx of fifth finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.6576,
+        -0.7279,
+        0.3432
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-right",
+      "name": "Proximal phalanx of fifth finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.6576,
+        -0.7279,
+        0.3432
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-left",
+      "name": "Proximal phalanx of first finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5178,
+        -5.9587,
+        0.6803
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-right",
+      "name": "Proximal phalanx of first finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5178,
+        -5.9587,
+        0.6803
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-left",
+      "name": "Proximal phalanx of first finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        2.2318,
+        -0.4985,
+        0.377
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-right",
+      "name": "Proximal phalanx of first finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -2.2318,
+        -0.4985,
+        0.377
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-left",
+      "name": "Proximal phalanx of fourth finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.8621,
+        -5.9821,
+        0.5702
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-right",
+      "name": "Proximal phalanx of fourth finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.8621,
+        -5.9821,
+        0.5702
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-left",
+      "name": "Proximal phalanx of fourth finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.7864,
+        -0.8017,
+        0.3412
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-right",
+      "name": "Proximal phalanx of fourth finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.7864,
+        -0.8017,
+        0.3412
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-left",
+      "name": "Proximal phalanx of second finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.6688,
+        -5.9634,
+        0.68
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-right",
+      "name": "Proximal phalanx of second finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.6688,
+        -5.9634,
+        0.68
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-left",
+      "name": "Proximal phalanx of second finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        2.1094,
+        -0.8371,
+        0.3172
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-right",
+      "name": "Proximal phalanx of second finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -2.1094,
+        -0.8371,
+        0.3172
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-left",
+      "name": "Proximal phalanx of third finger of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.7742,
+        -5.973,
+        0.6383
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-right",
+      "name": "Proximal phalanx of third finger of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.7742,
+        -5.973,
+        0.6383
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-left",
+      "name": "Proximal phalanx of third finger of hand.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.9399,
+        -0.8365,
+        0.3477
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-right",
+      "name": "Proximal phalanx of third finger of hand.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.9399,
+        -0.8365,
+        0.3477
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-radius-left",
+      "name": "Radius.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.8044,
+        0.7238,
+        -0.0532
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-radius-right",
+      "name": "Radius.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.8044,
+        0.7238,
+        -0.0532
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-scaphoid-bone-left",
+      "name": "Scaphoid bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.8887,
+        -0.1178,
+        0.1265
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-scaphoid-bone-right",
+      "name": "Scaphoid bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.8887,
+        -0.1178,
+        0.1265
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-scapula-left",
+      "name": "Scapula.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.8196,
+        3.2525,
+        -0.3904
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-scapula-right",
+      "name": "Scapula.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.8196,
+        3.2525,
+        -0.3904
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-second-metacarpal-bone-left",
+      "name": "Second metacarpal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        2.0041,
+        -0.4873,
+        0.205
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-second-metacarpal-bone-right",
+      "name": "Second metacarpal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -2.0041,
+        -0.4873,
+        0.205
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-second-metatarsal-bone-left",
+      "name": "Second metatarsal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.6261,
+        -5.8306,
+        0.3495
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-second-metatarsal-bone-right",
+      "name": "Second metatarsal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.6261,
+        -5.8306,
+        0.3495
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-sesamoid-bones-of-foot-left",
+      "name": "Sesamoid bones of foot.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5019,
+        -5.9975,
+        0.4932
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-sesamoid-bones-of-foot-right",
+      "name": "Sesamoid bones of foot.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5019,
+        -5.9975,
+        0.4932
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-talus-left",
+      "name": "Talus.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.5229,
+        -5.6263,
+        -0.256
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-talus-right",
+      "name": "Talus.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.5229,
+        -5.6263,
+        -0.256
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-third-metacarpal-bone-left",
+      "name": "Third metacarpal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.8971,
+        -0.4865,
+        0.188
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-third-metacarpal-bone-right",
+      "name": "Third metacarpal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.8971,
+        -0.4865,
+        0.188
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-third-metatarsal-bone-left",
+      "name": "Third metatarsal bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.7048,
+        -5.8505,
+        0.332
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-third-metatarsal-bone-right",
+      "name": "Third metatarsal bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.7048,
+        -5.8505,
+        0.332
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-tibia-left",
+      "name": "Tibia.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        0.536,
+        -4.3206,
+        -0.2026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-tibia-right",
+      "name": "Tibia.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -0.536,
+        -4.3206,
+        -0.2026
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-trapezium-bone-left",
+      "name": "Trapezium bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.9756,
+        -0.1775,
+        0.1781
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-trapezium-bone-right",
+      "name": "Trapezium bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.9756,
+        -0.1775,
+        0.1781
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-trapezoid-bone-left",
+      "name": "Trapezoid bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.9356,
+        -0.2261,
+        0.1403
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-trapezoid-bone-right",
+      "name": "Trapezoid bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.9356,
+        -0.2261,
+        0.1403
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-triquetrum-bone-left",
+      "name": "Triquetrum bone.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.7167,
+        -0.1779,
+        0.1498
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-triquetrum-bone-right",
+      "name": "Triquetrum bone.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.7167,
+        -0.1779,
+        0.1498
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-ulna-left",
+      "name": "Ulna.l",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        1.606,
+        0.7831,
+        -0.1314
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "appendicular-skeleton-ulna-right",
+      "name": "Ulna.r",
+      "kind": "part",
+      "parentId": "appendicular-skeleton",
+      "system": "skeletal",
+      "layer": "skeletal",
+      "selectable": true,
+      "position": [
+        -1.606,
+        0.7831,
+        -0.1314
+      ],
+      "objectCount": 1
+    }
+  ]
+}

@@ -490,6 +490,13 @@ export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
     ...normalizedCuratedRegistry,
     ...generatedRegistry,
   ];
+  const viewerStructures: VanatomeStructure[] = [
+    ...registry,
+    ...releasedStructures.filter(
+      (structure) =>
+        structure.selectable === false && !curatedById.has(structure.id),
+    ),
+  ];
   const byId = Object.fromEntries(
     registry.map((structure) => [structure.id, structure]),
   ) as Record<string, AnatomyStructure>;
@@ -509,7 +516,7 @@ export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
     mappedNodeCount: bundle.metadata.nodeCount,
     atlas: {
       ...bundle.atlas,
-      structures: registry,
+      structures: viewerStructures,
     },
     attributionUrl: bundle.provenance.noticeUrl ?? "/ATTRIBUTION.txt",
   };

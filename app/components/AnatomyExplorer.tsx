@@ -2,7 +2,6 @@
 
 import {
   Activity,
-  Box,
   ChevronDown,
   ChevronRight,
   Crosshair,
@@ -10,6 +9,7 @@ import {
   EyeOff,
   Info,
   Layers3,
+  Move,
   PanelLeftClose,
   PanelLeftOpen,
   PanelRightClose,
@@ -25,12 +25,17 @@ import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import {
   AtlasLoaderError,
+  createDemoHumanAtlas,
   createOfficialHumanAtlas,
   type AtlasLoaderState,
   type LoadedAtlasBundle,
 } from "@vixotic/vanatome-atlas";
 import { useVanatomeController } from "@vixotic/vanatome-react";
-import type { VanatomeHierarchyNode } from "@vixotic/vanatome-react";
+import type {
+  VanatomeContextMenuEvent,
+  VanatomeHierarchyNode,
+  VanatomeIsolationMode,
+} from "@vixotic/vanatome-react";
 import {
   createAnatomyData,
   type AnatomyData,
@@ -38,6 +43,7 @@ import {
 } from "../data/anatomy";
 import {
   ATLAS_ATTRIBUTION_URL,
+  ATLAS_CATALOG_IS_DEMO,
   ATLAS_CATALOG_URL,
 } from "../config/atlas";
 
@@ -56,7 +62,10 @@ const AnatomyScene = dynamic(
 
 export function AnatomyExplorer() {
   const loader = useMemo(
-    () => createOfficialHumanAtlas({ catalogUrl: ATLAS_CATALOG_URL }),
+    () =>
+      ATLAS_CATALOG_IS_DEMO
+        ? createDemoHumanAtlas({ catalogUrl: ATLAS_CATALOG_URL })
+        : createOfficialHumanAtlas({ catalogUrl: ATLAS_CATALOG_URL }),
     [],
   );
   const [loaderState, setLoaderState] = useState<AtlasLoaderState>(
@@ -120,7 +129,7 @@ function AtlasLoadScreen({
       <header className="topbar">
         <div className="brand">
           <div className="brand-mark" aria-hidden="true">
-            <Box size={20} strokeWidth={1.6} />
+            <img src="/favicon.svg" alt="" />
           </div>
           <div>
             <div className="brand-name">Vanatome</div>
@@ -182,10 +191,17 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
   const [rightOpen, setRightOpen] = useState(true);
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
+  const [contextMenu, setContextMenu] = useState<{
+    id: string;
+    x: number;
+    y: number;
+  } | null>(null);
   const [expandedIds, setExpandedIds] = useState(
     () => new Set(anatomyHierarchy.map((structure) => structure.id)),
   );
   const selected = viewer.selectedId ? anatomyById[viewer.selectedId] : null;
+  const selectedIsolationActive =
+    viewer.isolation?.id === selected?.id;
   const rightPanelExpanded = isCompact ? mobilePanelOpen : rightOpen;
 
   useEffect(() => {
@@ -207,6 +223,14 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
   }, [anatomyRegistry, query]);
 
   const choose = (id: string | null) => {
+    setContextMenu(null);
+    const structure = id ? anatomyById[id] : null;
+    if (
+      structure &&
+      !viewer.visibleLayers.includes(structure.layer)
+    ) {
+      viewer.setVisibleLayers([...viewer.visibleLayers, structure.layer]);
+    }
     viewer.select(id);
     if (!id) return;
     setExpandedIds((current) => {
@@ -222,6 +246,43 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
     setMobilePanelOpen(true);
     setQuery("");
   };
+
+  const openStructureMenu = (event: VanatomeContextMenuEvent) => {
+    const menuWidth = 280;
+    const menuHeight = 280;
+    setContextMenu({
+      id: event.id,
+      x: Math.max(12, Math.min(event.clientX, window.innerWidth - menuWidth - 12)),
+      y: Math.max(12, Math.min(event.clientY, window.innerHeight - menuHeight - 12)),
+    });
+  };
+
+  const applyIsolation = (mode: VanatomeIsolationMode) => {
+    if (!contextMenu) return;
+    viewer.isolate(contextMenu.id, mode);
+    setContextMenu(null);
+  };
+
+  const resetViewer = () => {
+    setContextMenu(null);
+    viewer.reset();
+  };
+
+  const toggleSystem = (layerId: string) => {
+    const active = viewer.visibleLayers.includes(layerId);
+    if (active && viewer.visibleLayers.length === 1) return;
+    if (active && selected?.layer === layerId) viewer.clear();
+    viewer.toggleLayer(layerId);
+  };
+
+  const showAllSystems = () => {
+    viewer.setVisibleLayers(initialLayers);
+  };
+
+  const menuStructure = contextMenu ? anatomyById[contextMenu.id] : null;
+  const menuParent = menuStructure?.parentId
+    ? anatomyById[menuStructure.parentId]
+    : null;
 
   const renderStructure = (
     structure: AnatomyStructure | VanatomeHierarchyNode,
@@ -302,7 +363,7 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
       <header className="topbar">
         <div className="brand">
           <div className="brand-mark" aria-hidden="true">
-            <Box size={20} strokeWidth={1.6} />
+            <img src="/favicon.svg" alt="" />
           </div>
           <div>
             <div className="brand-name">Vanatome</div>
@@ -312,7 +373,11 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
 
         <div className="status-pill">
           <span className="status-dot" />
-          FULL BODY ONLINE
+          {viewer.visibleLayers.length === anatomyLayers.length
+            ? "FULL BODY ONLINE"
+            : `${viewer.visibleLayers.length} ${
+              viewer.visibleLayers.length === 1 ? "SYSTEM" : "SYSTEMS"
+            } ACTIVE`}
         </div>
 
         <div className="topbar-actions">
@@ -363,21 +428,37 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
               )}
             </label>
 
-            <div className="layer-controls" aria-label="Anatomy layers">
-              <span className="layer-label">
-                <Layers3 size={13} />
-                LAYERS
-              </span>
+            <div className="layer-controls" aria-label="Anatomy systems">
+              <div className="layer-heading">
+                <span className="layer-label">
+                  <Layers3 size={13} />
+                  SYSTEMS · MULTI SELECT
+                </span>
+                <button
+                  type="button"
+                  className="layer-reset"
+                  onClick={showAllSystems}
+                  disabled={viewer.visibleLayers.length === anatomyLayers.length}
+                >
+                  ALL
+                </button>
+              </div>
               <div className="layer-chips">
                 {anatomyLayers.map((layer) => {
                   const active = viewer.visibleLayers.includes(layer.id);
+                  const lastActive =
+                    active && viewer.visibleLayers.length === 1;
                   return (
                     <button
                       key={layer.id}
                       type="button"
                       className={`layer-chip ${active ? "active" : ""}`}
                       aria-pressed={active}
-                      onClick={() => viewer.toggleLayer(layer.id)}
+                      aria-disabled={lastActive}
+                      title={lastActive
+                        ? "At least one system must remain visible"
+                        : `${active ? "Hide" : "Show"} ${layer.label}`}
+                      onClick={() => toggleSystem(layer.id)}
                     >
                       {layer.label}
                     </button>
@@ -421,11 +502,16 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
           <AnatomyScene
             atlas={anatomy.atlas}
             selectedId={viewer.selectedId}
-            isolatedId={viewer.isolatedId}
+            isolation={viewer.isolation}
             visibleLayers={viewer.visibleLayers}
             focusRequestKey={viewer.focusRequestKey}
             resetViewKey={viewer.resetViewKey}
             onSelect={choose}
+            onStructureContextMenu={openStructureMenu}
+            onEscape={() => {
+              if (contextMenu) setContextMenu(null);
+              else viewer.clear();
+            }}
           />
 
           <div className="viewer-label">
@@ -442,7 +528,7 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
           <button
             className="reset-view-button"
             type="button"
-            onClick={viewer.reset}
+            onClick={resetViewer}
           >
             <RotateCcw size={15} />
             RESET VIEW
@@ -458,6 +544,10 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
           <div className="viewer-controls" aria-label="3D controls hint">
             <span><Rotate3d size={15} /> DRAG TO ROTATE</span>
             <span><ZoomIn size={15} /> SCROLL TO ZOOM</span>
+            <span><Move size={15} /> RIGHT-DRAG TO MOVE</span>
+            <span className="touch-move-hint">
+              <Move size={15} /> TOUCH: ROTATE • PINCH/PAN
+            </span>
           </div>
 
           <div className="scan-status">
@@ -498,20 +588,20 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
                 <div className="panel-actions">
                   <button
                     type="button"
-                    className={`panel-action ${viewer.isolatedId ? "active" : ""}`}
-                    aria-pressed={viewer.isolatedId === selected.id}
+                    className={`panel-action ${viewer.isolation ? "active" : ""}`}
+                    aria-pressed={selectedIsolationActive}
                     onClick={() =>
                       viewer.isolate(
-                        viewer.isolatedId === selected.id ? null : selected.id,
+                        selectedIsolationActive ? null : selected.id,
                       )
                     }
                   >
-                    {viewer.isolatedId === selected.id ? (
+                    {selectedIsolationActive ? (
                       <EyeOff size={15} />
                     ) : (
                       <Eye size={15} />
                     )}
-                    {viewer.isolatedId === selected.id ? "SHOW ALL" : "ISOLATE"}
+                    {selectedIsolationActive ? "SHOW ALL" : "ISOLATE"}
                   </button>
                   <button
                     type="button"
@@ -568,6 +658,83 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
             aria-label="Close information panel"
             onClick={() => setMobilePanelOpen(false)}
           />
+        )}
+
+        {contextMenu && menuStructure && (
+          <div
+            className="viewer-context-dismiss"
+            onPointerDown={() => setContextMenu(null)}
+            onContextMenu={(event) => {
+              event.preventDefault();
+              setContextMenu(null);
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Escape") setContextMenu(null);
+            }}
+          >
+            <div
+              className="viewer-context-menu"
+              role="menu"
+              aria-label={`${menuStructure.name} view options`}
+              style={{ left: contextMenu.x, top: contextMenu.y }}
+              onPointerDown={(event) => event.stopPropagation()}
+              onContextMenu={(event) => event.preventDefault()}
+            >
+              <div className="viewer-context-heading">
+                <span>VIEW OPTIONS</span>
+                <strong>{menuStructure.name}</strong>
+              </div>
+              <button
+                type="button"
+                role="menuitem"
+                autoFocus
+                onClick={() => applyIsolation("selected")}
+              >
+                <strong>Isolate structure</strong>
+                <span>Show only {menuStructure.name}</span>
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                disabled={!menuParent}
+                onClick={() => applyIsolation("parent")}
+              >
+                <strong>Isolate within parent</strong>
+                <span>
+                  {menuParent
+                    ? `Keep the complete ${menuParent.name} visible`
+                    : "No parent structure is available"}
+                </span>
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                disabled={!menuParent}
+                onClick={() => applyIsolation("parent-context")}
+              >
+                <strong>Parent as translucent context</strong>
+                <span>
+                  {menuParent
+                    ? `Ghost ${menuParent.name} around the selection`
+                    : "No parent structure is available"}
+                </span>
+              </button>
+              {viewer.isolation && (
+                <button
+                  type="button"
+                  role="menuitem"
+                  className="viewer-context-reset"
+                  onClick={() => {
+                    viewer.isolate(null);
+                    setContextMenu(null);
+                  }}
+                >
+                  <strong>Show all anatomy</strong>
+                  <span>Exit the current isolation view</span>
+                </button>
+              )}
+            </div>
+          </div>
         )}
       </section>
 

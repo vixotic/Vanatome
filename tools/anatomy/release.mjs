@@ -64,7 +64,9 @@ function batchDirectory(config, batchId, buildId) {
 }
 
 function releaseDirectory(config, releaseId, buildId) {
-  return resolve(repoRoot, config.stagingRoot, config.atlas.version, "releases", releaseId, buildId);
+  const releaseVersion =
+    config.releases[releaseId].version ?? config.atlas.version;
+  return resolve(repoRoot, config.stagingRoot, releaseVersion, "releases", releaseId, buildId);
 }
 
 async function batchToolFingerprints(config, batchId) {
@@ -233,7 +235,7 @@ async function assemble(config, releaseId, options) {
       atlas: {
         id: config.atlas.id,
         name: config.atlas.name,
-        version: config.atlas.version,
+        version: release.version ?? config.atlas.version,
         release: releaseId,
       },
       build: { id: buildId, deterministic: true, fingerprints },

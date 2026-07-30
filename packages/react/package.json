@@ -1,6 +1,6 @@
 {
   "name": "@vixotic/vanatome-react",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Embeddable React viewer for curated Vanatome human anatomy atlases.",
   "license": "MIT",
   "type": "module",
@@ -21,6 +21,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "check": "tsc -p tsconfig.build.json --noEmit",
+    "test": "npm run check && npm run build && npm run test:compat && node --test tests/*.test.mjs",
+    "test:compat": "tsc -p tests/compatibility/tsconfig.json --noEmit",
     "prepack": "npm run build"
   },
   "peerDependencies": {

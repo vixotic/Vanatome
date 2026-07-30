@@ -1,0 +1,3236 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "appendicular-skeleton"
+  },
+  "build": {
+    "id": "5e8622391490df8d",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "843a4f6a1ad6c008bc919c66193958dfc57bdfc6eb8033e7d470cc080aba5289",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "2b4c050c498d62325339d8c2bf7fd98368231a3a71f411c201be5fc95e2a1c00"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 1713368,
+    "sha256": "daeb6765eba4e45c03c66b1164ff3e396e86f593c02100c39bab3e929e13836d"
+  },
+  "objectCount": 126,
+  "groups": {
+    "appendicular-skeleton": {
+      "centerBlender": [
+        0,
+        -0.012242,
+        0.717209
+      ],
+      "missing": [],
+      "name": "Appendicular Skeleton",
+      "nodes": [
+        "appendicular-skeleton-calcaneus-left__Calcaneus.l",
+        "appendicular-skeleton-calcaneus-right__Calcaneus.r",
+        "appendicular-skeleton-capitate-bone-left__Capitate bone.l",
+        "appendicular-skeleton-capitate-bone-right__Capitate bone.r",
+        "appendicular-skeleton-clavicle-left__Clavicle.l",
+        "appendicular-skeleton-clavicle-right__Clavicle.r",
+        "appendicular-skeleton-cuboid-bone-left__Cuboid bone.l",
+        "appendicular-skeleton-cuboid-bone-right__Cuboid bone.r",
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-left__Distal phalanx of fifth finger of foot.l",
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-right__Distal phalanx of fifth finger of foot.r",
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-left__Distal phalanx of fifth finger of hand.l",
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-right__Distal phalanx of fifth finger of hand.r",
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-left__Distal phalanx of first finger of foot.l",
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-right__Distal phalanx of first finger of foot.r",
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-left__Distal phalanx of first finger of hand.l",
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-right__Distal phalanx of first finger of hand.r",
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-left__Distal phalanx of fourth finger of foot.l",
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-right__Distal phalanx of fourth finger of foot.r",
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-left__Distal phalanx of fourth finger of hand.l",
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-right__Distal phalanx of fourth finger of hand.r",
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-left__Distal phalanx of second finger of foot.l",
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-right__Distal phalanx of second finger of foot.r",
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-left__Distal phalanx of second finger of hand.l",
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-right__Distal phalanx of second finger of hand.r",
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-left__Distal phalanx of third finger of foot.l",
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-right__Distal phalanx of third finger of foot.r",
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-left__Distal phalanx of third finger of hand.l",
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-right__Distal phalanx of third finger of hand.r",
+        "appendicular-skeleton-femur-left__Femur.l",
+        "appendicular-skeleton-femur-right__Femur.r",
+        "appendicular-skeleton-fibula-left__Fibula.l",
+        "appendicular-skeleton-fibula-right__Fibula.r",
+        "appendicular-skeleton-fifth-metacarpal-bone-left__Fifth metacarpal bone.l",
+        "appendicular-skeleton-fifth-metacarpal-bone-right__Fifth metacarpal bone.r",
+        "appendicular-skeleton-fifth-metatarsal-bone-left__Fifth metatarsal bone.l",
+        "appendicular-skeleton-fifth-metatarsal-bone-right__Fifth metatarsal bone.r",
+        "appendicular-skeleton-first-metacarpal-bone-left__First metacarpal bone.l",
+        "appendicular-skeleton-first-metacarpal-bone-right__First metacarpal bone.r",
+        "appendicular-skeleton-first-metatarsal-bone-left__First metatarsal bone.l",
+        "appendicular-skeleton-first-metatarsal-bone-right__First metatarsal bone.r",
+        "appendicular-skeleton-fourth-metacarpal-bone-left__Fourth metacarpal bone.l",
+        "appendicular-skeleton-fourth-metacarpal-bone-right__Fourth metacarpal bone.r",
+        "appendicular-skeleton-fourth-metatarsal-bone-left__Fourth metatarsal bone.l",
+        "appendicular-skeleton-fourth-metatarsal-bone-right__Fourth metatarsal bone.r",
+        "appendicular-skeleton-hamate-bone-left__Hamate bone.l",
+        "appendicular-skeleton-hamate-bone-right__Hamate bone.r",
+        "appendicular-skeleton-humerus-left__Humerus.l",
+        "appendicular-skeleton-humerus-right__Humerus.r",
+        "appendicular-skeleton-intermediate-cuneiform-bone-left__Intermediate cuneiform bone.l",
+        "appendicular-skeleton-intermediate-cuneiform-bone-right__Intermediate cuneiform bone.r",
+        "appendicular-skeleton-lateral-cuneiform-bone-left__Lateral cuneiform bone.l",
+        "appendicular-skeleton-lateral-cuneiform-bone-right__Lateral cuneiform bone.r",
+        "appendicular-skeleton-lunate-bone-left__Lunate bone.l",
+        "appendicular-skeleton-lunate-bone-right__Lunate bone.r",
+        "appendicular-skeleton-medial-cuneiform-bone-left__Medial cuneiform bone.l",
+        "appendicular-skeleton-medial-cuneiform-bone-right__Medial cuneiform bone.r",
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-left__Middle phalanx of fifth finger of foot.l",
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-right__Middle phalanx of fifth finger of foot.r",
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-left__Middle phalanx of fifth finger of hand.l",
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-right__Middle phalanx of fifth finger of hand.r",
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-left__Middle phalanx of fourth finger of foot.l",
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-right__Middle phalanx of fourth finger of foot.r",
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-left__Middle phalanx of fourth finger of hand.l",
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-right__Middle phalanx of fourth finger of hand.r",
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-left__Middle phalanx of second finger of foot.l",
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-right__Middle phalanx of second finger of foot.r",
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-left__Middle phalanx of second finger of hand.l",
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-right__Middle phalanx of second finger of hand.r",
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-left__Middle phalanx of third finger of foot.l",
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-right__Middle phalanx of third finger of foot.r",
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-left__Middle phalanx of third finger of hand.l",
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-right__Middle phalanx of third finger of hand.r",
+        "appendicular-skeleton-navicular-bone-left__Navicular bone.l",
+        "appendicular-skeleton-navicular-bone-right__Navicular bone.r",
+        "appendicular-skeleton-patella-left__Patella.l",
+        "appendicular-skeleton-patella-right__Patella.r",
+        "appendicular-skeleton-pisiform-bone-left__Pisiform bone.l",
+        "appendicular-skeleton-pisiform-bone-right__Pisiform bone.r",
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-left__Proximal phalanx of fifth finger of foot.l",
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-right__Proximal phalanx of fifth finger of foot.r",
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-left__Proximal phalanx of fifth finger of hand.l",
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-right__Proximal phalanx of fifth finger of hand.r",
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-left__Proximal phalanx of first finger of foot.l",
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-right__Proximal phalanx of first finger of foot.r",
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-left__Proximal phalanx of first finger of hand.l",
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-right__Proximal phalanx of first finger of hand.r",
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-left__Proximal phalanx of fourth finger of foot.l",
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-right__Proximal phalanx of fourth finger of foot.r",
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-left__Proximal phalanx of fourth finger of hand.l",
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-right__Proximal phalanx of fourth finger of hand.r",
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-left__Proximal phalanx of second finger of foot.l",
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-right__Proximal phalanx of second finger of foot.r",
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-left__Proximal phalanx of second finger of hand.l",
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-right__Proximal phalanx of second finger of hand.r",
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-left__Proximal phalanx of third finger of foot.l",
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-right__Proximal phalanx of third finger of foot.r",
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-left__Proximal phalanx of third finger of hand.l",
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-right__Proximal phalanx of third finger of hand.r",
+        "appendicular-skeleton-radius-left__Radius.l",
+        "appendicular-skeleton-radius-right__Radius.r",
+        "appendicular-skeleton-scaphoid-bone-left__Scaphoid bone.l",
+        "appendicular-skeleton-scaphoid-bone-right__Scaphoid bone.r",
+        "appendicular-skeleton-scapula-left__Scapula.l",
+        "appendicular-skeleton-scapula-right__Scapula.r",
+        "appendicular-skeleton-second-metacarpal-bone-left__Second metacarpal bone.l",
+        "appendicular-skeleton-second-metacarpal-bone-right__Second metacarpal bone.r",
+        "appendicular-skeleton-second-metatarsal-bone-left__Second metatarsal bone.l",
+        "appendicular-skeleton-second-metatarsal-bone-right__Second metatarsal bone.r",
+        "appendicular-skeleton-sesamoid-bones-of-foot-left__Sesamoid bones of foot.l",
+        "appendicular-skeleton-sesamoid-bones-of-foot-right__Sesamoid bones of foot.r",
+        "appendicular-skeleton-talus-left__Talus.l",
+        "appendicular-skeleton-talus-right__Talus.r",
+        "appendicular-skeleton-third-metacarpal-bone-left__Third metacarpal bone.l",
+        "appendicular-skeleton-third-metacarpal-bone-right__Third metacarpal bone.r",
+        "appendicular-skeleton-third-metatarsal-bone-left__Third metatarsal bone.l",
+        "appendicular-skeleton-third-metatarsal-bone-right__Third metatarsal bone.r",
+        "appendicular-skeleton-tibia-left__Tibia.l",
+        "appendicular-skeleton-tibia-right__Tibia.r",
+        "appendicular-skeleton-trapezium-bone-left__Trapezium bone.l",
+        "appendicular-skeleton-trapezium-bone-right__Trapezium bone.r",
+        "appendicular-skeleton-trapezoid-bone-left__Trapezoid bone.l",
+        "appendicular-skeleton-trapezoid-bone-right__Trapezoid bone.r",
+        "appendicular-skeleton-triquetrum-bone-left__Triquetrum bone.l",
+        "appendicular-skeleton-triquetrum-bone-right__Triquetrum bone.r",
+        "appendicular-skeleton-ulna-left__Ulna.l",
+        "appendicular-skeleton-ulna-right__Ulna.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.669249,
+        0.250132,
+        1.416012
+      ],
+      "sourceObjects": [
+        "Calcaneus.l",
+        "Calcaneus.r",
+        "Capitate bone.l",
+        "Capitate bone.r",
+        "Clavicle.l",
+        "Clavicle.r",
+        "Cuboid bone.l",
+        "Cuboid bone.r",
+        "Distal phalanx of fifth finger of foot.l",
+        "Distal phalanx of fifth finger of foot.r",
+        "Distal phalanx of fifth finger of hand.l",
+        "Distal phalanx of fifth finger of hand.r",
+        "Distal phalanx of first finger of foot.l",
+        "Distal phalanx of first finger of foot.r",
+        "Distal phalanx of first finger of hand.l",
+        "Distal phalanx of first finger of hand.r",
+        "Distal phalanx of fourth finger of foot.l",
+        "Distal phalanx of fourth finger of foot.r",
+        "Distal phalanx of fourth finger of hand.l",
+        "Distal phalanx of fourth finger of hand.r",
+        "Distal phalanx of second finger of foot.l",
+        "Distal phalanx of second finger of foot.r",
+        "Distal phalanx of second finger of hand.l",
+        "Distal phalanx of second finger of hand.r",
+        "Distal phalanx of third finger of foot.l",
+        "Distal phalanx of third finger of foot.r",
+        "Distal phalanx of third finger of hand.l",
+        "Distal phalanx of third finger of hand.r",
+        "Femur.l",
+        "Femur.r",
+        "Fibula.l",
+        "Fibula.r",
+        "Fifth metacarpal bone.l",
+        "Fifth metacarpal bone.r",
+        "Fifth metatarsal bone.l",
+        "Fifth metatarsal bone.r",
+        "First metacarpal bone.l",
+        "First metacarpal bone.r",
+        "First metatarsal bone.l",
+        "First metatarsal bone.r",
+        "Fourth metacarpal bone.l",
+        "Fourth metacarpal bone.r",
+        "Fourth metatarsal bone.l",
+        "Fourth metatarsal bone.r",
+        "Hamate bone.l",
+        "Hamate bone.r",
+        "Humerus.l",
+        "Humerus.r",
+        "Intermediate cuneiform bone.l",
+        "Intermediate cuneiform bone.r",
+        "Lateral cuneiform bone.l",
+        "Lateral cuneiform bone.r",
+        "Lunate bone.l",
+        "Lunate bone.r",
+        "Medial cuneiform bone.l",
+        "Medial cuneiform bone.r",
+        "Middle phalanx of fifth finger of foot.l",
+        "Middle phalanx of fifth finger of foot.r",
+        "Middle phalanx of fifth finger of hand.l",
+        "Middle phalanx of fifth finger of hand.r",
+        "Middle phalanx of fourth finger of foot.l",
+        "Middle phalanx of fourth finger of foot.r",
+        "Middle phalanx of fourth finger of hand.l",
+        "Middle phalanx of fourth finger of hand.r",
+        "Middle phalanx of second finger of foot.l",
+        "Middle phalanx of second finger of foot.r",
+        "Middle phalanx of second finger of hand.l",
+        "Middle phalanx of second finger of hand.r",
+        "Middle phalanx of third finger of foot.l",
+        "Middle phalanx of third finger of foot.r",
+        "Middle phalanx of third finger of hand.l",
+        "Middle phalanx of third finger of hand.r",
+        "Navicular bone.l",
+        "Navicular bone.r",
+        "Patella.l",
+        "Patella.r",
+        "Pisiform bone.l",
+        "Pisiform bone.r",
+        "Proximal phalanx of fifth finger of foot.l",
+        "Proximal phalanx of fifth finger of foot.r",
+        "Proximal phalanx of fifth finger of hand.l",
+        "Proximal phalanx of fifth finger of hand.r",
+        "Proximal phalanx of first finger of foot.l",
+        "Proximal phalanx of first finger of foot.r",
+        "Proximal phalanx of first finger of hand.l",
+        "Proximal phalanx of first finger of hand.r",
+        "Proximal phalanx of fourth finger of foot.l",
+        "Proximal phalanx of fourth finger of foot.r",
+        "Proximal phalanx of fourth finger of hand.l",
+        "Proximal phalanx of fourth finger of hand.r",
+        "Proximal phalanx of second finger of foot.l",
+        "Proximal phalanx of second finger of foot.r",
+        "Proximal phalanx of second finger of hand.l",
+        "Proximal phalanx of second finger of hand.r",
+        "Proximal phalanx of third finger of foot.l",
+        "Proximal phalanx of third finger of foot.r",
+        "Proximal phalanx of third finger of hand.l",
+        "Proximal phalanx of third finger of hand.r",
+        "Radius.l",
+        "Radius.r",
+        "Scaphoid bone.l",
+        "Scaphoid bone.r",
+        "Scapula.l",
+        "Scapula.r",
+        "Second metacarpal bone.l",
+        "Second metacarpal bone.r",
+        "Second metatarsal bone.l",
+        "Second metatarsal bone.r",
+        "Sesamoid bones of foot.l",
+        "Sesamoid bones of foot.r",
+        "Talus.l",
+        "Talus.r",
+        "Third metacarpal bone.l",
+        "Third metacarpal bone.r",
+        "Third metatarsal bone.l",
+        "Third metatarsal bone.r",
+        "Tibia.l",
+        "Tibia.r",
+        "Trapezium bone.l",
+        "Trapezium bone.r",
+        "Trapezoid bone.l",
+        "Trapezoid bone.r",
+        "Triquetrum bone.l",
+        "Triquetrum bone.r",
+        "Ulna.l",
+        "Ulna.r"
+      ],
+      "structures": {
+        "appendicular-skeleton": {
+          "centerBlender": [
+            0,
+            -0.012242,
+            0.717209
+          ],
+          "kind": "organ",
+          "name": "Appendicular Skeleton",
+          "nodes": [],
+          "parentId": "skeletal-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.669249,
+            0.250132,
+            1.416012
+          ],
+          "sourceObjects": [],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-calcaneus-left": {
+          "centerBlender": [
+            0.078468,
+            0.053712,
+            0.036981
+          ],
+          "kind": "part",
+          "name": "Calcaneus.l",
+          "nodes": [
+            "appendicular-skeleton-calcaneus-left__Calcaneus.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.047704,
+            0.075688,
+            0.051394
+          ],
+          "sourceObjects": [
+            "Calcaneus.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-calcaneus-right": {
+          "centerBlender": [
+            -0.078468,
+            0.053712,
+            0.036981
+          ],
+          "kind": "part",
+          "name": "Calcaneus.r",
+          "nodes": [
+            "appendicular-skeleton-calcaneus-right__Calcaneus.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.047704,
+            0.075688,
+            0.051394
+          ],
+          "sourceObjects": [
+            "Calcaneus.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-capitate-bone-left": {
+          "centerBlender": [
+            0.264855,
+            -0.017958,
+            0.843585
+          ],
+          "kind": "part",
+          "name": "Capitate bone.l",
+          "nodes": [
+            "appendicular-skeleton-capitate-bone-left__Capitate bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.016612,
+            0.017973,
+            0.02341
+          ],
+          "sourceObjects": [
+            "Capitate bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-capitate-bone-right": {
+          "centerBlender": [
+            -0.264855,
+            -0.017958,
+            0.843585
+          ],
+          "kind": "part",
+          "name": "Capitate bone.r",
+          "nodes": [
+            "appendicular-skeleton-capitate-bone-right__Capitate bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.016612,
+            0.017973,
+            0.02341
+          ],
+          "sourceObjects": [
+            "Capitate bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-clavicle-left": {
+          "centerBlender": [
+            0.082773,
+            0.000876,
+            1.407164
+          ],
+          "kind": "part",
+          "name": "Clavicle.l",
+          "nodes": [
+            "appendicular-skeleton-clavicle-left__Clavicle.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.143116,
+            0.102772,
+            0.036103
+          ],
+          "sourceObjects": [
+            "Clavicle.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-clavicle-right": {
+          "centerBlender": [
+            -0.082773,
+            0.000876,
+            1.407164
+          ],
+          "kind": "part",
+          "name": "Clavicle.r",
+          "nodes": [
+            "appendicular-skeleton-clavicle-right__Clavicle.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.143116,
+            0.102772,
+            0.036103
+          ],
+          "sourceObjects": [
+            "Clavicle.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-cuboid-bone-left": {
+          "centerBlender": [
+            0.095638,
+            0.006377,
+            0.044333
+          ],
+          "kind": "part",
+          "name": "Cuboid bone.l",
+          "nodes": [
+            "appendicular-skeleton-cuboid-bone-left__Cuboid bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.032234,
+            0.034192,
+            0.030858
+          ],
+          "sourceObjects": [
+            "Cuboid bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-cuboid-bone-right": {
+          "centerBlender": [
+            -0.095638,
+            0.006377,
+            0.044333
+          ],
+          "kind": "part",
+          "name": "Cuboid bone.r",
+          "nodes": [
+            "appendicular-skeleton-cuboid-bone-right__Cuboid bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.032234,
+            0.034192,
+            0.030858
+          ],
+          "sourceObjects": [
+            "Cuboid bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-left": {
+          "centerBlender": [
+            0.142472,
+            -0.091049,
+            0.01202
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fifth finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-left__Distal phalanx of fifth finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.007889,
+            0.010928,
+            0.005634
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fifth finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-right": {
+          "centerBlender": [
+            -0.142472,
+            -0.091049,
+            0.01202
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fifth finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-foot-right__Distal phalanx of fifth finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.007889,
+            0.010928,
+            0.005634
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fifth finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-left": {
+          "centerBlender": [
+            0.230377,
+            -0.076165,
+            0.729517
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fifth finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-left__Distal phalanx of fifth finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008582,
+            0.014799,
+            0.013132
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fifth finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-right": {
+          "centerBlender": [
+            -0.230377,
+            -0.076165,
+            0.729517
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fifth finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fifth-finger-of-hand-right__Distal phalanx of fifth finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008582,
+            0.014799,
+            0.013132
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fifth finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-left": {
+          "centerBlender": [
+            0.080092,
+            -0.121167,
+            0.015683
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of first finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-left__Distal phalanx of first finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020675,
+            0.026911,
+            0.011469
+          ],
+          "sourceObjects": [
+            "Distal phalanx of first finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-right": {
+          "centerBlender": [
+            -0.080092,
+            -0.121167,
+            0.015683
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of first finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-first-finger-of-foot-right__Distal phalanx of first finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020675,
+            0.026911,
+            0.011469
+          ],
+          "sourceObjects": [
+            "Distal phalanx of first finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-left": {
+          "centerBlender": [
+            0.327619,
+            -0.065755,
+            0.778921
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of first finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-left__Distal phalanx of first finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.014012,
+            0.016758,
+            0.024129
+          ],
+          "sourceObjects": [
+            "Distal phalanx of first finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-right": {
+          "centerBlender": [
+            -0.327619,
+            -0.065755,
+            0.778921
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of first finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-first-finger-of-hand-right__Distal phalanx of first finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.014012,
+            0.016758,
+            0.024129
+          ],
+          "sourceObjects": [
+            "Distal phalanx of first finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-left": {
+          "centerBlender": [
+            0.132178,
+            -0.109565,
+            0.012906
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fourth finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-left__Distal phalanx of fourth finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008789,
+            0.011676,
+            0.007333
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fourth finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-right": {
+          "centerBlender": [
+            -0.132178,
+            -0.109565,
+            0.012906
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fourth finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-foot-right__Distal phalanx of fourth finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008789,
+            0.011676,
+            0.007333
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fourth finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-left": {
+          "centerBlender": [
+            0.257642,
+            -0.08776,
+            0.715564
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fourth finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-left__Distal phalanx of fourth finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008608,
+            0.01618,
+            0.009607
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fourth finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-right": {
+          "centerBlender": [
+            -0.257642,
+            -0.08776,
+            0.715564
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of fourth finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-fourth-finger-of-hand-right__Distal phalanx of fourth finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008608,
+            0.01618,
+            0.009607
+          ],
+          "sourceObjects": [
+            "Distal phalanx of fourth finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-left": {
+          "centerBlender": [
+            0.103802,
+            -0.130475,
+            0.013255
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of second finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-left__Distal phalanx of second finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.010185,
+            0.013667,
+            0.007583
+          ],
+          "sourceObjects": [
+            "Distal phalanx of second finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-right": {
+          "centerBlender": [
+            -0.103802,
+            -0.130475,
+            0.013255
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of second finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-second-finger-of-foot-right__Distal phalanx of second finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.010185,
+            0.013667,
+            0.007583
+          ],
+          "sourceObjects": [
+            "Distal phalanx of second finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-left": {
+          "centerBlender": [
+            0.316356,
+            -0.079108,
+            0.714941
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of second finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-left__Distal phalanx of second finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.010436,
+            0.017646,
+            0.0143
+          ],
+          "sourceObjects": [
+            "Distal phalanx of second finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-right": {
+          "centerBlender": [
+            -0.316356,
+            -0.079108,
+            0.714941
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of second finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-second-finger-of-hand-right__Distal phalanx of second finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.010436,
+            0.017646,
+            0.0143
+          ],
+          "sourceObjects": [
+            "Distal phalanx of second finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-left": {
+          "centerBlender": [
+            0.118799,
+            -0.124277,
+            0.01256
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of third finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-left__Distal phalanx of third finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008848,
+            0.011995,
+            0.006164
+          ],
+          "sourceObjects": [
+            "Distal phalanx of third finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-right": {
+          "centerBlender": [
+            -0.118799,
+            -0.124277,
+            0.01256
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of third finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-third-finger-of-foot-right__Distal phalanx of third finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008848,
+            0.011995,
+            0.006164
+          ],
+          "sourceObjects": [
+            "Distal phalanx of third finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-left": {
+          "centerBlender": [
+            0.28518,
+            -0.08808,
+            0.70564
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of third finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-left__Distal phalanx of third finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.009862,
+            0.017901,
+            0.013908
+          ],
+          "sourceObjects": [
+            "Distal phalanx of third finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-right": {
+          "centerBlender": [
+            -0.28518,
+            -0.08808,
+            0.70564
+          ],
+          "kind": "part",
+          "name": "Distal phalanx of third finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-distal-phalanx-of-third-finger-of-hand-right__Distal phalanx of third finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.009862,
+            0.017901,
+            0.013908
+          ],
+          "sourceObjects": [
+            "Distal phalanx of third finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-femur-left": {
+          "centerBlender": [
+            0.09039,
+            0.020269,
+            0.657136
+          ],
+          "kind": "part",
+          "name": "Femur.l",
+          "nodes": [
+            "appendicular-skeleton-femur-left__Femur.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.116825,
+            0.078167,
+            0.45454
+          ],
+          "sourceObjects": [
+            "Femur.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-femur-right": {
+          "centerBlender": [
+            -0.09039,
+            0.020269,
+            0.657136
+          ],
+          "kind": "part",
+          "name": "Femur.r",
+          "nodes": [
+            "appendicular-skeleton-femur-right__Femur.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.116825,
+            0.078167,
+            0.45454
+          ],
+          "sourceObjects": [
+            "Femur.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fibula-left": {
+          "centerBlender": [
+            0.106735,
+            0.043223,
+            0.236457
+          ],
+          "kind": "part",
+          "name": "Fibula.l",
+          "nodes": [
+            "appendicular-skeleton-fibula-left__Fibula.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.036223,
+            0.032926,
+            0.362492
+          ],
+          "sourceObjects": [
+            "Fibula.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fibula-right": {
+          "centerBlender": [
+            -0.106735,
+            0.043223,
+            0.236457
+          ],
+          "kind": "part",
+          "name": "Fibula.r",
+          "nodes": [
+            "appendicular-skeleton-fibula-right__Fibula.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.036223,
+            0.032926,
+            0.362492
+          ],
+          "sourceObjects": [
+            "Fibula.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fifth-metacarpal-bone-left": {
+          "centerBlender": [
+            0.242976,
+            -0.031692,
+            0.808606
+          ],
+          "kind": "part",
+          "name": "Fifth metacarpal bone.l",
+          "nodes": [
+            "appendicular-skeleton-fifth-metacarpal-bone-left__Fifth metacarpal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020915,
+            0.025508,
+            0.056959
+          ],
+          "sourceObjects": [
+            "Fifth metacarpal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fifth-metacarpal-bone-right": {
+          "centerBlender": [
+            -0.242976,
+            -0.031692,
+            0.808606
+          ],
+          "kind": "part",
+          "name": "Fifth metacarpal bone.r",
+          "nodes": [
+            "appendicular-skeleton-fifth-metacarpal-bone-right__Fifth metacarpal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020915,
+            0.025508,
+            0.056959
+          ],
+          "sourceObjects": [
+            "Fifth metacarpal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fifth-metatarsal-bone-left": {
+          "centerBlender": [
+            0.119447,
+            -0.022828,
+            0.025473
+          ],
+          "kind": "part",
+          "name": "Fifth metatarsal bone.l",
+          "nodes": [
+            "appendicular-skeleton-fifth-metatarsal-bone-left__Fifth metatarsal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.037024,
+            0.073733,
+            0.031171
+          ],
+          "sourceObjects": [
+            "Fifth metatarsal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fifth-metatarsal-bone-right": {
+          "centerBlender": [
+            -0.119447,
+            -0.022828,
+            0.025473
+          ],
+          "kind": "part",
+          "name": "Fifth metatarsal bone.r",
+          "nodes": [
+            "appendicular-skeleton-fifth-metatarsal-bone-right__Fifth metatarsal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.037024,
+            0.073733,
+            0.031171
+          ],
+          "sourceObjects": [
+            "Fifth metatarsal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-first-metacarpal-bone-left": {
+          "centerBlender": [
+            0.300512,
+            -0.0383,
+            0.828556
+          ],
+          "kind": "part",
+          "name": "First metacarpal bone.l",
+          "nodes": [
+            "appendicular-skeleton-first-metacarpal-bone-left__First metacarpal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.038664,
+            0.03148,
+            0.038379
+          ],
+          "sourceObjects": [
+            "First metacarpal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-first-metacarpal-bone-right": {
+          "centerBlender": [
+            -0.300512,
+            -0.0383,
+            0.828556
+          ],
+          "kind": "part",
+          "name": "First metacarpal bone.r",
+          "nodes": [
+            "appendicular-skeleton-first-metacarpal-bone-right__First metacarpal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.038664,
+            0.03148,
+            0.038379
+          ],
+          "sourceObjects": [
+            "First metacarpal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-first-metatarsal-bone-left": {
+          "centerBlender": [
+            0.071239,
+            -0.052622,
+            0.037087
+          ],
+          "kind": "part",
+          "name": "First metatarsal bone.l",
+          "nodes": [
+            "appendicular-skeleton-first-metatarsal-bone-left__First metatarsal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.021848,
+            0.063576,
+            0.044894
+          ],
+          "sourceObjects": [
+            "First metatarsal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-first-metatarsal-bone-right": {
+          "centerBlender": [
+            -0.071239,
+            -0.052622,
+            0.037087
+          ],
+          "kind": "part",
+          "name": "First metatarsal bone.r",
+          "nodes": [
+            "appendicular-skeleton-first-metatarsal-bone-right__First metatarsal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.021848,
+            0.063576,
+            0.044894
+          ],
+          "sourceObjects": [
+            "First metatarsal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fourth-metacarpal-bone-left": {
+          "centerBlender": [
+            0.255728,
+            -0.028314,
+            0.804158
+          ],
+          "kind": "part",
+          "name": "Fourth metacarpal bone.l",
+          "nodes": [
+            "appendicular-skeleton-fourth-metacarpal-bone-left__Fourth metacarpal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.01309,
+            0.027142,
+            0.062069
+          ],
+          "sourceObjects": [
+            "Fourth metacarpal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fourth-metacarpal-bone-right": {
+          "centerBlender": [
+            -0.255728,
+            -0.028314,
+            0.804158
+          ],
+          "kind": "part",
+          "name": "Fourth metacarpal bone.r",
+          "nodes": [
+            "appendicular-skeleton-fourth-metacarpal-bone-right__Fourth metacarpal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.01309,
+            0.027142,
+            0.062069
+          ],
+          "sourceObjects": [
+            "Fourth metacarpal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fourth-metatarsal-bone-left": {
+          "centerBlender": [
+            0.109285,
+            -0.037925,
+            0.030897
+          ],
+          "kind": "part",
+          "name": "Fourth metatarsal bone.l",
+          "nodes": [
+            "appendicular-skeleton-fourth-metatarsal-bone-left__Fourth metatarsal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.029872,
+            0.068519,
+            0.036971
+          ],
+          "sourceObjects": [
+            "Fourth metatarsal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-fourth-metatarsal-bone-right": {
+          "centerBlender": [
+            -0.109285,
+            -0.037925,
+            0.030897
+          ],
+          "kind": "part",
+          "name": "Fourth metatarsal bone.r",
+          "nodes": [
+            "appendicular-skeleton-fourth-metatarsal-bone-right__Fourth metatarsal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.029872,
+            0.068519,
+            0.036971
+          ],
+          "sourceObjects": [
+            "Fourth metatarsal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-hamate-bone-left": {
+          "centerBlender": [
+            0.252284,
+            -0.021756,
+            0.841041
+          ],
+          "kind": "part",
+          "name": "Hamate bone.l",
+          "nodes": [
+            "appendicular-skeleton-hamate-bone-left__Hamate bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.016099,
+            0.02341,
+            0.020201
+          ],
+          "sourceObjects": [
+            "Hamate bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-hamate-bone-right": {
+          "centerBlender": [
+            -0.252284,
+            -0.021756,
+            0.841041
+          ],
+          "kind": "part",
+          "name": "Hamate bone.r",
+          "nodes": [
+            "appendicular-skeleton-hamate-bone-right__Hamate bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.016099,
+            0.02341,
+            0.020201
+          ],
+          "sourceObjects": [
+            "Hamate bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-humerus-left": {
+          "centerBlender": [
+            0.196717,
+            0.027519,
+            1.245867
+          ],
+          "kind": "part",
+          "name": "Humerus.l",
+          "nodes": [
+            "appendicular-skeleton-humerus-left__Humerus.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.104275,
+            0.052496,
+            0.317635
+          ],
+          "sourceObjects": [
+            "Humerus.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-humerus-right": {
+          "centerBlender": [
+            -0.196717,
+            0.027519,
+            1.245867
+          ],
+          "kind": "part",
+          "name": "Humerus.r",
+          "nodes": [
+            "appendicular-skeleton-humerus-right__Humerus.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.104275,
+            0.052496,
+            0.317635
+          ],
+          "sourceObjects": [
+            "Humerus.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-intermediate-cuneiform-bone-left": {
+          "centerBlender": [
+            0.083613,
+            -0.011262,
+            0.058688
+          ],
+          "kind": "part",
+          "name": "Intermediate cuneiform bone.l",
+          "nodes": [
+            "appendicular-skeleton-intermediate-cuneiform-bone-left__Intermediate cuneiform bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.019524,
+            0.022962,
+            0.024021
+          ],
+          "sourceObjects": [
+            "Intermediate cuneiform bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-intermediate-cuneiform-bone-right": {
+          "centerBlender": [
+            -0.083613,
+            -0.011262,
+            0.058688
+          ],
+          "kind": "part",
+          "name": "Intermediate cuneiform bone.r",
+          "nodes": [
+            "appendicular-skeleton-intermediate-cuneiform-bone-right__Intermediate cuneiform bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.019524,
+            0.022962,
+            0.024021
+          ],
+          "sourceObjects": [
+            "Intermediate cuneiform bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-lateral-cuneiform-bone-left": {
+          "centerBlender": [
+            0.093428,
+            -0.007034,
+            0.053655
+          ],
+          "kind": "part",
+          "name": "Lateral cuneiform bone.l",
+          "nodes": [
+            "appendicular-skeleton-lateral-cuneiform-bone-left__Lateral cuneiform bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.024226,
+            0.026471,
+            0.026861
+          ],
+          "sourceObjects": [
+            "Lateral cuneiform bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-lateral-cuneiform-bone-right": {
+          "centerBlender": [
+            -0.093428,
+            -0.007034,
+            0.053655
+          ],
+          "kind": "part",
+          "name": "Lateral cuneiform bone.r",
+          "nodes": [
+            "appendicular-skeleton-lateral-cuneiform-bone-right__Lateral cuneiform bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.024226,
+            0.026471,
+            0.026861
+          ],
+          "sourceObjects": [
+            "Lateral cuneiform bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-lunate-bone-left": {
+          "centerBlender": [
+            0.252505,
+            -0.017813,
+            0.854152
+          ],
+          "kind": "part",
+          "name": "Lunate bone.l",
+          "nodes": [
+            "appendicular-skeleton-lunate-bone-left__Lunate bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017097,
+            0.016607,
+            0.012739
+          ],
+          "sourceObjects": [
+            "Lunate bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-lunate-bone-right": {
+          "centerBlender": [
+            -0.252505,
+            -0.017813,
+            0.854152
+          ],
+          "kind": "part",
+          "name": "Lunate bone.r",
+          "nodes": [
+            "appendicular-skeleton-lunate-bone-right__Lunate bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017097,
+            0.016607,
+            0.012739
+          ],
+          "sourceObjects": [
+            "Lunate bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-medial-cuneiform-bone-left": {
+          "centerBlender": [
+            0.070612,
+            -0.015483,
+            0.051586
+          ],
+          "kind": "part",
+          "name": "Medial cuneiform bone.l",
+          "nodes": [
+            "appendicular-skeleton-medial-cuneiform-bone-left__Medial cuneiform bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.025083,
+            0.032959,
+            0.032302
+          ],
+          "sourceObjects": [
+            "Medial cuneiform bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-medial-cuneiform-bone-right": {
+          "centerBlender": [
+            -0.070612,
+            -0.015483,
+            0.051586
+          ],
+          "kind": "part",
+          "name": "Medial cuneiform bone.r",
+          "nodes": [
+            "appendicular-skeleton-medial-cuneiform-bone-right__Medial cuneiform bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.025083,
+            0.032959,
+            0.032302
+          ],
+          "sourceObjects": [
+            "Medial cuneiform bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-left": {
+          "centerBlender": [
+            0.141126,
+            -0.083669,
+            0.012877
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fifth finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-left__Middle phalanx of fifth finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008596,
+            0.00779,
+            0.006603
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fifth finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-right": {
+          "centerBlender": [
+            -0.141126,
+            -0.083669,
+            0.012877
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fifth finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-foot-right__Middle phalanx of fifth finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008596,
+            0.00779,
+            0.006603
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fifth finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-left": {
+          "centerBlender": [
+            0.232102,
+            -0.063571,
+            0.744421
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fifth finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-left__Middle phalanx of fifth finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.012052,
+            0.017285,
+            0.020452
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fifth finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-right": {
+          "centerBlender": [
+            -0.232102,
+            -0.063571,
+            0.744421
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fifth finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fifth-finger-of-hand-right__Middle phalanx of fifth finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.012052,
+            0.017285,
+            0.020452
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fifth finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-left": {
+          "centerBlender": [
+            0.129891,
+            -0.09931,
+            0.013987
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fourth finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-left__Middle phalanx of fourth finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011141,
+            0.014054,
+            0.008336
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fourth finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-right": {
+          "centerBlender": [
+            -0.129891,
+            -0.09931,
+            0.013987
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fourth finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-foot-right__Middle phalanx of fourth finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011141,
+            0.014054,
+            0.008336
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fourth finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-left": {
+          "centerBlender": [
+            0.256792,
+            -0.069164,
+            0.728279
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fourth finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-left__Middle phalanx of fourth finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.012563,
+            0.025052,
+            0.024841
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fourth finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-right": {
+          "centerBlender": [
+            -0.256792,
+            -0.069164,
+            0.728279
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of fourth finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-fourth-finger-of-hand-right__Middle phalanx of fourth finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.012563,
+            0.025052,
+            0.024841
+          ],
+          "sourceObjects": [
+            "Middle phalanx of fourth finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-left": {
+          "centerBlender": [
+            0.100998,
+            -0.117756,
+            0.016384
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of second finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-left__Middle phalanx of second finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.012326,
+            0.017627,
+            0.009084
+          ],
+          "sourceObjects": [
+            "Middle phalanx of second finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-right": {
+          "centerBlender": [
+            -0.100998,
+            -0.117756,
+            0.016384
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of second finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-second-finger-of-foot-right__Middle phalanx of second finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.012326,
+            0.017627,
+            0.009084
+          ],
+          "sourceObjects": [
+            "Middle phalanx of second finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-left": {
+          "centerBlender": [
+            0.311611,
+            -0.062038,
+            0.727725
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of second finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-left__Middle phalanx of second finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.015129,
+            0.021622,
+            0.021316
+          ],
+          "sourceObjects": [
+            "Middle phalanx of second finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-right": {
+          "centerBlender": [
+            -0.311611,
+            -0.062038,
+            0.727725
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of second finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-second-finger-of-hand-right__Middle phalanx of second finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.015129,
+            0.021622,
+            0.021316
+          ],
+          "sourceObjects": [
+            "Middle phalanx of second finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-left": {
+          "centerBlender": [
+            0.116101,
+            -0.112118,
+            0.015115
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of third finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-left__Middle phalanx of third finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011107,
+            0.017438,
+            0.0083
+          ],
+          "sourceObjects": [
+            "Middle phalanx of third finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-right": {
+          "centerBlender": [
+            -0.116101,
+            -0.112118,
+            0.015115
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of third finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-third-finger-of-foot-right__Middle phalanx of third finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011107,
+            0.017438,
+            0.0083
+          ],
+          "sourceObjects": [
+            "Middle phalanx of third finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-left": {
+          "centerBlender": [
+            0.282368,
+            -0.069927,
+            0.721381
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of third finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-left__Middle phalanx of third finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.014218,
+            0.023815,
+            0.026259
+          ],
+          "sourceObjects": [
+            "Middle phalanx of third finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-right": {
+          "centerBlender": [
+            -0.282368,
+            -0.069927,
+            0.721381
+          ],
+          "kind": "part",
+          "name": "Middle phalanx of third finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-middle-phalanx-of-third-finger-of-hand-right__Middle phalanx of third finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.014218,
+            0.023815,
+            0.026259
+          ],
+          "sourceObjects": [
+            "Middle phalanx of third finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-navicular-bone-left": {
+          "centerBlender": [
+            0.073033,
+            0.00309,
+            0.062218
+          ],
+          "kind": "part",
+          "name": "Navicular bone.l",
+          "nodes": [
+            "appendicular-skeleton-navicular-bone-left__Navicular bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.040685,
+            0.024037,
+            0.027516
+          ],
+          "sourceObjects": [
+            "Navicular bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-navicular-bone-right": {
+          "centerBlender": [
+            -0.073033,
+            0.00309,
+            0.062218
+          ],
+          "kind": "part",
+          "name": "Navicular bone.r",
+          "nodes": [
+            "appendicular-skeleton-navicular-bone-right__Navicular bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.040685,
+            0.024037,
+            0.027516
+          ],
+          "sourceObjects": [
+            "Navicular bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-patella-left": {
+          "centerBlender": [
+            0.08443,
+            -0.007288,
+            0.444283
+          ],
+          "kind": "part",
+          "name": "Patella.l",
+          "nodes": [
+            "appendicular-skeleton-patella-left__Patella.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.043378,
+            0.022752,
+            0.041134
+          ],
+          "sourceObjects": [
+            "Patella.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-patella-right": {
+          "centerBlender": [
+            -0.08443,
+            -0.007288,
+            0.444283
+          ],
+          "kind": "part",
+          "name": "Patella.r",
+          "nodes": [
+            "appendicular-skeleton-patella-right__Patella.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.043378,
+            0.022752,
+            0.041134
+          ],
+          "sourceObjects": [
+            "Patella.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-pisiform-bone-left": {
+          "centerBlender": [
+            0.243855,
+            -0.032089,
+            0.845822
+          ],
+          "kind": "part",
+          "name": "Pisiform bone.l",
+          "nodes": [
+            "appendicular-skeleton-pisiform-bone-left__Pisiform bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008463,
+            0.010419,
+            0.012091
+          ],
+          "sourceObjects": [
+            "Pisiform bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-pisiform-bone-right": {
+          "centerBlender": [
+            -0.243855,
+            -0.032089,
+            0.845822
+          ],
+          "kind": "part",
+          "name": "Pisiform bone.r",
+          "nodes": [
+            "appendicular-skeleton-pisiform-bone-right__Pisiform bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.008463,
+            0.010419,
+            0.012091
+          ],
+          "sourceObjects": [
+            "Pisiform bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-left": {
+          "centerBlender": [
+            0.135468,
+            -0.068408,
+            0.014923
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fifth finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-left__Proximal phalanx of fifth finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.018341,
+            0.026782,
+            0.010445
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fifth finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-right": {
+          "centerBlender": [
+            -0.135468,
+            -0.068408,
+            0.014923
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fifth finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-foot-right__Proximal phalanx of fifth finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.018341,
+            0.026782,
+            0.010445
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fifth finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-left": {
+          "centerBlender": [
+            0.236796,
+            -0.049028,
+            0.767441
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fifth finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-left__Proximal phalanx of fifth finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.014838,
+            0.021636,
+            0.033806
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fifth finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-right": {
+          "centerBlender": [
+            -0.236796,
+            -0.049028,
+            0.767441
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fifth finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fifth-finger-of-hand-right__Proximal phalanx of fifth finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.014838,
+            0.021636,
+            0.033806
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fifth finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-left": {
+          "centerBlender": [
+            0.073965,
+            -0.097181,
+            0.020192
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of first finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-left__Proximal phalanx of first finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.026146,
+            0.034521,
+            0.017732
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of first finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-right": {
+          "centerBlender": [
+            -0.073965,
+            -0.097181,
+            0.020192
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of first finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-first-finger-of-foot-right__Proximal phalanx of first finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.026146,
+            0.034521,
+            0.017732
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of first finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-left": {
+          "centerBlender": [
+            0.318825,
+            -0.053854,
+            0.800209
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of first finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-left__Proximal phalanx of first finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020928,
+            0.023029,
+            0.032536
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of first finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-right": {
+          "centerBlender": [
+            -0.318825,
+            -0.053854,
+            0.800209
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of first finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-first-finger-of-hand-right__Proximal phalanx of first finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020928,
+            0.023029,
+            0.032536
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of first finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-left": {
+          "centerBlender": [
+            0.123158,
+            -0.081458,
+            0.016845
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fourth finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-left__Proximal phalanx of fourth finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.018103,
+            0.025994,
+            0.013757
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fourth finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-right": {
+          "centerBlender": [
+            -0.123158,
+            -0.081458,
+            0.016845
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fourth finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-foot-right__Proximal phalanx of fourth finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.018103,
+            0.025994,
+            0.013757
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fourth finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-left": {
+          "centerBlender": [
+            0.255195,
+            -0.048737,
+            0.756905
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fourth finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-left__Proximal phalanx of fourth finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.01395,
+            0.027273,
+            0.040433
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fourth finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-right": {
+          "centerBlender": [
+            -0.255195,
+            -0.048737,
+            0.756905
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of fourth finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-fourth-finger-of-hand-right__Proximal phalanx of fourth finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.01395,
+            0.027273,
+            0.040433
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of fourth finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-left": {
+          "centerBlender": [
+            0.095536,
+            -0.097136,
+            0.019508
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of second finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-left__Proximal phalanx of second finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017864,
+            0.029382,
+            0.012953
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of second finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-right": {
+          "centerBlender": [
+            -0.095536,
+            -0.097136,
+            0.019508
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of second finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-second-finger-of-foot-right__Proximal phalanx of second finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017864,
+            0.029382,
+            0.012953
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of second finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-left": {
+          "centerBlender": [
+            0.301347,
+            -0.045321,
+            0.751841
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of second finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-left__Proximal phalanx of second finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.022748,
+            0.023711,
+            0.03891
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of second finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-right": {
+          "centerBlender": [
+            -0.301347,
+            -0.045321,
+            0.751841
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of second finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-second-finger-of-hand-right__Proximal phalanx of second finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.022748,
+            0.023711,
+            0.03891
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of second finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-left": {
+          "centerBlender": [
+            0.110607,
+            -0.09119,
+            0.018146
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of third finger of foot.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-left__Proximal phalanx of third finger of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.016392,
+            0.030214,
+            0.011977
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of third finger of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-right": {
+          "centerBlender": [
+            -0.110607,
+            -0.09119,
+            0.018146
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of third finger of foot.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-third-finger-of-foot-right__Proximal phalanx of third finger of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.016392,
+            0.030214,
+            0.011977
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of third finger of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-left": {
+          "centerBlender": [
+            0.277133,
+            -0.049668,
+            0.751923
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of third finger of hand.l",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-left__Proximal phalanx of third finger of hand.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.018956,
+            0.030169,
+            0.042148
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of third finger of hand.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-right": {
+          "centerBlender": [
+            -0.277133,
+            -0.049668,
+            0.751923
+          ],
+          "kind": "part",
+          "name": "Proximal phalanx of third finger of hand.r",
+          "nodes": [
+            "appendicular-skeleton-proximal-phalanx-of-third-finger-of-hand-right__Proximal phalanx of third finger of hand.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.018956,
+            0.030169,
+            0.042148
+          ],
+          "sourceObjects": [
+            "Proximal phalanx of third finger of hand.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-radius-left": {
+          "centerBlender": [
+            0.257772,
+            0.007605,
+            0.974828
+          ],
+          "kind": "part",
+          "name": "Radius.l",
+          "nodes": [
+            "appendicular-skeleton-radius-left__Radius.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.06179,
+            0.068671,
+            0.237008
+          ],
+          "sourceObjects": [
+            "Radius.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-radius-right": {
+          "centerBlender": [
+            -0.257772,
+            0.007605,
+            0.974828
+          ],
+          "kind": "part",
+          "name": "Radius.r",
+          "nodes": [
+            "appendicular-skeleton-radius-right__Radius.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.06179,
+            0.068671,
+            0.237008
+          ],
+          "sourceObjects": [
+            "Radius.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-scaphoid-bone-left": {
+          "centerBlender": [
+            0.269809,
+            -0.01807,
+            0.854604
+          ],
+          "kind": "part",
+          "name": "Scaphoid bone.l",
+          "nodes": [
+            "appendicular-skeleton-scaphoid-bone-left__Scaphoid bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.02456,
+            0.015889,
+            0.016208
+          ],
+          "sourceObjects": [
+            "Scaphoid bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-scaphoid-bone-right": {
+          "centerBlender": [
+            -0.269809,
+            -0.01807,
+            0.854604
+          ],
+          "kind": "part",
+          "name": "Scaphoid bone.r",
+          "nodes": [
+            "appendicular-skeleton-scaphoid-bone-right__Scaphoid bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.02456,
+            0.015889,
+            0.016208
+          ],
+          "sourceObjects": [
+            "Scaphoid bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-scapula-left": {
+          "centerBlender": [
+            0.117086,
+            0.055769,
+            1.336066
+          ],
+          "kind": "part",
+          "name": "Scapula.l",
+          "nodes": [
+            "appendicular-skeleton-scapula-left__Scapula.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.112956,
+            0.114109,
+            0.163594
+          ],
+          "sourceObjects": [
+            "Scapula.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-scapula-right": {
+          "centerBlender": [
+            -0.117086,
+            0.055769,
+            1.336066
+          ],
+          "kind": "part",
+          "name": "Scapula.r",
+          "nodes": [
+            "appendicular-skeleton-scapula-right__Scapula.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.112956,
+            0.114109,
+            0.163594
+          ],
+          "sourceObjects": [
+            "Scapula.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-second-metacarpal-bone-left": {
+          "centerBlender": [
+            0.286306,
+            -0.029282,
+            0.801812
+          ],
+          "kind": "part",
+          "name": "Second metacarpal bone.l",
+          "nodes": [
+            "appendicular-skeleton-second-metacarpal-bone-left__Second metacarpal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.032092,
+            0.0267,
+            0.070531
+          ],
+          "sourceObjects": [
+            "Second metacarpal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-second-metacarpal-bone-right": {
+          "centerBlender": [
+            -0.286306,
+            -0.029282,
+            0.801812
+          ],
+          "kind": "part",
+          "name": "Second metacarpal bone.r",
+          "nodes": [
+            "appendicular-skeleton-second-metacarpal-bone-right__Second metacarpal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.032092,
+            0.0267,
+            0.070531
+          ],
+          "sourceObjects": [
+            "Second metacarpal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-second-metatarsal-bone-left": {
+          "centerBlender": [
+            0.089443,
+            -0.049926,
+            0.038484
+          ],
+          "kind": "part",
+          "name": "Second metatarsal bone.l",
+          "nodes": [
+            "appendicular-skeleton-second-metatarsal-bone-left__Second metatarsal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017388,
+            0.070457,
+            0.049911
+          ],
+          "sourceObjects": [
+            "Second metatarsal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-second-metatarsal-bone-right": {
+          "centerBlender": [
+            -0.089443,
+            -0.049926,
+            0.038484
+          ],
+          "kind": "part",
+          "name": "Second metatarsal bone.r",
+          "nodes": [
+            "appendicular-skeleton-second-metatarsal-bone-right__Second metatarsal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017388,
+            0.070457,
+            0.049911
+          ],
+          "sourceObjects": [
+            "Second metatarsal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-sesamoid-bones-of-foot-left": {
+          "centerBlender": [
+            0.071698,
+            -0.070452,
+            0.014646
+          ],
+          "kind": "part",
+          "name": "Sesamoid bones of foot.l",
+          "nodes": [
+            "appendicular-skeleton-sesamoid-bones-of-foot-left__Sesamoid bones of foot.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017355,
+            0.013634,
+            0.008022
+          ],
+          "sourceObjects": [
+            "Sesamoid bones of foot.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-sesamoid-bones-of-foot-right": {
+          "centerBlender": [
+            -0.071698,
+            -0.070452,
+            0.014646
+          ],
+          "kind": "part",
+          "name": "Sesamoid bones of foot.r",
+          "nodes": [
+            "appendicular-skeleton-sesamoid-bones-of-foot-right__Sesamoid bones of foot.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017355,
+            0.013634,
+            0.008022
+          ],
+          "sourceObjects": [
+            "Sesamoid bones of foot.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-talus-left": {
+          "centerBlender": [
+            0.074701,
+            0.036573,
+            0.067669
+          ],
+          "kind": "part",
+          "name": "Talus.l",
+          "nodes": [
+            "appendicular-skeleton-talus-left__Talus.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.04211,
+            0.059064,
+            0.035613
+          ],
+          "sourceObjects": [
+            "Talus.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-talus-right": {
+          "centerBlender": [
+            -0.074701,
+            0.036573,
+            0.067669
+          ],
+          "kind": "part",
+          "name": "Talus.r",
+          "nodes": [
+            "appendicular-skeleton-talus-right__Talus.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.04211,
+            0.059064,
+            0.035613
+          ],
+          "sourceObjects": [
+            "Talus.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-third-metacarpal-bone-left": {
+          "centerBlender": [
+            0.271018,
+            -0.026863,
+            0.801931
+          ],
+          "kind": "part",
+          "name": "Third metacarpal bone.l",
+          "nodes": [
+            "appendicular-skeleton-third-metacarpal-bone-left__Third metacarpal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020789,
+            0.031714,
+            0.066688
+          ],
+          "sourceObjects": [
+            "Third metacarpal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-third-metacarpal-bone-right": {
+          "centerBlender": [
+            -0.271018,
+            -0.026863,
+            0.801931
+          ],
+          "kind": "part",
+          "name": "Third metacarpal bone.r",
+          "nodes": [
+            "appendicular-skeleton-third-metacarpal-bone-right__Third metacarpal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.020789,
+            0.031714,
+            0.066688
+          ],
+          "sourceObjects": [
+            "Third metacarpal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-third-metatarsal-bone-left": {
+          "centerBlender": [
+            0.100683,
+            -0.04743,
+            0.03564
+          ],
+          "kind": "part",
+          "name": "Third metatarsal bone.l",
+          "nodes": [
+            "appendicular-skeleton-third-metatarsal-bone-left__Third metatarsal bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.023078,
+            0.067754,
+            0.044442
+          ],
+          "sourceObjects": [
+            "Third metatarsal bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-third-metatarsal-bone-right": {
+          "centerBlender": [
+            -0.100683,
+            -0.04743,
+            0.03564
+          ],
+          "kind": "part",
+          "name": "Third metatarsal bone.r",
+          "nodes": [
+            "appendicular-skeleton-third-metatarsal-bone-right__Third metatarsal bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.023078,
+            0.067754,
+            0.044442
+          ],
+          "sourceObjects": [
+            "Third metatarsal bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-tibia-left": {
+          "centerBlender": [
+            0.076566,
+            0.028948,
+            0.2542
+          ],
+          "kind": "part",
+          "name": "Tibia.l",
+          "nodes": [
+            "appendicular-skeleton-tibia-left__Tibia.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.078447,
+            0.068023,
+            0.357963
+          ],
+          "sourceObjects": [
+            "Tibia.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-tibia-right": {
+          "centerBlender": [
+            -0.076566,
+            0.028948,
+            0.2542
+          ],
+          "kind": "part",
+          "name": "Tibia.r",
+          "nodes": [
+            "appendicular-skeleton-tibia-right__Tibia.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.078447,
+            0.068023,
+            0.357963
+          ],
+          "sourceObjects": [
+            "Tibia.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-trapezium-bone-left": {
+          "centerBlender": [
+            0.282223,
+            -0.02544,
+            0.846078
+          ],
+          "kind": "part",
+          "name": "Trapezium bone.l",
+          "nodes": [
+            "appendicular-skeleton-trapezium-bone-left__Trapezium bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017672,
+            0.017525,
+            0.020797
+          ],
+          "sourceObjects": [
+            "Trapezium bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-trapezium-bone-right": {
+          "centerBlender": [
+            -0.282223,
+            -0.02544,
+            0.846078
+          ],
+          "kind": "part",
+          "name": "Trapezium bone.r",
+          "nodes": [
+            "appendicular-skeleton-trapezium-bone-right__Trapezium bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.017672,
+            0.017525,
+            0.020797
+          ],
+          "sourceObjects": [
+            "Trapezium bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-trapezoid-bone-left": {
+          "centerBlender": [
+            0.276515,
+            -0.02005,
+            0.839124
+          ],
+          "kind": "part",
+          "name": "Trapezoid bone.l",
+          "nodes": [
+            "appendicular-skeleton-trapezoid-bone-left__Trapezoid bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011714,
+            0.015545,
+            0.013136
+          ],
+          "sourceObjects": [
+            "Trapezoid bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-trapezoid-bone-right": {
+          "centerBlender": [
+            -0.276515,
+            -0.02005,
+            0.839124
+          ],
+          "kind": "part",
+          "name": "Trapezoid bone.r",
+          "nodes": [
+            "appendicular-skeleton-trapezoid-bone-right__Trapezoid bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011714,
+            0.015545,
+            0.013136
+          ],
+          "sourceObjects": [
+            "Trapezoid bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-triquetrum-bone-left": {
+          "centerBlender": [
+            0.245242,
+            -0.021398,
+            0.846014
+          ],
+          "kind": "part",
+          "name": "Triquetrum bone.l",
+          "nodes": [
+            "appendicular-skeleton-triquetrum-bone-left__Triquetrum bone.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011101,
+            0.01593,
+            0.014277
+          ],
+          "sourceObjects": [
+            "Triquetrum bone.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-triquetrum-bone-right": {
+          "centerBlender": [
+            -0.245242,
+            -0.021398,
+            0.846014
+          ],
+          "kind": "part",
+          "name": "Triquetrum bone.r",
+          "nodes": [
+            "appendicular-skeleton-triquetrum-bone-right__Triquetrum bone.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.011101,
+            0.01593,
+            0.014277
+          ],
+          "sourceObjects": [
+            "Triquetrum bone.r"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-ulna-left": {
+          "centerBlender": [
+            0.229434,
+            0.018768,
+            0.9833
+          ],
+          "kind": "part",
+          "name": "Ulna.l",
+          "nodes": [
+            "appendicular-skeleton-ulna-left__Ulna.l"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.052393,
+            0.083239,
+            0.255439
+          ],
+          "sourceObjects": [
+            "Ulna.l"
+          ],
+          "system": "skeletal"
+        },
+        "appendicular-skeleton-ulna-right": {
+          "centerBlender": [
+            -0.229434,
+            0.018768,
+            0.9833
+          ],
+          "kind": "part",
+          "name": "Ulna.r",
+          "nodes": [
+            "appendicular-skeleton-ulna-right__Ulna.r"
+          ],
+          "parentId": "appendicular-skeleton",
+          "selectable": true,
+          "sizeBlender": [
+            0.052393,
+            0.083239,
+            0.255439
+          ],
+          "sourceObjects": [
+            "Ulna.r"
+          ],
+          "system": "skeletal"
+        }
+      },
+      "system": "skeletal"
+    }
+  }
+}

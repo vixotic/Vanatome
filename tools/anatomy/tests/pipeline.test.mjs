@@ -88,6 +88,26 @@ test("release registry is derived from stable group metadata", () => {
   });
 });
 
+test("release registry uses a release-specific atlas version", () => {
+  const registry = registryFor(
+    {
+      atlas: { id: "z-anatomy", version: "1.1.0" },
+      releases: { "demo-1.2.0": { version: "1.2.0" } },
+    },
+    "demo-1.2.0",
+    "build-2",
+    {
+      heart: {
+        system: "cardiovascular",
+        centerBlender: [0, 0, 0],
+        nodes: ["heart__Heart"],
+      },
+    },
+  );
+
+  assert.equal(registry.atlasVersion, "1.2.0");
+});
+
 test("source-derived part IDs preserve laterality deterministically", () => {
   assert.equal(stablePartId("kidneys", "Kidney.l"), "kidneys-kidney-left");
   assert.equal(

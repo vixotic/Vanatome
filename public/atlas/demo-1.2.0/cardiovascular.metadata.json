@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.2.0",
+  "buildId": "e9a45d0a551acb8f",
+  "bundleId": "cardiovascular",
+  "nodeCount": 4,
+  "structures": [
+    {
+      "id": "cardiovascular-system",
+      "name": "Cardiovascular",
+      "kind": "system",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.1278,
+        2.9348,
+        0.1977
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "heart",
+      "name": "Heart",
+      "kind": "organ",
+      "parentId": "cardiovascular-system",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.1594,
+        2.9353,
+        0.1734
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "heart-left-atrium",
+      "name": "Left atrium",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.146,
+        3.0037,
+        0.0805
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "heart-left-ventricle",
+      "name": "Left ventricle",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.2968,
+        2.8708,
+        0.1969
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "heart-right-atrium",
+      "name": "Right atrium",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        -0.1012,
+        2.9683,
+        0.2039
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "heart-right-ventricle",
+      "name": "Right ventricle",
+      "kind": "part",
+      "parentId": "heart",
+      "system": "cardiovascular",
+      "layer": "cardiovascular",
+      "selectable": true,
+      "position": [
+        0.1381,
+        2.8961,
+        0.3339
+      ],
+      "objectCount": 1
+    }
+  ]
+}

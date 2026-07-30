@@ -1,25 +1,47 @@
 import { createAtlasLoader } from "./loader.js";
-import type { AtlasLoader, AtlasLoaderOptions } from "./types.js";
+import type {
+  AtlasLoaderOptions,
+  AtlasLoaderWithProfiles,
+} from "./types.js";
 
 export const OFFICIAL_HUMAN_ATLAS = {
   id: "vanatome-human",
   name: "Vanatome Human Atlas",
-  version: "1.1.0",
-  buildId: "c87403fe2f003fba",
+  version: "1.2.0",
+  buildId: "e9a45d0a551acb8f",
   catalogFile: "catalog.json",
+  catalogUrl:
+    "https://atlas.vanatome.vixotic.in/releases/1.2.0/catalog.json",
+  defaultProfileId: "full-body",
 } as const;
 
-export type HumanAtlasSourceOptions = AtlasLoaderOptions;
+export const DEMO_HUMAN_ATLAS = {
+  id: "vanatome-human",
+  name: "Vanatome Human Atlas",
+  version: "1.2.0",
+  buildId: "e9a45d0a551acb8f",
+  catalogFile: "catalog.json",
+  defaultProfileId: "full-body",
+} as const;
+
+export type HumanAtlasSourceOptions = Omit<
+  AtlasLoaderOptions,
+  "catalogUrl"
+> & {
+  catalogUrl?: string;
+};
 
 /**
- * Connects the official Vanatome human-atlas identity to a caller-selected
- * catalog location. Vanatome does not currently publish a default hosted URL.
+ * Loads the immutable official atlas release. Pass catalogUrl to use an exact
+ * mirror or self-hosted copy of the same release.
  */
 export function createOfficialHumanAtlas(
-  options: HumanAtlasSourceOptions,
-): AtlasLoader {
+  options: HumanAtlasSourceOptions = {},
+): AtlasLoaderWithProfiles {
   return createAtlasLoader({
     ...options,
+    catalogUrl:
+      options.catalogUrl ?? OFFICIAL_HUMAN_ATLAS.catalogUrl,
     expectedAtlas: {
       id: OFFICIAL_HUMAN_ATLAS.id,
       version: OFFICIAL_HUMAN_ATLAS.version,
@@ -35,15 +57,15 @@ export function createOfficialHumanAtlas(
 export function createDemoHumanAtlas(options?: {
   catalogUrl?: string;
   fetch?: typeof globalThis.fetch;
-}): AtlasLoader {
+}): AtlasLoaderWithProfiles {
   return createAtlasLoader({
     catalogUrl:
-      options?.catalogUrl ?? "/atlas/demo-1.1.0/catalog.json",
+      options?.catalogUrl ?? "/atlas/demo-1.2.0/catalog.json",
     fetch: options?.fetch,
     expectedAtlas: {
-      id: OFFICIAL_HUMAN_ATLAS.id,
-      version: OFFICIAL_HUMAN_ATLAS.version,
-      buildId: OFFICIAL_HUMAN_ATLAS.buildId,
+      id: DEMO_HUMAN_ATLAS.id,
+      version: DEMO_HUMAN_ATLAS.version,
+      buildId: DEMO_HUMAN_ATLAS.buildId,
     },
   });
 }

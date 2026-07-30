@@ -6,7 +6,9 @@ import test from "node:test";
 import {
   AtlasLoaderError,
   createAtlasLoader,
+  createDemoHumanAtlas,
   createOfficialHumanAtlas,
+  DEMO_HUMAN_ATLAS,
   OFFICIAL_HUMAN_ATLAS,
 } from "../dist/index.js";
 
@@ -69,6 +71,36 @@ const metadata = {
   ],
 };
 
+const profiledCatalog = {
+  ...catalog,
+  systems: [
+    {
+      id: "cardiovascular",
+      name: "Cardiovascular",
+      bundleId: "cardiovascular",
+    },
+  ],
+  bundles: [
+    ...catalog.bundles,
+    {
+      id: "full-body",
+      name: "Full body",
+      systems: ["cardiovascular"],
+      layers: ["cardiovascular"],
+      modelUrl: "./full-body.glb",
+      metadataUrl: "./full-body.metadata.json",
+    },
+  ],
+  profiles: [
+    {
+      id: "full-body",
+      name: "Full body",
+      bundleId: "full-body",
+    },
+  ],
+  defaultProfileId: "full-body",
+};
+
 function jsonResponse(body, url, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
@@ -76,12 +108,14 @@ function jsonResponse(body, url, status = 200) {
   });
 }
 
-test("official identity requires an explicit catalog source", () => {
+test("official identity provides the immutable public catalog by default", () => {
   assert.equal(OFFICIAL_HUMAN_ATLAS.id, "vanatome-human");
-  const loader = createOfficialHumanAtlas({
-    catalogUrl: "https://assets.example/atlas/1.1.0/catalog.json",
-    fetch: async () => jsonResponse(catalog, ""),
-  });
+  assert.equal(OFFICIAL_HUMAN_ATLAS.version, "1.2.0");
+  assert.equal(
+    OFFICIAL_HUMAN_ATLAS.catalogUrl,
+    "https://atlas.vanatome.vixotic.in/releases/1.2.0/catalog.json",
+  );
+  const loader = createOfficialHumanAtlas();
   assert.deepEqual(loader.getState(), { status: "idle" });
 });
 
@@ -147,6 +181,46 @@ test("loads a system lazily and returns a viewer-compatible atlas", async () => 
     "catalog-ready",
     "loading-bundle",
     "ready",
+  ]);
+});
+
+test("explicit system mappings coexist with a cumulative full-body profile", async () => {
+  const requests = [];
+  const loader = createAtlasLoader({
+    catalogUrl: "https://assets.example/atlas/1.2.0/catalog.json",
+    fetch: async (input) => {
+      const url = String(input);
+      requests.push(url);
+      if (url.endsWith("catalog.json")) return jsonResponse(profiledCatalog, url);
+      return jsonResponse(
+        {
+          ...metadata,
+          bundleId: url.endsWith("full-body.metadata.json")
+            ? "full-body"
+            : "cardiovascular",
+        },
+        url,
+      );
+    },
+  });
+
+  const cardiovascular = await loader.loadSystem("cardiovascular");
+  const fullBody = await loader.loadProfile();
+
+  assert.equal(cardiovascular.descriptor.id, "cardiovascular");
+  assert.equal(
+    cardiovascular.atlas.modelUrl,
+    "https://assets.example/atlas/1.2.0/cardiovascular.glb",
+  );
+  assert.equal(fullBody.descriptor.id, "full-body");
+  assert.equal(
+    fullBody.atlas.modelUrl,
+    "https://assets.example/atlas/1.2.0/full-body.glb",
+  );
+  assert.deepEqual(requests, [
+    "https://assets.example/atlas/1.2.0/catalog.json",
+    "https://assets.example/atlas/1.2.0/cardiovascular.metadata.json",
+    "https://assets.example/atlas/1.2.0/full-body.metadata.json",
   ]);
 });
 
@@ -254,4 +328,62 @@ test("repository demo catalog matches its metadata and immutable GLB", async () 
     ),
     releaseRegistry.structures,
   );
+});
+
+test("distributed demo release loads systems independently and full body as a profile", async () => {
+  const demoDirectory = new URL(
+    "../../../public/atlas/demo-1.2.0/",
+    import.meta.url,
+  );
+  const demoCatalog = JSON.parse(
+    await readFile(new URL("catalog.json", demoDirectory), "utf8"),
+  );
+  const metadataByUrl = new Map();
+  for (const bundle of demoCatalog.bundles) {
+    metadataByUrl.set(
+      new URL(bundle.metadataUrl, "https://demo.local/atlas/demo-1.2.0/catalog.json").href,
+      JSON.parse(
+        await readFile(new URL(bundle.metadataUrl, demoDirectory), "utf8"),
+      ),
+    );
+    const model = await readFile(new URL(bundle.modelUrl, demoDirectory));
+    assert.equal(model.length, bundle.bytes);
+    assert.equal(
+      createHash("sha256").update(model).digest("hex"),
+      bundle.sha256,
+    );
+  }
+
+  const systemBundles = demoCatalog.bundles.filter(
+    (bundle) => bundle.id !== "curated-full-body",
+  );
+  const fullBody = demoCatalog.bundles.find(
+    (bundle) => bundle.id === "curated-full-body",
+  );
+  assert.ok(fullBody);
+  assert.equal(
+    systemBundles.reduce((total, bundle) => total + bundle.nodeCount, 0),
+    fullBody.nodeCount,
+  );
+  assert.equal(demoCatalog.defaultProfileId, "full-body");
+  assert.equal(DEMO_HUMAN_ATLAS.buildId, demoCatalog.atlas.buildId);
+
+  const requests = [];
+  const loader = createDemoHumanAtlas({
+    catalogUrl: "https://demo.local/atlas/demo-1.2.0/catalog.json",
+    fetch: async (input) => {
+      const url = String(input);
+      requests.push(url);
+      if (url.endsWith("catalog.json")) return jsonResponse(demoCatalog, url);
+      return jsonResponse(metadataByUrl.get(url), url);
+    },
+  });
+  const cardiovascular = await loader.loadSystem("cardiovascular");
+  const profile = await loader.loadProfile();
+
+  assert.equal(cardiovascular.descriptor.id, "cardiovascular");
+  assert.equal(cardiovascular.metadata.nodeCount, 4);
+  assert.equal(profile.descriptor.id, "curated-full-body");
+  assert.equal(profile.metadata.nodeCount, 528);
+  assert.equal(requests.length, 3);
 });

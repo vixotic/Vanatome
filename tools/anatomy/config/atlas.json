@@ -321,6 +321,58 @@
           "material": {"color": [0.74, 0.6, 0.9, 1.0], "roughness": 0.46}
         }
       ]
+    },
+    "appendicular-skeleton": {
+      "description": "Paired pectoral girdle, upper-limb, pelvic-limb, hand, and foot bones not already included in the torso skeleton.",
+      "liveAsset": "public/models/z-anatomy-appendicular-skeleton.glb",
+      "liveManifest": "public/models/z-anatomy-appendicular-skeleton-manifest.json",
+      "validation": {
+        "expectedObjectCount": 126,
+        "maximumAssetBytes": 12000000
+      },
+      "groups": [
+        {
+          "id": "appendicular-skeleton",
+          "name": "Appendicular Skeleton",
+          "system": "skeletal",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Appendicular skeleton",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1,
+            "excludeNames": ["Hip bone.l", "Hip bone.r"]
+          },
+          "material": {"color": [0.43, 0.64, 0.66, 1.0], "metallic": 0.05, "roughness": 0.58},
+          "decimate": 0.42
+        }
+      ]
+    },
+    "lymphoid-organs": {
+      "description": "Paired and regional lymph nodes, thymus lobes, and palatine tonsils not already included in the visceral core.",
+      "liveAsset": "public/models/z-anatomy-lymphoid-organs.glb",
+      "liveManifest": "public/models/z-anatomy-lymphoid-organs-manifest.json",
+      "validation": {
+        "expectedObjectCount": 53,
+        "maximumAssetBytes": 8000000
+      },
+      "groups": [
+        {
+          "id": "lymphoid-organs",
+          "name": "Lymphoid Organs",
+          "system": "lymphatic",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Lymphoid system",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1,
+            "excludeNames": ["Spleen"]
+          },
+          "material": {"color": [0.45, 0.11, 0.24, 1.0], "roughness": 0.46},
+          "decimate": 0.55
+        }
+      ]
     }
   },
   "releases": {
@@ -333,6 +385,18 @@
       "validation": {
         "expectedObjectCount": 349,
         "maximumAssetBytes": 30000000
+      }
+    },
+    "demo-1.2.0": {
+      "version": "1.2.0",
+      "description": "Cumulative full-body release with appendicular skeleton and lymphoid organ batches.",
+      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs"],
+      "liveAsset": "public/models/z-anatomy-1.2.0-full-body.glb",
+      "liveManifest": "public/models/z-anatomy-1.2.0-manifest.json",
+      "liveRegistry": "public/models/z-anatomy-1.2.0-registry.json",
+      "validation": {
+        "expectedObjectCount": 528,
+        "maximumAssetBytes": 35000000
       }
     }
   }

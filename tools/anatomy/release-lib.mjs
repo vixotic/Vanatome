@@ -47,6 +47,8 @@ export function releaseBuildId({ config, releaseId, components, fingerprints, bl
 }
 
 export function registryFor(config, releaseId, buildId, groups) {
+  const releaseVersion =
+    config.releases?.[releaseId]?.version ?? config.atlas.version;
   const releasedStructures = Object.entries(groups).flatMap(([id, group]) =>
     Object.entries(group.structures ?? { [id]: group }).map(([structureId, structure]) => ({
       id: structureId,
@@ -92,7 +94,7 @@ export function registryFor(config, releaseId, buildId, groups) {
   return {
     schemaVersion: 1,
     atlasId: config.atlas.id,
-    atlasVersion: config.atlas.version,
+    atlasVersion: releaseVersion,
     release: releaseId,
     buildId,
     structures,
@@ -115,6 +117,7 @@ export async function validateRelease({
   const gltf = parseGlbJson(asset);
   const expectedGroups = mergeComponentGroups(componentManifests);
   const expectedRegistry = registryFor(config, releaseId, buildId, expectedGroups);
+  const expectedVersion = release.version ?? config.atlas.version;
   const expectedStructures = Object.values(expectedGroups).flatMap((group) =>
     Object.entries(group.structures ?? {}).map(([id, structure]) => ({ id, ...structure })),
   );
@@ -137,6 +140,7 @@ export async function validateRelease({
 
   if (manifest.schemaVersion !== 1) errors.push("release manifest schemaVersion must be 1");
   if (manifest.atlas.release !== releaseId) errors.push("release manifest ID does not match");
+  if (manifest.atlas.version !== expectedVersion) errors.push("release manifest version does not match");
   if (manifest.build.id !== buildId || derivedBuildId !== buildId) {
     errors.push("release build ID cannot be reproduced");
   }
@@ -159,7 +163,13 @@ export async function validateRelease({
   if (manifest.objectCount !== release.validation.expectedObjectCount) errors.push("release object count is invalid");
   if (nodeRows.length !== release.validation.expectedObjectCount) errors.push("GLB anatomy node count is invalid");
   if (JSON.stringify(actualIds) !== JSON.stringify(expectedIds)) errors.push("release anatomy IDs do not match components");
-  if (registry.release !== releaseId || registry.buildId !== buildId) errors.push("registry release identity does not match");
+  if (
+    registry.release !== releaseId ||
+    registry.buildId !== buildId ||
+    registry.atlasVersion !== expectedVersion
+  ) {
+    errors.push("registry release identity does not match");
+  }
   if (registry.structures.length !== expectedRegistry.structures.length) errors.push("registry structure count does not match release groups");
   if (canonicalJson(registry) !== canonicalJson(expectedRegistry)) {
     errors.push("registry contents do not match generated release groups");

@@ -47,7 +47,7 @@ around a curated, Z-Anatomy-derived human atlas.
 
 | **Navigate the hierarchy** | **Bring your own UI** | **Stay static** |
 |:---|:---|:---|
-| Search 139 stable anatomy entries across seven curated systems. | The React viewer is controlled, composable, and designed to live inside your product. | No backend, account system, analytics service, or paid platform is required. |
+| Search 320 stable anatomy entries across eight curated systems. | The React viewer is controlled, composable, and designed to live inside your product. | No backend, account system, analytics service, or paid platform is required. |
 
 <table>
   <tr>
@@ -82,7 +82,7 @@ import {
 
 const atlasLoader = createOfficialHumanAtlas({
   catalogUrl:
-    "https://atlas.vanatome.vixotic.in/releases/1.1.0/catalog.json",
+    "https://atlas.vanatome.vixotic.in/releases/1.2.0/catalog.json",
 });
 
 export function Anatomy() {
@@ -91,7 +91,7 @@ export function Anatomy() {
 
   useEffect(() => {
     atlasLoader
-      .loadBundle("curated-full-body")
+      .loadProfile("full-body")
       .then(({ atlas }) => setAtlas(atlas));
   }, []);
 
@@ -113,6 +113,10 @@ export function Anatomy() {
 }
 ```
 
+Distributed catalogs let `loadSystem(id)` resolve a dedicated system GLB,
+while `loadProfile("full-body")` resolves the cumulative full-body bundle.
+Legacy single-bundle catalogs retain their original behavior.
+
 The package owns the 3D anatomy scene. Your app owns the surrounding
 experience—search, breadcrumbs, hierarchy, sidebars, educational content, and
 controls.
@@ -131,16 +135,20 @@ catalog, metadata, attribution, and model files on any static host.
 ## What ships today
 
 ```text
-139  stable anatomy entries
-349  mapped GLB nodes
-  7  curated anatomy systems
+320  stable anatomy entries
+293  geometry-mapped anatomy IDs
+528  mapped GLB nodes
+  8  curated anatomy systems
   0  required servers
 ```
 
-- Direct model picking, orbit, zoom, focus, isolate, and reset
+- Hover, drag-safe picking, orbit, pan, zoom, bounds-based focus, isolate, and reset
 - Recursive system → organ → part hierarchy
 - Cardiovascular, digestive, lymphatic, nervous, respiratory, skeletal, and
   urinary layers
+- Normal, x-ray, and ghost display modes with controlled visibility
+- Selected-only, parent, and translucent-parent isolation modes
+- Explicit model loading, progress, ready, error, and WebGL-loss events
 - Stable public anatomy IDs for URLs, saved views, and product content
 - Desktop and responsive interaction layouts
 - Explicit loading, error, retry, and attribution states

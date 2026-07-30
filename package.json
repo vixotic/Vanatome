@@ -24,7 +24,7 @@
     "build": "npm run package:build && WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
     "deploy:cloudflare": "vinext deploy --name vanatome",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run test --workspace @vixotic/vanatome-atlas && npm run build && node --test tests/rendered-html.test.mjs tools/anatomy/tests/*.test.mjs",
+    "test": "npm run test --workspace @vixotic/vanatome-react && npm run test --workspace @vixotic/vanatome-atlas && npm run build && node --test tests/rendered-html.test.mjs tools/anatomy/tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern '**/dist/**' --ignore-pattern .next",
     "package:build": "npm run build --workspace @vixotic/vanatome-react && npm run build --workspace @vixotic/vanatome-atlas",
     "package:check": "npm run check --workspace @vixotic/vanatome-react && npm run check --workspace @vixotic/vanatome-atlas",
@@ -32,21 +32,24 @@
     "atlas:validate": "node tools/anatomy/pipeline.mjs validate",
     "atlas:promote": "node tools/anatomy/pipeline.mjs promote",
     "atlas:release": "node tools/anatomy/release.mjs",
+    "atlas:distribute": "node tools/anatomy/distribute-release.mjs --source-model public/models/z-anatomy-1.2.0-full-body.glb --registry public/models/z-anatomy-1.2.0-registry.json --manifest public/models/z-anatomy-1.2.0-manifest.json --version 1.2.0 --release demo-1.2.0",
     "atlas:test": "node --test tools/anatomy/tests/*.test.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
-    "@vixotic/vanatome-atlas": "^0.1.0",
-    "@vixotic/vanatome-react": "^0.1.3",
+    "@vixotic/vanatome-atlas": "^0.1.1",
+    "@vixotic/vanatome-react": "^0.1.4",
     "lucide-react": "^1.27.0",
-    "next": "16.2.6",
+    "next": "16.2.12",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "three": "^0.185.1"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/vite-plugin": "1.48.0",
+    "@gltf-transform/core": "4.4.2",
+    "@gltf-transform/functions": "4.4.2",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
@@ -60,7 +63,7 @@
     "typescript": "5.9.3",
     "vinext": "0.0.50",
     "vite": "8.0.13",
-    "wrangler": "4.92.0"
+    "wrangler": "4.115.0"
   },
   "type": "module"
 }
