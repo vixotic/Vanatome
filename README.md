@@ -68,7 +68,7 @@ around a curated, Z-Anatomy-derived human atlas.
 
 ```bash
 npm install @vixotic/vanatome-react @vixotic/vanatome-atlas \
-  three @react-three/fiber @react-three/drei
+  react react-dom three @react-three/fiber @react-three/drei
 ```
 
 ```tsx

@@ -1,6 +1,6 @@
 {
   "name": "@vixotic/vanatome-atlas",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Versioned human anatomy catalogs and browser loaders for Vanatome.",
   "license": "MIT",
   "type": "module",
@@ -27,10 +27,10 @@
     "prepack": "npm run test"
   },
   "peerDependencies": {
-    "@vixotic/vanatome-react": "^0.1.4"
+    "@vixotic/vanatome-react": "^0.1.5"
   },
   "devDependencies": {
-    "@vixotic/vanatome-react": "0.1.4",
+    "@vixotic/vanatome-react": "0.1.5",
     "typescript": "^5.9.3"
   },
   "publishConfig": {

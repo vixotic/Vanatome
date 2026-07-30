@@ -9,10 +9,10 @@ assets.
 
 ```bash
 npm install @vixotic/vanatome-atlas @vixotic/vanatome-react \
-  react three @react-three/fiber @react-three/drei
+  react react-dom three @react-three/fiber @react-three/drei
 ```
 
-The Atlas package declares `@vixotic/vanatome-react` `^0.1.4` as a peer. Its
+The Atlas package declares `@vixotic/vanatome-react` `^0.1.5` as a peer. Its
 build checks the returned atlas object against the published viewer contract
 without adding React or Three.js to the Atlas runtime.
 
@@ -250,7 +250,7 @@ self-hosting them. See [ASSET-LICENSE.md](ASSET-LICENSE.md).
 
 ## Upgrading from 0.1.0
 
-Version 0.1.1 keeps the original catalog schema and loader methods compatible.
+Version 0.1.2 keeps the original catalog schema and loader methods compatible.
 Explicit per-system `bundleId` mappings, profiles, `loadProfile`, and the
 official 1.2.0 source are additive. The immutable 1.1.0 hosted release remains
 available for applications pinned to the previous package and atlas version.

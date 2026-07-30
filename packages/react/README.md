@@ -7,7 +7,7 @@ hierarchy, layer, isolate, focus, and detail-panel experiences.
 ## Install
 
 ```bash
-npm install @vixotic/vanatome-react react three \
+npm install @vixotic/vanatome-react react react-dom three \
   @react-three/fiber @react-three/drei
 ```
 
@@ -269,7 +269,7 @@ from the package for exact signatures.
 
 ## Upgrading from 0.1.3
 
-Version 0.1.4 is backward compatible with the 0.1.3 public contract.
+Version 0.1.5 is backward compatible with the 0.1.3 public contract.
 `isolatedId` continues to isolate a selected subtree, the original
 `VanatomeController` type remains unchanged, and an empty `visibleLayers`
 array still displays all layers. Pan, context-menu events, multi-mode
