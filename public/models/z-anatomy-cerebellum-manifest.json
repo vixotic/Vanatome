@@ -1,0 +1,911 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "cerebellum"
+  },
+  "build": {
+    "id": "7a6d156e1e302b9d",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "929037447ce6df97656972c8279a3afaafd2e05c76de99c36fbcf886a2ef4c91"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 1663440,
+    "sha256": "1342fc5ab0d1e9a57cbb7ea231e983494c7ed68f3fc5652693f5246205bee9fe"
+  },
+  "objectCount": 33,
+  "groups": {
+    "cerebellum": {
+      "centerBlender": [
+        0,
+        0.034821,
+        1.588968
+      ],
+      "missing": [],
+      "name": "Cerebellum",
+      "nodes": [
+        "cerebellum-anterior-quadrangular-lobule-left__Anterior quadrangular lobule.l",
+        "cerebellum-anterior-quadrangular-lobule-right__Anterior quadrangular lobule.r",
+        "cerebellum-base-of-peduncle-left__Base of peduncle.l",
+        "cerebellum-base-of-peduncle-right__Base of peduncle.r",
+        "cerebellum-biventral-lobule-left__Biventral lobule.l",
+        "cerebellum-biventral-lobule-right__Biventral lobule.r",
+        "cerebellum-central-lobule__Central lobule",
+        "cerebellum-culmen__Culmen",
+        "cerebellum-declive__Declive",
+        "cerebellum-flocculus-left__Flocculus.l",
+        "cerebellum-flocculus-right__Flocculus.r",
+        "cerebellum-folium-of-vermis__Folium of vermis",
+        "cerebellum-gracile-lobule-left__Gracile lobule.l",
+        "cerebellum-gracile-lobule-right__Gracile lobule.r",
+        "cerebellum-inferior-semilunar-lobule-left__Inferior semilunar lobule.l",
+        "cerebellum-inferior-semilunar-lobule-right__Inferior semilunar lobule.r",
+        "cerebellum-lingula-of-cerebellum__Lingula of cerebellum",
+        "cerebellum-nodule-of-vermis__Nodule of vermis",
+        "cerebellum-peduncle-of-flocculus-left__Peduncle of flocculus.l",
+        "cerebellum-peduncle-of-flocculus-right__Peduncle of flocculus.r",
+        "cerebellum-posterior-quadrangular-lobule-left__Posterior quadrangular lobule.l",
+        "cerebellum-posterior-quadrangular-lobule-right__Posterior quadrangular lobule.r",
+        "cerebellum-pyramis-of-vermis__Pyramis of vermis",
+        "cerebellum-superior-cerebellar-peduncle-left__Superior cerebellar peduncle.l",
+        "cerebellum-superior-cerebellar-peduncle-right__Superior cerebellar peduncle.r",
+        "cerebellum-superior-semilunar-lobule-left__Superior semilunar lobule.l",
+        "cerebellum-superior-semilunar-lobule-right__Superior semilunar lobule.r",
+        "cerebellum-tonsil-of-cerebellum-left__Tonsil of cerebellum.l",
+        "cerebellum-tonsil-of-cerebellum-right__Tonsil of cerebellum.r",
+        "cerebellum-tuber-of-vermis__Tuber of vermis",
+        "cerebellum-uvula-of-vermis__Uvula of vermis",
+        "cerebellum-wing-of-central-lobule-left__Wing of central lobule.l",
+        "cerebellum-wing-of-central-lobule-right__Wing of central lobule.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.098241,
+        0.090618,
+        0.057479
+      ],
+      "sourceObjects": [
+        "Anterior quadrangular lobule.l",
+        "Anterior quadrangular lobule.r",
+        "Base of peduncle.l",
+        "Base of peduncle.r",
+        "Biventral lobule.l",
+        "Biventral lobule.r",
+        "Central lobule",
+        "Culmen",
+        "Declive",
+        "Flocculus.l",
+        "Flocculus.r",
+        "Folium of vermis",
+        "Gracile lobule.l",
+        "Gracile lobule.r",
+        "Inferior semilunar lobule.l",
+        "Inferior semilunar lobule.r",
+        "Lingula of cerebellum",
+        "Nodule of vermis",
+        "Peduncle of flocculus.l",
+        "Peduncle of flocculus.r",
+        "Posterior quadrangular lobule.l",
+        "Posterior quadrangular lobule.r",
+        "Pyramis of vermis",
+        "Superior cerebellar peduncle.l",
+        "Superior cerebellar peduncle.r",
+        "Superior semilunar lobule.l",
+        "Superior semilunar lobule.r",
+        "Tonsil of cerebellum.l",
+        "Tonsil of cerebellum.r",
+        "Tuber of vermis",
+        "Uvula of vermis",
+        "Wing of central lobule.l",
+        "Wing of central lobule.r"
+      ],
+      "structures": {
+        "cerebellum": {
+          "centerBlender": [
+            0,
+            0.034821,
+            1.588968
+          ],
+          "kind": "organ",
+          "name": "Cerebellum",
+          "nodes": [],
+          "parentId": "nervous-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.098241,
+            0.090618,
+            0.057479
+          ],
+          "sourceObjects": [],
+          "system": "nervous"
+        },
+        "cerebellum-anterior-quadrangular-lobule-left": {
+          "centerBlender": [
+            0.013852,
+            0.029866,
+            1.599583
+          ],
+          "kind": "part",
+          "name": "Anterior quadrangular lobule.l",
+          "nodes": [
+            "cerebellum-anterior-quadrangular-lobule-left__Anterior quadrangular lobule.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.03049,
+            0.034824,
+            0.025076
+          ],
+          "sourceObjects": [
+            "Anterior quadrangular lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-anterior-quadrangular-lobule-right": {
+          "centerBlender": [
+            -0.013852,
+            0.029866,
+            1.599583
+          ],
+          "kind": "part",
+          "name": "Anterior quadrangular lobule.r",
+          "nodes": [
+            "cerebellum-anterior-quadrangular-lobule-right__Anterior quadrangular lobule.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.03049,
+            0.034824,
+            0.025076
+          ],
+          "sourceObjects": [
+            "Anterior quadrangular lobule.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-base-of-peduncle-left": {
+          "centerBlender": [
+            0.011284,
+            0.000656,
+            1.60958
+          ],
+          "kind": "part",
+          "name": "Base of peduncle.l",
+          "nodes": [
+            "cerebellum-base-of-peduncle-left__Base of peduncle.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01878,
+            0.022289,
+            0.016254
+          ],
+          "sourceObjects": [
+            "Base of peduncle.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-base-of-peduncle-right": {
+          "centerBlender": [
+            -0.011283,
+            0.000656,
+            1.60958
+          ],
+          "kind": "part",
+          "name": "Base of peduncle.r",
+          "nodes": [
+            "cerebellum-base-of-peduncle-right__Base of peduncle.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01878,
+            0.022289,
+            0.016254
+          ],
+          "sourceObjects": [
+            "Base of peduncle.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-biventral-lobule-left": {
+          "centerBlender": [
+            0.019732,
+            0.034962,
+            1.571371
+          ],
+          "kind": "part",
+          "name": "Biventral lobule.l",
+          "nodes": [
+            "cerebellum-biventral-lobule-left__Biventral lobule.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.034488,
+            0.035465,
+            0.020002
+          ],
+          "sourceObjects": [
+            "Biventral lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-biventral-lobule-right": {
+          "centerBlender": [
+            -0.019732,
+            0.034962,
+            1.571371
+          ],
+          "kind": "part",
+          "name": "Biventral lobule.r",
+          "nodes": [
+            "cerebellum-biventral-lobule-right__Biventral lobule.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.034488,
+            0.035465,
+            0.020002
+          ],
+          "sourceObjects": [
+            "Biventral lobule.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-central-lobule": {
+          "centerBlender": [
+            0.000314,
+            0.027049,
+            1.597854
+          ],
+          "kind": "part",
+          "name": "Central lobule",
+          "nodes": [
+            "cerebellum-central-lobule__Central lobule"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.007703,
+            0.01706,
+            0.015842
+          ],
+          "sourceObjects": [
+            "Central lobule"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-culmen": {
+          "centerBlender": [
+            -0.000001,
+            0.038831,
+            1.601195
+          ],
+          "kind": "part",
+          "name": "Culmen",
+          "nodes": [
+            "cerebellum-culmen__Culmen"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.010357,
+            0.019292,
+            0.023891
+          ],
+          "sourceObjects": [
+            "Culmen"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-declive": {
+          "centerBlender": [
+            -0.000035,
+            0.05366,
+            1.597441
+          ],
+          "kind": "part",
+          "name": "Declive",
+          "nodes": [
+            "cerebellum-declive__Declive"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01214,
+            0.019085,
+            0.017616
+          ],
+          "sourceObjects": [
+            "Declive"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-flocculus-left": {
+          "centerBlender": [
+            0.022499,
+            0.019433,
+            1.581158
+          ],
+          "kind": "part",
+          "name": "Flocculus.l",
+          "nodes": [
+            "cerebellum-flocculus-left__Flocculus.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018374,
+            0.017715,
+            0.00747
+          ],
+          "sourceObjects": [
+            "Flocculus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-flocculus-right": {
+          "centerBlender": [
+            -0.022499,
+            0.019433,
+            1.581158
+          ],
+          "kind": "part",
+          "name": "Flocculus.r",
+          "nodes": [
+            "cerebellum-flocculus-right__Flocculus.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018374,
+            0.017715,
+            0.00747
+          ],
+          "sourceObjects": [
+            "Flocculus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-folium-of-vermis": {
+          "centerBlender": [
+            -0.00002,
+            0.057499,
+            1.589383
+          ],
+          "kind": "part",
+          "name": "Folium of vermis",
+          "nodes": [
+            "cerebellum-folium-of-vermis__Folium of vermis"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013251,
+            0.017242,
+            0.006079
+          ],
+          "sourceObjects": [
+            "Folium of vermis"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-gracile-lobule-left": {
+          "centerBlender": [
+            0.022119,
+            0.041765,
+            1.572342
+          ],
+          "kind": "part",
+          "name": "Gracile lobule.l",
+          "nodes": [
+            "cerebellum-gracile-lobule-left__Gracile lobule.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.034839,
+            0.036614,
+            0.019453
+          ],
+          "sourceObjects": [
+            "Gracile lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-gracile-lobule-right": {
+          "centerBlender": [
+            -0.022119,
+            0.041765,
+            1.572342
+          ],
+          "kind": "part",
+          "name": "Gracile lobule.r",
+          "nodes": [
+            "cerebellum-gracile-lobule-right__Gracile lobule.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.034839,
+            0.036614,
+            0.019453
+          ],
+          "sourceObjects": [
+            "Gracile lobule.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-inferior-semilunar-lobule-left": {
+          "centerBlender": [
+            0.024181,
+            0.05035,
+            1.578164
+          ],
+          "kind": "part",
+          "name": "Inferior semilunar lobule.l",
+          "nodes": [
+            "cerebellum-inferior-semilunar-lobule-left__Inferior semilunar lobule.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.047494,
+            0.058224,
+            0.028544
+          ],
+          "sourceObjects": [
+            "Inferior semilunar lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-inferior-semilunar-lobule-right": {
+          "centerBlender": [
+            -0.024181,
+            0.05035,
+            1.578164
+          ],
+          "kind": "part",
+          "name": "Inferior semilunar lobule.r",
+          "nodes": [
+            "cerebellum-inferior-semilunar-lobule-right__Inferior semilunar lobule.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.047494,
+            0.058224,
+            0.028544
+          ],
+          "sourceObjects": [
+            "Inferior semilunar lobule.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-lingula-of-cerebellum": {
+          "centerBlender": [
+            0.000299,
+            0.026522,
+            1.594342
+          ],
+          "kind": "part",
+          "name": "Lingula of cerebellum",
+          "nodes": [
+            "cerebellum-lingula-of-cerebellum__Lingula of cerebellum"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.010197,
+            0.016096,
+            0.010846
+          ],
+          "sourceObjects": [
+            "Lingula of cerebellum"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-nodule-of-vermis": {
+          "centerBlender": [
+            -0.000077,
+            0.034255,
+            1.580323
+          ],
+          "kind": "part",
+          "name": "Nodule of vermis",
+          "nodes": [
+            "cerebellum-nodule-of-vermis__Nodule of vermis"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.010543,
+            0.008538,
+            0.011831
+          ],
+          "sourceObjects": [
+            "Nodule of vermis"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-peduncle-of-flocculus-left": {
+          "centerBlender": [
+            0.017164,
+            0.025765,
+            1.583174
+          ],
+          "kind": "part",
+          "name": "Peduncle of flocculus.l",
+          "nodes": [
+            "cerebellum-peduncle-of-flocculus-left__Peduncle of flocculus.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.033319,
+            0.02365,
+            0.008681
+          ],
+          "sourceObjects": [
+            "Peduncle of flocculus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-peduncle-of-flocculus-right": {
+          "centerBlender": [
+            -0.017164,
+            0.025765,
+            1.583174
+          ],
+          "kind": "part",
+          "name": "Peduncle of flocculus.r",
+          "nodes": [
+            "cerebellum-peduncle-of-flocculus-right__Peduncle of flocculus.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.033319,
+            0.02365,
+            0.008681
+          ],
+          "sourceObjects": [
+            "Peduncle of flocculus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-posterior-quadrangular-lobule-left": {
+          "centerBlender": [
+            0.01949,
+            0.039806,
+            1.595132
+          ],
+          "kind": "part",
+          "name": "Posterior quadrangular lobule.l",
+          "nodes": [
+            "cerebellum-posterior-quadrangular-lobule-left__Posterior quadrangular lobule.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.042288,
+            0.045103,
+            0.023275
+          ],
+          "sourceObjects": [
+            "Posterior quadrangular lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-posterior-quadrangular-lobule-right": {
+          "centerBlender": [
+            -0.01949,
+            0.039806,
+            1.595132
+          ],
+          "kind": "part",
+          "name": "Posterior quadrangular lobule.r",
+          "nodes": [
+            "cerebellum-posterior-quadrangular-lobule-right__Posterior quadrangular lobule.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.042288,
+            0.045103,
+            0.023275
+          ],
+          "sourceObjects": [
+            "Posterior quadrangular lobule.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-pyramis-of-vermis": {
+          "centerBlender": [
+            0.000011,
+            0.051821,
+            1.576374
+          ],
+          "kind": "part",
+          "name": "Pyramis of vermis",
+          "nodes": [
+            "cerebellum-pyramis-of-vermis__Pyramis of vermis"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.012615,
+            0.015692,
+            0.016576
+          ],
+          "sourceObjects": [
+            "Pyramis of vermis"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-superior-cerebellar-peduncle-left": {
+          "centerBlender": [
+            0.009199,
+            0.025364,
+            1.592005
+          ],
+          "kind": "part",
+          "name": "Superior cerebellar peduncle.l",
+          "nodes": [
+            "cerebellum-superior-cerebellar-peduncle-left__Superior cerebellar peduncle.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013735,
+            0.030023,
+            0.021258
+          ],
+          "sourceObjects": [
+            "Superior cerebellar peduncle.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-superior-cerebellar-peduncle-right": {
+          "centerBlender": [
+            -0.009199,
+            0.025364,
+            1.592005
+          ],
+          "kind": "part",
+          "name": "Superior cerebellar peduncle.r",
+          "nodes": [
+            "cerebellum-superior-cerebellar-peduncle-right__Superior cerebellar peduncle.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013735,
+            0.030023,
+            0.021258
+          ],
+          "sourceObjects": [
+            "Superior cerebellar peduncle.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-superior-semilunar-lobule-left": {
+          "centerBlender": [
+            0.024632,
+            0.05089,
+            1.587534
+          ],
+          "kind": "part",
+          "name": "Superior semilunar lobule.l",
+          "nodes": [
+            "cerebellum-superior-semilunar-lobule-left__Superior semilunar lobule.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.048976,
+            0.05848,
+            0.019327
+          ],
+          "sourceObjects": [
+            "Superior semilunar lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-superior-semilunar-lobule-right": {
+          "centerBlender": [
+            -0.024632,
+            0.05089,
+            1.587534
+          ],
+          "kind": "part",
+          "name": "Superior semilunar lobule.r",
+          "nodes": [
+            "cerebellum-superior-semilunar-lobule-right__Superior semilunar lobule.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.048976,
+            0.05848,
+            0.019327
+          ],
+          "sourceObjects": [
+            "Superior semilunar lobule.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-tonsil-of-cerebellum-left": {
+          "centerBlender": [
+            0.012449,
+            0.032227,
+            1.570456
+          ],
+          "kind": "part",
+          "name": "Tonsil of cerebellum.l",
+          "nodes": [
+            "cerebellum-tonsil-of-cerebellum-left__Tonsil of cerebellum.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021756,
+            0.022381,
+            0.020456
+          ],
+          "sourceObjects": [
+            "Tonsil of cerebellum.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-tonsil-of-cerebellum-right": {
+          "centerBlender": [
+            -0.012449,
+            0.032227,
+            1.570456
+          ],
+          "kind": "part",
+          "name": "Tonsil of cerebellum.r",
+          "nodes": [
+            "cerebellum-tonsil-of-cerebellum-right__Tonsil of cerebellum.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021756,
+            0.022381,
+            0.020456
+          ],
+          "sourceObjects": [
+            "Tonsil of cerebellum.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-tuber-of-vermis": {
+          "centerBlender": [
+            -0.000014,
+            0.056501,
+            1.581666
+          ],
+          "kind": "part",
+          "name": "Tuber of vermis",
+          "nodes": [
+            "cerebellum-tuber-of-vermis__Tuber of vermis"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.015138,
+            0.019031,
+            0.012566
+          ],
+          "sourceObjects": [
+            "Tuber of vermis"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-uvula-of-vermis": {
+          "centerBlender": [
+            0.000526,
+            0.041126,
+            1.576856
+          ],
+          "kind": "part",
+          "name": "Uvula of vermis",
+          "nodes": [
+            "cerebellum-uvula-of-vermis__Uvula of vermis"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.012754,
+            0.01578,
+            0.01633
+          ],
+          "sourceObjects": [
+            "Uvula of vermis"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-wing-of-central-lobule-left": {
+          "centerBlender": [
+            0.009925,
+            0.019401,
+            1.599541
+          ],
+          "kind": "part",
+          "name": "Wing of central lobule.l",
+          "nodes": [
+            "cerebellum-wing-of-central-lobule-left__Wing of central lobule.l"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017356,
+            0.020555,
+            0.012902
+          ],
+          "sourceObjects": [
+            "Wing of central lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebellum-wing-of-central-lobule-right": {
+          "centerBlender": [
+            -0.009926,
+            0.019401,
+            1.599541
+          ],
+          "kind": "part",
+          "name": "Wing of central lobule.r",
+          "nodes": [
+            "cerebellum-wing-of-central-lobule-right__Wing of central lobule.r"
+          ],
+          "parentId": "cerebellum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017356,
+            0.020555,
+            0.012902
+          ],
+          "sourceObjects": [
+            "Wing of central lobule.r"
+          ],
+          "system": "nervous"
+        }
+      },
+      "system": "nervous"
+    }
+  }
+}

@@ -1,0 +1,849 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.3.0",
+  "buildId": "74294b7e83da5dce",
+  "bundleId": "lymphatic",
+  "nodeCount": 54,
+  "structures": [
+    {
+      "id": "lymphatic-system",
+      "name": "Lymphatic",
+      "kind": "system",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.0038,
+        1.8878,
+        0.0827
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "spleen",
+      "name": "spleen",
+      "kind": "organ",
+      "parentId": "lymphatic-system",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.5933,
+        2.0305,
+        -0.0309
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs",
+      "name": "Lymphoid Organs",
+      "kind": "organ",
+      "parentId": "lymphatic-system",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0,
+        0.5925,
+        -0.0497
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "lymphoid-organs-anterior-axillary-nodes-left",
+      "name": "Anterior axillary nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.8253,
+        3.1771,
+        0.2081
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-anterior-axillary-nodes-right",
+      "name": "Anterior axillary nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.8253,
+        3.1771,
+        0.2081
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-anterior-tibial-node-left",
+      "name": "(Anterior tibial node).l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.7669,
+        -3.6841,
+        -0.0994
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-anterior-tibial-node-right",
+      "name": "(Anterior tibial node).r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.7669,
+        -3.6841,
+        -0.0994
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-brachial-nodes-left",
+      "name": "Brachial nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        1.0759,
+        3.4493,
+        0.0844
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-brachial-nodes-right",
+      "name": "Brachial nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -1.0759,
+        3.4493,
+        0.0844
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-bucinator-node-left",
+      "name": "Bucinator node.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.1961,
+        4.7206,
+        0.5076
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-bucinator-node-right",
+      "name": "Bucinator node.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.1961,
+        4.7206,
+        0.5076
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-cystic-node",
+      "name": "Cystic node",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.1608,
+        2.013,
+        0.2699
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-deep-popliteal-nodes-left",
+      "name": "Deep popliteal nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.5272,
+        -2.6401,
+        -0.2646
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-deep-popliteal-nodes-right",
+      "name": "Deep popliteal nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.5272,
+        -2.6401,
+        -0.2646
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-inferior-epigastric-nodes-left",
+      "name": "Inferior epigastric nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.3186,
+        0.0248,
+        0.4005
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-inferior-epigastric-nodes-right",
+      "name": "Inferior epigastric nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.3186,
+        0.0248,
+        0.4005
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-infra-auricular-nodes-left",
+      "name": "Infra-auricular nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.4066,
+        4.8453,
+        0.0461
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-infra-auricular-nodes-right",
+      "name": "Infra-auricular nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.4066,
+        4.8453,
+        0.0461
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-infraclavicular-nodes-left",
+      "name": "Infraclavicular nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.6824,
+        3.7005,
+        0.0251
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-infraclavicular-nodes-right",
+      "name": "Infraclavicular nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.6824,
+        3.7005,
+        0.0251
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-intermediate-deep-inguinal-node-left",
+      "name": "(Intermediate deep inguinal node).l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.3015,
+        -0.2177,
+        0.3752
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-intermediate-deep-inguinal-node-right",
+      "name": "(Intermediate deep inguinal node).r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.3015,
+        -0.2177,
+        0.3752
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-left-lobe-of-thymus",
+      "name": "Left lobe of thymus",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.1672,
+        3.3112,
+        0.3409
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-mastoid-nodes-left",
+      "name": "Mastoid nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.3946,
+        4.8095,
+        -0.1037
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-mastoid-nodes-right",
+      "name": "Mastoid nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.3946,
+        4.8095,
+        -0.1037
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-medial-common-iliac-nodes",
+      "name": "Medial common iliac nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.0121,
+        0.8511,
+        0.1251
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-medial-external-iliac-nodes-left",
+      "name": "Medial external iliac nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.2088,
+        0.4414,
+        0.1288
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-medial-external-iliac-nodes-right",
+      "name": "Medial external iliac nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.2088,
+        0.4414,
+        0.1288
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-occipital-nodes-left",
+      "name": "Occipital nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.2287,
+        5.0262,
+        -0.6201
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-occipital-nodes-right",
+      "name": "Occipital nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.2287,
+        5.0262,
+        -0.6201
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-palatine-tonsil-left",
+      "name": "Palatine tonsil.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.1944,
+        4.7873,
+        0.2068
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-palatine-tonsil-right",
+      "name": "Palatine tonsil.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.1944,
+        4.7873,
+        0.2068
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-posterior-tibial-node-left",
+      "name": "(Posterior tibial node).l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.5502,
+        -3.8695,
+        -0.3236
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-posterior-tibial-node-right",
+      "name": "(Posterior tibial node).r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.5502,
+        -3.8695,
+        -0.3236
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-postvesical-nodes",
+      "name": "Postvesical nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.0185,
+        -0.1021,
+        -0.2739
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-precaecal-nodes",
+      "name": "Precaecal nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.5568,
+        0.6419,
+        0.2851
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-proximal-deep-inguinal-node-left",
+      "name": "(Proximal deep inguinal node).l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.2996,
+        -0.145,
+        0.3432
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-proximal-deep-inguinal-node-right",
+      "name": "(Proximal deep inguinal node).r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.2996,
+        -0.145,
+        0.3432
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-retro-aortic-nodes",
+      "name": "Retro-aortic nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.0635,
+        1.6357,
+        0.0501
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-retrocaecal-nodes",
+      "name": "Retrocaecal nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.41,
+        0.575,
+        0.0174
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-retrocaval-nodes",
+      "name": "Retrocaval nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.0469,
+        1.6357,
+        0.0794
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-retropharyngeal-nodes-left",
+      "name": "Retropharyngeal nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.0828,
+        4.7078,
+        0.1035
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-retropharyngeal-nodes-right",
+      "name": "Retropharyngeal nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.0828,
+        4.7078,
+        0.1035
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-right-lobe-of-thymus",
+      "name": "Right lobe of thymus",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.0336,
+        3.2538,
+        0.3891
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-submandibular-nodes-left",
+      "name": "Submandibular nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.0443,
+        4.3979,
+        0.3759
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-submandibular-nodes-right",
+      "name": "Submandibular nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.0443,
+        4.3979,
+        0.3759
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-submental-nodes-left",
+      "name": "Submental nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.1148,
+        4.3808,
+        0.4765
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-submental-nodes-right",
+      "name": "Submental nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.1148,
+        4.3808,
+        0.4765
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-superficial-anterior-cervical-nodes",
+      "name": "Superficial anterior cervical nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.0003,
+        3.904,
+        0.302
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-superficial-popliteal-nodes-left",
+      "name": "Superficial popliteal nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.5332,
+        -2.6704,
+        -0.3534
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-superficial-popliteal-nodes-right",
+      "name": "Superficial popliteal nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.5332,
+        -2.6704,
+        -0.3534
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-superior-pancreatic-nodes",
+      "name": "Superior pancreatic nodes",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.1008,
+        1.9118,
+        0.169
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-supraclavicular-nodes-left",
+      "name": "Supraclavicular nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        0.2272,
+        3.8045,
+        0.1379
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-supraclavicular-nodes-right",
+      "name": "Supraclavicular nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -0.2272,
+        3.8045,
+        0.1379
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-supratrochlear-nodes-left",
+      "name": "Supratrochlear nodes.l",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        1.3521,
+        1.7409,
+        -0.217
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "lymphoid-organs-supratrochlear-nodes-right",
+      "name": "Supratrochlear nodes.r",
+      "kind": "part",
+      "parentId": "lymphoid-organs",
+      "system": "lymphatic",
+      "layer": "lymphatic",
+      "selectable": true,
+      "position": [
+        -1.3521,
+        1.7409,
+        -0.217
+      ],
+      "objectCount": 1
+    }
+  ]
+}

@@ -373,6 +373,463 @@
           "decimate": 0.55
         }
       ]
+    },
+    "male-reproductive": {
+      "description": "Male reproductive organs and paired ducts represented in the Z-Anatomy source.",
+      "liveAsset": "public/models/z-anatomy-male-reproductive.glb",
+      "liveManifest": "public/models/z-anatomy-male-reproductive-manifest.json",
+      "validation": {
+        "expectedObjectCount": 14,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "testes",
+          "name": "Testes",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Testis.l", "Testis.r"],
+          "material": {"color": [0.82, 0.55, 0.42, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "epididymides",
+          "name": "Epididymides",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Epididymis.l", "Epididymis.r"],
+          "material": {"color": [0.92, 0.68, 0.44, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "ductus-deferentes",
+          "name": "Ductus Deferentes",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Ductus deferens.l", "Ductus deferens.r"],
+          "material": {"color": [0.78, 0.68, 0.5, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "ejaculatory-ducts",
+          "name": "Ejaculatory Ducts",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Ejaculatory duct.l", "Ejaculatory duct.r"],
+          "material": {"color": [0.72, 0.6, 0.48, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "seminal-glands",
+          "name": "Seminal Glands",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Seminal gland.l", "Seminal gland.r"],
+          "material": {"color": [0.86, 0.56, 0.4, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "prostate",
+          "name": "Prostate",
+          "system": "reproductive",
+          "sourceObjects": ["Prostate"],
+          "material": {"color": [0.76, 0.38, 0.46, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "penile-erectile-tissues",
+          "name": "Penile Erectile Tissues",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": [
+            "Corpus cavernosum of penis",
+            "Corpus spongiosum of penis",
+            "Glans penis"
+          ],
+          "material": {"color": [0.72, 0.32, 0.4, 1.0], "roughness": 0.46}
+        }
+      ]
+    },
+    "endocrine-glands": {
+      "description": "Pituitary, pineal, thyroid, parathyroid, and adrenal glands represented in the Z-Anatomy source.",
+      "liveAsset": "public/models/z-anatomy-endocrine-glands.glb",
+      "liveManifest": "public/models/z-anatomy-endocrine-glands-manifest.json",
+      "validation": {
+        "expectedObjectCount": 10,
+        "maximumAssetBytes": 3000000
+      },
+      "groups": [
+        {
+          "id": "pituitary-gland",
+          "name": "Pituitary Gland",
+          "system": "endocrine",
+          "expandSourceParts": true,
+          "sourceObjects": ["Adenohypophysis", "Neurohypophysis"],
+          "material": {"color": [0.7, 0.38, 0.64, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "pineal-gland",
+          "name": "Pineal Gland",
+          "system": "endocrine",
+          "sourceObjects": ["Pineal gland"],
+          "material": {"color": [0.56, 0.34, 0.68, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "thyroid-gland",
+          "name": "Thyroid Gland",
+          "system": "endocrine",
+          "sourceObjects": ["Thyroid gland"],
+          "material": {"color": [0.78, 0.35, 0.36, 1.0], "roughness": 0.45}
+        },
+        {
+          "id": "parathyroid-glands",
+          "name": "Parathyroid Glands",
+          "system": "endocrine",
+          "expandSourceParts": true,
+          "sourceObjects": [
+            "Inferior parathyroid gland.l",
+            "Inferior parathyroid gland.r",
+            "Superior parathyroid gland.l",
+            "Superior parathyroid gland.r"
+          ],
+          "material": {"color": [0.86, 0.66, 0.28, 1.0], "roughness": 0.45}
+        },
+        {
+          "id": "adrenal-glands",
+          "name": "Adrenal Glands",
+          "system": "endocrine",
+          "expandSourceParts": true,
+          "sourceObjects": ["Suprarenal gland.l", "Suprarenal gland.r"],
+          "material": {"color": [0.9, 0.62, 0.24, 1.0], "roughness": 0.45}
+        }
+      ]
+    },
+    "abdominal-muscles": {
+      "description": "Abdominal wall and posterior abdominal muscles with associated linea alba and inguinal ligaments.",
+      "liveAsset": "public/models/z-anatomy-abdominal-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-abdominal-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 15,
+        "maximumAssetBytes": 8000000
+      },
+      "groups": [
+        {
+          "id": "external-abdominal-obliques",
+          "name": "External Abdominal Obliques",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": ["External abdominal oblique muscle.l", "External abdominal oblique muscle.r"],
+          "material": {"color": [0.64, 0.22, 0.2, 1.0], "roughness": 0.5},
+          "decimate": 0.5
+        },
+        {
+          "id": "internal-abdominal-obliques",
+          "name": "Internal Abdominal Obliques",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": ["Internal abdominal oblique muscle.l", "Internal abdominal oblique muscle.r"],
+          "material": {"color": [0.72, 0.28, 0.24, 1.0], "roughness": 0.5},
+          "decimate": 0.5
+        },
+        {
+          "id": "transversus-abdominis",
+          "name": "Transversus Abdominis",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": ["Transversus abdominis muscle.l", "Transversus abdominis muscle.r"],
+          "material": {"color": [0.76, 0.34, 0.28, 1.0], "roughness": 0.5},
+          "decimate": 0.5
+        },
+        {
+          "id": "rectus-abdominis",
+          "name": "Rectus Abdominis",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": ["Rectus abdominis muscle.l", "Rectus abdominis muscle.r"],
+          "material": {"color": [0.7, 0.2, 0.18, 1.0], "roughness": 0.48},
+          "decimate": 0.5
+        },
+        {
+          "id": "pyramidalis-muscles",
+          "name": "Pyramidalis Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": ["Pyramidalis muscle.l", "Pyramidalis muscle.r"],
+          "material": {"color": [0.68, 0.3, 0.26, 1.0], "roughness": 0.5},
+          "decimate": 0.6
+        },
+        {
+          "id": "quadratus-lumborum",
+          "name": "Quadratus Lumborum",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": ["Quadratus lumborum muscle.l", "Quadratus lumborum muscle.r"],
+          "material": {"color": [0.58, 0.2, 0.2, 1.0], "roughness": 0.5},
+          "decimate": 0.55
+        },
+        {
+          "id": "inguinal-ligaments",
+          "name": "Inguinal Ligaments",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": ["Inguinal ligament.l", "Inguinal ligament.r"],
+          "material": {"color": [0.82, 0.68, 0.5, 1.0], "roughness": 0.52},
+          "decimate": 0.6
+        },
+        {
+          "id": "linea-alba",
+          "name": "Linea Alba",
+          "system": "muscular",
+          "sourceObjects": ["Linea alba"],
+          "material": {"color": [0.86, 0.74, 0.62, 1.0], "roughness": 0.52},
+          "decimate": 0.7
+        }
+      ]
+    },
+    "shoulder-muscles": {
+      "description": "Deltoid regions and the four paired rotator cuff muscles.",
+      "liveAsset": "public/models/z-anatomy-shoulder-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-shoulder-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 14,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "deltoid-muscles",
+          "name": "Deltoid Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Deltoid muscle",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.68, 0.22, 0.2, 1.0], "roughness": 0.48},
+          "decimate": 0.7
+        },
+        {
+          "id": "rotator-cuff-muscles",
+          "name": "Rotator Cuff Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Rotator cuff muscles",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.76, 0.3, 0.24, 1.0], "roughness": 0.48},
+          "decimate": 0.7
+        }
+      ]
+    },
+    "gluteal-muscles": {
+      "description": "Superficial gluteal muscles and the paired deep lateral rotators of the hip.",
+      "liveAsset": "public/models/z-anatomy-gluteal-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-gluteal-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 20,
+        "maximumAssetBytes": 6000000
+      },
+      "groups": [
+        {
+          "id": "superficial-gluteal-muscles",
+          "name": "Superficial Gluteal Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Superficial gluteal muscles",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.66, 0.2, 0.2, 1.0], "roughness": 0.5},
+          "decimate": 0.7
+        },
+        {
+          "id": "deep-gluteal-muscles",
+          "name": "Deep Gluteal Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": [
+            "Inferior gemellus muscle.l",
+            "Inferior gemellus muscle.r",
+            "Obturator externus.l",
+            "Obturator externus.r",
+            "Obturator internus.l",
+            "Obturator internus.r",
+            "Piriformis muscle.l",
+            "Piriformis muscle.r",
+            "Quadratus femoris muscle.l",
+            "Quadratus femoris muscle.r",
+            "Superior gemellus muscle.l",
+            "Superior gemellus muscle.r"
+          ],
+          "material": {"color": [0.76, 0.32, 0.26, 1.0], "roughness": 0.5},
+          "decimate": 0.7
+        }
+      ]
+    },
+    "facial-muscles": {
+      "description": "Paired muscles of facial expression represented in the Z-Anatomy source.",
+      "liveAsset": "public/models/z-anatomy-facial-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-facial-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 34,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "facial-expression-muscles",
+          "name": "Facial Expression Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Facial muscles",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.72, 0.28, 0.24, 1.0], "roughness": 0.48},
+          "decimate": 0.8
+        }
+      ]
+    },
+    "cerebrum": {
+      "description": "Cerebral hemispheres, telencephalic structures, and diencephalic structures represented in the Z-Anatomy source.",
+      "liveAsset": "public/models/z-anatomy-cerebrum.glb",
+      "liveManifest": "public/models/z-anatomy-cerebrum-manifest.json",
+      "validation": {
+        "expectedObjectCount": 169,
+        "maximumAssetBytes": 12000000
+      },
+      "groups": [
+        {
+          "id": "cerebrum",
+          "name": "Cerebrum",
+          "system": "nervous",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Cerebrum",
+            "recursive": true,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.78, 0.58, 0.65, 1.0], "roughness": 0.5},
+          "decimate": 0.6
+        }
+      ]
+    },
+    "cerebellum": {
+      "description": "Cerebellar hemispheres, vermis, grey and white matter, and cerebellar peduncles.",
+      "liveAsset": "public/models/z-anatomy-cerebellum.glb",
+      "liveManifest": "public/models/z-anatomy-cerebellum-manifest.json",
+      "validation": {
+        "expectedObjectCount": 33,
+        "maximumAssetBytes": 7000000
+      },
+      "groups": [
+        {
+          "id": "cerebellum",
+          "name": "Cerebellum",
+          "system": "nervous",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Cerebellum",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.68, 0.46, 0.62, 1.0], "roughness": 0.5},
+          "decimate": 0.65
+        }
+      ]
+    },
+    "cardiac-internal-structures": {
+      "description": "Atrioventricular and semilunar valve leaflets with ventricular papillary muscles.",
+      "liveAsset": "public/models/z-anatomy-cardiac-internal-structures.glb",
+      "liveManifest": "public/models/z-anatomy-cardiac-internal-structures-manifest.json",
+      "validation": {
+        "expectedObjectCount": 13,
+        "maximumAssetBytes": 4000000
+      },
+      "groups": [
+        {
+          "id": "cardiac-internal-structures",
+          "name": "Cardiac Internal Structures",
+          "system": "cardiovascular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Heart",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1,
+            "excludeNames": ["Right atrium", "Right ventricle", "Left atrium", "Left ventricle"]
+          },
+          "material": {"color": [0.72, 0.2, 0.24, 1.0], "roughness": 0.44},
+          "decimate": 0.65
+        }
+      ]
+    },
+    "pulmonary-vessels": {
+      "description": "Pulmonary arterial and venous trees connecting the heart and lungs.",
+      "liveAsset": "public/models/z-anatomy-pulmonary-vessels.glb",
+      "liveManifest": "public/models/z-anatomy-pulmonary-vessels-manifest.json",
+      "validation": {
+        "expectedObjectCount": 47,
+        "maximumAssetBytes": 6000000
+      },
+      "groups": [
+        {
+          "id": "pulmonary-arteries",
+          "name": "Pulmonary Arteries",
+          "system": "cardiovascular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Pulmonary arteries",
+            "recursive": false,
+            "types": ["MESH", "CURVE"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.28, 0.48, 0.72, 1.0], "roughness": 0.42},
+          "decimate": 0.7
+        },
+        {
+          "id": "pulmonary-veins",
+          "name": "Pulmonary Veins",
+          "system": "cardiovascular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Pulmonary veins",
+            "recursive": false,
+            "types": ["MESH", "CURVE"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.72, 0.26, 0.3, 1.0], "roughness": 0.42},
+          "decimate": 0.7
+        }
+      ]
+    },
+    "neck-muscles": {
+      "description": "Superficial and deep neck muscles, including pharyngeal and laryngeal muscle groups.",
+      "liveAsset": "public/models/z-anatomy-neck-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-neck-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 63,
+        "maximumAssetBytes": 9000000
+      },
+      "groups": [
+        {
+          "id": "neck-muscles",
+          "name": "Neck Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Muscles of neck",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.7, 0.24, 0.22, 1.0], "roughness": 0.5},
+          "decimate": 0.65
+        }
+      ]
     }
   },
   "releases": {
@@ -397,6 +854,18 @@
       "validation": {
         "expectedObjectCount": 528,
         "maximumAssetBytes": 35000000
+      }
+    },
+    "demo-1.3.0": {
+      "version": "1.3.0",
+      "description": "Cumulative full-body release candidate with expanded visceral, skeletal, muscular, nervous, endocrine, reproductive, lymphatic, and cardiovascular anatomy.",
+      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs", "male-reproductive", "endocrine-glands", "abdominal-muscles", "shoulder-muscles", "gluteal-muscles", "facial-muscles", "cerebrum", "cerebellum", "cardiac-internal-structures", "pulmonary-vessels", "neck-muscles"],
+      "liveAsset": "public/models/z-anatomy-1.3.0-full-body.glb",
+      "liveManifest": "public/models/z-anatomy-1.3.0-manifest.json",
+      "liveRegistry": "public/models/z-anatomy-1.3.0-registry.json",
+      "validation": {
+        "expectedObjectCount": 960,
+        "maximumAssetBytes": 60000000
       }
     }
   }

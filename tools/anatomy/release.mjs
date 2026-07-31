@@ -23,6 +23,7 @@ const toolRoot = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(toolRoot, "../..");
 const configPath = resolve(toolRoot, "config/atlas.json");
 const exporterPath = resolve(toolRoot, "blender/export_batch.py");
+const composerPath = resolve(toolRoot, "blender/compose_release.py");
 const pipelinePath = resolve(toolRoot, "pipeline.mjs");
 const validatorPath = resolve(toolRoot, "lib.mjs");
 const releaseToolPath = fileURLToPath(import.meta.url);
@@ -101,6 +102,7 @@ async function loadComponents(config, releaseId, buildMap) {
     throw new Error(`component batches must be exactly: ${release.batches.join(", ")}`);
   }
   const components = [];
+  const componentAssets = [];
   const manifests = [];
   for (const batchId of release.batches) {
     const buildId = buildMap[batchId];
@@ -115,6 +117,7 @@ async function loadComponents(config, releaseId, buildMap) {
     const manifestBuffer = await readFile(resolve(directory, "manifest.json"));
     const manifest = JSON.parse(manifestBuffer);
     manifests.push(manifest);
+    componentAssets.push(resolve(directory, "atlas.glb"));
     components.push({
       batch: batchId,
       buildId,
@@ -123,7 +126,7 @@ async function loadComponents(config, releaseId, buildMap) {
     });
   }
   mergeComponentGroups(manifests);
-  return { components, manifests };
+  return { components, componentAssets, manifests };
 }
 
 async function releaseFingerprints(config, releaseId, source, blender, components) {
@@ -131,6 +134,7 @@ async function releaseFingerprints(config, releaseId, source, blender, component
     sourceBlendSha256: await sha256File(source),
     blenderExecutableSha256: await sha256File(blender),
     exporterSha256: await sha256File(exporterPath),
+    composerSha256: await sha256File(composerPath),
     releaseToolSha256: await sha256File(releaseToolPath),
     releaseValidatorSha256: await sha256File(releaseValidatorPath),
     releaseConfigSha256: sha256(canonicalJson({
@@ -157,18 +161,13 @@ async function assemble(config, releaseId, options) {
   if (!source || !(await exists(source))) throw new Error("Z-Anatomy Blend not found");
   if (!(await exists(blender))) throw new Error("Blender executable not found");
   const buildMap = parseComponentBuilds(options["component-builds"]);
-  const { components, manifests } = await loadComponents(config, releaseId, buildMap);
+  const { components, componentAssets, manifests } = await loadComponents(
+    config,
+    releaseId,
+    buildMap,
+  );
   const groups = mergeComponentGroups(manifests);
   const release = config.releases[releaseId];
-  const virtualBatch = {
-    description: release.description,
-    validation: release.validation,
-    groups: release.batches.flatMap((batchId) => config.batches[batchId].groups),
-  };
-  const virtualConfig = {
-    ...config,
-    batches: { [releaseId]: virtualBatch },
-  };
   const versionRun = spawnSync(blender, ["--version"], { encoding: "utf8" });
   if (versionRun.status !== 0) throw new Error(`Unable to inspect Blender: ${versionRun.stderr}`);
   const blenderVersion = versionRun.stdout.split("\n")[0].replace(/^Blender\s+/u, "").trim();
@@ -198,35 +197,42 @@ async function assemble(config, releaseId, options) {
   await mkdir(dirname(finalDirectory), { recursive: true });
   await rm(tempDirectory, { recursive: true, force: true });
   await mkdir(tempDirectory, { recursive: true });
-  const virtualConfigPath = resolve(tempDirectory, "release-config.json");
-  await writeFile(virtualConfigPath, `${JSON.stringify(virtualConfig, null, 2)}\n`);
+  const composeConfigPath = resolve(tempDirectory, "compose-config.json");
+  await writeFile(composeConfigPath, `${JSON.stringify({
+    components: componentAssets.map((asset, index) => ({
+      asset,
+      batch: components[index].batch,
+    })),
+    expectedObjectCount: release.validation.expectedObjectCount,
+  }, null, 2)}\n`);
   try {
     const run = spawnSync(
       blender,
       [
         "--background",
-        "--disable-autoexec",
-        source,
+        "--factory-startup",
         "--python",
-        exporterPath,
+        composerPath,
         "--",
         "--config",
-        virtualConfigPath,
-        "--batch",
-        releaseId,
+        composeConfigPath,
         "--output",
         tempDirectory,
       ],
       { cwd: repoRoot, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] },
     );
     await writeFile(resolve(tempDirectory, "blender.log"), `${run.stdout}${run.stderr}`);
-    if (run.status !== 0) throw new Error(`Blender release export failed; inspect ${tempDirectory}/blender.log`);
-    const report = JSON.parse(await readFile(resolve(tempDirectory, "export-report.json"), "utf8"));
+    if (run.status !== 0) {
+      throw new Error(
+        `Blender release composition failed; inspect ${tempDirectory}/blender.log`,
+      );
+    }
+    const report = JSON.parse(
+      await readFile(resolve(tempDirectory, "compose-report.json"), "utf8"),
+    );
     const assetPath = resolve(tempDirectory, "atlas.glb");
     const assetBuffer = await readFile(assetPath);
-    const releaseGroups = Object.fromEntries(
-      Object.keys(groups).map((id) => [id, report.groups[id]]),
-    );
+    const releaseGroups = groups;
     const registryBuffer = Buffer.from(
       `${JSON.stringify(registryFor(config, releaseId, buildId, releaseGroups), null, 2)}\n`,
     );
@@ -262,8 +268,8 @@ async function assemble(config, releaseId, options) {
     };
     await writeFile(resolve(tempDirectory, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
     await writeFile(resolve(tempDirectory, "registry.json"), registryBuffer);
-    await rm(resolve(tempDirectory, "export-report.json"));
-    await rm(virtualConfigPath);
+    await rm(resolve(tempDirectory, "compose-report.json"));
+    await rm(composeConfigPath);
     await validateRelease({
       directory: tempDirectory,
       config,

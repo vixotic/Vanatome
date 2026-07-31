@@ -1,0 +1,91 @@
+{
+  "status": "distributed",
+  "release": "demo-1.3.0",
+  "version": "1.3.0",
+  "buildId": "74294b7e83da5dce",
+  "fullBody": {
+    "file": "z-anatomy-1.3.0-full-body.glb",
+    "bytes": 31583896,
+    "nodeCount": 960,
+    "anatomyIdCount": 725
+  },
+  "systems": [
+    {
+      "id": "cardiovascular",
+      "file": "z-anatomy-1.3.0-cardiovascular.glb",
+      "bytes": 7994524,
+      "nodeCount": 64,
+      "anatomyIdCount": 64
+    },
+    {
+      "id": "digestive",
+      "file": "z-anatomy-1.3.0-digestive.glb",
+      "bytes": 5757452,
+      "nodeCount": 12,
+      "anatomyIdCount": 12
+    },
+    {
+      "id": "endocrine",
+      "file": "z-anatomy-1.3.0-endocrine.glb",
+      "bytes": 3505740,
+      "nodeCount": 10,
+      "anatomyIdCount": 10
+    },
+    {
+      "id": "lymphatic",
+      "file": "z-anatomy-1.3.0-lymphatic.glb",
+      "bytes": 3919332,
+      "nodeCount": 54,
+      "anatomyIdCount": 54
+    },
+    {
+      "id": "muscular",
+      "file": "z-anatomy-1.3.0-muscular.glb",
+      "bytes": 10441072,
+      "nodeCount": 146,
+      "anatomyIdCount": 146
+    },
+    {
+      "id": "nervous",
+      "file": "z-anatomy-1.3.0-nervous.glb",
+      "bytes": 11301584,
+      "nodeCount": 234,
+      "anatomyIdCount": 234
+    },
+    {
+      "id": "regional-anatomy",
+      "file": "z-anatomy-1.3.0-regional-anatomy.glb",
+      "bytes": 6288144,
+      "nodeCount": 236,
+      "anatomyIdCount": 1
+    },
+    {
+      "id": "reproductive",
+      "file": "z-anatomy-1.3.0-reproductive.glb",
+      "bytes": 3611832,
+      "nodeCount": 14,
+      "anatomyIdCount": 14
+    },
+    {
+      "id": "respiratory",
+      "file": "z-anatomy-1.3.0-respiratory.glb",
+      "bytes": 4143248,
+      "nodeCount": 6,
+      "anatomyIdCount": 6
+    },
+    {
+      "id": "skeletal",
+      "file": "z-anatomy-1.3.0-skeletal.glb",
+      "bytes": 3882928,
+      "nodeCount": 181,
+      "anatomyIdCount": 181
+    },
+    {
+      "id": "urinary",
+      "file": "z-anatomy-1.3.0-urinary.glb",
+      "bytes": 3442972,
+      "nodeCount": 3,
+      "anatomyIdCount": 3
+    }
+  ]
+}

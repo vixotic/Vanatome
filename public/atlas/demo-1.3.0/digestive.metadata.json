@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.3.0",
+  "buildId": "74294b7e83da5dce",
+  "bundleId": "digestive",
+  "nodeCount": 12,
+  "structures": [
+    {
+      "id": "digestive-system",
+      "name": "Digestive",
+      "kind": "system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.0409,
+        1.3633,
+        0.1311
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "oesophagus",
+      "name": "oesophagus",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0326,
+        3.2436,
+        -0.0538
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "liver",
+      "name": "liver",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.0797,
+        2.1217,
+        0.16
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "gallbladder",
+      "name": "gallbladder",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.3162,
+        1.8599,
+        0.3938
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "stomach",
+      "name": "stomach",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.2684,
+        2.0649,
+        0.2532
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "pancreas",
+      "name": "pancreas",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0952,
+        1.712,
+        0.1509
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "small-intestine",
+      "name": "Small Intestine",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0622,
+        0.9851,
+        0.3035
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "small-intestine-duodenum",
+      "name": "Duodenum",
+      "kind": "part",
+      "parentId": "small-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.1165,
+        1.5585,
+        0.2209
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "small-intestine-jejunum",
+      "name": "Jejunum",
+      "kind": "part",
+      "parentId": "small-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0622,
+        0.7979,
+        0.3495
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine",
+      "name": "Large Intestine",
+      "kind": "organ",
+      "parentId": "digestive-system",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0016,
+        0.6861,
+        0.0333
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "large-intestine-ascending-colon",
+      "name": "Ascending colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.6166,
+        1.0281,
+        0.1045
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-descending-colon",
+      "name": "Descending colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.3361,
+        0.92,
+        -0.0779
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-sigmoid-colon",
+      "name": "Sigmoid colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.032,
+        -0.0446,
+        -0.3294
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-transverse-colon",
+      "name": "Transverse colon",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        0.0415,
+        1.6067,
+        0.3055
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "large-intestine-vermiform-appendix",
+      "name": "Vermiform appendix",
+      "kind": "part",
+      "parentId": "large-intestine",
+      "system": "digestive",
+      "layer": "digestive",
+      "selectable": true,
+      "position": [
+        -0.3755,
+        0.5458,
+        0.022
+      ],
+      "objectCount": 1
+    }
+  ]
+}

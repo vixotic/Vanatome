@@ -1,0 +1,1661 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "neck-muscles"
+  },
+  "build": {
+    "id": "3b86f274890e72d8",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "a0d2b183711c6e4c3f9df4c6715984073a745b3afd992c3dfb9f785515300aea"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 2047688,
+    "sha256": "1a1914a1681558b36367c16d7319479643bd74922cb7fdb618d54444578a591f"
+  },
+  "objectCount": 63,
+  "groups": {
+    "neck-muscles": {
+      "centerBlender": [
+        0,
+        -0.011973,
+        1.478361
+      ],
+      "missing": [],
+      "name": "Neck Muscles",
+      "nodes": [
+        "neck-muscles-anterior-belly-of-digastric-muscle-left__Anterior belly of digastric muscle.l",
+        "neck-muscles-anterior-belly-of-digastric-muscle-right__Anterior belly of digastric muscle.r",
+        "neck-muscles-ary-epiglottic-part-of-oblique-arytenoid-muscle-left__Ary-epiglottic part of oblique arytenoid muscle.l",
+        "neck-muscles-ary-epiglottic-part-of-oblique-arytenoid-muscle-right__Ary-epiglottic part of oblique arytenoid muscle.r",
+        "neck-muscles-external-part-of-thyro-arytenoid-muscle-left__External part of thyro-arytenoid muscle.l",
+        "neck-muscles-external-part-of-thyro-arytenoid-muscle-right__External part of thyro-arytenoid muscle.r",
+        "neck-muscles-geniohyoid-muscle-left__Geniohyoid muscle.l",
+        "neck-muscles-geniohyoid-muscle-right__Geniohyoid muscle.r",
+        "neck-muscles-inferior-pharyngeal-constrictor-left__Inferior pharyngeal constrictor.l",
+        "neck-muscles-inferior-pharyngeal-constrictor-right__Inferior pharyngeal constrictor.r",
+        "neck-muscles-intermediate-tendon-of-digastric-muscle-left__Intermediate tendon of digastric muscle.l",
+        "neck-muscles-intermediate-tendon-of-digastric-muscle-right__Intermediate tendon of digastric muscle.r",
+        "neck-muscles-lateral-crico-arytenoid-muscle-left__Lateral crico-arytenoid muscle.l",
+        "neck-muscles-lateral-crico-arytenoid-muscle-right__Lateral crico-arytenoid muscle.r",
+        "neck-muscles-longus-capitis-muscle-left__Longus capitis muscle.l",
+        "neck-muscles-longus-capitis-muscle-right__Longus capitis muscle.r",
+        "neck-muscles-longus-colli-muscle-left__Longus colli muscle.l",
+        "neck-muscles-longus-colli-muscle-right__Longus colli muscle.r",
+        "neck-muscles-middle-pharyngeal-constrictor-left__Middle pharyngeal constrictor.l",
+        "neck-muscles-middle-pharyngeal-constrictor-right__Middle pharyngeal constrictor.r",
+        "neck-muscles-mylohyoid-muscle-left__Mylohyoid muscle.l",
+        "neck-muscles-mylohyoid-muscle-right__Mylohyoid muscle.r",
+        "neck-muscles-oblique-part-of-cricothyroid-muscle-left__Oblique part of cricothyroid muscle.l",
+        "neck-muscles-oblique-part-of-cricothyroid-muscle-right__Oblique part of cricothyroid muscle.r",
+        "neck-muscles-omohyoid-muscle-left__Omohyoid muscle.l",
+        "neck-muscles-omohyoid-muscle-right__Omohyoid muscle.r",
+        "neck-muscles-palatopharyngeus-muscle-left__Palatopharyngeus muscle.l",
+        "neck-muscles-palatopharyngeus-muscle-right__Palatopharyngeus muscle.r",
+        "neck-muscles-platysma-left__Platysma.l",
+        "neck-muscles-platysma-right__Platysma.r",
+        "neck-muscles-posterior-belly-of-digastric-muscle-left__Posterior belly of digastric muscle.l",
+        "neck-muscles-posterior-belly-of-digastric-muscle-right__Posterior belly of digastric muscle.r",
+        "neck-muscles-posterior-crico-arytenoid-muscle-left__Posterior crico-arytenoid muscle.l",
+        "neck-muscles-posterior-crico-arytenoid-muscle-right__Posterior crico-arytenoid muscle.r",
+        "neck-muscles-rectus-anterior-capitis-muscle-left__Rectus anterior capitis muscle.l",
+        "neck-muscles-rectus-anterior-capitis-muscle-right__Rectus anterior capitis muscle.r",
+        "neck-muscles-rectus-lateralis-capitis-muscle-left__Rectus lateralis capitis muscle.l",
+        "neck-muscles-rectus-lateralis-capitis-muscle-right__Rectus lateralis capitis muscle.r",
+        "neck-muscles-scalenus-anterior-muscle-left__Scalenus anterior muscle.l",
+        "neck-muscles-scalenus-anterior-muscle-right__Scalenus anterior muscle.r",
+        "neck-muscles-scalenus-medius-muscle-left__Scalenus medius muscle.l",
+        "neck-muscles-scalenus-medius-muscle-right__Scalenus medius muscle.r",
+        "neck-muscles-scalenus-posterior-muscle-left__Scalenus posterior muscle.l",
+        "neck-muscles-scalenus-posterior-muscle-right__Scalenus posterior muscle.r",
+        "neck-muscles-sternocleidomastoid-muscle-left__Sternocleidomastoid muscle.l",
+        "neck-muscles-sternocleidomastoid-muscle-right__Sternocleidomastoid muscle.r",
+        "neck-muscles-sternohyoid-muscle-left__Sternohyoid muscle.l",
+        "neck-muscles-sternohyoid-muscle-right__Sternohyoid muscle.r",
+        "neck-muscles-sternothyroid-muscle-left__Sternothyroid muscle.l",
+        "neck-muscles-sternothyroid-muscle-right__Sternothyroid muscle.r",
+        "neck-muscles-straight-part-of-cricothyroid-muscle-left__Straight part of cricothyroid muscle.l",
+        "neck-muscles-straight-part-of-cricothyroid-muscle-right__Straight part of cricothyroid muscle.r",
+        "neck-muscles-stylohyoid-muscle-left__Stylohyoid muscle.l",
+        "neck-muscles-stylohyoid-muscle-right__Stylohyoid muscle.r",
+        "neck-muscles-stylopharyngeus-muscle-left__Stylopharyngeus muscle.l",
+        "neck-muscles-stylopharyngeus-muscle-right__Stylopharyngeus muscle.r",
+        "neck-muscles-superior-pharyngeal-constrictor-left__Superior pharyngeal constrictor.l",
+        "neck-muscles-superior-pharyngeal-constrictor-right__Superior pharyngeal constrictor.r",
+        "neck-muscles-thyro-epiglottic-part-of-thyro-arytenoid-muscle-left__Thyro-epiglottic part of thyro-arytenoid muscle.l",
+        "neck-muscles-thyro-epiglottic-part-of-thyro-arytenoid-muscle-right__Thyro-epiglottic part of thyro-arytenoid muscle.r",
+        "neck-muscles-thyrohyoid-muscle-left__Thyrohyoid muscle.l",
+        "neck-muscles-thyrohyoid-muscle-right__Thyrohyoid muscle.r",
+        "neck-muscles-transverse-arytenoid-muscle__Transverse arytenoid muscle"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.282546,
+        0.143497,
+        0.194148
+      ],
+      "sourceObjects": [
+        "Anterior belly of digastric muscle.l",
+        "Anterior belly of digastric muscle.r",
+        "Ary-epiglottic part of oblique arytenoid muscle.l",
+        "Ary-epiglottic part of oblique arytenoid muscle.r",
+        "External part of thyro-arytenoid muscle.l",
+        "External part of thyro-arytenoid muscle.r",
+        "Geniohyoid muscle.l",
+        "Geniohyoid muscle.r",
+        "Inferior pharyngeal constrictor.l",
+        "Inferior pharyngeal constrictor.r",
+        "Intermediate tendon of digastric muscle.l",
+        "Intermediate tendon of digastric muscle.r",
+        "Lateral crico-arytenoid muscle.l",
+        "Lateral crico-arytenoid muscle.r",
+        "Longus capitis muscle.l",
+        "Longus capitis muscle.r",
+        "Longus colli muscle.l",
+        "Longus colli muscle.r",
+        "Middle pharyngeal constrictor.l",
+        "Middle pharyngeal constrictor.r",
+        "Mylohyoid muscle.l",
+        "Mylohyoid muscle.r",
+        "Oblique part of cricothyroid muscle.l",
+        "Oblique part of cricothyroid muscle.r",
+        "Omohyoid muscle.l",
+        "Omohyoid muscle.r",
+        "Palatopharyngeus muscle.l",
+        "Palatopharyngeus muscle.r",
+        "Platysma.l",
+        "Platysma.r",
+        "Posterior belly of digastric muscle.l",
+        "Posterior belly of digastric muscle.r",
+        "Posterior crico-arytenoid muscle.l",
+        "Posterior crico-arytenoid muscle.r",
+        "Rectus anterior capitis muscle.l",
+        "Rectus anterior capitis muscle.r",
+        "Rectus lateralis capitis muscle.l",
+        "Rectus lateralis capitis muscle.r",
+        "Scalenus anterior muscle.l",
+        "Scalenus anterior muscle.r",
+        "Scalenus medius muscle.l",
+        "Scalenus medius muscle.r",
+        "Scalenus posterior muscle.l",
+        "Scalenus posterior muscle.r",
+        "Sternocleidomastoid muscle.l",
+        "Sternocleidomastoid muscle.r",
+        "Sternohyoid muscle.l",
+        "Sternohyoid muscle.r",
+        "Sternothyroid muscle.l",
+        "Sternothyroid muscle.r",
+        "Straight part of cricothyroid muscle.l",
+        "Straight part of cricothyroid muscle.r",
+        "Stylohyoid muscle.l",
+        "Stylohyoid muscle.r",
+        "Stylopharyngeus muscle.l",
+        "Stylopharyngeus muscle.r",
+        "Superior pharyngeal constrictor.l",
+        "Superior pharyngeal constrictor.r",
+        "Thyro-epiglottic part of thyro-arytenoid muscle.l",
+        "Thyro-epiglottic part of thyro-arytenoid muscle.r",
+        "Thyrohyoid muscle.l",
+        "Thyrohyoid muscle.r",
+        "Transverse arytenoid muscle"
+      ],
+      "structures": {
+        "neck-muscles": {
+          "centerBlender": [
+            0,
+            -0.011973,
+            1.478361
+          ],
+          "kind": "organ",
+          "name": "Neck Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.282546,
+            0.143497,
+            0.194148
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "neck-muscles-anterior-belly-of-digastric-muscle-left": {
+          "centerBlender": [
+            0.009271,
+            -0.051654,
+            1.502339
+          ],
+          "kind": "part",
+          "name": "Anterior belly of digastric muscle.l",
+          "nodes": [
+            "neck-muscles-anterior-belly-of-digastric-muscle-left__Anterior belly of digastric muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.011978,
+            0.035799,
+            0.006333
+          ],
+          "sourceObjects": [
+            "Anterior belly of digastric muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-anterior-belly-of-digastric-muscle-right": {
+          "centerBlender": [
+            -0.009271,
+            -0.051654,
+            1.502339
+          ],
+          "kind": "part",
+          "name": "Anterior belly of digastric muscle.r",
+          "nodes": [
+            "neck-muscles-anterior-belly-of-digastric-muscle-right__Anterior belly of digastric muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.011978,
+            0.035799,
+            0.006333
+          ],
+          "sourceObjects": [
+            "Anterior belly of digastric muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-ary-epiglottic-part-of-oblique-arytenoid-muscle-left": {
+          "centerBlender": [
+            0.006921,
+            -0.013103,
+            1.493071
+          ],
+          "kind": "part",
+          "name": "Ary-epiglottic part of oblique arytenoid muscle.l",
+          "nodes": [
+            "neck-muscles-ary-epiglottic-part-of-oblique-arytenoid-muscle-left__Ary-epiglottic part of oblique arytenoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.004243,
+            0.012632,
+            0.023429
+          ],
+          "sourceObjects": [
+            "Ary-epiglottic part of oblique arytenoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-ary-epiglottic-part-of-oblique-arytenoid-muscle-right": {
+          "centerBlender": [
+            -0.006921,
+            -0.013103,
+            1.493071
+          ],
+          "kind": "part",
+          "name": "Ary-epiglottic part of oblique arytenoid muscle.r",
+          "nodes": [
+            "neck-muscles-ary-epiglottic-part-of-oblique-arytenoid-muscle-right__Ary-epiglottic part of oblique arytenoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.004243,
+            0.012632,
+            0.023429
+          ],
+          "sourceObjects": [
+            "Ary-epiglottic part of oblique arytenoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-external-part-of-thyro-arytenoid-muscle-left": {
+          "centerBlender": [
+            0.00538,
+            -0.015235,
+            1.475741
+          ],
+          "kind": "part",
+          "name": "External part of thyro-arytenoid muscle.l",
+          "nodes": [
+            "neck-muscles-external-part-of-thyro-arytenoid-muscle-left__External part of thyro-arytenoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.005971,
+            0.020782,
+            0.009211
+          ],
+          "sourceObjects": [
+            "External part of thyro-arytenoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-external-part-of-thyro-arytenoid-muscle-right": {
+          "centerBlender": [
+            -0.00538,
+            -0.015235,
+            1.475741
+          ],
+          "kind": "part",
+          "name": "External part of thyro-arytenoid muscle.r",
+          "nodes": [
+            "neck-muscles-external-part-of-thyro-arytenoid-muscle-right__External part of thyro-arytenoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.005971,
+            0.020782,
+            0.009211
+          ],
+          "sourceObjects": [
+            "External part of thyro-arytenoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-geniohyoid-muscle-left": {
+          "centerBlender": [
+            0.00569,
+            -0.049796,
+            1.505749
+          ],
+          "kind": "part",
+          "name": "Geniohyoid muscle.l",
+          "nodes": [
+            "neck-muscles-geniohyoid-muscle-left__Geniohyoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.011243,
+            0.040059,
+            0.010137
+          ],
+          "sourceObjects": [
+            "Geniohyoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-geniohyoid-muscle-right": {
+          "centerBlender": [
+            -0.00569,
+            -0.049796,
+            1.505749
+          ],
+          "kind": "part",
+          "name": "Geniohyoid muscle.r",
+          "nodes": [
+            "neck-muscles-geniohyoid-muscle-right__Geniohyoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.011243,
+            0.040059,
+            0.010137
+          ],
+          "sourceObjects": [
+            "Geniohyoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-inferior-pharyngeal-constrictor-left": {
+          "centerBlender": [
+            0.011603,
+            -0.003446,
+            1.492612
+          ],
+          "kind": "part",
+          "name": "Inferior pharyngeal constrictor.l",
+          "nodes": [
+            "neck-muscles-inferior-pharyngeal-constrictor-left__Inferior pharyngeal constrictor.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.022022,
+            0.014296,
+            0.065085
+          ],
+          "sourceObjects": [
+            "Inferior pharyngeal constrictor.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-inferior-pharyngeal-constrictor-right": {
+          "centerBlender": [
+            -0.011603,
+            -0.003446,
+            1.492612
+          ],
+          "kind": "part",
+          "name": "Inferior pharyngeal constrictor.r",
+          "nodes": [
+            "neck-muscles-inferior-pharyngeal-constrictor-right__Inferior pharyngeal constrictor.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.022022,
+            0.014296,
+            0.065085
+          ],
+          "sourceObjects": [
+            "Inferior pharyngeal constrictor.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-intermediate-tendon-of-digastric-muscle-left": {
+          "centerBlender": [
+            0.013347,
+            -0.035502,
+            1.50282
+          ],
+          "kind": "part",
+          "name": "Intermediate tendon of digastric muscle.l",
+          "nodes": [
+            "neck-muscles-intermediate-tendon-of-digastric-muscle-left__Intermediate tendon of digastric muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.0079,
+            0.007115,
+            0.00749
+          ],
+          "sourceObjects": [
+            "Intermediate tendon of digastric muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-intermediate-tendon-of-digastric-muscle-right": {
+          "centerBlender": [
+            -0.013347,
+            -0.035502,
+            1.50282
+          ],
+          "kind": "part",
+          "name": "Intermediate tendon of digastric muscle.r",
+          "nodes": [
+            "neck-muscles-intermediate-tendon-of-digastric-muscle-right__Intermediate tendon of digastric muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.0079,
+            0.007115,
+            0.00749
+          ],
+          "sourceObjects": [
+            "Intermediate tendon of digastric muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-lateral-crico-arytenoid-muscle-left": {
+          "centerBlender": [
+            0.009518,
+            -0.004131,
+            1.474641
+          ],
+          "kind": "part",
+          "name": "Lateral crico-arytenoid muscle.l",
+          "nodes": [
+            "neck-muscles-lateral-crico-arytenoid-muscle-left__Lateral crico-arytenoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.004443,
+            0.009945,
+            0.010746
+          ],
+          "sourceObjects": [
+            "Lateral crico-arytenoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-lateral-crico-arytenoid-muscle-right": {
+          "centerBlender": [
+            -0.009518,
+            -0.004131,
+            1.474641
+          ],
+          "kind": "part",
+          "name": "Lateral crico-arytenoid muscle.r",
+          "nodes": [
+            "neck-muscles-lateral-crico-arytenoid-muscle-right__Lateral crico-arytenoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.004443,
+            0.009945,
+            0.010746
+          ],
+          "sourceObjects": [
+            "Lateral crico-arytenoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-longus-capitis-muscle-left": {
+          "centerBlender": [
+            0.014429,
+            0.002151,
+            1.514036
+          ],
+          "kind": "part",
+          "name": "Longus capitis muscle.l",
+          "nodes": [
+            "neck-muscles-longus-capitis-muscle-left__Longus capitis muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024327,
+            0.017628,
+            0.110054
+          ],
+          "sourceObjects": [
+            "Longus capitis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-longus-capitis-muscle-right": {
+          "centerBlender": [
+            -0.014429,
+            0.002151,
+            1.514036
+          ],
+          "kind": "part",
+          "name": "Longus capitis muscle.r",
+          "nodes": [
+            "neck-muscles-longus-capitis-muscle-right__Longus capitis muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024327,
+            0.017628,
+            0.110054
+          ],
+          "sourceObjects": [
+            "Longus capitis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-longus-colli-muscle-left": {
+          "centerBlender": [
+            0.013674,
+            0.01233,
+            1.466258
+          ],
+          "kind": "part",
+          "name": "Longus colli muscle.l",
+          "nodes": [
+            "neck-muscles-longus-colli-muscle-left__Longus colli muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024791,
+            0.034081,
+            0.157357
+          ],
+          "sourceObjects": [
+            "Longus colli muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-longus-colli-muscle-right": {
+          "centerBlender": [
+            -0.013674,
+            0.01233,
+            1.466258
+          ],
+          "kind": "part",
+          "name": "Longus colli muscle.r",
+          "nodes": [
+            "neck-muscles-longus-colli-muscle-right__Longus colli muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024791,
+            0.034081,
+            0.157357
+          ],
+          "sourceObjects": [
+            "Longus colli muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-middle-pharyngeal-constrictor-left": {
+          "centerBlender": [
+            0.009831,
+            -0.017896,
+            1.522381
+          ],
+          "kind": "part",
+          "name": "Middle pharyngeal constrictor.l",
+          "nodes": [
+            "neck-muscles-middle-pharyngeal-constrictor-left__Middle pharyngeal constrictor.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018783,
+            0.031574,
+            0.045834
+          ],
+          "sourceObjects": [
+            "Middle pharyngeal constrictor.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-middle-pharyngeal-constrictor-right": {
+          "centerBlender": [
+            -0.009831,
+            -0.017896,
+            1.522381
+          ],
+          "kind": "part",
+          "name": "Middle pharyngeal constrictor.r",
+          "nodes": [
+            "neck-muscles-middle-pharyngeal-constrictor-right__Middle pharyngeal constrictor.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018783,
+            0.031574,
+            0.045834
+          ],
+          "sourceObjects": [
+            "Middle pharyngeal constrictor.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-mylohyoid-muscle-left": {
+          "centerBlender": [
+            0.013495,
+            -0.053512,
+            1.512188
+          ],
+          "kind": "part",
+          "name": "Mylohyoid muscle.l",
+          "nodes": [
+            "neck-muscles-mylohyoid-muscle-left__Mylohyoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.026916,
+            0.037784,
+            0.027983
+          ],
+          "sourceObjects": [
+            "Mylohyoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-mylohyoid-muscle-right": {
+          "centerBlender": [
+            -0.013494,
+            -0.053512,
+            1.512188
+          ],
+          "kind": "part",
+          "name": "Mylohyoid muscle.r",
+          "nodes": [
+            "neck-muscles-mylohyoid-muscle-right__Mylohyoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.026916,
+            0.037784,
+            0.027983
+          ],
+          "sourceObjects": [
+            "Mylohyoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-oblique-part-of-cricothyroid-muscle-left": {
+          "centerBlender": [
+            0.009313,
+            -0.012502,
+            1.463516
+          ],
+          "kind": "part",
+          "name": "Oblique part of cricothyroid muscle.l",
+          "nodes": [
+            "neck-muscles-oblique-part-of-cricothyroid-muscle-left__Oblique part of cricothyroid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.008842,
+            0.015844,
+            0.009294
+          ],
+          "sourceObjects": [
+            "Oblique part of cricothyroid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-oblique-part-of-cricothyroid-muscle-right": {
+          "centerBlender": [
+            -0.009313,
+            -0.012502,
+            1.463516
+          ],
+          "kind": "part",
+          "name": "Oblique part of cricothyroid muscle.r",
+          "nodes": [
+            "neck-muscles-oblique-part-of-cricothyroid-muscle-right__Oblique part of cricothyroid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.008842,
+            0.015844,
+            0.009294
+          ],
+          "sourceObjects": [
+            "Oblique part of cricothyroid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-omohyoid-muscle-left": {
+          "centerBlender": [
+            0.057775,
+            0.013035,
+            1.444692
+          ],
+          "kind": "part",
+          "name": "Omohyoid muscle.l",
+          "nodes": [
+            "neck-muscles-omohyoid-muscle-left__Omohyoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.090767,
+            0.093482,
+            0.106612
+          ],
+          "sourceObjects": [
+            "Omohyoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-omohyoid-muscle-right": {
+          "centerBlender": [
+            -0.057775,
+            0.013035,
+            1.444692
+          ],
+          "kind": "part",
+          "name": "Omohyoid muscle.r",
+          "nodes": [
+            "neck-muscles-omohyoid-muscle-right__Omohyoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.090767,
+            0.093482,
+            0.106612
+          ],
+          "sourceObjects": [
+            "Omohyoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-palatopharyngeus-muscle-left": {
+          "centerBlender": [
+            0.009573,
+            -0.007467,
+            1.507044
+          ],
+          "kind": "part",
+          "name": "Palatopharyngeus muscle.l",
+          "nodes": [
+            "neck-muscles-palatopharyngeus-muscle-left__Palatopharyngeus muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.020473,
+            0.01527,
+            0.088024
+          ],
+          "sourceObjects": [
+            "Palatopharyngeus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-palatopharyngeus-muscle-right": {
+          "centerBlender": [
+            -0.009573,
+            -0.007467,
+            1.507044
+          ],
+          "kind": "part",
+          "name": "Palatopharyngeus muscle.r",
+          "nodes": [
+            "neck-muscles-palatopharyngeus-muscle-right__Palatopharyngeus muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.020473,
+            0.01527,
+            0.088024
+          ],
+          "sourceObjects": [
+            "Palatopharyngeus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-platysma-left": {
+          "centerBlender": [
+            0.069327,
+            -0.021469,
+            1.470292
+          ],
+          "kind": "part",
+          "name": "Platysma.l",
+          "nodes": [
+            "neck-muscles-platysma-left__Platysma.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.143891,
+            0.124505,
+            0.142175
+          ],
+          "sourceObjects": [
+            "Platysma.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-platysma-right": {
+          "centerBlender": [
+            -0.069327,
+            -0.021469,
+            1.470292
+          ],
+          "kind": "part",
+          "name": "Platysma.r",
+          "nodes": [
+            "neck-muscles-platysma-right__Platysma.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.143891,
+            0.124505,
+            0.142175
+          ],
+          "sourceObjects": [
+            "Platysma.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-posterior-belly-of-digastric-muscle-left": {
+          "centerBlender": [
+            0.035416,
+            -0.005604,
+            1.534686
+          ],
+          "kind": "part",
+          "name": "Posterior belly of digastric muscle.l",
+          "nodes": [
+            "neck-muscles-posterior-belly-of-digastric-muscle-left__Posterior belly of digastric muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.046941,
+            0.06309,
+            0.064121
+          ],
+          "sourceObjects": [
+            "Posterior belly of digastric muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-posterior-belly-of-digastric-muscle-right": {
+          "centerBlender": [
+            -0.035416,
+            -0.005604,
+            1.534686
+          ],
+          "kind": "part",
+          "name": "Posterior belly of digastric muscle.r",
+          "nodes": [
+            "neck-muscles-posterior-belly-of-digastric-muscle-right__Posterior belly of digastric muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.046941,
+            0.06309,
+            0.064121
+          ],
+          "sourceObjects": [
+            "Posterior belly of digastric muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-posterior-crico-arytenoid-muscle-left": {
+          "centerBlender": [
+            0.006832,
+            0.002627,
+            1.472492
+          ],
+          "kind": "part",
+          "name": "Posterior crico-arytenoid muscle.l",
+          "nodes": [
+            "neck-muscles-posterior-crico-arytenoid-muscle-left__Posterior crico-arytenoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.009086,
+            0.005735,
+            0.014361
+          ],
+          "sourceObjects": [
+            "Posterior crico-arytenoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-posterior-crico-arytenoid-muscle-right": {
+          "centerBlender": [
+            -0.006832,
+            0.002627,
+            1.472492
+          ],
+          "kind": "part",
+          "name": "Posterior crico-arytenoid muscle.r",
+          "nodes": [
+            "neck-muscles-posterior-crico-arytenoid-muscle-right__Posterior crico-arytenoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.009086,
+            0.005735,
+            0.014361
+          ],
+          "sourceObjects": [
+            "Posterior crico-arytenoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-rectus-anterior-capitis-muscle-left": {
+          "centerBlender": [
+            0.01569,
+            0.002844,
+            1.555721
+          ],
+          "kind": "part",
+          "name": "Rectus anterior capitis muscle.l",
+          "nodes": [
+            "neck-muscles-rectus-anterior-capitis-muscle-left__Rectus anterior capitis muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024975,
+            0.006688,
+            0.020356
+          ],
+          "sourceObjects": [
+            "Rectus anterior capitis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-rectus-anterior-capitis-muscle-right": {
+          "centerBlender": [
+            -0.01569,
+            0.002844,
+            1.555721
+          ],
+          "kind": "part",
+          "name": "Rectus anterior capitis muscle.r",
+          "nodes": [
+            "neck-muscles-rectus-anterior-capitis-muscle-right__Rectus anterior capitis muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024975,
+            0.006688,
+            0.020356
+          ],
+          "sourceObjects": [
+            "Rectus anterior capitis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-rectus-lateralis-capitis-muscle-left": {
+          "centerBlender": [
+            0.035645,
+            0.016668,
+            1.551582
+          ],
+          "kind": "part",
+          "name": "Rectus lateralis capitis muscle.l",
+          "nodes": [
+            "neck-muscles-rectus-lateralis-capitis-muscle-left__Rectus lateralis capitis muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.012254,
+            0.017389,
+            0.021301
+          ],
+          "sourceObjects": [
+            "Rectus lateralis capitis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-rectus-lateralis-capitis-muscle-right": {
+          "centerBlender": [
+            -0.035645,
+            0.016668,
+            1.551582
+          ],
+          "kind": "part",
+          "name": "Rectus lateralis capitis muscle.r",
+          "nodes": [
+            "neck-muscles-rectus-lateralis-capitis-muscle-right__Rectus lateralis capitis muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.012254,
+            0.017389,
+            0.021301
+          ],
+          "sourceObjects": [
+            "Rectus lateralis capitis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-scalenus-anterior-muscle-left": {
+          "centerBlender": [
+            0.037774,
+            0.000974,
+            1.452163
+          ],
+          "kind": "part",
+          "name": "Scalenus anterior muscle.l",
+          "nodes": [
+            "neck-muscles-scalenus-anterior-muscle-left__Scalenus anterior muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.034322,
+            0.018832,
+            0.082824
+          ],
+          "sourceObjects": [
+            "Scalenus anterior muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-scalenus-anterior-muscle-right": {
+          "centerBlender": [
+            -0.037774,
+            0.000974,
+            1.452163
+          ],
+          "kind": "part",
+          "name": "Scalenus anterior muscle.r",
+          "nodes": [
+            "neck-muscles-scalenus-anterior-muscle-right__Scalenus anterior muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.034322,
+            0.018832,
+            0.082824
+          ],
+          "sourceObjects": [
+            "Scalenus anterior muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-scalenus-medius-muscle-left": {
+          "centerBlender": [
+            0.03908,
+            0.014156,
+            1.469067
+          ],
+          "kind": "part",
+          "name": "Scalenus medius muscle.l",
+          "nodes": [
+            "neck-muscles-scalenus-medius-muscle-left__Scalenus medius muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.03022,
+            0.025021,
+            0.099178
+          ],
+          "sourceObjects": [
+            "Scalenus medius muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-scalenus-medius-muscle-right": {
+          "centerBlender": [
+            -0.03908,
+            0.014156,
+            1.469067
+          ],
+          "kind": "part",
+          "name": "Scalenus medius muscle.r",
+          "nodes": [
+            "neck-muscles-scalenus-medius-muscle-right__Scalenus medius muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.03022,
+            0.025021,
+            0.099178
+          ],
+          "sourceObjects": [
+            "Scalenus medius muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-scalenus-posterior-muscle-left": {
+          "centerBlender": [
+            0.047713,
+            0.026014,
+            1.450584
+          ],
+          "kind": "part",
+          "name": "Scalenus posterior muscle.l",
+          "nodes": [
+            "neck-muscles-scalenus-posterior-muscle-left__Scalenus posterior muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.044208,
+            0.027488,
+            0.05359
+          ],
+          "sourceObjects": [
+            "Scalenus posterior muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-scalenus-posterior-muscle-right": {
+          "centerBlender": [
+            -0.047713,
+            0.026014,
+            1.450584
+          ],
+          "kind": "part",
+          "name": "Scalenus posterior muscle.r",
+          "nodes": [
+            "neck-muscles-scalenus-posterior-muscle-right__Scalenus posterior muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.044208,
+            0.027488,
+            0.05359
+          ],
+          "sourceObjects": [
+            "Scalenus posterior muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-sternocleidomastoid-muscle-left": {
+          "centerBlender": [
+            0.032586,
+            -0.007553,
+            1.478575
+          ],
+          "kind": "part",
+          "name": "Sternocleidomastoid muscle.l",
+          "nodes": [
+            "neck-muscles-sternocleidomastoid-muscle-left__Sternocleidomastoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.057804,
+            0.113637,
+            0.193719
+          ],
+          "sourceObjects": [
+            "Sternocleidomastoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-sternocleidomastoid-muscle-right": {
+          "centerBlender": [
+            -0.032586,
+            -0.007553,
+            1.478575
+          ],
+          "kind": "part",
+          "name": "Sternocleidomastoid muscle.r",
+          "nodes": [
+            "neck-muscles-sternocleidomastoid-muscle-right__Sternocleidomastoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.057804,
+            0.113637,
+            0.193719
+          ],
+          "sourceObjects": [
+            "Sternocleidomastoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-sternohyoid-muscle-left": {
+          "centerBlender": [
+            0.015515,
+            -0.02748,
+            1.44349
+          ],
+          "kind": "part",
+          "name": "Sternohyoid muscle.l",
+          "nodes": [
+            "neck-muscles-sternohyoid-muscle-left__Sternohyoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.023798,
+            0.018639,
+            0.108105
+          ],
+          "sourceObjects": [
+            "Sternohyoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-sternohyoid-muscle-right": {
+          "centerBlender": [
+            -0.015514,
+            -0.02748,
+            1.44349
+          ],
+          "kind": "part",
+          "name": "Sternohyoid muscle.r",
+          "nodes": [
+            "neck-muscles-sternohyoid-muscle-right__Sternohyoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.023798,
+            0.018639,
+            0.108105
+          ],
+          "sourceObjects": [
+            "Sternohyoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-sternothyroid-muscle-left": {
+          "centerBlender": [
+            0.013317,
+            -0.023199,
+            1.430676
+          ],
+          "kind": "part",
+          "name": "Sternothyroid muscle.l",
+          "nodes": [
+            "neck-muscles-sternothyroid-muscle-left__Sternothyroid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018269,
+            0.02994,
+            0.098779
+          ],
+          "sourceObjects": [
+            "Sternothyroid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-sternothyroid-muscle-right": {
+          "centerBlender": [
+            -0.013317,
+            -0.023199,
+            1.430676
+          ],
+          "kind": "part",
+          "name": "Sternothyroid muscle.r",
+          "nodes": [
+            "neck-muscles-sternothyroid-muscle-right__Sternothyroid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018269,
+            0.02994,
+            0.098779
+          ],
+          "sourceObjects": [
+            "Sternothyroid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-straight-part-of-cricothyroid-muscle-left": {
+          "centerBlender": [
+            0.00715,
+            -0.009923,
+            1.468189
+          ],
+          "kind": "part",
+          "name": "Straight part of cricothyroid muscle.l",
+          "nodes": [
+            "neck-muscles-straight-part-of-cricothyroid-muscle-left__Straight part of cricothyroid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.009728,
+            0.006847,
+            0.010294
+          ],
+          "sourceObjects": [
+            "Straight part of cricothyroid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-straight-part-of-cricothyroid-muscle-right": {
+          "centerBlender": [
+            -0.00715,
+            -0.009923,
+            1.468188
+          ],
+          "kind": "part",
+          "name": "Straight part of cricothyroid muscle.r",
+          "nodes": [
+            "neck-muscles-straight-part-of-cricothyroid-muscle-right__Straight part of cricothyroid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.009728,
+            0.006847,
+            0.010294
+          ],
+          "sourceObjects": [
+            "Straight part of cricothyroid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-stylohyoid-muscle-left": {
+          "centerBlender": [
+            0.0256,
+            -0.013785,
+            1.530345
+          ],
+          "kind": "part",
+          "name": "Stylohyoid muscle.l",
+          "nodes": [
+            "neck-muscles-stylohyoid-muscle-left__Stylohyoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.031612,
+            0.040787,
+            0.062773
+          ],
+          "sourceObjects": [
+            "Stylohyoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-stylohyoid-muscle-right": {
+          "centerBlender": [
+            -0.0256,
+            -0.013785,
+            1.530345
+          ],
+          "kind": "part",
+          "name": "Stylohyoid muscle.r",
+          "nodes": [
+            "neck-muscles-stylohyoid-muscle-right__Stylohyoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.031612,
+            0.040787,
+            0.062773
+          ],
+          "sourceObjects": [
+            "Stylohyoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-stylopharyngeus-muscle-left": {
+          "centerBlender": [
+            0.026506,
+            -0.006985,
+            1.524046
+          ],
+          "kind": "part",
+          "name": "Stylopharyngeus muscle.l",
+          "nodes": [
+            "neck-muscles-stylopharyngeus-muscle-left__Stylopharyngeus muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.027744,
+            0.0243,
+            0.066695
+          ],
+          "sourceObjects": [
+            "Stylopharyngeus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-stylopharyngeus-muscle-right": {
+          "centerBlender": [
+            -0.026506,
+            -0.006985,
+            1.524046
+          ],
+          "kind": "part",
+          "name": "Stylopharyngeus muscle.r",
+          "nodes": [
+            "neck-muscles-stylopharyngeus-muscle-right__Stylopharyngeus muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.027744,
+            0.0243,
+            0.066695
+          ],
+          "sourceObjects": [
+            "Stylopharyngeus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-superior-pharyngeal-constrictor-left": {
+          "centerBlender": [
+            0.017158,
+            -0.02219,
+            1.547785
+          ],
+          "kind": "part",
+          "name": "Superior pharyngeal constrictor.l",
+          "nodes": [
+            "neck-muscles-superior-pharyngeal-constrictor-left__Superior pharyngeal constrictor.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.03299,
+            0.032694,
+            0.053687
+          ],
+          "sourceObjects": [
+            "Superior pharyngeal constrictor.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-superior-pharyngeal-constrictor-right": {
+          "centerBlender": [
+            -0.017158,
+            -0.02219,
+            1.547785
+          ],
+          "kind": "part",
+          "name": "Superior pharyngeal constrictor.r",
+          "nodes": [
+            "neck-muscles-superior-pharyngeal-constrictor-right__Superior pharyngeal constrictor.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.03299,
+            0.032694,
+            0.053687
+          ],
+          "sourceObjects": [
+            "Superior pharyngeal constrictor.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-thyro-epiglottic-part-of-thyro-arytenoid-muscle-left": {
+          "centerBlender": [
+            0.004531,
+            -0.018873,
+            1.490343
+          ],
+          "kind": "part",
+          "name": "Thyro-epiglottic part of thyro-arytenoid muscle.l",
+          "nodes": [
+            "neck-muscles-thyro-epiglottic-part-of-thyro-arytenoid-muscle-left__Thyro-epiglottic part of thyro-arytenoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.008478,
+            0.018795,
+            0.024896
+          ],
+          "sourceObjects": [
+            "Thyro-epiglottic part of thyro-arytenoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-thyro-epiglottic-part-of-thyro-arytenoid-muscle-right": {
+          "centerBlender": [
+            -0.004531,
+            -0.018873,
+            1.490343
+          ],
+          "kind": "part",
+          "name": "Thyro-epiglottic part of thyro-arytenoid muscle.r",
+          "nodes": [
+            "neck-muscles-thyro-epiglottic-part-of-thyro-arytenoid-muscle-right__Thyro-epiglottic part of thyro-arytenoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.008478,
+            0.018795,
+            0.024896
+          ],
+          "sourceObjects": [
+            "Thyro-epiglottic part of thyro-arytenoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-thyrohyoid-muscle-left": {
+          "centerBlender": [
+            0.013669,
+            -0.019614,
+            1.481951
+          ],
+          "kind": "part",
+          "name": "Thyrohyoid muscle.l",
+          "nodes": [
+            "neck-muscles-thyrohyoid-muscle-left__Thyrohyoid muscle.l"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.01228,
+            0.025027,
+            0.030843
+          ],
+          "sourceObjects": [
+            "Thyrohyoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-thyrohyoid-muscle-right": {
+          "centerBlender": [
+            -0.013668,
+            -0.019614,
+            1.481951
+          ],
+          "kind": "part",
+          "name": "Thyrohyoid muscle.r",
+          "nodes": [
+            "neck-muscles-thyrohyoid-muscle-right__Thyrohyoid muscle.r"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.01228,
+            0.025027,
+            0.030843
+          ],
+          "sourceObjects": [
+            "Thyrohyoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "neck-muscles-transverse-arytenoid-muscle": {
+          "centerBlender": [
+            -0.000664,
+            -0.00579,
+            1.476335
+          ],
+          "kind": "part",
+          "name": "Transverse arytenoid muscle",
+          "nodes": [
+            "neck-muscles-transverse-arytenoid-muscle__Transverse arytenoid muscle"
+          ],
+          "parentId": "neck-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.014681,
+            0.003056,
+            0.006226
+          ],
+          "sourceObjects": [
+            "Transverse arytenoid muscle"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    }
+  }
+}

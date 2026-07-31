@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "gluteal-muscles"
+  },
+  "build": {
+    "id": "77bf06dd3ec5b282",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "404a880db7ce97a073ac2265fea51618f7e8b2e0ecce10e07d74ea6c93bd02de"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 651512,
+    "sha256": "3d0fe049a11b0da852dc996d47a7f309a2031813ddd2dd86897f40ee876a1307"
+  },
+  "objectCount": 20,
+  "groups": {
+    "superficial-gluteal-muscles": {
+      "centerBlender": [
+        0,
+        0.031954,
+        0.853405
+      ],
+      "missing": [],
+      "name": "Superficial Gluteal Muscles",
+      "nodes": [
+        "superficial-gluteal-muscles-gluteus-maximus-muscle-left__Gluteus maximus muscle.l",
+        "superficial-gluteal-muscles-gluteus-maximus-muscle-right__Gluteus maximus muscle.r",
+        "superficial-gluteal-muscles-gluteus-medius-muscle-left__Gluteus medius muscle.l",
+        "superficial-gluteal-muscles-gluteus-medius-muscle-right__Gluteus medius muscle.r",
+        "superficial-gluteal-muscles-gluteus-minimus-muscle-left__Gluteus minimus muscle.l",
+        "superficial-gluteal-muscles-gluteus-minimus-muscle-right__Gluteus minimus muscle.r",
+        "superficial-gluteal-muscles-tensor-fasciae-latae-left__Tensor fasciae latae.l",
+        "superficial-gluteal-muscles-tensor-fasciae-latae-right__Tensor fasciae latae.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.304202,
+        0.159945,
+        0.28752
+      ],
+      "sourceObjects": [
+        "Gluteus maximus muscle.l",
+        "Gluteus maximus muscle.r",
+        "Gluteus medius muscle.l",
+        "Gluteus medius muscle.r",
+        "Gluteus minimus muscle.l",
+        "Gluteus minimus muscle.r",
+        "Tensor fasciae latae.l",
+        "Tensor fasciae latae.r"
+      ],
+      "structures": {
+        "superficial-gluteal-muscles": {
+          "centerBlender": [
+            0,
+            0.031954,
+            0.853405
+          ],
+          "kind": "organ",
+          "name": "Superficial Gluteal Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.304202,
+            0.159945,
+            0.28752
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-gluteus-maximus-muscle-left": {
+          "centerBlender": [
+            0.073847,
+            0.063421,
+            0.844502
+          ],
+          "kind": "part",
+          "name": "Gluteus maximus muscle.l",
+          "nodes": [
+            "superficial-gluteal-muscles-gluteus-maximus-muscle-left__Gluteus maximus muscle.l"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.145142,
+            0.097011,
+            0.269715
+          ],
+          "sourceObjects": [
+            "Gluteus maximus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-gluteus-maximus-muscle-right": {
+          "centerBlender": [
+            -0.073847,
+            0.063421,
+            0.844502
+          ],
+          "kind": "part",
+          "name": "Gluteus maximus muscle.r",
+          "nodes": [
+            "superficial-gluteal-muscles-gluteus-maximus-muscle-right__Gluteus maximus muscle.r"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.145142,
+            0.097011,
+            0.269715
+          ],
+          "sourceObjects": [
+            "Gluteus maximus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-gluteus-medius-muscle-left": {
+          "centerBlender": [
+            0.105258,
+            0.023895,
+            0.913416
+          ],
+          "kind": "part",
+          "name": "Gluteus medius muscle.l",
+          "nodes": [
+            "superficial-gluteal-muscles-gluteus-medius-muscle-left__Gluteus medius muscle.l"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.089062,
+            0.091609,
+            0.167498
+          ],
+          "sourceObjects": [
+            "Gluteus medius muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-gluteus-medius-muscle-right": {
+          "centerBlender": [
+            -0.105258,
+            0.023895,
+            0.913416
+          ],
+          "kind": "part",
+          "name": "Gluteus medius muscle.r",
+          "nodes": [
+            "superficial-gluteal-muscles-gluteus-medius-muscle-right__Gluteus medius muscle.r"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.089062,
+            0.091609,
+            0.167498
+          ],
+          "sourceObjects": [
+            "Gluteus medius muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-gluteus-minimus-muscle-left": {
+          "centerBlender": [
+            0.108931,
+            0.009187,
+            0.900982
+          ],
+          "kind": "part",
+          "name": "Gluteus minimus muscle.l",
+          "nodes": [
+            "superficial-gluteal-muscles-gluteus-minimus-muscle-left__Gluteus minimus muscle.l"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.082826,
+            0.060802,
+            0.134404
+          ],
+          "sourceObjects": [
+            "Gluteus minimus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-gluteus-minimus-muscle-right": {
+          "centerBlender": [
+            -0.108931,
+            0.009187,
+            0.900982
+          ],
+          "kind": "part",
+          "name": "Gluteus minimus muscle.r",
+          "nodes": [
+            "superficial-gluteal-muscles-gluteus-minimus-muscle-right__Gluteus minimus muscle.r"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.082826,
+            0.060802,
+            0.134404
+          ],
+          "sourceObjects": [
+            "Gluteus minimus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-tensor-fasciae-latae-left": {
+          "centerBlender": [
+            0.132528,
+            -0.030416,
+            0.883837
+          ],
+          "kind": "part",
+          "name": "Tensor fasciae latae.l",
+          "nodes": [
+            "superficial-gluteal-muscles-tensor-fasciae-latae-left__Tensor fasciae latae.l"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.039147,
+            0.035205,
+            0.161516
+          ],
+          "sourceObjects": [
+            "Tensor fasciae latae.l"
+          ],
+          "system": "muscular"
+        },
+        "superficial-gluteal-muscles-tensor-fasciae-latae-right": {
+          "centerBlender": [
+            -0.132528,
+            -0.030416,
+            0.883836
+          ],
+          "kind": "part",
+          "name": "Tensor fasciae latae.r",
+          "nodes": [
+            "superficial-gluteal-muscles-tensor-fasciae-latae-right__Tensor fasciae latae.r"
+          ],
+          "parentId": "superficial-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.039147,
+            0.035205,
+            0.161516
+          ],
+          "sourceObjects": [
+            "Tensor fasciae latae.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "deep-gluteal-muscles": {
+      "centerBlender": [
+        0,
+        0.02382,
+        0.856116
+      ],
+      "missing": [],
+      "name": "Deep Gluteal Muscles",
+      "nodes": [
+        "deep-gluteal-muscles-inferior-gemellus-muscle-left__Inferior gemellus muscle.l",
+        "deep-gluteal-muscles-inferior-gemellus-muscle-right__Inferior gemellus muscle.r",
+        "deep-gluteal-muscles-obturator-externus-left__Obturator externus.l",
+        "deep-gluteal-muscles-obturator-externus-right__Obturator externus.r",
+        "deep-gluteal-muscles-obturator-internus-left__Obturator internus.l",
+        "deep-gluteal-muscles-obturator-internus-right__Obturator internus.r",
+        "deep-gluteal-muscles-piriformis-muscle-left__Piriformis muscle.l",
+        "deep-gluteal-muscles-piriformis-muscle-right__Piriformis muscle.r",
+        "deep-gluteal-muscles-quadratus-femoris-muscle-left__Quadratus femoris muscle.l",
+        "deep-gluteal-muscles-quadratus-femoris-muscle-right__Quadratus femoris muscle.r",
+        "deep-gluteal-muscles-superior-gemellus-muscle-left__Superior gemellus muscle.l",
+        "deep-gluteal-muscles-superior-gemellus-muscle-right__Superior gemellus muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.267433,
+        0.100471,
+        0.126279
+      ],
+      "sourceObjects": [
+        "Inferior gemellus muscle.l",
+        "Inferior gemellus muscle.r",
+        "Obturator externus.l",
+        "Obturator externus.r",
+        "Obturator internus.l",
+        "Obturator internus.r",
+        "Piriformis muscle.l",
+        "Piriformis muscle.r",
+        "Quadratus femoris muscle.l",
+        "Quadratus femoris muscle.r",
+        "Superior gemellus muscle.l",
+        "Superior gemellus muscle.r"
+      ],
+      "structures": {
+        "deep-gluteal-muscles": {
+          "centerBlender": [
+            0,
+            0.02382,
+            0.856116
+          ],
+          "kind": "organ",
+          "name": "Deep Gluteal Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.267433,
+            0.100471,
+            0.126279
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-inferior-gemellus-muscle-left": {
+          "centerBlender": [
+            0.090463,
+            0.03627,
+            0.84144
+          ],
+          "kind": "part",
+          "name": "Inferior gemellus muscle.l",
+          "nodes": [
+            "deep-gluteal-muscles-inferior-gemellus-muscle-left__Inferior gemellus muscle.l"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.072815,
+            0.054302,
+            0.023198
+          ],
+          "sourceObjects": [
+            "Inferior gemellus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-inferior-gemellus-muscle-right": {
+          "centerBlender": [
+            -0.090463,
+            0.03627,
+            0.841439
+          ],
+          "kind": "part",
+          "name": "Inferior gemellus muscle.r",
+          "nodes": [
+            "deep-gluteal-muscles-inferior-gemellus-muscle-right__Inferior gemellus muscle.r"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.072815,
+            0.054302,
+            0.023198
+          ],
+          "sourceObjects": [
+            "Inferior gemellus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-obturator-externus-left": {
+          "centerBlender": [
+            0.073762,
+            0.002672,
+            0.83084
+          ],
+          "kind": "part",
+          "name": "Obturator externus.l",
+          "nodes": [
+            "deep-gluteal-muscles-obturator-externus-left__Obturator externus.l"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.099546,
+            0.058176,
+            0.030915
+          ],
+          "sourceObjects": [
+            "Obturator externus.l"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-obturator-externus-right": {
+          "centerBlender": [
+            -0.073762,
+            0.002672,
+            0.83084
+          ],
+          "kind": "part",
+          "name": "Obturator externus.r",
+          "nodes": [
+            "deep-gluteal-muscles-obturator-externus-right__Obturator externus.r"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.099546,
+            0.058176,
+            0.030915
+          ],
+          "sourceObjects": [
+            "Obturator externus.r"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-obturator-internus-left": {
+          "centerBlender": [
+            0.069764,
+            0.017091,
+            0.848358
+          ],
+          "kind": "part",
+          "name": "Obturator internus.l",
+          "nodes": [
+            "deep-gluteal-muscles-obturator-internus-left__Obturator internus.l"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.097664,
+            0.081572,
+            0.059826
+          ],
+          "sourceObjects": [
+            "Obturator internus.l"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-obturator-internus-right": {
+          "centerBlender": [
+            -0.069764,
+            0.017091,
+            0.848358
+          ],
+          "kind": "part",
+          "name": "Obturator internus.r",
+          "nodes": [
+            "deep-gluteal-muscles-obturator-internus-right__Obturator internus.r"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.097664,
+            0.081572,
+            0.059826
+          ],
+          "sourceObjects": [
+            "Obturator internus.r"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-piriformis-muscle-left": {
+          "centerBlender": [
+            0.07873,
+            0.044411,
+            0.88772
+          ],
+          "kind": "part",
+          "name": "Piriformis muscle.l",
+          "nodes": [
+            "deep-gluteal-muscles-piriformis-muscle-left__Piriformis muscle.l"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.109973,
+            0.059289,
+            0.06307
+          ],
+          "sourceObjects": [
+            "Piriformis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-piriformis-muscle-right": {
+          "centerBlender": [
+            -0.07873,
+            0.044411,
+            0.88772
+          ],
+          "kind": "part",
+          "name": "Piriformis muscle.r",
+          "nodes": [
+            "deep-gluteal-muscles-piriformis-muscle-right__Piriformis muscle.r"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.109973,
+            0.059289,
+            0.06307
+          ],
+          "sourceObjects": [
+            "Piriformis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-quadratus-femoris-muscle-left": {
+          "centerBlender": [
+            0.088174,
+            0.031795,
+            0.815838
+          ],
+          "kind": "part",
+          "name": "Quadratus femoris muscle.l",
+          "nodes": [
+            "deep-gluteal-muscles-quadratus-femoris-muscle-left__Quadratus femoris muscle.l"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.068454,
+            0.016119,
+            0.045723
+          ],
+          "sourceObjects": [
+            "Quadratus femoris muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-quadratus-femoris-muscle-right": {
+          "centerBlender": [
+            -0.088174,
+            0.031795,
+            0.815838
+          ],
+          "kind": "part",
+          "name": "Quadratus femoris muscle.r",
+          "nodes": [
+            "deep-gluteal-muscles-quadratus-femoris-muscle-right__Quadratus femoris muscle.r"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.068454,
+            0.016119,
+            0.045723
+          ],
+          "sourceObjects": [
+            "Quadratus femoris muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-superior-gemellus-muscle-left": {
+          "centerBlender": [
+            0.084643,
+            0.031175,
+            0.861843
+          ],
+          "kind": "part",
+          "name": "Superior gemellus muscle.l",
+          "nodes": [
+            "deep-gluteal-muscles-superior-gemellus-muscle-left__Superior gemellus muscle.l"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.083512,
+            0.045723,
+            0.027174
+          ],
+          "sourceObjects": [
+            "Superior gemellus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "deep-gluteal-muscles-superior-gemellus-muscle-right": {
+          "centerBlender": [
+            -0.084643,
+            0.031175,
+            0.861843
+          ],
+          "kind": "part",
+          "name": "Superior gemellus muscle.r",
+          "nodes": [
+            "deep-gluteal-muscles-superior-gemellus-muscle-right__Superior gemellus muscle.r"
+          ],
+          "parentId": "deep-gluteal-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.083512,
+            0.045723,
+            0.027174
+          ],
+          "sourceObjects": [
+            "Superior gemellus muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    }
+  }
+}

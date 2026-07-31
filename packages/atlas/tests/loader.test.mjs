@@ -110,10 +110,10 @@ function jsonResponse(body, url, status = 200) {
 
 test("official identity provides the immutable public catalog by default", () => {
   assert.equal(OFFICIAL_HUMAN_ATLAS.id, "vanatome-human");
-  assert.equal(OFFICIAL_HUMAN_ATLAS.version, "1.2.0");
+  assert.equal(OFFICIAL_HUMAN_ATLAS.version, "1.3.0");
   assert.equal(
     OFFICIAL_HUMAN_ATLAS.catalogUrl,
-    "https://atlas.vanatome.vixotic.in/releases/1.2.0/catalog.json",
+    "https://atlas.vanatome.vixotic.in/releases/1.3.0/catalog.json",
   );
   const loader = createOfficialHumanAtlas();
   assert.deepEqual(loader.getState(), { status: "idle" });
@@ -332,7 +332,7 @@ test("repository demo catalog matches its metadata and immutable GLB", async () 
 
 test("distributed demo release loads systems independently and full body as a profile", async () => {
   const demoDirectory = new URL(
-    "../../../public/atlas/demo-1.2.0/",
+    "../../../public/atlas/demo-1.3.0/",
     import.meta.url,
   );
   const demoCatalog = JSON.parse(
@@ -341,7 +341,7 @@ test("distributed demo release loads systems independently and full body as a pr
   const metadataByUrl = new Map();
   for (const bundle of demoCatalog.bundles) {
     metadataByUrl.set(
-      new URL(bundle.metadataUrl, "https://demo.local/atlas/demo-1.2.0/catalog.json").href,
+      new URL(bundle.metadataUrl, "https://demo.local/atlas/demo-1.3.0/catalog.json").href,
       JSON.parse(
         await readFile(new URL(bundle.metadataUrl, demoDirectory), "utf8"),
       ),
@@ -370,7 +370,7 @@ test("distributed demo release loads systems independently and full body as a pr
 
   const requests = [];
   const loader = createDemoHumanAtlas({
-    catalogUrl: "https://demo.local/atlas/demo-1.2.0/catalog.json",
+    catalogUrl: "https://demo.local/atlas/demo-1.3.0/catalog.json",
     fetch: async (input) => {
       const url = String(input);
       requests.push(url);
@@ -382,8 +382,8 @@ test("distributed demo release loads systems independently and full body as a pr
   const profile = await loader.loadProfile();
 
   assert.equal(cardiovascular.descriptor.id, "cardiovascular");
-  assert.equal(cardiovascular.metadata.nodeCount, 4);
+  assert.equal(cardiovascular.metadata.nodeCount, 64);
   assert.equal(profile.descriptor.id, "curated-full-body");
-  assert.equal(profile.metadata.nodeCount, 528);
+  assert.equal(profile.metadata.nodeCount, 960);
   assert.equal(requests.length, 3);
 });

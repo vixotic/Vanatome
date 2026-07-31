@@ -1,0 +1,4311 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "cerebrum"
+  },
+  "build": {
+    "id": "f5c251f177f3a0f6",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "b8928f67a6294d83b626d7666efb82c41a4beffb6dc3ddd3402d3d7cbdcc8913"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 5296852,
+    "sha256": "2426034a3c4b0555ed8803a024d2cc19babaead9f3427cce14ec3b92307ca55c"
+  },
+  "objectCount": 169,
+  "groups": {
+    "cerebrum": {
+      "centerBlender": [
+        0,
+        0.008782,
+        1.423854
+      ],
+      "missing": [],
+      "name": "Cerebrum",
+      "nodes": [
+        "cerebrum-posterior-transverse-collateral-sulcus-left__ Posterior transverse collateral sulcus.l",
+        "cerebrum-posterior-transverse-collateral-sulcus-right__ Posterior transverse collateral sulcus.r",
+        "cerebrum-amygdaloid-body-left__Amygdaloid body.l",
+        "cerebrum-amygdaloid-body-right__Amygdaloid body.r",
+        "cerebrum-angular-gyrus-left__Angular gyrus.l",
+        "cerebrum-angular-gyrus-right__Angular gyrus.r",
+        "cerebrum-anterior-commissure__Anterior commissure",
+        "cerebrum-anterior-occipital-sulcus-left__Anterior occipital sulcus*.l",
+        "cerebrum-anterior-occipital-sulcus-right__Anterior occipital sulcus*.r",
+        "cerebrum-calcarine-sulcus-left__Calcarine sulcus.l",
+        "cerebrum-calcarine-sulcus-right__Calcarine sulcus.r",
+        "cerebrum-caudate-nucleus-left__Caudate nucleus.l",
+        "cerebrum-caudate-nucleus-right__Caudate nucleus.r",
+        "cerebrum-central-sulcus-left__Central sulcus.l",
+        "cerebrum-central-sulcus-right__Central sulcus.r",
+        "cerebrum-cingulate-gyrus-posteroventral-part-left__Cingulate gyrus (Posteroventral part*).l",
+        "cerebrum-cingulate-gyrus-posteroventral-part-right__Cingulate gyrus (Posteroventral part*).r",
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-left__Cingulate gyrus and sulcus (Middle anterior part).l",
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-right__Cingulate gyrus and sulcus (Middle anterior part).r",
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-left__Cingulate gyrus and sulcus (Middle posterior part).l",
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-right__Cingulate gyrus and sulcus (Middle posterior part).r",
+        "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-left__Cingulate gyrus and sulcus (Posterior dorsal part).l",
+        "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-right__Cingulate gyrus and sulcus (Posterior dorsal part).r",
+        "cerebrum-cingulate-sulcus-marginal-part-left__Cingulate sulcus (Marginal part*).l",
+        "cerebrum-cingulate-sulcus-marginal-part-right__Cingulate sulcus (Marginal part*).r",
+        "cerebrum-circular-sulcus-of-insula-left__Circular sulcus of insula.l",
+        "cerebrum-circular-sulcus-of-insula-right__Circular sulcus of insula.r",
+        "cerebrum-collateral-sulcus-left__Collateral sulcus.l",
+        "cerebrum-collateral-sulcus-right__Collateral sulcus.r",
+        "cerebrum-corpus-callosum__Corpus callosum",
+        "cerebrum-cuneus-left__Cuneus.l",
+        "cerebrum-cuneus-right__Cuneus.r",
+        "cerebrum-fornix-left__Fornix.l",
+        "cerebrum-fornix-right__Fornix.r",
+        "cerebrum-globus-pallidus-left__Globus pallidus.l",
+        "cerebrum-globus-pallidus-right__Globus pallidus.r",
+        "cerebrum-habenula__Habenula",
+        "cerebrum-hippocampal-commissure__Hippocampal commissure",
+        "cerebrum-hippocampus-left__Hippocampus.l",
+        "cerebrum-hippocampus-right__Hippocampus.r",
+        "cerebrum-hypothalamus__Hypothalamus",
+        "cerebrum-inferior-frontal-sulcus-left__Inferior frontal sulcus.l",
+        "cerebrum-inferior-frontal-sulcus-right__Inferior frontal sulcus.r",
+        "cerebrum-inferior-occipital-gyrus-and-sulcus-left__Inferior occipital gyrus and sulcus*.l",
+        "cerebrum-inferior-occipital-gyrus-and-sulcus-right__Inferior occipital gyrus and sulcus*.r",
+        "cerebrum-inferior-temporal-gyrus-left__Inferior temporal gyrus.l",
+        "cerebrum-inferior-temporal-gyrus-right__Inferior temporal gyrus.r",
+        "cerebrum-inferior-temporal-sulcus-left__Inferior temporal sulcus.l",
+        "cerebrum-inferior-temporal-sulcus-right__Inferior temporal sulcus.r",
+        "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-left__Insula (Subcentral gyrus and ant. and post. sulci*).l",
+        "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-right__Insula (Subcentral gyrus and ant. and post. sulci*).r",
+        "cerebrum-intraparietal-sulcus-left__Intraparietal sulcus.l",
+        "cerebrum-intraparietal-sulcus-right__Intraparietal sulcus.r",
+        "cerebrum-lat-fis-ant-horizont-left__Lat_Fis-ant-Horizont.l",
+        "cerebrum-lat-fis-ant-horizont-right__Lat_Fis-ant-Horizont.r",
+        "cerebrum-lat-fis-ant-vertical-left__Lat_Fis-ant-Vertical.l",
+        "cerebrum-lat-fis-ant-vertical-right__Lat_Fis-ant-Vertical.r",
+        "cerebrum-lat-fis-post-left__Lat_Fis-post.l",
+        "cerebrum-lat-fis-post-right__Lat_Fis-post.r",
+        "cerebrum-lateral-geniculate-body-left__Lateral geniculate body.l",
+        "cerebrum-lateral-geniculate-body-right__Lateral geniculate body.r",
+        "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-left__Lateral occipital gyrus (Middle occipital gyrus*).l",
+        "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-right__Lateral occipital gyrus (Middle occipital gyrus*).r",
+        "cerebrum-lateral-occipitotemporal-gyrus-left__Lateral occipitotemporal gyrus.l",
+        "cerebrum-lateral-occipitotemporal-gyrus-right__Lateral occipitotemporal gyrus.r",
+        "cerebrum-lateral-ventricle-left__Lateral ventricle.l",
+        "cerebrum-lateral-ventricle-right__Lateral ventricle.r",
+        "cerebrum-lentiform-nucleus-left__Lentiform nucleus.l",
+        "cerebrum-lentiform-nucleus-right__Lentiform nucleus.r",
+        "cerebrum-lingual-gyrus-left__Lingual gyrus.l",
+        "cerebrum-lingual-gyrus-right__Lingual gyrus.r",
+        "cerebrum-lunate-sulcus-left__Lunate sulcus.l",
+        "cerebrum-lunate-sulcus-right__Lunate sulcus.r",
+        "cerebrum-mamillary-body-left__Mamillary body.l",
+        "cerebrum-mamillary-body-right__Mamillary body.r",
+        "cerebrum-medial-geniculate-body-left__Medial geniculate body.l",
+        "cerebrum-medial-geniculate-body-right__Medial geniculate body.r",
+        "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-left__Medial occipitotemporal gyrus (Parahippocampal*).l",
+        "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-right__Medial occipitotemporal gyrus (Parahippocampal*).r",
+        "cerebrum-middle-frontal-gyrus-left__Middle frontal gyrus.l",
+        "cerebrum-middle-frontal-gyrus-right__Middle frontal gyrus.r",
+        "cerebrum-middle-temporal-gyrus-left__Middle temporal gyrus.l",
+        "cerebrum-middle-temporal-gyrus-right__Middle temporal gyrus.r",
+        "cerebrum-occipital-pole-left__Occipital pole.l",
+        "cerebrum-occipital-pole-right__Occipital pole.r",
+        "cerebrum-occipitotemporal-sulcus-lateral-part-left__Occipitotemporal sulcus (Lateral part*).l",
+        "cerebrum-occipitotemporal-sulcus-lateral-part-right__Occipitotemporal sulcus (Lateral part*).r",
+        "cerebrum-olfactory-sulcus-left__Olfactory sulcus.l",
+        "cerebrum-olfactory-sulcus-right__Olfactory sulcus.r",
+        "cerebrum-opercular-part-of-inferior-frontal-gyrus-left__Opercular part of inferior frontal gyrus.l",
+        "cerebrum-opercular-part-of-inferior-frontal-gyrus-right__Opercular part of inferior frontal gyrus.r",
+        "cerebrum-optic-chiasm-left__Optic chiasm.l",
+        "cerebrum-optic-chiasm-right__Optic chiasm.r",
+        "cerebrum-optic-tract-left__Optic tract.l",
+        "cerebrum-optic-tract-right__Optic tract.r",
+        "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-left__Orbital gyri (Frontomarginal gyrus and sulcus*).l",
+        "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-right__Orbital gyri (Frontomarginal gyrus and sulcus*).r",
+        "cerebrum-orbital-gyri-left__Orbital gyri.l",
+        "cerebrum-orbital-gyri-right__Orbital gyri.r",
+        "cerebrum-orbital-part-of-inferior-frontal-gyrus-left__Orbital part of  inferior frontal gyrus.l",
+        "cerebrum-orbital-part-of-inferior-frontal-gyrus-right__Orbital part of  inferior frontal gyrus.r",
+        "cerebrum-orbital-sulci-h-shaped-orbital-sulci-left__Orbital sulci (H-shaped orbital sulci*).l",
+        "cerebrum-orbital-sulci-h-shaped-orbital-sulci-right__Orbital sulci (H-shaped orbital sulci*).r",
+        "cerebrum-orbital-sulci-lateral-orbital-sulcus-left__Orbital sulci (Lateral Orbital sulcus*).l",
+        "cerebrum-orbital-sulci-lateral-orbital-sulcus-right__Orbital sulci (Lateral Orbital sulcus*).r",
+        "cerebrum-paracentral-gyrus-and-sulcus-left__Paracentral gyrus and sulcus*.l",
+        "cerebrum-paracentral-gyrus-and-sulcus-right__Paracentral gyrus and sulcus*.r",
+        "cerebrum-paracentral-sulcus-left__Paracentral sulcus.l",
+        "cerebrum-paracentral-sulcus-right__Paracentral sulcus.r",
+        "cerebrum-parieto-occipital-sulcus-left__Parieto-occipital sulcus.l",
+        "cerebrum-parieto-occipital-sulcus-right__Parieto-occipital sulcus.r",
+        "cerebrum-postcentral-gyrus-left__Postcentral gyrus.l",
+        "cerebrum-postcentral-gyrus-right__Postcentral gyrus.r",
+        "cerebrum-postcentral-sulcus-left__Postcentral sulcus.l",
+        "cerebrum-postcentral-sulcus-right__Postcentral sulcus.r",
+        "cerebrum-posterior-commissure__Posterior commissure",
+        "cerebrum-precentral-gyrus-left__Precentral gyrus.l",
+        "cerebrum-precentral-gyrus-right__Precentral gyrus.r",
+        "cerebrum-precentral-sulcus-superior-part-left__Precentral sulcus (Superior part)*.l",
+        "cerebrum-precentral-sulcus-superior-part-right__Precentral sulcus (Superior part)*.r",
+        "cerebrum-precentral-sulcus-inferior-part-left__Precentral sulcus (inferior part)*.l",
+        "cerebrum-precentral-sulcus-inferior-part-right__Precentral sulcus (inferior part)*.r",
+        "cerebrum-precuneus-left__Precuneus.l",
+        "cerebrum-precuneus-right__Precuneus.r",
+        "cerebrum-putamen-left__Putamen.l",
+        "cerebrum-putamen-right__Putamen.r",
+        "cerebrum-septal-nuclei__Septal nuclei",
+        "cerebrum-septum-pellucidum__Septum pellucidum",
+        "cerebrum-straight-gyrus-gyrus-rectus-left__Straight gyrus (Gyrus rectus).l",
+        "cerebrum-straight-gyrus-gyrus-rectus-right__Straight gyrus (Gyrus rectus).r",
+        "cerebrum-stria-medullaris-thalami-left__Stria medullaris thalami.l",
+        "cerebrum-stria-medullaris-thalami-right__Stria medullaris thalami.r",
+        "cerebrum-stria-terminalis-left__Stria terminalis.l",
+        "cerebrum-stria-terminalis-right__Stria terminalis.r",
+        "cerebrum-subparietal-sulcus-left__Subparietal sulcus.l",
+        "cerebrum-subparietal-sulcus-right__Subparietal sulcus.r",
+        "cerebrum-sulcus-interm-prim-jensen-left__Sulcus interm_prim-Jensen.l",
+        "cerebrum-sulcus-interm-prim-jensen-right__Sulcus interm_prim-Jensen.r",
+        "cerebrum-superior-frontal-gyrus-left__Superior frontal gyrus.l",
+        "cerebrum-superior-frontal-gyrus-right__Superior frontal gyrus.r",
+        "cerebrum-superior-frontal-sulcus-left__Superior frontal sulcus.l",
+        "cerebrum-superior-frontal-sulcus-right__Superior frontal sulcus.r",
+        "cerebrum-superior-occipital-gyri-left__Superior occipital gyri.l",
+        "cerebrum-superior-occipital-gyri-right__Superior occipital gyri.r",
+        "cerebrum-superior-parietal-lobule-left__Superior parietal lobule.l",
+        "cerebrum-superior-parietal-lobule-right__Superior parietal lobule.r",
+        "cerebrum-superior-temporal-gyrus-lateral-part-left__Superior temporal gyrus (Lateral part).l",
+        "cerebrum-superior-temporal-gyrus-lateral-part-right__Superior temporal gyrus (Lateral part).r",
+        "cerebrum-superior-temporal-sulcus-left__Superior temporal sulcus.l",
+        "cerebrum-superior-temporal-sulcus-right__Superior temporal sulcus.r",
+        "cerebrum-supramarginal-gyrus-left__Supramarginal gyrus.l",
+        "cerebrum-supramarginal-gyrus-right__Supramarginal gyrus.r",
+        "cerebrum-temporal-plane-left__Temporal plane.l",
+        "cerebrum-temporal-plane-right__Temporal plane.r",
+        "cerebrum-temporal-pole-left__Temporal pole.l",
+        "cerebrum-temporal-pole-right__Temporal pole.r",
+        "cerebrum-thalamus-left__Thalamus.l",
+        "cerebrum-thalamus-right__Thalamus.r",
+        "cerebrum-third-ventricle__Third ventricle",
+        "cerebrum-transverse-frontopolar-gyrus-and-sulcus-left__Transverse frontopolar gyrus and sulcus*.l",
+        "cerebrum-transverse-frontopolar-gyrus-and-sulcus-right__Transverse frontopolar gyrus and sulcus*.r",
+        "cerebrum-transverse-occipital-sulcus-left__Transverse occipital sulcus.l",
+        "cerebrum-transverse-occipital-sulcus-right__Transverse occipital sulcus.r",
+        "cerebrum-transverse-temporal-gyri-left__Transverse temporal gyri.l",
+        "cerebrum-transverse-temporal-gyri-right__Transverse temporal gyri.r",
+        "cerebrum-triangular-part-of-inferior-frontal-gyrus-left__Triangular part of inferior frontal gyrus.l",
+        "cerebrum-triangular-part-of-inferior-frontal-gyrus-right__Triangular part of inferior frontal gyrus.r",
+        "cerebrum-white-matter-of-telencephalon-left__White matter of telencephalon.l",
+        "cerebrum-white-matter-of-telencephalon-right__White matter of telencephalon.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.137774,
+        0.180699,
+        0.551562
+      ],
+      "sourceObjects": [
+        " Posterior transverse collateral sulcus.l",
+        " Posterior transverse collateral sulcus.r",
+        "Amygdaloid body.l",
+        "Amygdaloid body.r",
+        "Angular gyrus.l",
+        "Angular gyrus.r",
+        "Anterior commissure",
+        "Anterior occipital sulcus*.l",
+        "Anterior occipital sulcus*.r",
+        "Calcarine sulcus.l",
+        "Calcarine sulcus.r",
+        "Caudate nucleus.l",
+        "Caudate nucleus.r",
+        "Central sulcus.l",
+        "Central sulcus.r",
+        "Cingulate gyrus (Posteroventral part*).l",
+        "Cingulate gyrus (Posteroventral part*).r",
+        "Cingulate gyrus and sulcus (Middle anterior part).l",
+        "Cingulate gyrus and sulcus (Middle anterior part).r",
+        "Cingulate gyrus and sulcus (Middle posterior part).l",
+        "Cingulate gyrus and sulcus (Middle posterior part).r",
+        "Cingulate gyrus and sulcus (Posterior dorsal part).l",
+        "Cingulate gyrus and sulcus (Posterior dorsal part).r",
+        "Cingulate sulcus (Marginal part*).l",
+        "Cingulate sulcus (Marginal part*).r",
+        "Circular sulcus of insula.l",
+        "Circular sulcus of insula.r",
+        "Collateral sulcus.l",
+        "Collateral sulcus.r",
+        "Corpus callosum",
+        "Cuneus.l",
+        "Cuneus.r",
+        "Fornix.l",
+        "Fornix.r",
+        "Globus pallidus.l",
+        "Globus pallidus.r",
+        "Habenula",
+        "Hippocampal commissure",
+        "Hippocampus.l",
+        "Hippocampus.r",
+        "Hypothalamus",
+        "Inferior frontal sulcus.l",
+        "Inferior frontal sulcus.r",
+        "Inferior occipital gyrus and sulcus*.l",
+        "Inferior occipital gyrus and sulcus*.r",
+        "Inferior temporal gyrus.l",
+        "Inferior temporal gyrus.r",
+        "Inferior temporal sulcus.l",
+        "Inferior temporal sulcus.r",
+        "Insula (Subcentral gyrus and ant. and post. sulci*).l",
+        "Insula (Subcentral gyrus and ant. and post. sulci*).r",
+        "Intraparietal sulcus.l",
+        "Intraparietal sulcus.r",
+        "Lat_Fis-ant-Horizont.l",
+        "Lat_Fis-ant-Horizont.r",
+        "Lat_Fis-ant-Vertical.l",
+        "Lat_Fis-ant-Vertical.r",
+        "Lat_Fis-post.l",
+        "Lat_Fis-post.r",
+        "Lateral geniculate body.l",
+        "Lateral geniculate body.r",
+        "Lateral occipital gyrus (Middle occipital gyrus*).l",
+        "Lateral occipital gyrus (Middle occipital gyrus*).r",
+        "Lateral occipitotemporal gyrus.l",
+        "Lateral occipitotemporal gyrus.r",
+        "Lateral ventricle.l",
+        "Lateral ventricle.r",
+        "Lentiform nucleus.l",
+        "Lentiform nucleus.r",
+        "Lingual gyrus.l",
+        "Lingual gyrus.r",
+        "Lunate sulcus.l",
+        "Lunate sulcus.r",
+        "Mamillary body.l",
+        "Mamillary body.r",
+        "Medial geniculate body.l",
+        "Medial geniculate body.r",
+        "Medial occipitotemporal gyrus (Parahippocampal*).l",
+        "Medial occipitotemporal gyrus (Parahippocampal*).r",
+        "Middle frontal gyrus.l",
+        "Middle frontal gyrus.r",
+        "Middle temporal gyrus.l",
+        "Middle temporal gyrus.r",
+        "Occipital pole.l",
+        "Occipital pole.r",
+        "Occipitotemporal sulcus (Lateral part*).l",
+        "Occipitotemporal sulcus (Lateral part*).r",
+        "Olfactory sulcus.l",
+        "Olfactory sulcus.r",
+        "Opercular part of inferior frontal gyrus.l",
+        "Opercular part of inferior frontal gyrus.r",
+        "Optic chiasm.l",
+        "Optic chiasm.r",
+        "Optic tract.l",
+        "Optic tract.r",
+        "Orbital gyri (Frontomarginal gyrus and sulcus*).l",
+        "Orbital gyri (Frontomarginal gyrus and sulcus*).r",
+        "Orbital gyri.l",
+        "Orbital gyri.r",
+        "Orbital part of  inferior frontal gyrus.l",
+        "Orbital part of  inferior frontal gyrus.r",
+        "Orbital sulci (H-shaped orbital sulci*).l",
+        "Orbital sulci (H-shaped orbital sulci*).r",
+        "Orbital sulci (Lateral Orbital sulcus*).l",
+        "Orbital sulci (Lateral Orbital sulcus*).r",
+        "Paracentral gyrus and sulcus*.l",
+        "Paracentral gyrus and sulcus*.r",
+        "Paracentral sulcus.l",
+        "Paracentral sulcus.r",
+        "Parieto-occipital sulcus.l",
+        "Parieto-occipital sulcus.r",
+        "Postcentral gyrus.l",
+        "Postcentral gyrus.r",
+        "Postcentral sulcus.l",
+        "Postcentral sulcus.r",
+        "Posterior commissure",
+        "Precentral gyrus.l",
+        "Precentral gyrus.r",
+        "Precentral sulcus (Superior part)*.l",
+        "Precentral sulcus (Superior part)*.r",
+        "Precentral sulcus (inferior part)*.l",
+        "Precentral sulcus (inferior part)*.r",
+        "Precuneus.l",
+        "Precuneus.r",
+        "Putamen.l",
+        "Putamen.r",
+        "Septal nuclei",
+        "Septum pellucidum",
+        "Straight gyrus (Gyrus rectus).l",
+        "Straight gyrus (Gyrus rectus).r",
+        "Stria medullaris thalami.l",
+        "Stria medullaris thalami.r",
+        "Stria terminalis.l",
+        "Stria terminalis.r",
+        "Subparietal sulcus.l",
+        "Subparietal sulcus.r",
+        "Sulcus interm_prim-Jensen.l",
+        "Sulcus interm_prim-Jensen.r",
+        "Superior frontal gyrus.l",
+        "Superior frontal gyrus.r",
+        "Superior frontal sulcus.l",
+        "Superior frontal sulcus.r",
+        "Superior occipital gyri.l",
+        "Superior occipital gyri.r",
+        "Superior parietal lobule.l",
+        "Superior parietal lobule.r",
+        "Superior temporal gyrus (Lateral part).l",
+        "Superior temporal gyrus (Lateral part).r",
+        "Superior temporal sulcus.l",
+        "Superior temporal sulcus.r",
+        "Supramarginal gyrus.l",
+        "Supramarginal gyrus.r",
+        "Temporal plane.l",
+        "Temporal plane.r",
+        "Temporal pole.l",
+        "Temporal pole.r",
+        "Thalamus.l",
+        "Thalamus.r",
+        "Third ventricle",
+        "Transverse frontopolar gyrus and sulcus*.l",
+        "Transverse frontopolar gyrus and sulcus*.r",
+        "Transverse occipital sulcus.l",
+        "Transverse occipital sulcus.r",
+        "Transverse temporal gyri.l",
+        "Transverse temporal gyri.r",
+        "Triangular part of inferior frontal gyrus.l",
+        "Triangular part of inferior frontal gyrus.r",
+        "White matter of telencephalon.l",
+        "White matter of telencephalon.r"
+      ],
+      "structures": {
+        "cerebrum": {
+          "centerBlender": [
+            0,
+            0.008782,
+            1.423854
+          ],
+          "kind": "organ",
+          "name": "Cerebrum",
+          "nodes": [],
+          "parentId": "nervous-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.137774,
+            0.180699,
+            0.551562
+          ],
+          "sourceObjects": [],
+          "system": "nervous"
+        },
+        "cerebrum-amygdaloid-body-left": {
+          "centerBlender": [
+            0.024742,
+            -0.00958,
+            1.610446
+          ],
+          "kind": "part",
+          "name": "Amygdaloid body.l",
+          "nodes": [
+            "cerebrum-amygdaloid-body-left__Amygdaloid body.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016547,
+            0.017841,
+            0.012387
+          ],
+          "sourceObjects": [
+            "Amygdaloid body.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-amygdaloid-body-right": {
+          "centerBlender": [
+            -0.024742,
+            -0.00958,
+            1.610446
+          ],
+          "kind": "part",
+          "name": "Amygdaloid body.r",
+          "nodes": [
+            "cerebrum-amygdaloid-body-right__Amygdaloid body.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016547,
+            0.017841,
+            0.012387
+          ],
+          "sourceObjects": [
+            "Amygdaloid body.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-angular-gyrus-left": {
+          "centerBlender": [
+            0.037135,
+            0.065149,
+            1.653198
+          ],
+          "kind": "part",
+          "name": "Angular gyrus.l",
+          "nodes": [
+            "cerebrum-angular-gyrus-left__Angular gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.043199,
+            0.051849,
+            0.047302
+          ],
+          "sourceObjects": [
+            "Angular gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-angular-gyrus-right": {
+          "centerBlender": [
+            -0.037135,
+            0.065149,
+            1.653198
+          ],
+          "kind": "part",
+          "name": "Angular gyrus.r",
+          "nodes": [
+            "cerebrum-angular-gyrus-right__Angular gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.043199,
+            0.051849,
+            0.047302
+          ],
+          "sourceObjects": [
+            "Angular gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-anterior-commissure": {
+          "centerBlender": [
+            0,
+            -0.0144,
+            1.624632
+          ],
+          "kind": "part",
+          "name": "Anterior commissure",
+          "nodes": [
+            "cerebrum-anterior-commissure__Anterior commissure"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.023795,
+            0.004523,
+            0.002505
+          ],
+          "sourceObjects": [
+            "Anterior commissure"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-anterior-occipital-sulcus-left": {
+          "centerBlender": [
+            0.042253,
+            0.064923,
+            1.619414
+          ],
+          "kind": "part",
+          "name": "Anterior occipital sulcus*.l",
+          "nodes": [
+            "cerebrum-anterior-occipital-sulcus-left__Anterior occipital sulcus*.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.014136,
+            0.014871,
+            0.024402
+          ],
+          "sourceObjects": [
+            "Anterior occipital sulcus*.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-anterior-occipital-sulcus-right": {
+          "centerBlender": [
+            -0.042253,
+            0.064923,
+            1.619414
+          ],
+          "kind": "part",
+          "name": "Anterior occipital sulcus*.r",
+          "nodes": [
+            "cerebrum-anterior-occipital-sulcus-right__Anterior occipital sulcus*.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.014136,
+            0.014871,
+            0.024402
+          ],
+          "sourceObjects": [
+            "Anterior occipital sulcus*.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-calcarine-sulcus-left": {
+          "centerBlender": [
+            0.01274,
+            0.065357,
+            1.618174
+          ],
+          "kind": "part",
+          "name": "Calcarine sulcus.l",
+          "nodes": [
+            "cerebrum-calcarine-sulcus-left__Calcarine sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.019552,
+            0.055544,
+            0.033088
+          ],
+          "sourceObjects": [
+            "Calcarine sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-calcarine-sulcus-right": {
+          "centerBlender": [
+            -0.01274,
+            0.065357,
+            1.618174
+          ],
+          "kind": "part",
+          "name": "Calcarine sulcus.r",
+          "nodes": [
+            "cerebrum-calcarine-sulcus-right__Calcarine sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.019552,
+            0.055544,
+            0.033088
+          ],
+          "sourceObjects": [
+            "Calcarine sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-caudate-nucleus-left": {
+          "centerBlender": [
+            0.017938,
+            -0.003596,
+            1.630344
+          ],
+          "kind": "part",
+          "name": "Caudate nucleus.l",
+          "nodes": [
+            "cerebrum-caudate-nucleus-left__Caudate nucleus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.030885,
+            0.06167,
+            0.036014
+          ],
+          "sourceObjects": [
+            "Caudate nucleus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-caudate-nucleus-right": {
+          "centerBlender": [
+            -0.017938,
+            -0.003596,
+            1.630344
+          ],
+          "kind": "part",
+          "name": "Caudate nucleus.r",
+          "nodes": [
+            "cerebrum-caudate-nucleus-right__Caudate nucleus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.030885,
+            0.06167,
+            0.036014
+          ],
+          "sourceObjects": [
+            "Caudate nucleus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-central-sulcus-left": {
+          "centerBlender": [
+            0.033703,
+            0.015673,
+            1.662547
+          ],
+          "kind": "part",
+          "name": "Central sulcus.l",
+          "nodes": [
+            "cerebrum-central-sulcus-left__Central sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.051333,
+            0.048396,
+            0.053174
+          ],
+          "sourceObjects": [
+            "Central sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-central-sulcus-right": {
+          "centerBlender": [
+            -0.033703,
+            0.015673,
+            1.662547
+          ],
+          "kind": "part",
+          "name": "Central sulcus.r",
+          "nodes": [
+            "cerebrum-central-sulcus-right__Central sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.051333,
+            0.048396,
+            0.053174
+          ],
+          "sourceObjects": [
+            "Central sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-left": {
+          "centerBlender": [
+            0.007283,
+            -0.017104,
+            1.661575
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus and sulcus (Middle anterior part).l",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-left__Cingulate gyrus and sulcus (Middle anterior part).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.014549,
+            0.036675,
+            0.028944
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus and sulcus (Middle anterior part).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-right": {
+          "centerBlender": [
+            -0.007283,
+            -0.017104,
+            1.661575
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus and sulcus (Middle anterior part).r",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-right__Cingulate gyrus and sulcus (Middle anterior part).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.014549,
+            0.036675,
+            0.028944
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus and sulcus (Middle anterior part).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-left": {
+          "centerBlender": [
+            0.009059,
+            0.011698,
+            1.66206
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus and sulcus (Middle posterior part).l",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-left__Cingulate gyrus and sulcus (Middle posterior part).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018084,
+            0.033042,
+            0.018959
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus and sulcus (Middle posterior part).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-right": {
+          "centerBlender": [
+            -0.009059,
+            0.011698,
+            1.66206
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus and sulcus (Middle posterior part).r",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-right__Cingulate gyrus and sulcus (Middle posterior part).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018084,
+            0.033042,
+            0.018959
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus and sulcus (Middle posterior part).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-left": {
+          "centerBlender": [
+            0.00655,
+            0.036824,
+            1.652878
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus and sulcus (Posterior dorsal part).l",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-left__Cingulate gyrus and sulcus (Posterior dorsal part).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01307,
+            0.033998,
+            0.033058
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus and sulcus (Posterior dorsal part).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-right": {
+          "centerBlender": [
+            -0.00655,
+            0.036824,
+            1.652878
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus and sulcus (Posterior dorsal part).r",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-right__Cingulate gyrus and sulcus (Posterior dorsal part).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01307,
+            0.033998,
+            0.033058
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus and sulcus (Posterior dorsal part).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-posteroventral-part-left": {
+          "centerBlender": [
+            0.008669,
+            0.039575,
+            1.625351
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus (Posteroventral part*).l",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-posteroventral-part-left__Cingulate gyrus (Posteroventral part*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016306,
+            0.020352,
+            0.025839
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus (Posteroventral part*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-gyrus-posteroventral-part-right": {
+          "centerBlender": [
+            -0.008669,
+            0.039575,
+            1.625351
+          ],
+          "kind": "part",
+          "name": "Cingulate gyrus (Posteroventral part*).r",
+          "nodes": [
+            "cerebrum-cingulate-gyrus-posteroventral-part-right__Cingulate gyrus (Posteroventral part*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016306,
+            0.020352,
+            0.025839
+          ],
+          "sourceObjects": [
+            "Cingulate gyrus (Posteroventral part*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-sulcus-marginal-part-left": {
+          "centerBlender": [
+            0.010954,
+            0.038209,
+            1.669146
+          ],
+          "kind": "part",
+          "name": "Cingulate sulcus (Marginal part*).l",
+          "nodes": [
+            "cerebrum-cingulate-sulcus-marginal-part-left__Cingulate sulcus (Marginal part*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01944,
+            0.031992,
+            0.032463
+          ],
+          "sourceObjects": [
+            "Cingulate sulcus (Marginal part*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cingulate-sulcus-marginal-part-right": {
+          "centerBlender": [
+            -0.010954,
+            0.038209,
+            1.669146
+          ],
+          "kind": "part",
+          "name": "Cingulate sulcus (Marginal part*).r",
+          "nodes": [
+            "cerebrum-cingulate-sulcus-marginal-part-right__Cingulate sulcus (Marginal part*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01944,
+            0.031992,
+            0.032463
+          ],
+          "sourceObjects": [
+            "Cingulate sulcus (Marginal part*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-circular-sulcus-of-insula-left": {
+          "centerBlender": [
+            0.039256,
+            -0.011251,
+            1.63885
+          ],
+          "kind": "part",
+          "name": "Circular sulcus of insula.l",
+          "nodes": [
+            "cerebrum-circular-sulcus-of-insula-left__Circular sulcus of insula.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.019789,
+            0.059381,
+            0.017926
+          ],
+          "sourceObjects": [
+            "Circular sulcus of insula.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-circular-sulcus-of-insula-right": {
+          "centerBlender": [
+            -0.039256,
+            -0.011251,
+            1.63885
+          ],
+          "kind": "part",
+          "name": "Circular sulcus of insula.r",
+          "nodes": [
+            "cerebrum-circular-sulcus-of-insula-right__Circular sulcus of insula.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.019789,
+            0.059381,
+            0.017926
+          ],
+          "sourceObjects": [
+            "Circular sulcus of insula.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-collateral-sulcus-left": {
+          "centerBlender": [
+            0.024788,
+            0.036657,
+            1.605643
+          ],
+          "kind": "part",
+          "name": "Collateral sulcus.l",
+          "nodes": [
+            "cerebrum-collateral-sulcus-left__Collateral sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.031749,
+            0.083013,
+            0.026433
+          ],
+          "sourceObjects": [
+            "Collateral sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-collateral-sulcus-right": {
+          "centerBlender": [
+            -0.024788,
+            0.036657,
+            1.605643
+          ],
+          "kind": "part",
+          "name": "Collateral sulcus.r",
+          "nodes": [
+            "cerebrum-collateral-sulcus-right__Collateral sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.031749,
+            0.083013,
+            0.026434
+          ],
+          "sourceObjects": [
+            "Collateral sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-corpus-callosum": {
+          "centerBlender": [
+            0,
+            0.003142,
+            1.635181
+          ],
+          "kind": "part",
+          "name": "Corpus callosum",
+          "nodes": [
+            "cerebrum-corpus-callosum__Corpus callosum"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.04998,
+            0.088751,
+            0.037657
+          ],
+          "sourceObjects": [
+            "Corpus callosum"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cuneus-left": {
+          "centerBlender": [
+            0.009759,
+            0.074274,
+            1.630293
+          ],
+          "kind": "part",
+          "name": "Cuneus.l",
+          "nodes": [
+            "cerebrum-cuneus-left__Cuneus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01949,
+            0.049395,
+            0.032066
+          ],
+          "sourceObjects": [
+            "Cuneus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-cuneus-right": {
+          "centerBlender": [
+            -0.009759,
+            0.074274,
+            1.630293
+          ],
+          "kind": "part",
+          "name": "Cuneus.r",
+          "nodes": [
+            "cerebrum-cuneus-right__Cuneus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.01949,
+            0.049395,
+            0.032066
+          ],
+          "sourceObjects": [
+            "Cuneus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-fornix-left": {
+          "centerBlender": [
+            0.015308,
+            0.007744,
+            1.62316
+          ],
+          "kind": "part",
+          "name": "Fornix.l",
+          "nodes": [
+            "cerebrum-fornix-left__Fornix.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.030538,
+            0.043155,
+            0.03102
+          ],
+          "sourceObjects": [
+            "Fornix.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-fornix-right": {
+          "centerBlender": [
+            -0.015308,
+            0.007744,
+            1.62316
+          ],
+          "kind": "part",
+          "name": "Fornix.r",
+          "nodes": [
+            "cerebrum-fornix-right__Fornix.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.030538,
+            0.043155,
+            0.03102
+          ],
+          "sourceObjects": [
+            "Fornix.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-globus-pallidus-left": {
+          "centerBlender": [
+            0.020718,
+            -0.006219,
+            1.626606
+          ],
+          "kind": "part",
+          "name": "Globus pallidus.l",
+          "nodes": [
+            "cerebrum-globus-pallidus-left__Globus pallidus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016244,
+            0.028416,
+            0.016801
+          ],
+          "sourceObjects": [
+            "Globus pallidus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-globus-pallidus-right": {
+          "centerBlender": [
+            -0.020718,
+            -0.006219,
+            1.626606
+          ],
+          "kind": "part",
+          "name": "Globus pallidus.r",
+          "nodes": [
+            "cerebrum-globus-pallidus-right__Globus pallidus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016244,
+            0.028416,
+            0.016801
+          ],
+          "sourceObjects": [
+            "Globus pallidus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-habenula": {
+          "centerBlender": [
+            0,
+            0.018375,
+            1.618706
+          ],
+          "kind": "part",
+          "name": "Habenula",
+          "nodes": [
+            "cerebrum-habenula__Habenula"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.007343,
+            0.004948,
+            0.004019
+          ],
+          "sourceObjects": [
+            "Habenula"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-hippocampal-commissure": {
+          "centerBlender": [
+            0,
+            0.017053,
+            1.628242
+          ],
+          "kind": "part",
+          "name": "Hippocampal commissure",
+          "nodes": [
+            "cerebrum-hippocampal-commissure__Hippocampal commissure"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.047618,
+            0.026822,
+            0.01955
+          ],
+          "sourceObjects": [
+            "Hippocampal commissure"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-hippocampus-left": {
+          "centerBlender": [
+            0.026492,
+            0.007289,
+            1.612342
+          ],
+          "kind": "part",
+          "name": "Hippocampus.l",
+          "nodes": [
+            "cerebrum-hippocampus-left__Hippocampus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.019413,
+            0.041593,
+            0.021328
+          ],
+          "sourceObjects": [
+            "Hippocampus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-hippocampus-right": {
+          "centerBlender": [
+            -0.026492,
+            0.007289,
+            1.612342
+          ],
+          "kind": "part",
+          "name": "Hippocampus.r",
+          "nodes": [
+            "cerebrum-hippocampus-right__Hippocampus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.019413,
+            0.041593,
+            0.021328
+          ],
+          "sourceObjects": [
+            "Hippocampus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-hypothalamus": {
+          "centerBlender": [
+            -0.00015,
+            -0.015704,
+            1.385954
+          ],
+          "kind": "part",
+          "name": "Hypothalamus",
+          "nodes": [
+            "cerebrum-hypothalamus__Hypothalamus"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.019561,
+            0.023991,
+            0.475763
+          ],
+          "sourceObjects": [
+            "Hypothalamus"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-frontal-sulcus-left": {
+          "centerBlender": [
+            0.039382,
+            -0.032562,
+            1.652879
+          ],
+          "kind": "part",
+          "name": "Inferior frontal sulcus.l",
+          "nodes": [
+            "cerebrum-inferior-frontal-sulcus-left__Inferior frontal sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.023687,
+            0.053758,
+            0.054524
+          ],
+          "sourceObjects": [
+            "Inferior frontal sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-frontal-sulcus-right": {
+          "centerBlender": [
+            -0.039382,
+            -0.032562,
+            1.652879
+          ],
+          "kind": "part",
+          "name": "Inferior frontal sulcus.r",
+          "nodes": [
+            "cerebrum-inferior-frontal-sulcus-right__Inferior frontal sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.023687,
+            0.053758,
+            0.054524
+          ],
+          "sourceObjects": [
+            "Inferior frontal sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-occipital-gyrus-and-sulcus-left": {
+          "centerBlender": [
+            0.035064,
+            0.069715,
+            1.603671
+          ],
+          "kind": "part",
+          "name": "Inferior occipital gyrus and sulcus*.l",
+          "nodes": [
+            "cerebrum-inferior-occipital-gyrus-and-sulcus-left__Inferior occipital gyrus and sulcus*.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039853,
+            0.031549,
+            0.023709
+          ],
+          "sourceObjects": [
+            "Inferior occipital gyrus and sulcus*.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-occipital-gyrus-and-sulcus-right": {
+          "centerBlender": [
+            -0.035064,
+            0.069715,
+            1.603671
+          ],
+          "kind": "part",
+          "name": "Inferior occipital gyrus and sulcus*.r",
+          "nodes": [
+            "cerebrum-inferior-occipital-gyrus-and-sulcus-right__Inferior occipital gyrus and sulcus*.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039853,
+            0.031549,
+            0.023709
+          ],
+          "sourceObjects": [
+            "Inferior occipital gyrus and sulcus*.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-temporal-gyrus-left": {
+          "centerBlender": [
+            0.051172,
+            0.025919,
+            1.604546
+          ],
+          "kind": "part",
+          "name": "Inferior temporal gyrus.l",
+          "nodes": [
+            "cerebrum-inferior-temporal-gyrus-left__Inferior temporal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.025645,
+            0.089663,
+            0.044081
+          ],
+          "sourceObjects": [
+            "Inferior temporal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-temporal-gyrus-right": {
+          "centerBlender": [
+            -0.051172,
+            0.025919,
+            1.604546
+          ],
+          "kind": "part",
+          "name": "Inferior temporal gyrus.r",
+          "nodes": [
+            "cerebrum-inferior-temporal-gyrus-right__Inferior temporal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.025645,
+            0.089664,
+            0.044081
+          ],
+          "sourceObjects": [
+            "Inferior temporal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-temporal-sulcus-left": {
+          "centerBlender": [
+            0.042753,
+            0.010859,
+            1.597648
+          ],
+          "kind": "part",
+          "name": "Inferior temporal sulcus.l",
+          "nodes": [
+            "cerebrum-inferior-temporal-sulcus-left__Inferior temporal sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.010978,
+            0.033034,
+            0.02007
+          ],
+          "sourceObjects": [
+            "Inferior temporal sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-inferior-temporal-sulcus-right": {
+          "centerBlender": [
+            -0.042753,
+            0.010859,
+            1.597648
+          ],
+          "kind": "part",
+          "name": "Inferior temporal sulcus.r",
+          "nodes": [
+            "cerebrum-inferior-temporal-sulcus-right__Inferior temporal sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.010978,
+            0.033034,
+            0.02007
+          ],
+          "sourceObjects": [
+            "Inferior temporal sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-left": {
+          "centerBlender": [
+            0.054083,
+            0.001868,
+            1.637184
+          ],
+          "kind": "part",
+          "name": "Insula (Subcentral gyrus and ant. and post. sulci*).l",
+          "nodes": [
+            "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-left__Insula (Subcentral gyrus and ant. and post. sulci*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.02808,
+            0.037637,
+            0.022063
+          ],
+          "sourceObjects": [
+            "Insula (Subcentral gyrus and ant. and post. sulci*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-right": {
+          "centerBlender": [
+            -0.054083,
+            0.001868,
+            1.637184
+          ],
+          "kind": "part",
+          "name": "Insula (Subcentral gyrus and ant. and post. sulci*).r",
+          "nodes": [
+            "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-right__Insula (Subcentral gyrus and ant. and post. sulci*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.02808,
+            0.037637,
+            0.022063
+          ],
+          "sourceObjects": [
+            "Insula (Subcentral gyrus and ant. and post. sulci*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-intraparietal-sulcus-left": {
+          "centerBlender": [
+            0.028324,
+            0.057545,
+            1.660846
+          ],
+          "kind": "part",
+          "name": "Intraparietal sulcus.l",
+          "nodes": [
+            "cerebrum-intraparietal-sulcus-left__Intraparietal sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.026208,
+            0.03499,
+            0.025574
+          ],
+          "sourceObjects": [
+            "Intraparietal sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-intraparietal-sulcus-right": {
+          "centerBlender": [
+            -0.028324,
+            0.057545,
+            1.660846
+          ],
+          "kind": "part",
+          "name": "Intraparietal sulcus.r",
+          "nodes": [
+            "cerebrum-intraparietal-sulcus-right__Intraparietal sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.026208,
+            0.03499,
+            0.025574
+          ],
+          "sourceObjects": [
+            "Intraparietal sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lat-fis-ant-horizont-left": {
+          "centerBlender": [
+            0.0422,
+            -0.036115,
+            1.63249
+          ],
+          "kind": "part",
+          "name": "Lat_Fis-ant-Horizont.l",
+          "nodes": [
+            "cerebrum-lat-fis-ant-horizont-left__Lat_Fis-ant-Horizont.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017692,
+            0.011296,
+            0.011189
+          ],
+          "sourceObjects": [
+            "Lat_Fis-ant-Horizont.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lat-fis-ant-horizont-right": {
+          "centerBlender": [
+            -0.0422,
+            -0.036115,
+            1.63249
+          ],
+          "kind": "part",
+          "name": "Lat_Fis-ant-Horizont.r",
+          "nodes": [
+            "cerebrum-lat-fis-ant-horizont-right__Lat_Fis-ant-Horizont.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017692,
+            0.011296,
+            0.011189
+          ],
+          "sourceObjects": [
+            "Lat_Fis-ant-Horizont.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lat-fis-ant-vertical-left": {
+          "centerBlender": [
+            0.044953,
+            -0.028421,
+            1.646405
+          ],
+          "kind": "part",
+          "name": "Lat_Fis-ant-Vertical.l",
+          "nodes": [
+            "cerebrum-lat-fis-ant-vertical-left__Lat_Fis-ant-Vertical.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.015263,
+            0.01071,
+            0.013139
+          ],
+          "sourceObjects": [
+            "Lat_Fis-ant-Vertical.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lat-fis-ant-vertical-right": {
+          "centerBlender": [
+            -0.044953,
+            -0.028421,
+            1.646405
+          ],
+          "kind": "part",
+          "name": "Lat_Fis-ant-Vertical.r",
+          "nodes": [
+            "cerebrum-lat-fis-ant-vertical-right__Lat_Fis-ant-Vertical.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.015263,
+            0.01071,
+            0.013139
+          ],
+          "sourceObjects": [
+            "Lat_Fis-ant-Vertical.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lat-fis-post-left": {
+          "centerBlender": [
+            0.042719,
+            0.026781,
+            1.639633
+          ],
+          "kind": "part",
+          "name": "Lat_Fis-post.l",
+          "nodes": [
+            "cerebrum-lat-fis-post-left__Lat_Fis-post.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.024598,
+            0.023579,
+            0.023041
+          ],
+          "sourceObjects": [
+            "Lat_Fis-post.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lat-fis-post-right": {
+          "centerBlender": [
+            -0.042719,
+            0.026781,
+            1.639633
+          ],
+          "kind": "part",
+          "name": "Lat_Fis-post.r",
+          "nodes": [
+            "cerebrum-lat-fis-post-right__Lat_Fis-post.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.024598,
+            0.023579,
+            0.023041
+          ],
+          "sourceObjects": [
+            "Lat_Fis-post.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-geniculate-body-left": {
+          "centerBlender": [
+            0.019097,
+            0.013153,
+            1.612248
+          ],
+          "kind": "part",
+          "name": "Lateral geniculate body.l",
+          "nodes": [
+            "cerebrum-lateral-geniculate-body-left__Lateral geniculate body.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.008224,
+            0.011387,
+            0.006232
+          ],
+          "sourceObjects": [
+            "Lateral geniculate body.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-geniculate-body-right": {
+          "centerBlender": [
+            -0.019096,
+            0.013153,
+            1.612248
+          ],
+          "kind": "part",
+          "name": "Lateral geniculate body.r",
+          "nodes": [
+            "cerebrum-lateral-geniculate-body-right__Lateral geniculate body.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.008224,
+            0.011387,
+            0.006232
+          ],
+          "sourceObjects": [
+            "Lateral geniculate body.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-left": {
+          "centerBlender": [
+            0.034836,
+            0.078687,
+            1.621658
+          ],
+          "kind": "part",
+          "name": "Lateral occipital gyrus (Middle occipital gyrus*).l",
+          "nodes": [
+            "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-left__Lateral occipital gyrus (Middle occipital gyrus*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.029994,
+            0.027653,
+            0.044951
+          ],
+          "sourceObjects": [
+            "Lateral occipital gyrus (Middle occipital gyrus*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-right": {
+          "centerBlender": [
+            -0.034836,
+            0.078687,
+            1.621658
+          ],
+          "kind": "part",
+          "name": "Lateral occipital gyrus (Middle occipital gyrus*).r",
+          "nodes": [
+            "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-right__Lateral occipital gyrus (Middle occipital gyrus*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.029994,
+            0.027653,
+            0.044951
+          ],
+          "sourceObjects": [
+            "Lateral occipital gyrus (Middle occipital gyrus*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-occipitotemporal-gyrus-left": {
+          "centerBlender": [
+            0.036658,
+            0.035258,
+            1.60014
+          ],
+          "kind": "part",
+          "name": "Lateral occipitotemporal gyrus.l",
+          "nodes": [
+            "cerebrum-lateral-occipitotemporal-gyrus-left__Lateral occipitotemporal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.025815,
+            0.062338,
+            0.021982
+          ],
+          "sourceObjects": [
+            "Lateral occipitotemporal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-occipitotemporal-gyrus-right": {
+          "centerBlender": [
+            -0.036658,
+            0.035258,
+            1.60014
+          ],
+          "kind": "part",
+          "name": "Lateral occipitotemporal gyrus.r",
+          "nodes": [
+            "cerebrum-lateral-occipitotemporal-gyrus-right__Lateral occipitotemporal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.025815,
+            0.062338,
+            0.021982
+          ],
+          "sourceObjects": [
+            "Lateral occipitotemporal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-ventricle-left": {
+          "centerBlender": [
+            0.018916,
+            0.015573,
+            1.62645
+          ],
+          "kind": "part",
+          "name": "Lateral ventricle.l",
+          "nodes": [
+            "cerebrum-lateral-ventricle-left__Lateral ventricle.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.037363,
+            0.105943,
+            0.04716
+          ],
+          "sourceObjects": [
+            "Lateral ventricle.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lateral-ventricle-right": {
+          "centerBlender": [
+            -0.018916,
+            0.015573,
+            1.62645
+          ],
+          "kind": "part",
+          "name": "Lateral ventricle.r",
+          "nodes": [
+            "cerebrum-lateral-ventricle-right__Lateral ventricle.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.037363,
+            0.105943,
+            0.04716
+          ],
+          "sourceObjects": [
+            "Lateral ventricle.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lentiform-nucleus-left": {
+          "centerBlender": [
+            0.018403,
+            -0.003114,
+            1.63193
+          ],
+          "kind": "part",
+          "name": "Lentiform nucleus.l",
+          "nodes": [
+            "cerebrum-lentiform-nucleus-left__Lentiform nucleus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022191,
+            0.052329,
+            0.03212
+          ],
+          "sourceObjects": [
+            "Lentiform nucleus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lentiform-nucleus-right": {
+          "centerBlender": [
+            -0.018403,
+            -0.003114,
+            1.63193
+          ],
+          "kind": "part",
+          "name": "Lentiform nucleus.r",
+          "nodes": [
+            "cerebrum-lentiform-nucleus-right__Lentiform nucleus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022191,
+            0.052329,
+            0.03212
+          ],
+          "sourceObjects": [
+            "Lentiform nucleus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lingual-gyrus-left": {
+          "centerBlender": [
+            0.01692,
+            0.065881,
+            1.609906
+          ],
+          "kind": "part",
+          "name": "Lingual gyrus.l",
+          "nodes": [
+            "cerebrum-lingual-gyrus-left__Lingual gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.033814,
+            0.06091,
+            0.031374
+          ],
+          "sourceObjects": [
+            "Lingual gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lingual-gyrus-right": {
+          "centerBlender": [
+            -0.01692,
+            0.065881,
+            1.609906
+          ],
+          "kind": "part",
+          "name": "Lingual gyrus.r",
+          "nodes": [
+            "cerebrum-lingual-gyrus-right__Lingual gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.033814,
+            0.06091,
+            0.031374
+          ],
+          "sourceObjects": [
+            "Lingual gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lunate-sulcus-left": {
+          "centerBlender": [
+            0.031637,
+            0.080514,
+            1.617511
+          ],
+          "kind": "part",
+          "name": "Lunate sulcus.l",
+          "nodes": [
+            "cerebrum-lunate-sulcus-left__Lunate sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021702,
+            0.020974,
+            0.024054
+          ],
+          "sourceObjects": [
+            "Lunate sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-lunate-sulcus-right": {
+          "centerBlender": [
+            -0.031637,
+            0.080514,
+            1.617511
+          ],
+          "kind": "part",
+          "name": "Lunate sulcus.r",
+          "nodes": [
+            "cerebrum-lunate-sulcus-right__Lunate sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021702,
+            0.020974,
+            0.024054
+          ],
+          "sourceObjects": [
+            "Lunate sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-mamillary-body-left": {
+          "centerBlender": [
+            0.003315,
+            -0.00535,
+            1.6129
+          ],
+          "kind": "part",
+          "name": "Mamillary body.l",
+          "nodes": [
+            "cerebrum-mamillary-body-left__Mamillary body.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.003836,
+            0.004426,
+            0.004873
+          ],
+          "sourceObjects": [
+            "Mamillary body.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-mamillary-body-right": {
+          "centerBlender": [
+            -0.003315,
+            -0.00535,
+            1.6129
+          ],
+          "kind": "part",
+          "name": "Mamillary body.r",
+          "nodes": [
+            "cerebrum-mamillary-body-right__Mamillary body.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.003836,
+            0.004426,
+            0.004873
+          ],
+          "sourceObjects": [
+            "Mamillary body.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-medial-geniculate-body-left": {
+          "centerBlender": [
+            0.014018,
+            0.01347,
+            1.611868
+          ],
+          "kind": "part",
+          "name": "Medial geniculate body.l",
+          "nodes": [
+            "cerebrum-medial-geniculate-body-left__Medial geniculate body.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.006328,
+            0.006863,
+            0.007436
+          ],
+          "sourceObjects": [
+            "Medial geniculate body.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-medial-geniculate-body-right": {
+          "centerBlender": [
+            -0.014018,
+            0.01347,
+            1.611868
+          ],
+          "kind": "part",
+          "name": "Medial geniculate body.r",
+          "nodes": [
+            "cerebrum-medial-geniculate-body-right__Medial geniculate body.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.006328,
+            0.006863,
+            0.007436
+          ],
+          "sourceObjects": [
+            "Medial geniculate body.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-left": {
+          "centerBlender": [
+            0.02714,
+            0.010233,
+            1.601619
+          ],
+          "kind": "part",
+          "name": "Medial occipitotemporal gyrus (Parahippocampal*).l",
+          "nodes": [
+            "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-left__Medial occipitotemporal gyrus (Parahippocampal*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.031545,
+            0.058803,
+            0.03966
+          ],
+          "sourceObjects": [
+            "Medial occipitotemporal gyrus (Parahippocampal*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-right": {
+          "centerBlender": [
+            -0.02714,
+            0.010233,
+            1.601619
+          ],
+          "kind": "part",
+          "name": "Medial occipitotemporal gyrus (Parahippocampal*).r",
+          "nodes": [
+            "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-right__Medial occipitotemporal gyrus (Parahippocampal*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.031545,
+            0.058803,
+            0.03966
+          ],
+          "sourceObjects": [
+            "Medial occipitotemporal gyrus (Parahippocampal*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-middle-frontal-gyrus-left": {
+          "centerBlender": [
+            0.031821,
+            -0.033485,
+            1.659659
+          ],
+          "kind": "part",
+          "name": "Middle frontal gyrus.l",
+          "nodes": [
+            "cerebrum-middle-frontal-gyrus-left__Middle frontal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039284,
+            0.090959,
+            0.061548
+          ],
+          "sourceObjects": [
+            "Middle frontal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-middle-frontal-gyrus-right": {
+          "centerBlender": [
+            -0.031821,
+            -0.033485,
+            1.659659
+          ],
+          "kind": "part",
+          "name": "Middle frontal gyrus.r",
+          "nodes": [
+            "cerebrum-middle-frontal-gyrus-right__Middle frontal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039284,
+            0.090959,
+            0.061549
+          ],
+          "sourceObjects": [
+            "Middle frontal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-middle-temporal-gyrus-left": {
+          "centerBlender": [
+            0.053122,
+            0.023037,
+            1.614737
+          ],
+          "kind": "part",
+          "name": "Middle temporal gyrus.l",
+          "nodes": [
+            "cerebrum-middle-temporal-gyrus-left__Middle temporal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.028076,
+            0.100375,
+            0.045287
+          ],
+          "sourceObjects": [
+            "Middle temporal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-middle-temporal-gyrus-right": {
+          "centerBlender": [
+            -0.053121,
+            0.023037,
+            1.614737
+          ],
+          "kind": "part",
+          "name": "Middle temporal gyrus.r",
+          "nodes": [
+            "cerebrum-middle-temporal-gyrus-right__Middle temporal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.028076,
+            0.100375,
+            0.045287
+          ],
+          "sourceObjects": [
+            "Middle temporal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-occipital-pole-left": {
+          "centerBlender": [
+            0.016445,
+            0.084947,
+            1.6066
+          ],
+          "kind": "part",
+          "name": "Occipital pole.l",
+          "nodes": [
+            "cerebrum-occipital-pole-left__Occipital pole.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.031616,
+            0.028369,
+            0.034522
+          ],
+          "sourceObjects": [
+            "Occipital pole.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-occipital-pole-right": {
+          "centerBlender": [
+            -0.016445,
+            0.084947,
+            1.6066
+          ],
+          "kind": "part",
+          "name": "Occipital pole.r",
+          "nodes": [
+            "cerebrum-occipital-pole-right__Occipital pole.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.031616,
+            0.028369,
+            0.034522
+          ],
+          "sourceObjects": [
+            "Occipital pole.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-occipitotemporal-sulcus-lateral-part-left": {
+          "centerBlender": [
+            0.043732,
+            0.044088,
+            1.608235
+          ],
+          "kind": "part",
+          "name": "Occipitotemporal sulcus (Lateral part*).l",
+          "nodes": [
+            "cerebrum-occipitotemporal-sulcus-lateral-part-left__Occipitotemporal sulcus (Lateral part*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013027,
+            0.038533,
+            0.015939
+          ],
+          "sourceObjects": [
+            "Occipitotemporal sulcus (Lateral part*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-occipitotemporal-sulcus-lateral-part-right": {
+          "centerBlender": [
+            -0.043732,
+            0.044088,
+            1.608235
+          ],
+          "kind": "part",
+          "name": "Occipitotemporal sulcus (Lateral part*).r",
+          "nodes": [
+            "cerebrum-occipitotemporal-sulcus-lateral-part-right__Occipitotemporal sulcus (Lateral part*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013027,
+            0.038533,
+            0.015939
+          ],
+          "sourceObjects": [
+            "Occipitotemporal sulcus (Lateral part*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-olfactory-sulcus-left": {
+          "centerBlender": [
+            0.015333,
+            -0.038155,
+            1.616943
+          ],
+          "kind": "part",
+          "name": "Olfactory sulcus.l",
+          "nodes": [
+            "cerebrum-olfactory-sulcus-left__Olfactory sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021325,
+            0.057536,
+            0.015829
+          ],
+          "sourceObjects": [
+            "Olfactory sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-olfactory-sulcus-right": {
+          "centerBlender": [
+            -0.015333,
+            -0.038155,
+            1.616943
+          ],
+          "kind": "part",
+          "name": "Olfactory sulcus.r",
+          "nodes": [
+            "cerebrum-olfactory-sulcus-right__Olfactory sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021325,
+            0.057536,
+            0.015829
+          ],
+          "sourceObjects": [
+            "Olfactory sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-opercular-part-of-inferior-frontal-gyrus-left": {
+          "centerBlender": [
+            0.046913,
+            -0.021948,
+            1.64435
+          ],
+          "kind": "part",
+          "name": "Opercular part of inferior frontal gyrus.l",
+          "nodes": [
+            "cerebrum-opercular-part-of-inferior-frontal-gyrus-left__Opercular part of inferior frontal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022626,
+            0.039826,
+            0.039309
+          ],
+          "sourceObjects": [
+            "Opercular part of inferior frontal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-opercular-part-of-inferior-frontal-gyrus-right": {
+          "centerBlender": [
+            -0.046913,
+            -0.021948,
+            1.64435
+          ],
+          "kind": "part",
+          "name": "Opercular part of inferior frontal gyrus.r",
+          "nodes": [
+            "cerebrum-opercular-part-of-inferior-frontal-gyrus-right__Opercular part of inferior frontal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022626,
+            0.039826,
+            0.039309
+          ],
+          "sourceObjects": [
+            "Opercular part of inferior frontal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-optic-chiasm-left": {
+          "centerBlender": [
+            0.003591,
+            -0.016325,
+            1.612058
+          ],
+          "kind": "part",
+          "name": "Optic chiasm.l",
+          "nodes": [
+            "cerebrum-optic-chiasm-left__Optic chiasm.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.00711,
+            0.010004,
+            0.007854
+          ],
+          "sourceObjects": [
+            "Optic chiasm.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-optic-chiasm-right": {
+          "centerBlender": [
+            -0.003591,
+            -0.016325,
+            1.612058
+          ],
+          "kind": "part",
+          "name": "Optic chiasm.r",
+          "nodes": [
+            "cerebrum-optic-chiasm-right__Optic chiasm.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.00711,
+            0.010004,
+            0.007854
+          ],
+          "sourceObjects": [
+            "Optic chiasm.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-optic-tract-left": {
+          "centerBlender": [
+            0.012672,
+            -0.000079,
+            1.612082
+          ],
+          "kind": "part",
+          "name": "Optic tract.l",
+          "nodes": [
+            "cerebrum-optic-tract-left__Optic tract.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.024076,
+            0.036709,
+            0.007786
+          ],
+          "sourceObjects": [
+            "Optic tract.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-optic-tract-right": {
+          "centerBlender": [
+            -0.012672,
+            -0.000079,
+            1.612082
+          ],
+          "kind": "part",
+          "name": "Optic tract.r",
+          "nodes": [
+            "cerebrum-optic-tract-right__Optic tract.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.024076,
+            0.036709,
+            0.007786
+          ],
+          "sourceObjects": [
+            "Optic tract.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-left": {
+          "centerBlender": [
+            0.025751,
+            -0.06737,
+            1.634066
+          ],
+          "kind": "part",
+          "name": "Orbital gyri (Frontomarginal gyrus and sulcus*).l",
+          "nodes": [
+            "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-left__Orbital gyri (Frontomarginal gyrus and sulcus*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039677,
+            0.026835,
+            0.019701
+          ],
+          "sourceObjects": [
+            "Orbital gyri (Frontomarginal gyrus and sulcus*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-right": {
+          "centerBlender": [
+            -0.025751,
+            -0.06737,
+            1.634066
+          ],
+          "kind": "part",
+          "name": "Orbital gyri (Frontomarginal gyrus and sulcus*).r",
+          "nodes": [
+            "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-right__Orbital gyri (Frontomarginal gyrus and sulcus*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039677,
+            0.026835,
+            0.019701
+          ],
+          "sourceObjects": [
+            "Orbital gyri (Frontomarginal gyrus and sulcus*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-gyri-left": {
+          "centerBlender": [
+            0.028242,
+            -0.047162,
+            1.620748
+          ],
+          "kind": "part",
+          "name": "Orbital gyri.l",
+          "nodes": [
+            "cerebrum-orbital-gyri-left__Orbital gyri.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.048739,
+            0.061396,
+            0.027215
+          ],
+          "sourceObjects": [
+            "Orbital gyri.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-gyri-right": {
+          "centerBlender": [
+            -0.028242,
+            -0.047162,
+            1.620748
+          ],
+          "kind": "part",
+          "name": "Orbital gyri.r",
+          "nodes": [
+            "cerebrum-orbital-gyri-right__Orbital gyri.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.048739,
+            0.061396,
+            0.027215
+          ],
+          "sourceObjects": [
+            "Orbital gyri.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-part-of-inferior-frontal-gyrus-left": {
+          "centerBlender": [
+            0.044635,
+            -0.037361,
+            1.626826
+          ],
+          "kind": "part",
+          "name": "Orbital part of  inferior frontal gyrus.l",
+          "nodes": [
+            "cerebrum-orbital-part-of-inferior-frontal-gyrus-left__Orbital part of  inferior frontal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017275,
+            0.023107,
+            0.015187
+          ],
+          "sourceObjects": [
+            "Orbital part of  inferior frontal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-part-of-inferior-frontal-gyrus-right": {
+          "centerBlender": [
+            -0.044635,
+            -0.037361,
+            1.626827
+          ],
+          "kind": "part",
+          "name": "Orbital part of  inferior frontal gyrus.r",
+          "nodes": [
+            "cerebrum-orbital-part-of-inferior-frontal-gyrus-right__Orbital part of  inferior frontal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017275,
+            0.023107,
+            0.015187
+          ],
+          "sourceObjects": [
+            "Orbital part of  inferior frontal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-sulci-h-shaped-orbital-sulci-left": {
+          "centerBlender": [
+            0.028839,
+            -0.04828,
+            1.623155
+          ],
+          "kind": "part",
+          "name": "Orbital sulci (H-shaped orbital sulci*).l",
+          "nodes": [
+            "cerebrum-orbital-sulci-h-shaped-orbital-sulci-left__Orbital sulci (H-shaped orbital sulci*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.028455,
+            0.041526,
+            0.019158
+          ],
+          "sourceObjects": [
+            "Orbital sulci (H-shaped orbital sulci*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-sulci-h-shaped-orbital-sulci-right": {
+          "centerBlender": [
+            -0.028839,
+            -0.04828,
+            1.623155
+          ],
+          "kind": "part",
+          "name": "Orbital sulci (H-shaped orbital sulci*).r",
+          "nodes": [
+            "cerebrum-orbital-sulci-h-shaped-orbital-sulci-right__Orbital sulci (H-shaped orbital sulci*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.028455,
+            0.041526,
+            0.019158
+          ],
+          "sourceObjects": [
+            "Orbital sulci (H-shaped orbital sulci*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-sulci-lateral-orbital-sulcus-left": {
+          "centerBlender": [
+            0.047227,
+            -0.050132,
+            1.633959
+          ],
+          "kind": "part",
+          "name": "Orbital sulci (Lateral Orbital sulcus*).l",
+          "nodes": [
+            "cerebrum-orbital-sulci-lateral-orbital-sulcus-left__Orbital sulci (Lateral Orbital sulcus*).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013286,
+            0.014094,
+            0.016342
+          ],
+          "sourceObjects": [
+            "Orbital sulci (Lateral Orbital sulcus*).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-orbital-sulci-lateral-orbital-sulcus-right": {
+          "centerBlender": [
+            -0.047227,
+            -0.050132,
+            1.633959
+          ],
+          "kind": "part",
+          "name": "Orbital sulci (Lateral Orbital sulcus*).r",
+          "nodes": [
+            "cerebrum-orbital-sulci-lateral-orbital-sulcus-right__Orbital sulci (Lateral Orbital sulcus*).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013286,
+            0.014094,
+            0.016342
+          ],
+          "sourceObjects": [
+            "Orbital sulci (Lateral Orbital sulcus*).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-paracentral-gyrus-and-sulcus-left": {
+          "centerBlender": [
+            0.012038,
+            0.033653,
+            1.68086
+          ],
+          "kind": "part",
+          "name": "Paracentral gyrus and sulcus*.l",
+          "nodes": [
+            "cerebrum-paracentral-gyrus-and-sulcus-left__Paracentral gyrus and sulcus*.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.023887,
+            0.035924,
+            0.03755
+          ],
+          "sourceObjects": [
+            "Paracentral gyrus and sulcus*.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-paracentral-gyrus-and-sulcus-right": {
+          "centerBlender": [
+            -0.012038,
+            0.033653,
+            1.68086
+          ],
+          "kind": "part",
+          "name": "Paracentral gyrus and sulcus*.r",
+          "nodes": [
+            "cerebrum-paracentral-gyrus-and-sulcus-right__Paracentral gyrus and sulcus*.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.023887,
+            0.035924,
+            0.03755
+          ],
+          "sourceObjects": [
+            "Paracentral gyrus and sulcus*.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-paracentral-sulcus-left": {
+          "centerBlender": [
+            0.025098,
+            -0.053497,
+            1.657351
+          ],
+          "kind": "part",
+          "name": "Paracentral sulcus.l",
+          "nodes": [
+            "cerebrum-paracentral-sulcus-left__Paracentral sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018918,
+            0.036238,
+            0.033942
+          ],
+          "sourceObjects": [
+            "Paracentral sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-paracentral-sulcus-right": {
+          "centerBlender": [
+            -0.025098,
+            -0.053497,
+            1.657351
+          ],
+          "kind": "part",
+          "name": "Paracentral sulcus.r",
+          "nodes": [
+            "cerebrum-paracentral-sulcus-right__Paracentral sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018918,
+            0.036238,
+            0.033942
+          ],
+          "sourceObjects": [
+            "Paracentral sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-parieto-occipital-sulcus-left": {
+          "centerBlender": [
+            0.017376,
+            0.064463,
+            1.647449
+          ],
+          "kind": "part",
+          "name": "Parieto-occipital sulcus.l",
+          "nodes": [
+            "cerebrum-parieto-occipital-sulcus-left__Parieto-occipital sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022458,
+            0.029862,
+            0.050731
+          ],
+          "sourceObjects": [
+            "Parieto-occipital sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-parieto-occipital-sulcus-right": {
+          "centerBlender": [
+            -0.017376,
+            0.064463,
+            1.647449
+          ],
+          "kind": "part",
+          "name": "Parieto-occipital sulcus.r",
+          "nodes": [
+            "cerebrum-parieto-occipital-sulcus-right__Parieto-occipital sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022458,
+            0.029862,
+            0.050731
+          ],
+          "sourceObjects": [
+            "Parieto-occipital sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-postcentral-gyrus-left": {
+          "centerBlender": [
+            0.039316,
+            0.018766,
+            1.668296
+          ],
+          "kind": "part",
+          "name": "Postcentral gyrus.l",
+          "nodes": [
+            "cerebrum-postcentral-gyrus-left__Postcentral gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.052752,
+            0.051532,
+            0.05581
+          ],
+          "sourceObjects": [
+            "Postcentral gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-postcentral-gyrus-right": {
+          "centerBlender": [
+            -0.039316,
+            0.018766,
+            1.668296
+          ],
+          "kind": "part",
+          "name": "Postcentral gyrus.r",
+          "nodes": [
+            "cerebrum-postcentral-gyrus-right__Postcentral gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.052752,
+            0.051532,
+            0.05581
+          ],
+          "sourceObjects": [
+            "Postcentral gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-postcentral-sulcus-left": {
+          "centerBlender": [
+            0.039817,
+            0.029227,
+            1.667605
+          ],
+          "kind": "part",
+          "name": "Postcentral sulcus.l",
+          "nodes": [
+            "cerebrum-postcentral-sulcus-left__Postcentral sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.042246,
+            0.040576,
+            0.044727
+          ],
+          "sourceObjects": [
+            "Postcentral sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-postcentral-sulcus-right": {
+          "centerBlender": [
+            -0.039817,
+            0.029227,
+            1.667605
+          ],
+          "kind": "part",
+          "name": "Postcentral sulcus.r",
+          "nodes": [
+            "cerebrum-postcentral-sulcus-right__Postcentral sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.042246,
+            0.040576,
+            0.044727
+          ],
+          "sourceObjects": [
+            "Postcentral sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-posterior-commissure": {
+          "centerBlender": [
+            0,
+            0.014436,
+            1.616787
+          ],
+          "kind": "part",
+          "name": "Posterior commissure",
+          "nodes": [
+            "cerebrum-posterior-commissure__Posterior commissure"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.015074,
+            0.004891,
+            0.00265
+          ],
+          "sourceObjects": [
+            "Posterior commissure"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-posterior-transverse-collateral-sulcus-left": {
+          "centerBlender": [
+            0.024766,
+            0.068243,
+            1.602805
+          ],
+          "kind": "part",
+          "name": " Posterior transverse collateral sulcus.l",
+          "nodes": [
+            "cerebrum-posterior-transverse-collateral-sulcus-left__ Posterior transverse collateral sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018123,
+            0.014819,
+            0.013294
+          ],
+          "sourceObjects": [
+            " Posterior transverse collateral sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-posterior-transverse-collateral-sulcus-right": {
+          "centerBlender": [
+            -0.024766,
+            0.068243,
+            1.602805
+          ],
+          "kind": "part",
+          "name": " Posterior transverse collateral sulcus.r",
+          "nodes": [
+            "cerebrum-posterior-transverse-collateral-sulcus-right__ Posterior transverse collateral sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.018123,
+            0.014819,
+            0.013294
+          ],
+          "sourceObjects": [
+            " Posterior transverse collateral sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precentral-gyrus-left": {
+          "centerBlender": [
+            0.035781,
+            0.005638,
+            1.667939
+          ],
+          "kind": "part",
+          "name": "Precentral gyrus.l",
+          "nodes": [
+            "cerebrum-precentral-gyrus-left__Precentral gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.048624,
+            0.055557,
+            0.061305
+          ],
+          "sourceObjects": [
+            "Precentral gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precentral-gyrus-right": {
+          "centerBlender": [
+            -0.035781,
+            0.005638,
+            1.667939
+          ],
+          "kind": "part",
+          "name": "Precentral gyrus.r",
+          "nodes": [
+            "cerebrum-precentral-gyrus-right__Precentral gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.048624,
+            0.055557,
+            0.061305
+          ],
+          "sourceObjects": [
+            "Precentral gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precentral-sulcus-inferior-part-left": {
+          "centerBlender": [
+            0.0417,
+            -0.012107,
+            1.658605
+          ],
+          "kind": "part",
+          "name": "Precentral sulcus (inferior part)*.l",
+          "nodes": [
+            "cerebrum-precentral-sulcus-inferior-part-left__Precentral sulcus (inferior part)*.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.026398,
+            0.0253,
+            0.047885
+          ],
+          "sourceObjects": [
+            "Precentral sulcus (inferior part)*.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precentral-sulcus-inferior-part-right": {
+          "centerBlender": [
+            -0.0417,
+            -0.012107,
+            1.658605
+          ],
+          "kind": "part",
+          "name": "Precentral sulcus (inferior part)*.r",
+          "nodes": [
+            "cerebrum-precentral-sulcus-inferior-part-right__Precentral sulcus (inferior part)*.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.026398,
+            0.0253,
+            0.047885
+          ],
+          "sourceObjects": [
+            "Precentral sulcus (inferior part)*.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precentral-sulcus-superior-part-left": {
+          "centerBlender": [
+            0.029727,
+            0.007439,
+            1.677225
+          ],
+          "kind": "part",
+          "name": "Precentral sulcus (Superior part)*.l",
+          "nodes": [
+            "cerebrum-precentral-sulcus-superior-part-left__Precentral sulcus (Superior part)*.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039203,
+            0.020456,
+            0.026783
+          ],
+          "sourceObjects": [
+            "Precentral sulcus (Superior part)*.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precentral-sulcus-superior-part-right": {
+          "centerBlender": [
+            -0.029727,
+            0.007439,
+            1.677225
+          ],
+          "kind": "part",
+          "name": "Precentral sulcus (Superior part)*.r",
+          "nodes": [
+            "cerebrum-precentral-sulcus-superior-part-right__Precentral sulcus (Superior part)*.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.039203,
+            0.020456,
+            0.026783
+          ],
+          "sourceObjects": [
+            "Precentral sulcus (Superior part)*.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precuneus-left": {
+          "centerBlender": [
+            0.008231,
+            0.06032,
+            1.657503
+          ],
+          "kind": "part",
+          "name": "Precuneus.l",
+          "nodes": [
+            "cerebrum-precuneus-left__Precuneus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016451,
+            0.053918,
+            0.067806
+          ],
+          "sourceObjects": [
+            "Precuneus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-precuneus-right": {
+          "centerBlender": [
+            -0.008231,
+            0.06032,
+            1.657503
+          ],
+          "kind": "part",
+          "name": "Precuneus.r",
+          "nodes": [
+            "cerebrum-precuneus-right__Precuneus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.016451,
+            0.053918,
+            0.067806
+          ],
+          "sourceObjects": [
+            "Precuneus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-putamen-left": {
+          "centerBlender": [
+            0.025265,
+            -0.008212,
+            1.630075
+          ],
+          "kind": "part",
+          "name": "Putamen.l",
+          "nodes": [
+            "cerebrum-putamen-left__Putamen.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017683,
+            0.041647,
+            0.02519
+          ],
+          "sourceObjects": [
+            "Putamen.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-putamen-right": {
+          "centerBlender": [
+            -0.025265,
+            -0.008212,
+            1.630075
+          ],
+          "kind": "part",
+          "name": "Putamen.r",
+          "nodes": [
+            "cerebrum-putamen-right__Putamen.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017683,
+            0.041647,
+            0.02519
+          ],
+          "sourceObjects": [
+            "Putamen.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-septal-nuclei": {
+          "centerBlender": [
+            0.00004,
+            -0.017234,
+            1.617504
+          ],
+          "kind": "part",
+          "name": "Septal nuclei",
+          "nodes": [
+            "cerebrum-septal-nuclei__Septal nuclei"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.002726,
+            0.007099,
+            0.01155
+          ],
+          "sourceObjects": [
+            "Septal nuclei"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-septum-pellucidum": {
+          "centerBlender": [
+            0,
+            -0.002056,
+            1.634753
+          ],
+          "kind": "part",
+          "name": "Septum pellucidum",
+          "nodes": [
+            "cerebrum-septum-pellucidum__Septum pellucidum"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.020425,
+            0.060715,
+            0.022245
+          ],
+          "sourceObjects": [
+            "Septum pellucidum"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-straight-gyrus-gyrus-rectus-left": {
+          "centerBlender": [
+            0.006292,
+            -0.048907,
+            1.621998
+          ],
+          "kind": "part",
+          "name": "Straight gyrus (Gyrus rectus).l",
+          "nodes": [
+            "cerebrum-straight-gyrus-gyrus-rectus-left__Straight gyrus (Gyrus rectus).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.012006,
+            0.063796,
+            0.024759
+          ],
+          "sourceObjects": [
+            "Straight gyrus (Gyrus rectus).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-straight-gyrus-gyrus-rectus-right": {
+          "centerBlender": [
+            -0.006292,
+            -0.048907,
+            1.621998
+          ],
+          "kind": "part",
+          "name": "Straight gyrus (Gyrus rectus).r",
+          "nodes": [
+            "cerebrum-straight-gyrus-gyrus-rectus-right__Straight gyrus (Gyrus rectus).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.012006,
+            0.063796,
+            0.024759
+          ],
+          "sourceObjects": [
+            "Straight gyrus (Gyrus rectus).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-stria-medullaris-thalami-left": {
+          "centerBlender": [
+            0.005176,
+            0.003171,
+            1.624762
+          ],
+          "kind": "part",
+          "name": "Stria medullaris thalami.l",
+          "nodes": [
+            "cerebrum-stria-medullaris-thalami-left__Stria medullaris thalami.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.003688,
+            0.035715,
+            0.015134
+          ],
+          "sourceObjects": [
+            "Stria medullaris thalami.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-stria-medullaris-thalami-right": {
+          "centerBlender": [
+            -0.003697,
+            0.003171,
+            1.624762
+          ],
+          "kind": "part",
+          "name": "Stria medullaris thalami.r",
+          "nodes": [
+            "cerebrum-stria-medullaris-thalami-right__Stria medullaris thalami.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.003688,
+            0.035715,
+            0.015134
+          ],
+          "sourceObjects": [
+            "Stria medullaris thalami.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-stria-terminalis-left": {
+          "centerBlender": [
+            0.000645,
+            0.00476,
+            1.623955
+          ],
+          "kind": "part",
+          "name": "Stria terminalis.l",
+          "nodes": [
+            "cerebrum-stria-terminalis-left__Stria terminalis.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.053445,
+            0.042336,
+            0.0299
+          ],
+          "sourceObjects": [
+            "Stria terminalis.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-stria-terminalis-right": {
+          "centerBlender": [
+            -0.000645,
+            0.00476,
+            1.623955
+          ],
+          "kind": "part",
+          "name": "Stria terminalis.r",
+          "nodes": [
+            "cerebrum-stria-terminalis-right__Stria terminalis.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.053445,
+            0.042336,
+            0.0299
+          ],
+          "sourceObjects": [
+            "Stria terminalis.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-subparietal-sulcus-left": {
+          "centerBlender": [
+            0.007533,
+            0.051042,
+            1.654644
+          ],
+          "kind": "part",
+          "name": "Subparietal sulcus.l",
+          "nodes": [
+            "cerebrum-subparietal-sulcus-left__Subparietal sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.015054,
+            0.026554,
+            0.035836
+          ],
+          "sourceObjects": [
+            "Subparietal sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-subparietal-sulcus-right": {
+          "centerBlender": [
+            -0.007533,
+            0.051042,
+            1.654644
+          ],
+          "kind": "part",
+          "name": "Subparietal sulcus.r",
+          "nodes": [
+            "cerebrum-subparietal-sulcus-right__Subparietal sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.015054,
+            0.026554,
+            0.035836
+          ],
+          "sourceObjects": [
+            "Subparietal sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-sulcus-interm-prim-jensen-left": {
+          "centerBlender": [
+            0.04596,
+            0.051564,
+            1.652101
+          ],
+          "kind": "part",
+          "name": "Sulcus interm_prim-Jensen.l",
+          "nodes": [
+            "cerebrum-sulcus-interm-prim-jensen-left__Sulcus interm_prim-Jensen.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013675,
+            0.016508,
+            0.028304
+          ],
+          "sourceObjects": [
+            "Sulcus interm_prim-Jensen.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-sulcus-interm-prim-jensen-right": {
+          "centerBlender": [
+            -0.04596,
+            0.051564,
+            1.652101
+          ],
+          "kind": "part",
+          "name": "Sulcus interm_prim-Jensen.r",
+          "nodes": [
+            "cerebrum-sulcus-interm-prim-jensen-right__Sulcus interm_prim-Jensen.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.013675,
+            0.016508,
+            0.028304
+          ],
+          "sourceObjects": [
+            "Sulcus interm_prim-Jensen.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-frontal-gyrus-left": {
+          "centerBlender": [
+            0.014104,
+            -0.024261,
+            1.663673
+          ],
+          "kind": "part",
+          "name": "Superior frontal gyrus.l",
+          "nodes": [
+            "cerebrum-superior-frontal-gyrus-left__Superior frontal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.028175,
+            0.114564,
+            0.070896
+          ],
+          "sourceObjects": [
+            "Superior frontal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-frontal-gyrus-right": {
+          "centerBlender": [
+            -0.014104,
+            -0.024261,
+            1.663673
+          ],
+          "kind": "part",
+          "name": "Superior frontal gyrus.r",
+          "nodes": [
+            "cerebrum-superior-frontal-gyrus-right__Superior frontal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.028175,
+            0.114564,
+            0.070896
+          ],
+          "sourceObjects": [
+            "Superior frontal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-frontal-sulcus-left": {
+          "centerBlender": [
+            0.020492,
+            -0.021723,
+            1.675002
+          ],
+          "kind": "part",
+          "name": "Superior frontal sulcus.l",
+          "nodes": [
+            "cerebrum-superior-frontal-sulcus-left__Superior frontal sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.024359,
+            0.06736,
+            0.039586
+          ],
+          "sourceObjects": [
+            "Superior frontal sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-frontal-sulcus-right": {
+          "centerBlender": [
+            -0.020492,
+            -0.021723,
+            1.675002
+          ],
+          "kind": "part",
+          "name": "Superior frontal sulcus.r",
+          "nodes": [
+            "cerebrum-superior-frontal-sulcus-right__Superior frontal sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.024359,
+            0.06736,
+            0.039586
+          ],
+          "sourceObjects": [
+            "Superior frontal sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-occipital-gyri-left": {
+          "centerBlender": [
+            0.016729,
+            0.08708,
+            1.638693
+          ],
+          "kind": "part",
+          "name": "Superior occipital gyri.l",
+          "nodes": [
+            "cerebrum-superior-occipital-gyri-left__Superior occipital gyri.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.029515,
+            0.023786,
+            0.039678
+          ],
+          "sourceObjects": [
+            "Superior occipital gyri.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-occipital-gyri-right": {
+          "centerBlender": [
+            -0.016729,
+            0.08708,
+            1.638693
+          ],
+          "kind": "part",
+          "name": "Superior occipital gyri.r",
+          "nodes": [
+            "cerebrum-superior-occipital-gyri-right__Superior occipital gyri.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.029515,
+            0.023786,
+            0.039678
+          ],
+          "sourceObjects": [
+            "Superior occipital gyri.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-parietal-lobule-left": {
+          "centerBlender": [
+            0.020494,
+            0.064826,
+            1.670551
+          ],
+          "kind": "part",
+          "name": "Superior parietal lobule.l",
+          "nodes": [
+            "cerebrum-superior-parietal-lobule-left__Superior parietal lobule.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.036283,
+            0.044908,
+            0.041822
+          ],
+          "sourceObjects": [
+            "Superior parietal lobule.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-parietal-lobule-right": {
+          "centerBlender": [
+            -0.020494,
+            0.064826,
+            1.670551
+          ],
+          "kind": "part",
+          "name": "Superior parietal lobule.r",
+          "nodes": [
+            "cerebrum-superior-parietal-lobule-right__Superior parietal lobule.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.036283,
+            0.044908,
+            0.041822
+          ],
+          "sourceObjects": [
+            "Superior parietal lobule.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-temporal-gyrus-lateral-part-left": {
+          "centerBlender": [
+            0.056183,
+            0.006513,
+            1.62234
+          ],
+          "kind": "part",
+          "name": "Superior temporal gyrus (Lateral part).l",
+          "nodes": [
+            "cerebrum-superior-temporal-gyrus-lateral-part-left__Superior temporal gyrus (Lateral part).l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.025407,
+            0.082329,
+            0.042856
+          ],
+          "sourceObjects": [
+            "Superior temporal gyrus (Lateral part).l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-temporal-gyrus-lateral-part-right": {
+          "centerBlender": [
+            -0.056183,
+            0.006513,
+            1.62234
+          ],
+          "kind": "part",
+          "name": "Superior temporal gyrus (Lateral part).r",
+          "nodes": [
+            "cerebrum-superior-temporal-gyrus-lateral-part-right__Superior temporal gyrus (Lateral part).r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.025407,
+            0.082329,
+            0.042856
+          ],
+          "sourceObjects": [
+            "Superior temporal gyrus (Lateral part).r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-temporal-sulcus-left": {
+          "centerBlender": [
+            0.047034,
+            0.032405,
+            1.630282
+          ],
+          "kind": "part",
+          "name": "Superior temporal sulcus.l",
+          "nodes": [
+            "cerebrum-superior-temporal-sulcus-left__Superior temporal sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.03578,
+            0.098642,
+            0.051521
+          ],
+          "sourceObjects": [
+            "Superior temporal sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-superior-temporal-sulcus-right": {
+          "centerBlender": [
+            -0.047034,
+            0.032405,
+            1.630282
+          ],
+          "kind": "part",
+          "name": "Superior temporal sulcus.r",
+          "nodes": [
+            "cerebrum-superior-temporal-sulcus-right__Superior temporal sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.03578,
+            0.098642,
+            0.051521
+          ],
+          "sourceObjects": [
+            "Superior temporal sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-supramarginal-gyrus-left": {
+          "centerBlender": [
+            0.053014,
+            0.035022,
+            1.655516
+          ],
+          "kind": "part",
+          "name": "Supramarginal gyrus.l",
+          "nodes": [
+            "cerebrum-supramarginal-gyrus-left__Supramarginal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.030222,
+            0.048987,
+            0.043968
+          ],
+          "sourceObjects": [
+            "Supramarginal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-supramarginal-gyrus-right": {
+          "centerBlender": [
+            -0.053014,
+            0.035022,
+            1.655516
+          ],
+          "kind": "part",
+          "name": "Supramarginal gyrus.r",
+          "nodes": [
+            "cerebrum-supramarginal-gyrus-right__Supramarginal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.030222,
+            0.048987,
+            0.043968
+          ],
+          "sourceObjects": [
+            "Supramarginal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-temporal-plane-left": {
+          "centerBlender": [
+            0.056785,
+            0.032468,
+            1.641834
+          ],
+          "kind": "part",
+          "name": "Temporal plane.l",
+          "nodes": [
+            "cerebrum-temporal-plane-left__Temporal plane.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.020575,
+            0.043822,
+            0.027367
+          ],
+          "sourceObjects": [
+            "Temporal plane.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-temporal-plane-right": {
+          "centerBlender": [
+            -0.056785,
+            0.032468,
+            1.641834
+          ],
+          "kind": "part",
+          "name": "Temporal plane.r",
+          "nodes": [
+            "cerebrum-temporal-plane-right__Temporal plane.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.020575,
+            0.043822,
+            0.027367
+          ],
+          "sourceObjects": [
+            "Temporal plane.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-temporal-pole-left": {
+          "centerBlender": [
+            0.037003,
+            -0.016171,
+            1.596512
+          ],
+          "kind": "part",
+          "name": "Temporal pole.l",
+          "nodes": [
+            "cerebrum-temporal-pole-left__Temporal pole.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.029521,
+            0.041998,
+            0.027695
+          ],
+          "sourceObjects": [
+            "Temporal pole.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-temporal-pole-right": {
+          "centerBlender": [
+            -0.037003,
+            -0.016171,
+            1.596512
+          ],
+          "kind": "part",
+          "name": "Temporal pole.r",
+          "nodes": [
+            "cerebrum-temporal-pole-right__Temporal pole.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.029521,
+            0.041998,
+            0.027695
+          ],
+          "sourceObjects": [
+            "Temporal pole.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-thalamus-left": {
+          "centerBlender": [
+            0.011949,
+            0.008092,
+            1.625603
+          ],
+          "kind": "part",
+          "name": "Thalamus.l",
+          "nodes": [
+            "cerebrum-thalamus-left__Thalamus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022675,
+            0.03543,
+            0.022901
+          ],
+          "sourceObjects": [
+            "Thalamus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-thalamus-right": {
+          "centerBlender": [
+            -0.011949,
+            0.008092,
+            1.625603
+          ],
+          "kind": "part",
+          "name": "Thalamus.r",
+          "nodes": [
+            "cerebrum-thalamus-right__Thalamus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.022675,
+            0.03543,
+            0.022901
+          ],
+          "sourceObjects": [
+            "Thalamus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-third-ventricle": {
+          "centerBlender": [
+            0,
+            0.003254,
+            1.620957
+          ],
+          "kind": "part",
+          "name": "Third ventricle",
+          "nodes": [
+            "cerebrum-third-ventricle__Third ventricle"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.007572,
+            0.038933,
+            0.022426
+          ],
+          "sourceObjects": [
+            "Third ventricle"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-transverse-frontopolar-gyrus-and-sulcus-left": {
+          "centerBlender": [
+            0.0136,
+            -0.072886,
+            1.640719
+          ],
+          "kind": "part",
+          "name": "Transverse frontopolar gyrus and sulcus*.l",
+          "nodes": [
+            "cerebrum-transverse-frontopolar-gyrus-and-sulcus-left__Transverse frontopolar gyrus and sulcus*.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.023158,
+            0.017363,
+            0.015817
+          ],
+          "sourceObjects": [
+            "Transverse frontopolar gyrus and sulcus*.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-transverse-frontopolar-gyrus-and-sulcus-right": {
+          "centerBlender": [
+            -0.0136,
+            -0.072886,
+            1.640719
+          ],
+          "kind": "part",
+          "name": "Transverse frontopolar gyrus and sulcus*.r",
+          "nodes": [
+            "cerebrum-transverse-frontopolar-gyrus-and-sulcus-right__Transverse frontopolar gyrus and sulcus*.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.023158,
+            0.017363,
+            0.015817
+          ],
+          "sourceObjects": [
+            "Transverse frontopolar gyrus and sulcus*.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-transverse-occipital-sulcus-left": {
+          "centerBlender": [
+            0.022891,
+            0.074709,
+            1.627893
+          ],
+          "kind": "part",
+          "name": "Transverse occipital sulcus.l",
+          "nodes": [
+            "cerebrum-transverse-occipital-sulcus-left__Transverse occipital sulcus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017207,
+            0.025169,
+            0.028844
+          ],
+          "sourceObjects": [
+            "Transverse occipital sulcus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-transverse-occipital-sulcus-right": {
+          "centerBlender": [
+            -0.022891,
+            0.074709,
+            1.627893
+          ],
+          "kind": "part",
+          "name": "Transverse occipital sulcus.r",
+          "nodes": [
+            "cerebrum-transverse-occipital-sulcus-right__Transverse occipital sulcus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.017207,
+            0.025169,
+            0.028844
+          ],
+          "sourceObjects": [
+            "Transverse occipital sulcus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-transverse-temporal-gyri-left": {
+          "centerBlender": [
+            0.04623,
+            0.011194,
+            1.632775
+          ],
+          "kind": "part",
+          "name": "Transverse temporal gyri.l",
+          "nodes": [
+            "cerebrum-transverse-temporal-gyri-left__Transverse temporal gyri.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021282,
+            0.025443,
+            0.014419
+          ],
+          "sourceObjects": [
+            "Transverse temporal gyri.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-transverse-temporal-gyri-right": {
+          "centerBlender": [
+            -0.04623,
+            0.011194,
+            1.632775
+          ],
+          "kind": "part",
+          "name": "Transverse temporal gyri.r",
+          "nodes": [
+            "cerebrum-transverse-temporal-gyri-right__Transverse temporal gyri.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.021282,
+            0.025443,
+            0.014419
+          ],
+          "sourceObjects": [
+            "Transverse temporal gyri.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-triangular-part-of-inferior-frontal-gyrus-left": {
+          "centerBlender": [
+            0.047847,
+            -0.036221,
+            1.643414
+          ],
+          "kind": "part",
+          "name": "Triangular part of inferior frontal gyrus.l",
+          "nodes": [
+            "cerebrum-triangular-part-of-inferior-frontal-gyrus-left__Triangular part of inferior frontal gyrus.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.020471,
+            0.02244,
+            0.035336
+          ],
+          "sourceObjects": [
+            "Triangular part of inferior frontal gyrus.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-triangular-part-of-inferior-frontal-gyrus-right": {
+          "centerBlender": [
+            -0.047847,
+            -0.036221,
+            1.643414
+          ],
+          "kind": "part",
+          "name": "Triangular part of inferior frontal gyrus.r",
+          "nodes": [
+            "cerebrum-triangular-part-of-inferior-frontal-gyrus-right__Triangular part of inferior frontal gyrus.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.020471,
+            0.02244,
+            0.035336
+          ],
+          "sourceObjects": [
+            "Triangular part of inferior frontal gyrus.r"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-white-matter-of-telencephalon-left": {
+          "centerBlender": [
+            0.033136,
+            0.009579,
+            1.641468
+          ],
+          "kind": "part",
+          "name": "White matter of telencephalon.l",
+          "nodes": [
+            "cerebrum-white-matter-of-telencephalon-left__White matter of telencephalon.l"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.063492,
+            0.174936,
+            0.109559
+          ],
+          "sourceObjects": [
+            "White matter of telencephalon.l"
+          ],
+          "system": "nervous"
+        },
+        "cerebrum-white-matter-of-telencephalon-right": {
+          "centerBlender": [
+            -0.033136,
+            0.009579,
+            1.641468
+          ],
+          "kind": "part",
+          "name": "White matter of telencephalon.r",
+          "nodes": [
+            "cerebrum-white-matter-of-telencephalon-right__White matter of telencephalon.r"
+          ],
+          "parentId": "cerebrum",
+          "selectable": true,
+          "sizeBlender": [
+            0.063492,
+            0.174936,
+            0.109559
+          ],
+          "sourceObjects": [
+            "White matter of telencephalon.r"
+          ],
+          "system": "nervous"
+        }
+      },
+      "system": "nervous"
+    }
+  }
+}

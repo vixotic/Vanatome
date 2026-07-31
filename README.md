@@ -47,7 +47,7 @@ around a curated, Z-Anatomy-derived human atlas.
 
 | **Navigate the hierarchy** | **Bring your own UI** | **Stay static** |
 |:---|:---|:---|
-| Search 320 stable anatomy entries across eight curated systems. | The React viewer is controlled, composable, and designed to live inside your product. | No backend, account system, analytics service, or paid platform is required. |
+| Search 782 stable anatomy entries across eleven curated systems. | The React viewer is controlled, composable, and designed to live inside your product. | No backend, account system, analytics service, or paid platform is required. |
 
 <table>
   <tr>
@@ -82,7 +82,7 @@ import {
 
 const atlasLoader = createOfficialHumanAtlas({
   catalogUrl:
-    "https://atlas.vanatome.vixotic.in/releases/1.2.0/catalog.json",
+    "https://atlas.vanatome.vixotic.in/releases/1.3.0/catalog.json",
 });
 
 export function Anatomy() {
@@ -135,17 +135,17 @@ catalog, metadata, attribution, and model files on any static host.
 ## What ships today
 
 ```text
-320  stable anatomy entries
-293  geometry-mapped anatomy IDs
-528  mapped GLB nodes
-  8  curated anatomy systems
+782  stable anatomy entries
+725  geometry-mapped anatomy IDs
+960  mapped GLB nodes
+ 11  curated anatomy systems
   0  required servers
 ```
 
 - Hover, drag-safe picking, orbit, pan, zoom, bounds-based focus, isolate, and reset
 - Recursive system → organ → part hierarchy
-- Cardiovascular, digestive, lymphatic, nervous, respiratory, skeletal, and
-  urinary layers
+- Cardiovascular, digestive, endocrine, lymphatic, muscular, nervous,
+  reproductive, respiratory, skeletal, urinary, and regional-anatomy layers
 - Normal, x-ray, and ghost display modes with controlled visibility
 - Selected-only, parent, and translucent-parent isolation modes
 - Explicit model loading, progress, ready, error, and WebGL-loss events

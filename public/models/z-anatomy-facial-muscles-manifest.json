@@ -1,0 +1,936 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "facial-muscles"
+  },
+  "build": {
+    "id": "c884843a8d429c47",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "e4fa7cb73edd7774db6d202c9fed1fab80077aebba0c890ae60543eef89cdbed"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 422552,
+    "sha256": "d725c756d82ab2952263e53e91428d4465af3a59e51ac121b0c9470c00832b8d"
+  },
+  "objectCount": 34,
+  "groups": {
+    "facial-expression-muscles": {
+      "centerBlender": [
+        0,
+        -0.071096,
+        1.564156
+      ],
+      "missing": [],
+      "name": "Facial Expression Muscles",
+      "nodes": [
+        "facial-expression-muscles-bucinator-left__Bucinator.l",
+        "facial-expression-muscles-bucinator-right__Bucinator.r",
+        "facial-expression-muscles-corrugator-supercilii-left__Corrugator supercilii.l",
+        "facial-expression-muscles-corrugator-supercilii-right__Corrugator supercilii.r",
+        "facial-expression-muscles-depressor-anguli-oris-left__Depressor anguli oris.l",
+        "facial-expression-muscles-depressor-anguli-oris-right__Depressor anguli oris.r",
+        "facial-expression-muscles-depressor-labii-inferioris-left__Depressor labii inferioris.l",
+        "facial-expression-muscles-depressor-labii-inferioris-right__Depressor labii inferioris.r",
+        "facial-expression-muscles-depressor-septi-nasi-left__Depressor septi nasi.l",
+        "facial-expression-muscles-depressor-septi-nasi-right__Depressor septi nasi.r",
+        "facial-expression-muscles-levator-anguli-oris-left__Levator anguli oris.l",
+        "facial-expression-muscles-levator-anguli-oris-right__Levator anguli oris.r",
+        "facial-expression-muscles-levator-labii-superioris-left__Levator labii superioris.l",
+        "facial-expression-muscles-levator-labii-superioris-right__Levator labii superioris.r",
+        "facial-expression-muscles-levator-nasolabialis-left__Levator nasolabialis.l",
+        "facial-expression-muscles-levator-nasolabialis-right__Levator nasolabialis.r",
+        "facial-expression-muscles-mentalis-muscle-left__Mentalis muscle.l",
+        "facial-expression-muscles-mentalis-muscle-right__Mentalis muscle.r",
+        "facial-expression-muscles-nasalis-muscle-left__Nasalis muscle.l",
+        "facial-expression-muscles-nasalis-muscle-right__Nasalis muscle.r",
+        "facial-expression-muscles-orbicularis-oris-muscle-left__Orbicularis oris muscle.l",
+        "facial-expression-muscles-orbicularis-oris-muscle-right__Orbicularis oris muscle.r",
+        "facial-expression-muscles-orbital-part-of-orbicularis-oculi-left__Orbital part of orbicularis oculi.l",
+        "facial-expression-muscles-orbital-part-of-orbicularis-oculi-right__Orbital part of orbicularis oculi.r",
+        "facial-expression-muscles-palpebral-part-of-orbicularis-oculi-left__Palpebral part of orbicularis oculi.l",
+        "facial-expression-muscles-palpebral-part-of-orbicularis-oculi-right__Palpebral part of orbicularis oculi.r",
+        "facial-expression-muscles-procerus-muscle-left__Procerus muscle.l",
+        "facial-expression-muscles-procerus-muscle-right__Procerus muscle.r",
+        "facial-expression-muscles-risorius-muscle-left__Risorius muscle.l",
+        "facial-expression-muscles-risorius-muscle-right__Risorius muscle.r",
+        "facial-expression-muscles-zygomaticus-major-muscle-left__Zygomaticus major muscle.l",
+        "facial-expression-muscles-zygomaticus-major-muscle-right__Zygomaticus major muscle.r",
+        "facial-expression-muscles-zygomaticus-minor-muscle-left__Zygomaticus minor muscle.l",
+        "facial-expression-muscles-zygomaticus-minor-muscle-right__Zygomaticus minor muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.110955,
+        0.057989,
+        0.13232
+      ],
+      "sourceObjects": [
+        "Bucinator.l",
+        "Bucinator.r",
+        "Corrugator supercilii.l",
+        "Corrugator supercilii.r",
+        "Depressor anguli oris.l",
+        "Depressor anguli oris.r",
+        "Depressor labii inferioris.l",
+        "Depressor labii inferioris.r",
+        "Depressor septi nasi.l",
+        "Depressor septi nasi.r",
+        "Levator anguli oris.l",
+        "Levator anguli oris.r",
+        "Levator labii superioris.l",
+        "Levator labii superioris.r",
+        "Levator nasolabialis.l",
+        "Levator nasolabialis.r",
+        "Mentalis muscle.l",
+        "Mentalis muscle.r",
+        "Nasalis muscle.l",
+        "Nasalis muscle.r",
+        "Orbicularis oris muscle.l",
+        "Orbicularis oris muscle.r",
+        "Orbital part of orbicularis oculi.l",
+        "Orbital part of orbicularis oculi.r",
+        "Palpebral part of orbicularis oculi.l",
+        "Palpebral part of orbicularis oculi.r",
+        "Procerus muscle.l",
+        "Procerus muscle.r",
+        "Risorius muscle.l",
+        "Risorius muscle.r",
+        "Zygomaticus major muscle.l",
+        "Zygomaticus major muscle.r",
+        "Zygomaticus minor muscle.l",
+        "Zygomaticus minor muscle.r"
+      ],
+      "structures": {
+        "facial-expression-muscles": {
+          "centerBlender": [
+            0,
+            -0.071096,
+            1.564156
+          ],
+          "kind": "organ",
+          "name": "Facial Expression Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.110955,
+            0.057989,
+            0.13232
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-bucinator-left": {
+          "centerBlender": [
+            0.028368,
+            -0.056556,
+            1.532872
+          ],
+          "kind": "part",
+          "name": "Bucinator.l",
+          "nodes": [
+            "facial-expression-muscles-bucinator-left__Bucinator.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.014977,
+            0.02891,
+            0.036311
+          ],
+          "sourceObjects": [
+            "Bucinator.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-bucinator-right": {
+          "centerBlender": [
+            -0.028368,
+            -0.056556,
+            1.532872
+          ],
+          "kind": "part",
+          "name": "Bucinator.r",
+          "nodes": [
+            "facial-expression-muscles-bucinator-right__Bucinator.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.014977,
+            0.02891,
+            0.036311
+          ],
+          "sourceObjects": [
+            "Bucinator.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-corrugator-supercilii-left": {
+          "centerBlender": [
+            0.020232,
+            -0.080497,
+            1.611551
+          ],
+          "kind": "part",
+          "name": "Corrugator supercilii.l",
+          "nodes": [
+            "facial-expression-muscles-corrugator-supercilii-left__Corrugator supercilii.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.02265,
+            0.007032,
+            0.018978
+          ],
+          "sourceObjects": [
+            "Corrugator supercilii.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-corrugator-supercilii-right": {
+          "centerBlender": [
+            -0.020232,
+            -0.080497,
+            1.611551
+          ],
+          "kind": "part",
+          "name": "Corrugator supercilii.r",
+          "nodes": [
+            "facial-expression-muscles-corrugator-supercilii-right__Corrugator supercilii.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.02265,
+            0.007032,
+            0.018978
+          ],
+          "sourceObjects": [
+            "Corrugator supercilii.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-depressor-anguli-oris-left": {
+          "centerBlender": [
+            0.023883,
+            -0.0627,
+            1.518821
+          ],
+          "kind": "part",
+          "name": "Depressor anguli oris.l",
+          "nodes": [
+            "facial-expression-muscles-depressor-anguli-oris-left__Depressor anguli oris.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024335,
+            0.023976,
+            0.041651
+          ],
+          "sourceObjects": [
+            "Depressor anguli oris.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-depressor-anguli-oris-right": {
+          "centerBlender": [
+            -0.023883,
+            -0.0627,
+            1.518821
+          ],
+          "kind": "part",
+          "name": "Depressor anguli oris.r",
+          "nodes": [
+            "facial-expression-muscles-depressor-anguli-oris-right__Depressor anguli oris.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.024335,
+            0.023976,
+            0.041651
+          ],
+          "sourceObjects": [
+            "Depressor anguli oris.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-depressor-labii-inferioris-left": {
+          "centerBlender": [
+            0.015861,
+            -0.071998,
+            1.515093
+          ],
+          "kind": "part",
+          "name": "Depressor labii inferioris.l",
+          "nodes": [
+            "facial-expression-muscles-depressor-labii-inferioris-left__Depressor labii inferioris.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.030598,
+            0.027267,
+            0.029503
+          ],
+          "sourceObjects": [
+            "Depressor labii inferioris.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-depressor-labii-inferioris-right": {
+          "centerBlender": [
+            -0.015861,
+            -0.071998,
+            1.515093
+          ],
+          "kind": "part",
+          "name": "Depressor labii inferioris.r",
+          "nodes": [
+            "facial-expression-muscles-depressor-labii-inferioris-right__Depressor labii inferioris.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.030598,
+            0.027267,
+            0.029503
+          ],
+          "sourceObjects": [
+            "Depressor labii inferioris.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-depressor-septi-nasi-left": {
+          "centerBlender": [
+            0.008372,
+            -0.085459,
+            1.549777
+          ],
+          "kind": "part",
+          "name": "Depressor septi nasi.l",
+          "nodes": [
+            "facial-expression-muscles-depressor-septi-nasi-left__Depressor septi nasi.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.016647,
+            0.007574,
+            0.016131
+          ],
+          "sourceObjects": [
+            "Depressor septi nasi.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-depressor-septi-nasi-right": {
+          "centerBlender": [
+            -0.008372,
+            -0.085459,
+            1.549777
+          ],
+          "kind": "part",
+          "name": "Depressor septi nasi.r",
+          "nodes": [
+            "facial-expression-muscles-depressor-septi-nasi-right__Depressor septi nasi.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.016647,
+            0.007574,
+            0.016131
+          ],
+          "sourceObjects": [
+            "Depressor septi nasi.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-levator-anguli-oris-left": {
+          "centerBlender": [
+            0.020532,
+            -0.07565,
+            1.552472
+          ],
+          "kind": "part",
+          "name": "Levator anguli oris.l",
+          "nodes": [
+            "facial-expression-muscles-levator-anguli-oris-left__Levator anguli oris.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.017046,
+            0.015579,
+            0.02005
+          ],
+          "sourceObjects": [
+            "Levator anguli oris.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-levator-anguli-oris-right": {
+          "centerBlender": [
+            -0.020532,
+            -0.07565,
+            1.552472
+          ],
+          "kind": "part",
+          "name": "Levator anguli oris.r",
+          "nodes": [
+            "facial-expression-muscles-levator-anguli-oris-right__Levator anguli oris.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.017046,
+            0.015579,
+            0.02005
+          ],
+          "sourceObjects": [
+            "Levator anguli oris.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-levator-labii-superioris-left": {
+          "centerBlender": [
+            0.025333,
+            -0.076444,
+            1.561779
+          ],
+          "kind": "part",
+          "name": "Levator labii superioris.l",
+          "nodes": [
+            "facial-expression-muscles-levator-labii-superioris-left__Levator labii superioris.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.026989,
+            0.014875,
+            0.028937
+          ],
+          "sourceObjects": [
+            "Levator labii superioris.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-levator-labii-superioris-right": {
+          "centerBlender": [
+            -0.025333,
+            -0.076444,
+            1.561779
+          ],
+          "kind": "part",
+          "name": "Levator labii superioris.r",
+          "nodes": [
+            "facial-expression-muscles-levator-labii-superioris-right__Levator labii superioris.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.026989,
+            0.014875,
+            0.028937
+          ],
+          "sourceObjects": [
+            "Levator labii superioris.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-levator-nasolabialis-left": {
+          "centerBlender": [
+            0.013363,
+            -0.080764,
+            1.572114
+          ],
+          "kind": "part",
+          "name": "Levator nasolabialis.l",
+          "nodes": [
+            "facial-expression-muscles-levator-nasolabialis-left__Levator nasolabialis.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.005452,
+            0.007228,
+            0.029106
+          ],
+          "sourceObjects": [
+            "Levator nasolabialis.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-levator-nasolabialis-right": {
+          "centerBlender": [
+            -0.013363,
+            -0.080764,
+            1.572114
+          ],
+          "kind": "part",
+          "name": "Levator nasolabialis.r",
+          "nodes": [
+            "facial-expression-muscles-levator-nasolabialis-right__Levator nasolabialis.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.005452,
+            0.007228,
+            0.029106
+          ],
+          "sourceObjects": [
+            "Levator nasolabialis.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-mentalis-muscle-left": {
+          "centerBlender": [
+            0.007632,
+            -0.078891,
+            1.505473
+          ],
+          "kind": "part",
+          "name": "Mentalis muscle.l",
+          "nodes": [
+            "facial-expression-muscles-mentalis-muscle-left__Mentalis muscle.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.013693,
+            0.007083,
+            0.014756
+          ],
+          "sourceObjects": [
+            "Mentalis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-mentalis-muscle-right": {
+          "centerBlender": [
+            -0.007632,
+            -0.078891,
+            1.505473
+          ],
+          "kind": "part",
+          "name": "Mentalis muscle.r",
+          "nodes": [
+            "facial-expression-muscles-mentalis-muscle-right__Mentalis muscle.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.013693,
+            0.007083,
+            0.014756
+          ],
+          "sourceObjects": [
+            "Mentalis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-nasalis-muscle-left": {
+          "centerBlender": [
+            0.008231,
+            -0.089191,
+            1.583341
+          ],
+          "kind": "part",
+          "name": "Nasalis muscle.l",
+          "nodes": [
+            "facial-expression-muscles-nasalis-muscle-left__Nasalis muscle.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.013252,
+            0.021799,
+            0.040319
+          ],
+          "sourceObjects": [
+            "Nasalis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-nasalis-muscle-right": {
+          "centerBlender": [
+            -0.008231,
+            -0.089191,
+            1.583341
+          ],
+          "kind": "part",
+          "name": "Nasalis muscle.r",
+          "nodes": [
+            "facial-expression-muscles-nasalis-muscle-right__Nasalis muscle.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.013252,
+            0.021799,
+            0.040319
+          ],
+          "sourceObjects": [
+            "Nasalis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-orbicularis-oris-muscle-left": {
+          "centerBlender": [
+            0.01609,
+            -0.081318,
+            1.531385
+          ],
+          "kind": "part",
+          "name": "Orbicularis oris muscle.l",
+          "nodes": [
+            "facial-expression-muscles-orbicularis-oris-muscle-left__Orbicularis oris muscle.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.032105,
+            0.027604,
+            0.045393
+          ],
+          "sourceObjects": [
+            "Orbicularis oris muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-orbicularis-oris-muscle-right": {
+          "centerBlender": [
+            -0.01609,
+            -0.081318,
+            1.531385
+          ],
+          "kind": "part",
+          "name": "Orbicularis oris muscle.r",
+          "nodes": [
+            "facial-expression-muscles-orbicularis-oris-muscle-right__Orbicularis oris muscle.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.032105,
+            0.027604,
+            0.045393
+          ],
+          "sourceObjects": [
+            "Orbicularis oris muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-orbital-part-of-orbicularis-oculi-left": {
+          "centerBlender": [
+            0.031227,
+            -0.071203,
+            1.592254
+          ],
+          "kind": "part",
+          "name": "Orbital part of orbicularis oculi.l",
+          "nodes": [
+            "facial-expression-muscles-orbital-part-of-orbicularis-oculi-left__Orbital part of orbicularis oculi.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.044277,
+            0.031544,
+            0.04977
+          ],
+          "sourceObjects": [
+            "Orbital part of orbicularis oculi.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-orbital-part-of-orbicularis-oculi-right": {
+          "centerBlender": [
+            -0.031227,
+            -0.071203,
+            1.592254
+          ],
+          "kind": "part",
+          "name": "Orbital part of orbicularis oculi.r",
+          "nodes": [
+            "facial-expression-muscles-orbital-part-of-orbicularis-oculi-right__Orbital part of orbicularis oculi.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.044277,
+            0.031544,
+            0.04977
+          ],
+          "sourceObjects": [
+            "Orbital part of orbicularis oculi.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-palpebral-part-of-orbicularis-oculi-left": {
+          "centerBlender": [
+            0.029561,
+            -0.072331,
+            1.591259
+          ],
+          "kind": "part",
+          "name": "Palpebral part of orbicularis oculi.l",
+          "nodes": [
+            "facial-expression-muscles-palpebral-part-of-orbicularis-oculi-left__Palpebral part of orbicularis oculi.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.033621,
+            0.017868,
+            0.024496
+          ],
+          "sourceObjects": [
+            "Palpebral part of orbicularis oculi.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-palpebral-part-of-orbicularis-oculi-right": {
+          "centerBlender": [
+            -0.029561,
+            -0.072331,
+            1.591259
+          ],
+          "kind": "part",
+          "name": "Palpebral part of orbicularis oculi.r",
+          "nodes": [
+            "facial-expression-muscles-palpebral-part-of-orbicularis-oculi-right__Palpebral part of orbicularis oculi.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.033621,
+            0.017868,
+            0.024496
+          ],
+          "sourceObjects": [
+            "Palpebral part of orbicularis oculi.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-procerus-muscle-left": {
+          "centerBlender": [
+            0.011648,
+            -0.086406,
+            1.612045
+          ],
+          "kind": "part",
+          "name": "Procerus muscle.l",
+          "nodes": [
+            "facial-expression-muscles-procerus-muscle-left__Procerus muscle.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.023211,
+            0.006087,
+            0.036541
+          ],
+          "sourceObjects": [
+            "Procerus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-procerus-muscle-right": {
+          "centerBlender": [
+            -0.011648,
+            -0.086406,
+            1.612045
+          ],
+          "kind": "part",
+          "name": "Procerus muscle.r",
+          "nodes": [
+            "facial-expression-muscles-procerus-muscle-right__Procerus muscle.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.023211,
+            0.006087,
+            0.036541
+          ],
+          "sourceObjects": [
+            "Procerus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-risorius-muscle-left": {
+          "centerBlender": [
+            0.038556,
+            -0.057606,
+            1.528629
+          ],
+          "kind": "part",
+          "name": "Risorius muscle.l",
+          "nodes": [
+            "facial-expression-muscles-risorius-muscle-left__Risorius muscle.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.019725,
+            0.027523,
+            0.027164
+          ],
+          "sourceObjects": [
+            "Risorius muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-risorius-muscle-right": {
+          "centerBlender": [
+            -0.038556,
+            -0.057606,
+            1.528629
+          ],
+          "kind": "part",
+          "name": "Risorius muscle.r",
+          "nodes": [
+            "facial-expression-muscles-risorius-muscle-right__Risorius muscle.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.019725,
+            0.027523,
+            0.027164
+          ],
+          "sourceObjects": [
+            "Risorius muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-zygomaticus-major-muscle-left": {
+          "centerBlender": [
+            0.040786,
+            -0.063172,
+            1.551594
+          ],
+          "kind": "part",
+          "name": "Zygomaticus major muscle.l",
+          "nodes": [
+            "facial-expression-muscles-zygomaticus-major-muscle-left__Zygomaticus major muscle.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.029383,
+            0.025645,
+            0.054529
+          ],
+          "sourceObjects": [
+            "Zygomaticus major muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-zygomaticus-major-muscle-right": {
+          "centerBlender": [
+            -0.040786,
+            -0.063172,
+            1.551594
+          ],
+          "kind": "part",
+          "name": "Zygomaticus major muscle.r",
+          "nodes": [
+            "facial-expression-muscles-zygomaticus-major-muscle-right__Zygomaticus major muscle.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.029383,
+            0.025645,
+            0.054529
+          ],
+          "sourceObjects": [
+            "Zygomaticus major muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-zygomaticus-minor-muscle-left": {
+          "centerBlender": [
+            0.03154,
+            -0.072355,
+            1.561995
+          ],
+          "kind": "part",
+          "name": "Zygomaticus minor muscle.l",
+          "nodes": [
+            "facial-expression-muscles-zygomaticus-minor-muscle-left__Zygomaticus minor muscle.l"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.037607,
+            0.024615,
+            0.030639
+          ],
+          "sourceObjects": [
+            "Zygomaticus minor muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "facial-expression-muscles-zygomaticus-minor-muscle-right": {
+          "centerBlender": [
+            -0.03154,
+            -0.072355,
+            1.561995
+          ],
+          "kind": "part",
+          "name": "Zygomaticus minor muscle.r",
+          "nodes": [
+            "facial-expression-muscles-zygomaticus-minor-muscle-right__Zygomaticus minor muscle.r"
+          ],
+          "parentId": "facial-expression-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.037607,
+            0.024615,
+            0.030639
+          ],
+          "sourceObjects": [
+            "Zygomaticus minor muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    }
+  }
+}

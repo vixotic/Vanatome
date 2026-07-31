@@ -1,0 +1,663 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "male-reproductive"
+  },
+  "build": {
+    "id": "be11eef7df052686",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "9fa0659cd4d47d7af1921ca787debec41ca9411e1618cab2cee9c28ccdc9bcbb"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 333684,
+    "sha256": "3b81f7c89f8a8115818dc8fe855f4a0297274e64481bdcf656df37a5b40a960d"
+  },
+  "objectCount": 14,
+  "groups": {
+    "testes": {
+      "centerBlender": [
+        0,
+        -0.056154,
+        0.741372
+      ],
+      "missing": [],
+      "name": "Testes",
+      "nodes": [
+        "testes-testis-left__Testis.l",
+        "testes-testis-right__Testis.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.062451,
+        0.022735,
+        0.029453
+      ],
+      "sourceObjects": [
+        "Testis.l",
+        "Testis.r"
+      ],
+      "structures": {
+        "testes": {
+          "centerBlender": [
+            0,
+            -0.056154,
+            0.741372
+          ],
+          "kind": "organ",
+          "name": "Testes",
+          "nodes": [],
+          "parentId": "reproductive-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.062451,
+            0.022735,
+            0.029453
+          ],
+          "sourceObjects": [],
+          "system": "reproductive"
+        },
+        "testes-testis-left": {
+          "centerBlender": [
+            0.020688,
+            -0.056154,
+            0.741372
+          ],
+          "kind": "part",
+          "name": "Testis.l",
+          "nodes": [
+            "testes-testis-left__Testis.l"
+          ],
+          "parentId": "testes",
+          "selectable": true,
+          "sizeBlender": [
+            0.021075,
+            0.022735,
+            0.029453
+          ],
+          "sourceObjects": [
+            "Testis.l"
+          ],
+          "system": "reproductive"
+        },
+        "testes-testis-right": {
+          "centerBlender": [
+            -0.020688,
+            -0.056154,
+            0.741372
+          ],
+          "kind": "part",
+          "name": "Testis.r",
+          "nodes": [
+            "testes-testis-right__Testis.r"
+          ],
+          "parentId": "testes",
+          "selectable": true,
+          "sizeBlender": [
+            0.021075,
+            0.022735,
+            0.029453
+          ],
+          "sourceObjects": [
+            "Testis.r"
+          ],
+          "system": "reproductive"
+        }
+      },
+      "system": "reproductive"
+    },
+    "epididymides": {
+      "centerBlender": [
+        0,
+        -0.053709,
+        0.749898
+      ],
+      "missing": [],
+      "name": "Epididymides",
+      "nodes": [
+        "epididymides-epididymis-left__Epididymis.l",
+        "epididymides-epididymis-right__Epididymis.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.051717,
+        0.019118,
+        0.024725
+      ],
+      "sourceObjects": [
+        "Epididymis.l",
+        "Epididymis.r"
+      ],
+      "structures": {
+        "epididymides": {
+          "centerBlender": [
+            0,
+            -0.053709,
+            0.749898
+          ],
+          "kind": "organ",
+          "name": "Epididymides",
+          "nodes": [],
+          "parentId": "reproductive-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.051717,
+            0.019118,
+            0.024725
+          ],
+          "sourceObjects": [],
+          "system": "reproductive"
+        },
+        "epididymides-epididymis-left": {
+          "centerBlender": [
+            0.021374,
+            -0.053709,
+            0.749898
+          ],
+          "kind": "part",
+          "name": "Epididymis.l",
+          "nodes": [
+            "epididymides-epididymis-left__Epididymis.l"
+          ],
+          "parentId": "epididymides",
+          "selectable": true,
+          "sizeBlender": [
+            0.008969,
+            0.019118,
+            0.024725
+          ],
+          "sourceObjects": [
+            "Epididymis.l"
+          ],
+          "system": "reproductive"
+        },
+        "epididymides-epididymis-right": {
+          "centerBlender": [
+            -0.021374,
+            -0.053709,
+            0.749898
+          ],
+          "kind": "part",
+          "name": "Epididymis.r",
+          "nodes": [
+            "epididymides-epididymis-right__Epididymis.r"
+          ],
+          "parentId": "epididymides",
+          "selectable": true,
+          "sizeBlender": [
+            0.008969,
+            0.019118,
+            0.024725
+          ],
+          "sourceObjects": [
+            "Epididymis.r"
+          ],
+          "system": "reproductive"
+        }
+      },
+      "system": "reproductive"
+    },
+    "ductus-deferentes": {
+      "centerBlender": [
+        0,
+        -0.01171,
+        0.812527
+      ],
+      "missing": [],
+      "name": "Ductus Deferentes",
+      "nodes": [
+        "ductus-deferentes-ductus-deferens-left__Ductus deferens.l",
+        "ductus-deferentes-ductus-deferens-right__Ductus deferens.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.112292,
+        0.09104,
+        0.159104
+      ],
+      "sourceObjects": [
+        "Ductus deferens.l",
+        "Ductus deferens.r"
+      ],
+      "structures": {
+        "ductus-deferentes": {
+          "centerBlender": [
+            0,
+            -0.01171,
+            0.812527
+          ],
+          "kind": "organ",
+          "name": "Ductus Deferentes",
+          "nodes": [],
+          "parentId": "reproductive-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.112292,
+            0.09104,
+            0.159104
+          ],
+          "sourceObjects": [],
+          "system": "reproductive"
+        },
+        "ductus-deferentes-ductus-deferens-left": {
+          "centerBlender": [
+            0.036756,
+            -0.01171,
+            0.812527
+          ],
+          "kind": "part",
+          "name": "Ductus deferens.l",
+          "nodes": [
+            "ductus-deferentes-ductus-deferens-left__Ductus deferens.l"
+          ],
+          "parentId": "ductus-deferentes",
+          "selectable": true,
+          "sizeBlender": [
+            0.038781,
+            0.09104,
+            0.159104
+          ],
+          "sourceObjects": [
+            "Ductus deferens.l"
+          ],
+          "system": "reproductive"
+        },
+        "ductus-deferentes-ductus-deferens-right": {
+          "centerBlender": [
+            -0.036755,
+            -0.01171,
+            0.812527
+          ],
+          "kind": "part",
+          "name": "Ductus deferens.r",
+          "nodes": [
+            "ductus-deferentes-ductus-deferens-right__Ductus deferens.r"
+          ],
+          "parentId": "ductus-deferentes",
+          "selectable": true,
+          "sizeBlender": [
+            0.038781,
+            0.09104,
+            0.159104
+          ],
+          "sourceObjects": [
+            "Ductus deferens.r"
+          ],
+          "system": "reproductive"
+        }
+      },
+      "system": "reproductive"
+    },
+    "ejaculatory-ducts": {
+      "centerBlender": [
+        0,
+        0.026839,
+        0.831163
+      ],
+      "missing": [],
+      "name": "Ejaculatory Ducts",
+      "nodes": [
+        "ejaculatory-ducts-ejaculatory-duct-left__Ejaculatory duct.l",
+        "ejaculatory-ducts-ejaculatory-duct-right__Ejaculatory duct.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.016695,
+        0.01884,
+        0.014876
+      ],
+      "sourceObjects": [
+        "Ejaculatory duct.l",
+        "Ejaculatory duct.r"
+      ],
+      "structures": {
+        "ejaculatory-ducts": {
+          "centerBlender": [
+            0,
+            0.026839,
+            0.831163
+          ],
+          "kind": "organ",
+          "name": "Ejaculatory Ducts",
+          "nodes": [],
+          "parentId": "reproductive-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.016695,
+            0.01884,
+            0.014876
+          ],
+          "sourceObjects": [],
+          "system": "reproductive"
+        },
+        "ejaculatory-ducts-ejaculatory-duct-left": {
+          "centerBlender": [
+            0.003827,
+            0.026839,
+            0.831163
+          ],
+          "kind": "part",
+          "name": "Ejaculatory duct.l",
+          "nodes": [
+            "ejaculatory-ducts-ejaculatory-duct-left__Ejaculatory duct.l"
+          ],
+          "parentId": "ejaculatory-ducts",
+          "selectable": true,
+          "sizeBlender": [
+            0.00904,
+            0.01884,
+            0.014876
+          ],
+          "sourceObjects": [
+            "Ejaculatory duct.l"
+          ],
+          "system": "reproductive"
+        },
+        "ejaculatory-ducts-ejaculatory-duct-right": {
+          "centerBlender": [
+            -0.003827,
+            0.026839,
+            0.831163
+          ],
+          "kind": "part",
+          "name": "Ejaculatory duct.r",
+          "nodes": [
+            "ejaculatory-ducts-ejaculatory-duct-right__Ejaculatory duct.r"
+          ],
+          "parentId": "ejaculatory-ducts",
+          "selectable": true,
+          "sizeBlender": [
+            0.00904,
+            0.01884,
+            0.014876
+          ],
+          "sourceObjects": [
+            "Ejaculatory duct.r"
+          ],
+          "system": "reproductive"
+        }
+      },
+      "system": "reproductive"
+    },
+    "seminal-glands": {
+      "centerBlender": [
+        0,
+        0.034044,
+        0.84355
+      ],
+      "missing": [],
+      "name": "Seminal Glands",
+      "nodes": [
+        "seminal-glands-seminal-gland-left__Seminal gland.l",
+        "seminal-glands-seminal-gland-right__Seminal gland.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.07191,
+        0.02097,
+        0.030574
+      ],
+      "sourceObjects": [
+        "Seminal gland.l",
+        "Seminal gland.r"
+      ],
+      "structures": {
+        "seminal-glands": {
+          "centerBlender": [
+            0,
+            0.034044,
+            0.84355
+          ],
+          "kind": "organ",
+          "name": "Seminal Glands",
+          "nodes": [],
+          "parentId": "reproductive-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.07191,
+            0.02097,
+            0.030574
+          ],
+          "sourceObjects": [],
+          "system": "reproductive"
+        },
+        "seminal-glands-seminal-gland-left": {
+          "centerBlender": [
+            0.019512,
+            0.034044,
+            0.84355
+          ],
+          "kind": "part",
+          "name": "Seminal gland.l",
+          "nodes": [
+            "seminal-glands-seminal-gland-left__Seminal gland.l"
+          ],
+          "parentId": "seminal-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.032886,
+            0.02097,
+            0.030574
+          ],
+          "sourceObjects": [
+            "Seminal gland.l"
+          ],
+          "system": "reproductive"
+        },
+        "seminal-glands-seminal-gland-right": {
+          "centerBlender": [
+            -0.019512,
+            0.034044,
+            0.84355
+          ],
+          "kind": "part",
+          "name": "Seminal gland.r",
+          "nodes": [
+            "seminal-glands-seminal-gland-right__Seminal gland.r"
+          ],
+          "parentId": "seminal-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.032886,
+            0.02097,
+            0.030574
+          ],
+          "sourceObjects": [
+            "Seminal gland.r"
+          ],
+          "system": "reproductive"
+        }
+      },
+      "system": "reproductive"
+    },
+    "prostate": {
+      "centerBlender": [
+        -0.000064,
+        0.015319,
+        0.820716
+      ],
+      "missing": [],
+      "name": "Prostate",
+      "nodes": [
+        "prostate__Prostate"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.035715,
+        0.03275,
+        0.023423
+      ],
+      "sourceObjects": [
+        "Prostate"
+      ],
+      "structures": {
+        "prostate": {
+          "centerBlender": [
+            -0.000064,
+            0.015319,
+            0.820716
+          ],
+          "kind": "organ",
+          "name": "Prostate",
+          "nodes": [
+            "prostate__Prostate"
+          ],
+          "parentId": "reproductive-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.035715,
+            0.03275,
+            0.023423
+          ],
+          "sourceObjects": [
+            "Prostate"
+          ],
+          "system": "reproductive"
+        }
+      },
+      "system": "reproductive"
+    },
+    "penile-erectile-tissues": {
+      "centerBlender": [
+        0.000111,
+        -0.035975,
+        0.786355
+      ],
+      "missing": [],
+      "name": "Penile Erectile Tissues",
+      "nodes": [
+        "penile-erectile-tissues-corpus-cavernosum-of-penis__Corpus cavernosum of penis",
+        "penile-erectile-tissues-corpus-spongiosum-of-penis__Corpus spongiosum of penis",
+        "penile-erectile-tissues-glans-penis__Glans penis"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.065296,
+        0.140922,
+        0.083907
+      ],
+      "sourceObjects": [
+        "Corpus cavernosum of penis",
+        "Corpus spongiosum of penis",
+        "Glans penis"
+      ],
+      "structures": {
+        "penile-erectile-tissues": {
+          "centerBlender": [
+            0.000111,
+            -0.035975,
+            0.786355
+          ],
+          "kind": "organ",
+          "name": "Penile Erectile Tissues",
+          "nodes": [],
+          "parentId": "reproductive-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.065296,
+            0.140922,
+            0.083907
+          ],
+          "sourceObjects": [],
+          "system": "reproductive"
+        },
+        "penile-erectile-tissues-corpus-cavernosum-of-penis": {
+          "centerBlender": [
+            0.000111,
+            -0.033272,
+            0.78676
+          ],
+          "kind": "part",
+          "name": "Corpus cavernosum of penis",
+          "nodes": [
+            "penile-erectile-tissues-corpus-cavernosum-of-penis__Corpus cavernosum of penis"
+          ],
+          "parentId": "penile-erectile-tissues",
+          "selectable": true,
+          "sizeBlender": [
+            0.065296,
+            0.135517,
+            0.083098
+          ],
+          "sourceObjects": [
+            "Corpus cavernosum of penis"
+          ],
+          "system": "reproductive"
+        },
+        "penile-erectile-tissues-corpus-spongiosum-of-penis": {
+          "centerBlender": [
+            -0.000653,
+            -0.032928,
+            0.783084
+          ],
+          "kind": "part",
+          "name": "Corpus spongiosum of penis",
+          "nodes": [
+            "penile-erectile-tissues-corpus-spongiosum-of-penis__Corpus spongiosum of penis"
+          ],
+          "parentId": "penile-erectile-tissues",
+          "selectable": true,
+          "sizeBlender": [
+            0.021254,
+            0.112121,
+            0.071284
+          ],
+          "sourceObjects": [
+            "Corpus spongiosum of penis"
+          ],
+          "system": "reproductive"
+        },
+        "penile-erectile-tissues-glans-penis": {
+          "centerBlender": [
+            -0.000059,
+            -0.093601,
+            0.760166
+          ],
+          "kind": "part",
+          "name": "Glans penis",
+          "nodes": [
+            "penile-erectile-tissues-glans-penis__Glans penis"
+          ],
+          "parentId": "penile-erectile-tissues",
+          "selectable": true,
+          "sizeBlender": [
+            0.030759,
+            0.025668,
+            0.031528
+          ],
+          "sourceObjects": [
+            "Glans penis"
+          ],
+          "system": "reproductive"
+        }
+      },
+      "system": "reproductive"
+    }
+  }
+}

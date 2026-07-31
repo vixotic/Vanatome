@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "endocrine-glands"
+  },
+  "build": {
+    "id": "e7e5e18ccdbd3978",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "a434aa40b8f98d9460772814f293791d7470b3b16f6457a010ac2188ab440640"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 227548,
+    "sha256": "4b35d0231ac9415a4b6986f1f570d36e8c1780af85523e1f35fabf1ed98aecf7"
+  },
+  "objectCount": 10,
+  "groups": {
+    "pituitary-gland": {
+      "centerBlender": [
+        0,
+        -0.016877,
+        1.601459
+      ],
+      "missing": [],
+      "name": "Pituitary Gland",
+      "nodes": [
+        "pituitary-gland-adenohypophysis__Adenohypophysis",
+        "pituitary-gland-neurohypophysis__Neurohypophysis"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.0119,
+        0.009157,
+        0.01256
+      ],
+      "sourceObjects": [
+        "Adenohypophysis",
+        "Neurohypophysis"
+      ],
+      "structures": {
+        "pituitary-gland": {
+          "centerBlender": [
+            0,
+            -0.016877,
+            1.601459
+          ],
+          "kind": "organ",
+          "name": "Pituitary Gland",
+          "nodes": [],
+          "parentId": "endocrine-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.0119,
+            0.009157,
+            0.01256
+          ],
+          "sourceObjects": [],
+          "system": "endocrine"
+        },
+        "pituitary-gland-adenohypophysis": {
+          "centerBlender": [
+            0,
+            -0.017401,
+            1.601713
+          ],
+          "kind": "part",
+          "name": "Adenohypophysis",
+          "nodes": [
+            "pituitary-gland-adenohypophysis__Adenohypophysis"
+          ],
+          "parentId": "pituitary-gland",
+          "selectable": true,
+          "sizeBlender": [
+            0.0119,
+            0.008109,
+            0.012052
+          ],
+          "sourceObjects": [
+            "Adenohypophysis"
+          ],
+          "system": "endocrine"
+        },
+        "pituitary-gland-neurohypophysis": {
+          "centerBlender": [
+            0,
+            -0.015208,
+            1.601237
+          ],
+          "kind": "part",
+          "name": "Neurohypophysis",
+          "nodes": [
+            "pituitary-gland-neurohypophysis__Neurohypophysis"
+          ],
+          "parentId": "pituitary-gland",
+          "selectable": true,
+          "sizeBlender": [
+            0.011715,
+            0.005819,
+            0.012117
+          ],
+          "sourceObjects": [
+            "Neurohypophysis"
+          ],
+          "system": "endocrine"
+        }
+      },
+      "system": "endocrine"
+    },
+    "pineal-gland": {
+      "centerBlender": [
+        0,
+        0.022886,
+        1.615992
+      ],
+      "missing": [],
+      "name": "Pineal Gland",
+      "nodes": [
+        "pineal-gland__Pineal gland"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.006362,
+        0.01109,
+        0.007431
+      ],
+      "sourceObjects": [
+        "Pineal gland"
+      ],
+      "structures": {
+        "pineal-gland": {
+          "centerBlender": [
+            0,
+            0.022886,
+            1.615992
+          ],
+          "kind": "organ",
+          "name": "Pineal Gland",
+          "nodes": [
+            "pineal-gland__Pineal gland"
+          ],
+          "parentId": "endocrine-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.006362,
+            0.01109,
+            0.007431
+          ],
+          "sourceObjects": [
+            "Pineal gland"
+          ],
+          "system": "endocrine"
+        }
+      },
+      "system": "endocrine"
+    },
+    "thyroid-gland": {
+      "centerBlender": [
+        0,
+        -0.016244,
+        1.471718
+      ],
+      "missing": [],
+      "name": "Thyroid Gland",
+      "nodes": [
+        "thyroid-gland__Thyroid gland"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.048629,
+        0.041571,
+        0.034117
+      ],
+      "sourceObjects": [
+        "Thyroid gland"
+      ],
+      "structures": {
+        "thyroid-gland": {
+          "centerBlender": [
+            0,
+            -0.016244,
+            1.471718
+          ],
+          "kind": "organ",
+          "name": "Thyroid Gland",
+          "nodes": [
+            "thyroid-gland__Thyroid gland"
+          ],
+          "parentId": "endocrine-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.048629,
+            0.041571,
+            0.034117
+          ],
+          "sourceObjects": [
+            "Thyroid gland"
+          ],
+          "system": "endocrine"
+        }
+      },
+      "system": "endocrine"
+    },
+    "parathyroid-glands": {
+      "centerBlender": [
+        0,
+        0.001914,
+        1.470246
+      ],
+      "missing": [],
+      "name": "Parathyroid Glands",
+      "nodes": [
+        "parathyroid-glands-inferior-parathyroid-gland-left__Inferior parathyroid gland.l",
+        "parathyroid-glands-inferior-parathyroid-gland-right__Inferior parathyroid gland.r",
+        "parathyroid-glands-superior-parathyroid-gland-left__Superior parathyroid gland.l",
+        "parathyroid-glands-superior-parathyroid-gland-right__Superior parathyroid gland.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.036628,
+        0.00509,
+        0.022831
+      ],
+      "sourceObjects": [
+        "Inferior parathyroid gland.l",
+        "Inferior parathyroid gland.r",
+        "Superior parathyroid gland.l",
+        "Superior parathyroid gland.r"
+      ],
+      "structures": {
+        "parathyroid-glands": {
+          "centerBlender": [
+            0,
+            0.001914,
+            1.470246
+          ],
+          "kind": "organ",
+          "name": "Parathyroid Glands",
+          "nodes": [],
+          "parentId": "endocrine-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.036628,
+            0.00509,
+            0.022831
+          ],
+          "sourceObjects": [],
+          "system": "endocrine"
+        },
+        "parathyroid-glands-inferior-parathyroid-gland-left": {
+          "centerBlender": [
+            0.010878,
+            0.001254,
+            1.46032
+          ],
+          "kind": "part",
+          "name": "Inferior parathyroid gland.l",
+          "nodes": [
+            "parathyroid-glands-inferior-parathyroid-gland-left__Inferior parathyroid gland.l"
+          ],
+          "parentId": "parathyroid-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.001661,
+            0.003769,
+            0.002979
+          ],
+          "sourceObjects": [
+            "Inferior parathyroid gland.l"
+          ],
+          "system": "endocrine"
+        },
+        "parathyroid-glands-inferior-parathyroid-gland-right": {
+          "centerBlender": [
+            -0.010878,
+            0.001254,
+            1.46032
+          ],
+          "kind": "part",
+          "name": "Inferior parathyroid gland.r",
+          "nodes": [
+            "parathyroid-glands-inferior-parathyroid-gland-right__Inferior parathyroid gland.r"
+          ],
+          "parentId": "parathyroid-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.001661,
+            0.003769,
+            0.002979
+          ],
+          "sourceObjects": [
+            "Inferior parathyroid gland.r"
+          ],
+          "system": "endocrine"
+        },
+        "parathyroid-glands-superior-parathyroid-gland-left": {
+          "centerBlender": [
+            0.016371,
+            0.003199,
+            1.480121
+          ],
+          "kind": "part",
+          "name": "Superior parathyroid gland.l",
+          "nodes": [
+            "parathyroid-glands-superior-parathyroid-gland-left__Superior parathyroid gland.l"
+          ],
+          "parentId": "parathyroid-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.003886,
+            0.002519,
+            0.003082
+          ],
+          "sourceObjects": [
+            "Superior parathyroid gland.l"
+          ],
+          "system": "endocrine"
+        },
+        "parathyroid-glands-superior-parathyroid-gland-right": {
+          "centerBlender": [
+            -0.016371,
+            0.003199,
+            1.480121
+          ],
+          "kind": "part",
+          "name": "Superior parathyroid gland.r",
+          "nodes": [
+            "parathyroid-glands-superior-parathyroid-gland-right__Superior parathyroid gland.r"
+          ],
+          "parentId": "parathyroid-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.003886,
+            0.002519,
+            0.003082
+          ],
+          "sourceObjects": [
+            "Superior parathyroid gland.r"
+          ],
+          "system": "endocrine"
+        }
+      },
+      "system": "endocrine"
+    },
+    "adrenal-glands": {
+      "centerBlender": [
+        0.006479,
+        0.015409,
+        1.151651
+      ],
+      "missing": [],
+      "name": "Adrenal Glands",
+      "nodes": [
+        "adrenal-glands-suprarenal-gland-left__Suprarenal gland.l",
+        "adrenal-glands-suprarenal-gland-right__Suprarenal gland.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.138026,
+        0.039207,
+        0.062695
+      ],
+      "sourceObjects": [
+        "Suprarenal gland.l",
+        "Suprarenal gland.r"
+      ],
+      "structures": {
+        "adrenal-glands": {
+          "centerBlender": [
+            0.006479,
+            0.015409,
+            1.151651
+          ],
+          "kind": "organ",
+          "name": "Adrenal Glands",
+          "nodes": [],
+          "parentId": "endocrine-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.138026,
+            0.039207,
+            0.062695
+          ],
+          "sourceObjects": [],
+          "system": "endocrine"
+        },
+        "adrenal-glands-suprarenal-gland-left": {
+          "centerBlender": [
+            0.051403,
+            0.024937,
+            1.160559
+          ],
+          "kind": "part",
+          "name": "Suprarenal gland.l",
+          "nodes": [
+            "adrenal-glands-suprarenal-gland-left__Suprarenal gland.l"
+          ],
+          "parentId": "adrenal-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.048177,
+            0.02015,
+            0.04488
+          ],
+          "sourceObjects": [
+            "Suprarenal gland.l"
+          ],
+          "system": "endocrine"
+        },
+        "adrenal-glands-suprarenal-gland-right": {
+          "centerBlender": [
+            -0.046582,
+            0.009424,
+            1.141443
+          ],
+          "kind": "part",
+          "name": "Suprarenal gland.r",
+          "nodes": [
+            "adrenal-glands-suprarenal-gland-right__Suprarenal gland.r"
+          ],
+          "parentId": "adrenal-glands",
+          "selectable": true,
+          "sizeBlender": [
+            0.031904,
+            0.027236,
+            0.04228
+          ],
+          "sourceObjects": [
+            "Suprarenal gland.r"
+          ],
+          "system": "endocrine"
+        }
+      },
+      "system": "endocrine"
+    }
+  }
+}

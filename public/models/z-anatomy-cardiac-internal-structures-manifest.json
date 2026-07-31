@@ -1,0 +1,411 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "cardiac-internal-structures"
+  },
+  "build": {
+    "id": "3df4b949c591ff82",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "56dde41085660b516be338504f6f8751e40ae462620315d64ac751fee92d767c"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 564904,
+    "sha256": "0e418ab127dd19ba6fafa39b823ebf4f822486a946e63f36e2cece6b1c08f1db"
+  },
+  "objectCount": 13,
+  "groups": {
+    "cardiac-internal-structures": {
+      "centerBlender": [
+        0.029536,
+        -0.032186,
+        1.285964
+      ],
+      "missing": [],
+      "name": "Cardiac Internal Structures",
+      "nodes": [
+        "cardiac-internal-structures-anterior-papillary-muscle-of-right-ventricle__Anterior papillary muscle of right ventricle",
+        "cardiac-internal-structures-anterior-semilunar-leaflet-of-pulmonary-valve__Anterior semilunar leaflet of pulmonary valve",
+        "cardiac-internal-structures-inferior-leaflet-of-right-atrioventricular-valve__Inferior leaflet of right atrioventricular valve",
+        "cardiac-internal-structures-inferior-papillary-muscle-of-left-ventricle__Inferior papillary muscle of left ventricle",
+        "cardiac-internal-structures-inferior-papillary-muscle-of-right-ventricle__Inferior papillary muscle of right ventricle",
+        "cardiac-internal-structures-left-coronary-leaflet__Left coronary leaflet",
+        "cardiac-internal-structures-left-semilunar-leaflet-of-pulmonary-valve__Left semilunar leaflet of pulmonary valve",
+        "cardiac-internal-structures-non-coronary-leaflet__Non-coronary leaflet",
+        "cardiac-internal-structures-posterior-leaflet-of-left-atrioventricular-valve__Posterior leaflet of left atrioventricular valve",
+        "cardiac-internal-structures-right-coronary-leaflet__Right coronary leaflet",
+        "cardiac-internal-structures-right-semilunar-leaflet-of-pulmonary-valve__Right semilunar leaflet of pulmonary valve",
+        "cardiac-internal-structures-septal-leaflet-of-right-atrioventricular-valve__Septal leaflet of right atrioventricular valve",
+        "cardiac-internal-structures-septal-papillary-muscle-of-right-ventricle__Septal papillary muscle of right ventricle"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.097001,
+        0.090211,
+        0.089612
+      ],
+      "sourceObjects": [
+        "Anterior papillary muscle of right ventricle",
+        "Anterior semilunar leaflet of pulmonary valve",
+        "Inferior leaflet of right atrioventricular valve",
+        "Inferior papillary muscle of left ventricle",
+        "Inferior papillary muscle of right ventricle",
+        "Left coronary leaflet",
+        "Left semilunar leaflet of pulmonary valve",
+        "Non-coronary leaflet",
+        "Posterior leaflet of left atrioventricular valve",
+        "Right coronary leaflet",
+        "Right semilunar leaflet of pulmonary valve",
+        "Septal leaflet of right atrioventricular valve",
+        "Septal papillary muscle of right ventricle"
+      ],
+      "structures": {
+        "cardiac-internal-structures": {
+          "centerBlender": [
+            0.029536,
+            -0.032186,
+            1.285964
+          ],
+          "kind": "organ",
+          "name": "Cardiac Internal Structures",
+          "nodes": [],
+          "parentId": "cardiovascular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.097001,
+            0.090211,
+            0.089612
+          ],
+          "sourceObjects": [],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-anterior-papillary-muscle-of-right-ventricle": {
+          "centerBlender": [
+            0.031249,
+            -0.066146,
+            1.257452
+          ],
+          "kind": "part",
+          "name": "Anterior papillary muscle of right ventricle",
+          "nodes": [
+            "cardiac-internal-structures-anterior-papillary-muscle-of-right-ventricle__Anterior papillary muscle of right ventricle"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.036447,
+            0.022291,
+            0.030318
+          ],
+          "sourceObjects": [
+            "Anterior papillary muscle of right ventricle"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-anterior-semilunar-leaflet-of-pulmonary-valve": {
+          "centerBlender": [
+            0.033711,
+            -0.053352,
+            1.318206
+          ],
+          "kind": "part",
+          "name": "Anterior semilunar leaflet of pulmonary valve",
+          "nodes": [
+            "cardiac-internal-structures-anterior-semilunar-leaflet-of-pulmonary-valve__Anterior semilunar leaflet of pulmonary valve"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.018488,
+            0.020832,
+            0.017237
+          ],
+          "sourceObjects": [
+            "Anterior semilunar leaflet of pulmonary valve"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-inferior-leaflet-of-right-atrioventricular-valve": {
+          "centerBlender": [
+            -0.000653,
+            -0.032652,
+            1.26588
+          ],
+          "kind": "part",
+          "name": "Inferior leaflet of right atrioventricular valve",
+          "nodes": [
+            "cardiac-internal-structures-inferior-leaflet-of-right-atrioventricular-valve__Inferior leaflet of right atrioventricular valve"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.036623,
+            0.032611,
+            0.028504
+          ],
+          "sourceObjects": [
+            "Inferior leaflet of right atrioventricular valve"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-inferior-papillary-muscle-of-left-ventricle": {
+          "centerBlender": [
+            0.063302,
+            -0.028866,
+            1.266677
+          ],
+          "kind": "part",
+          "name": "Inferior papillary muscle of left ventricle",
+          "nodes": [
+            "cardiac-internal-structures-inferior-papillary-muscle-of-left-ventricle__Inferior papillary muscle of left ventricle"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.02947,
+            0.043679,
+            0.031072
+          ],
+          "sourceObjects": [
+            "Inferior papillary muscle of left ventricle"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-inferior-papillary-muscle-of-right-ventricle": {
+          "centerBlender": [
+            0.023297,
+            -0.04985,
+            1.248601
+          ],
+          "kind": "part",
+          "name": "Inferior papillary muscle of right ventricle",
+          "nodes": [
+            "cardiac-internal-structures-inferior-papillary-muscle-of-right-ventricle__Inferior papillary muscle of right ventricle"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.030628,
+            0.029608,
+            0.014886
+          ],
+          "sourceObjects": [
+            "Inferior papillary muscle of right ventricle"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-left-coronary-leaflet": {
+          "centerBlender": [
+            0.020699,
+            -0.021786,
+            1.317891
+          ],
+          "kind": "part",
+          "name": "Left coronary leaflet",
+          "nodes": [
+            "cardiac-internal-structures-left-coronary-leaflet__Left coronary leaflet"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.018037,
+            0.021164,
+            0.01764
+          ],
+          "sourceObjects": [
+            "Left coronary leaflet"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-left-semilunar-leaflet-of-pulmonary-valve": {
+          "centerBlender": [
+            0.033706,
+            -0.038267,
+            1.318537
+          ],
+          "kind": "part",
+          "name": "Left semilunar leaflet of pulmonary valve",
+          "nodes": [
+            "cardiac-internal-structures-left-semilunar-leaflet-of-pulmonary-valve__Left semilunar leaflet of pulmonary valve"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.017772,
+            0.015192,
+            0.017055
+          ],
+          "sourceObjects": [
+            "Left semilunar leaflet of pulmonary valve"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-non-coronary-leaflet": {
+          "centerBlender": [
+            0.00976,
+            -0.019542,
+            1.314611
+          ],
+          "kind": "part",
+          "name": "Non-coronary leaflet",
+          "nodes": [
+            "cardiac-internal-structures-non-coronary-leaflet__Non-coronary leaflet"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.020553,
+            0.020076,
+            0.020848
+          ],
+          "sourceObjects": [
+            "Non-coronary leaflet"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-posterior-leaflet-of-left-atrioventricular-valve": {
+          "centerBlender": [
+            0.04007,
+            -0.006664,
+            1.279595
+          ],
+          "kind": "part",
+          "name": "Posterior leaflet of left atrioventricular valve",
+          "nodes": [
+            "cardiac-internal-structures-posterior-leaflet-of-left-atrioventricular-valve__Posterior leaflet of left atrioventricular valve"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.050997,
+            0.039167,
+            0.033163
+          ],
+          "sourceObjects": [
+            "Posterior leaflet of left atrioventricular valve"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-right-coronary-leaflet": {
+          "centerBlender": [
+            0.012217,
+            -0.031169,
+            1.315756
+          ],
+          "kind": "part",
+          "name": "Right coronary leaflet",
+          "nodes": [
+            "cardiac-internal-structures-right-coronary-leaflet__Right coronary leaflet"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.022533,
+            0.014938,
+            0.021783
+          ],
+          "sourceObjects": [
+            "Right coronary leaflet"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-right-semilunar-leaflet-of-pulmonary-valve": {
+          "centerBlender": [
+            0.019385,
+            -0.048549,
+            1.321865
+          ],
+          "kind": "part",
+          "name": "Right semilunar leaflet of pulmonary valve",
+          "nodes": [
+            "cardiac-internal-structures-right-semilunar-leaflet-of-pulmonary-valve__Right semilunar leaflet of pulmonary valve"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.019469,
+            0.024861,
+            0.01781
+          ],
+          "sourceObjects": [
+            "Right semilunar leaflet of pulmonary valve"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-septal-leaflet-of-right-atrioventricular-valve": {
+          "centerBlender": [
+            0.01252,
+            -0.028696,
+            1.288989
+          ],
+          "kind": "part",
+          "name": "Septal leaflet of right atrioventricular valve",
+          "nodes": [
+            "cardiac-internal-structures-septal-leaflet-of-right-atrioventricular-valve__Septal leaflet of right atrioventricular valve"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.03722,
+            0.025015,
+            0.024144
+          ],
+          "sourceObjects": [
+            "Septal leaflet of right atrioventricular valve"
+          ],
+          "system": "cardiovascular"
+        },
+        "cardiac-internal-structures-septal-papillary-muscle-of-right-ventricle": {
+          "centerBlender": [
+            0.023987,
+            -0.039271,
+            1.291151
+          ],
+          "kind": "part",
+          "name": "Septal papillary muscle of right ventricle",
+          "nodes": [
+            "cardiac-internal-structures-septal-papillary-muscle-of-right-ventricle__Septal papillary muscle of right ventricle"
+          ],
+          "parentId": "cardiac-internal-structures",
+          "selectable": true,
+          "sizeBlender": [
+            0.020135,
+            0.015912,
+            0.027788
+          ],
+          "sourceObjects": [
+            "Septal papillary muscle of right ventricle"
+          ],
+          "system": "cardiovascular"
+        }
+      },
+      "system": "cardiovascular"
+    }
+  }
+}
