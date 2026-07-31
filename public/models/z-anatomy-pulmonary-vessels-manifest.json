@@ -1,0 +1,1302 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "pulmonary-vessels"
+  },
+  "build": {
+    "id": "803afcf147370ce4",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "2a8a281402288dadd4f54bd722059632a4f77cbdb148eacd84f32e810d581ce3"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 2845092,
+    "sha256": "ab4e38c8eadd66da68967e6d9b512768d734f8ebde91cdee1e30762d333e4e8c"
+  },
+  "objectCount": 47,
+  "groups": {
+    "pulmonary-arteries": {
+      "centerBlender": [
+        -0.000085,
+        -0.005165,
+        1.305131
+      ],
+      "missing": [],
+      "name": "Pulmonary Arteries",
+      "nodes": [
+        "pulmonary-arteries-anterior-basal-segmental-artery-of-left-lung__Anterior basal segmental artery of left lung",
+        "pulmonary-arteries-anterior-basal-segmental-artery-of-right-lung__Anterior basal segmental artery of right lung",
+        "pulmonary-arteries-anterior-segmental-artery-of-left-lung__Anterior segmental artery of left lung",
+        "pulmonary-arteries-anterior-segmental-artery-of-right-lung__Anterior segmental artery of right lung",
+        "pulmonary-arteries-apical-segmental-artery-of-left-lung__Apical segmental artery of left lung",
+        "pulmonary-arteries-apical-segmental-artery-of-right-lung__Apical segmental artery of right lung",
+        "pulmonary-arteries-bifurcation-of-pulmonary-trunk__Bifurcation of pulmonary trunk",
+        "pulmonary-arteries-inferior-lingular-artery-of-left-lung__Inferior lingular artery of left lung",
+        "pulmonary-arteries-inferior-lobar-artery-of-right-lung__Inferior lobar artery of right lung",
+        "pulmonary-arteries-lateral-basal-segmental-artery-of-left-lung__Lateral basal segmental artery of left lung",
+        "pulmonary-arteries-lateral-basal-segmental-artery-of-right-lung__Lateral basal segmental artery of right lung",
+        "pulmonary-arteries-lateral-segmental-artery-of-right-lung__Lateral segmental artery of right lung",
+        "pulmonary-arteries-left-pulmonary-artery__Left pulmonary artery",
+        "pulmonary-arteries-medial-basal-segmental-artery-of-left-lung__Medial basal segmental artery of left lung",
+        "pulmonary-arteries-medial-basal-segmental-artery-of-right-lung__Medial basal segmental artery of right lung",
+        "pulmonary-arteries-medial-segmental-artery-of-right-lung__Medial segmental artery of right lung",
+        "pulmonary-arteries-middle-lobar-artery-of-right-lung__Middle lobar artery of right lung",
+        "pulmonary-arteries-posterior-basal-segmental-artery-of-left-lung__Posterior basal segmental artery of left lung",
+        "pulmonary-arteries-posterior-basal-segmental-artery-of-right-lung__Posterior basal segmental artery of right lung",
+        "pulmonary-arteries-posterior-segmental-artery-of-left-lung__Posterior segmental artery of left lung",
+        "pulmonary-arteries-posterior-segmental-artery-of-right-lung__Posterior segmental artery of right lung",
+        "pulmonary-arteries-pulmonary-trunk__Pulmonary trunk",
+        "pulmonary-arteries-right-pulmonary-artery__Right pulmonary artery",
+        "pulmonary-arteries-superior-lingular-artery-of-left-lung__Superior lingular artery of left lung",
+        "pulmonary-arteries-superior-lobar-artery-of-right-lung__Superior lobar artery of right lung",
+        "pulmonary-arteries-superior-segmental-artery-of-left-lung__Superior segmental artery of left lung",
+        "pulmonary-arteries-superior-segmental-artery-of-right-lung__Superior segmental artery of right lung"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.255965,
+        0.165765,
+        0.239661
+      ],
+      "sourceObjects": [
+        "Anterior basal segmental artery of left lung",
+        "Anterior basal segmental artery of right lung",
+        "Anterior segmental artery of left lung",
+        "Anterior segmental artery of right lung",
+        "Apical segmental artery of left lung",
+        "Apical segmental artery of right lung",
+        "Bifurcation of pulmonary trunk",
+        "Inferior lingular artery of left lung",
+        "Inferior lobar artery of right lung",
+        "Lateral basal segmental artery of left lung",
+        "Lateral basal segmental artery of right lung",
+        "Lateral segmental artery of right lung",
+        "Left pulmonary artery",
+        "Medial basal segmental artery of left lung",
+        "Medial basal segmental artery of right lung",
+        "Medial segmental artery of right lung",
+        "Middle lobar artery of right lung",
+        "Posterior basal segmental artery of left lung",
+        "Posterior basal segmental artery of right lung",
+        "Posterior segmental artery of left lung",
+        "Posterior segmental artery of right lung",
+        "Pulmonary trunk",
+        "Right pulmonary artery",
+        "Superior lingular artery of left lung",
+        "Superior lobar artery of right lung",
+        "Superior segmental artery of left lung",
+        "Superior segmental artery of right lung"
+      ],
+      "structures": {
+        "pulmonary-arteries": {
+          "centerBlender": [
+            -0.000085,
+            -0.005165,
+            1.305131
+          ],
+          "kind": "organ",
+          "name": "Pulmonary Arteries",
+          "nodes": [],
+          "parentId": "cardiovascular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.255965,
+            0.165765,
+            0.239661
+          ],
+          "sourceObjects": [],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-anterior-basal-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.103009,
+            0.037675,
+            1.231515
+          ],
+          "kind": "part",
+          "name": "Anterior basal segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-anterior-basal-segmental-artery-of-left-lung__Anterior basal segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.040746,
+            0.070385,
+            0.077845
+          ],
+          "sourceObjects": [
+            "Anterior basal segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-anterior-basal-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.087854,
+            0.034212,
+            1.241758
+          ],
+          "kind": "part",
+          "name": "Anterior basal segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-anterior-basal-segmental-artery-of-right-lung__Anterior basal segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.070211,
+            0.037121,
+            0.093219
+          ],
+          "sourceObjects": [
+            "Anterior basal segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-anterior-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.062203,
+            -0.015562,
+            1.342885
+          ],
+          "kind": "part",
+          "name": "Anterior segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-anterior-segmental-artery-of-left-lung__Anterior segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.071169,
+            0.093872,
+            0.051893
+          ],
+          "sourceObjects": [
+            "Anterior segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-anterior-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.048851,
+            -0.025638,
+            1.351362
+          ],
+          "kind": "part",
+          "name": "Anterior segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-anterior-segmental-artery-of-right-lung__Anterior segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.066142,
+            0.069213,
+            0.042604
+          ],
+          "sourceObjects": [
+            "Anterior segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-apical-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.042897,
+            0.019478,
+            1.383677
+          ],
+          "kind": "part",
+          "name": "Apical segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-apical-segmental-artery-of-left-lung__Apical segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.044241,
+            0.037888,
+            0.082568
+          ],
+          "sourceObjects": [
+            "Apical segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-apical-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.045036,
+            0.019869,
+            1.385797
+          ],
+          "kind": "part",
+          "name": "Apical segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-apical-segmental-artery-of-right-lung__Apical segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.050405,
+            0.084989,
+            0.074941
+          ],
+          "sourceObjects": [
+            "Apical segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-bifurcation-of-pulmonary-trunk": {
+          "centerBlender": [
+            0.025374,
+            -0.013592,
+            1.345197
+          ],
+          "kind": "part",
+          "name": "Bifurcation of pulmonary trunk",
+          "nodes": [
+            "pulmonary-arteries-bifurcation-of-pulmonary-trunk__Bifurcation of pulmonary trunk"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.040015,
+            0.044842,
+            0.029787
+          ],
+          "sourceObjects": [
+            "Bifurcation of pulmonary trunk"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-inferior-lingular-artery-of-left-lung": {
+          "centerBlender": [
+            0.080165,
+            -0.023925,
+            1.288373
+          ],
+          "kind": "part",
+          "name": "Inferior lingular artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-inferior-lingular-artery-of-left-lung__Inferior lingular artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.050157,
+            0.114062,
+            0.086048
+          ],
+          "sourceObjects": [
+            "Inferior lingular artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-inferior-lobar-artery-of-right-lung": {
+          "centerBlender": [
+            -0.051958,
+            0.02518,
+            1.301608
+          ],
+          "kind": "part",
+          "name": "Inferior lobar artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-inferior-lobar-artery-of-right-lung__Inferior lobar artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.018198,
+            0.029551,
+            0.0383
+          ],
+          "sourceObjects": [
+            "Inferior lobar artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-lateral-basal-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.092832,
+            -0.011853,
+            1.25977
+          ],
+          "kind": "part",
+          "name": "Lateral basal segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-lateral-basal-segmental-artery-of-left-lung__Lateral basal segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.07013,
+            0.097924,
+            0.128444
+          ],
+          "sourceObjects": [
+            "Lateral basal segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-lateral-basal-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.089598,
+            0.005095,
+            1.268338
+          ],
+          "kind": "part",
+          "name": "Lateral basal segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-lateral-basal-segmental-artery-of-right-lung__Lateral basal segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.076939,
+            0.047618,
+            0.074233
+          ],
+          "sourceObjects": [
+            "Lateral basal segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-lateral-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.0796,
+            -0.014459,
+            1.295541
+          ],
+          "kind": "part",
+          "name": "Lateral segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-lateral-segmental-artery-of-right-lung__Lateral segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.07763,
+            0.06126,
+            0.056635
+          ],
+          "sourceObjects": [
+            "Lateral segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-left-pulmonary-artery": {
+          "centerBlender": [
+            0.056159,
+            0.019896,
+            1.312884
+          ],
+          "kind": "part",
+          "name": "Left pulmonary artery",
+          "nodes": [
+            "pulmonary-arteries-left-pulmonary-artery__Left pulmonary artery"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.067407,
+            0.039841,
+            0.091948
+          ],
+          "sourceObjects": [
+            "Left pulmonary artery"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-medial-basal-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.061401,
+            0.047172,
+            1.287661
+          ],
+          "kind": "part",
+          "name": "Medial basal segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-medial-basal-segmental-artery-of-left-lung__Medial basal segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.024937,
+            0.027564,
+            0.063472
+          ],
+          "sourceObjects": [
+            "Medial basal segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-medial-basal-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.047787,
+            0.053912,
+            1.233053
+          ],
+          "kind": "part",
+          "name": "Medial basal segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-medial-basal-segmental-artery-of-right-lung__Medial basal segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.025198,
+            0.010287,
+            0.058644
+          ],
+          "sourceObjects": [
+            "Medial basal segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-medial-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.054495,
+            -0.039696,
+            1.293089
+          ],
+          "kind": "part",
+          "name": "Medial segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-medial-segmental-artery-of-right-lung__Medial segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.045549,
+            0.096704,
+            0.078462
+          ],
+          "sourceObjects": [
+            "Medial segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-middle-lobar-artery-of-right-lung": {
+          "centerBlender": [
+            -0.041948,
+            0.011095,
+            1.324621
+          ],
+          "kind": "part",
+          "name": "Middle lobar artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-middle-lobar-artery-of-right-lung__Middle lobar artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.025817,
+            0.023107,
+            0.026675
+          ],
+          "sourceObjects": [
+            "Middle lobar artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-posterior-basal-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.050129,
+            0.052363,
+            1.254301
+          ],
+          "kind": "part",
+          "name": "Posterior basal segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-posterior-basal-segmental-artery-of-left-lung__Posterior basal segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.052071,
+            0.047582,
+            0.138002
+          ],
+          "sourceObjects": [
+            "Posterior basal segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-posterior-basal-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.061751,
+            0.053697,
+            1.237809
+          ],
+          "kind": "part",
+          "name": "Posterior basal segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-posterior-basal-segmental-artery-of-right-lung__Posterior basal segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.021175,
+            0.043764,
+            0.100621
+          ],
+          "sourceObjects": [
+            "Posterior basal segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-posterior-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.061723,
+            0.0396,
+            1.367626
+          ],
+          "kind": "part",
+          "name": "Posterior segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-posterior-segmental-artery-of-left-lung__Posterior segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.048606,
+            0.052175,
+            0.056233
+          ],
+          "sourceObjects": [
+            "Posterior segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-posterior-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.064057,
+            0.034907,
+            1.337785
+          ],
+          "kind": "part",
+          "name": "Posterior segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-posterior-segmental-artery-of-right-lung__Posterior segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.068338,
+            0.062988,
+            0.021136
+          ],
+          "sourceObjects": [
+            "Posterior segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-pulmonary-trunk": {
+          "centerBlender": [
+            0.027718,
+            -0.044281,
+            1.340633
+          ],
+          "kind": "part",
+          "name": "Pulmonary trunk",
+          "nodes": [
+            "pulmonary-arteries-pulmonary-trunk__Pulmonary trunk"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.031157,
+            0.037802,
+            0.032915
+          ],
+          "sourceObjects": [
+            "Pulmonary trunk"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-right-pulmonary-artery": {
+          "centerBlender": [
+            -0.011921,
+            0.00142,
+            1.337841
+          ],
+          "kind": "part",
+          "name": "Right pulmonary artery",
+          "nodes": [
+            "pulmonary-arteries-right-pulmonary-artery__Right pulmonary artery"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.052309,
+            0.026378,
+            0.027812
+          ],
+          "sourceObjects": [
+            "Right pulmonary artery"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-superior-lingular-artery-of-left-lung": {
+          "centerBlender": [
+            0.084214,
+            -0.019808,
+            1.31155
+          ],
+          "kind": "part",
+          "name": "Superior lingular artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-superior-lingular-artery-of-left-lung__Superior lingular artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.05987,
+            0.108179,
+            0.043969
+          ],
+          "sourceObjects": [
+            "Superior lingular artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-superior-lobar-artery-of-right-lung": {
+          "centerBlender": [
+            -0.00537,
+            -0.001347,
+            1.342923
+          ],
+          "kind": "part",
+          "name": "Superior lobar artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-superior-lobar-artery-of-right-lung__Superior lobar artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.036882,
+            0.021986,
+            0.025015
+          ],
+          "sourceObjects": [
+            "Superior lobar artery of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-superior-segmental-artery-of-left-lung": {
+          "centerBlender": [
+            0.068224,
+            0.046531,
+            1.323492
+          ],
+          "kind": "part",
+          "name": "Superior segmental artery of left lung",
+          "nodes": [
+            "pulmonary-arteries-superior-segmental-artery-of-left-lung__Superior segmental artery of left lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.062283,
+            0.030727,
+            0.058409
+          ],
+          "sourceObjects": [
+            "Superior segmental artery of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-arteries-superior-segmental-artery-of-right-lung": {
+          "centerBlender": [
+            -0.06906,
+            0.046781,
+            1.305309
+          ],
+          "kind": "part",
+          "name": "Superior segmental artery of right lung",
+          "nodes": [
+            "pulmonary-arteries-superior-segmental-artery-of-right-lung__Superior segmental artery of right lung"
+          ],
+          "parentId": "pulmonary-arteries",
+          "selectable": true,
+          "sizeBlender": [
+            0.056549,
+            0.061873,
+            0.07956
+          ],
+          "sourceObjects": [
+            "Superior segmental artery of right lung"
+          ],
+          "system": "cardiovascular"
+        }
+      },
+      "system": "cardiovascular"
+    },
+    "pulmonary-veins": {
+      "centerBlender": [
+        0.006714,
+        0.004605,
+        1.305529
+      ],
+      "missing": [],
+      "name": "Pulmonary Veins",
+      "nodes": [
+        "pulmonary-veins-anterior-vein-of-left-lung__Anterior vein of left lung",
+        "pulmonary-veins-anterior-vein-of-right-lung__Anterior vein of right lung",
+        "pulmonary-veins-apical-vein-of-right-lung__Apical vein of right lung",
+        "pulmonary-veins-apicoposterior-vein-of-left-lung__Apicoposterior vein of left lung",
+        "pulmonary-veins-inferior-basal-vein-of-left-lung__Inferior basal vein of left lung",
+        "pulmonary-veins-inferior-basal-vein-of-right-lung__Inferior basal vein of right lung",
+        "pulmonary-veins-inferior-lingular-vein-of-left-lung__Inferior lingular vein of left lung",
+        "pulmonary-veins-lateral-vein-of-right-lung__Lateral vein of right lung",
+        "pulmonary-veins-left-inferior-pulmonary-vein__Left inferior pulmonary vein",
+        "pulmonary-veins-left-superior-pulmonary-vein__Left superior pulmonary vein",
+        "pulmonary-veins-lingular-vein-of-left-lung__Lingular vein of left lung",
+        "pulmonary-veins-medial-vein-of-right-lung__Medial vein of right lung",
+        "pulmonary-veins-posterior-vein-of-right-lung__Posterior vein of right lung",
+        "pulmonary-veins-right-inferior-pulmonary-vein__Right inferior pulmonary vein",
+        "pulmonary-veins-right-superior-pulmonary-vein__Right superior pulmonary vein",
+        "pulmonary-veins-superior-basal-vein-of-left-lung__Superior basal vein of left lung",
+        "pulmonary-veins-superior-basal-vein-of-right-lung__Superior basal vein of right lung",
+        "pulmonary-veins-superior-lingular-vein-of-left-lung__Superior lingular vein of left lung",
+        "pulmonary-veins-superior-vein-of-left-lung__Superior vein of left lung",
+        "pulmonary-veins-superior-vein-of-right-lung__Superior vein of right lung"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.233023,
+        0.140222,
+        0.228441
+      ],
+      "sourceObjects": [
+        "Anterior vein of left lung",
+        "Anterior vein of right lung",
+        "Apical vein of right lung",
+        "Apicoposterior vein of left lung",
+        "Inferior basal vein of left lung",
+        "Inferior basal vein of right lung",
+        "Inferior lingular vein of left lung",
+        "Lateral vein of right lung",
+        "Left inferior pulmonary vein",
+        "Left superior pulmonary vein",
+        "Lingular vein of left lung",
+        "Medial vein of right lung",
+        "Posterior vein of right lung",
+        "Right inferior pulmonary vein",
+        "Right superior pulmonary vein",
+        "Superior basal vein of left lung",
+        "Superior basal vein of right lung",
+        "Superior lingular vein of left lung",
+        "Superior vein of left lung",
+        "Superior vein of right lung"
+      ],
+      "structures": {
+        "pulmonary-veins": {
+          "centerBlender": [
+            0.006714,
+            0.004605,
+            1.305529
+          ],
+          "kind": "organ",
+          "name": "Pulmonary Veins",
+          "nodes": [],
+          "parentId": "cardiovascular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.233023,
+            0.140222,
+            0.228441
+          ],
+          "sourceObjects": [],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-anterior-vein-of-left-lung": {
+          "centerBlender": [
+            0.069376,
+            -0.012423,
+            1.322063
+          ],
+          "kind": "part",
+          "name": "Anterior vein of left lung",
+          "nodes": [
+            "pulmonary-veins-anterior-vein-of-left-lung__Anterior vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.058741,
+            0.049933,
+            0.01506
+          ],
+          "sourceObjects": [
+            "Anterior vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-anterior-vein-of-right-lung": {
+          "centerBlender": [
+            -0.03969,
+            -0.018325,
+            1.343296
+          ],
+          "kind": "part",
+          "name": "Anterior vein of right lung",
+          "nodes": [
+            "pulmonary-veins-anterior-vein-of-right-lung__Anterior vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.024502,
+            0.035603,
+            0.033574
+          ],
+          "sourceObjects": [
+            "Anterior vein of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-apical-vein-of-right-lung": {
+          "centerBlender": [
+            -0.033959,
+            -0.005837,
+            1.369316
+          ],
+          "kind": "part",
+          "name": "Apical vein of right lung",
+          "nodes": [
+            "pulmonary-veins-apical-vein-of-right-lung__Apical vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.029474,
+            0.03056,
+            0.096551
+          ],
+          "sourceObjects": [
+            "Apical vein of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-apicoposterior-vein-of-left-lung": {
+          "centerBlender": [
+            0.062197,
+            0.003496,
+            1.36905
+          ],
+          "kind": "part",
+          "name": "Apicoposterior vein of left lung",
+          "nodes": [
+            "pulmonary-veins-apicoposterior-vein-of-left-lung__Apicoposterior vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.061592,
+            0.0642,
+            0.101399
+          ],
+          "sourceObjects": [
+            "Apicoposterior vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-inferior-basal-vein-of-left-lung": {
+          "centerBlender": [
+            0.060854,
+            0.045421,
+            1.248395
+          ],
+          "kind": "part",
+          "name": "Inferior basal vein of left lung",
+          "nodes": [
+            "pulmonary-veins-inferior-basal-vein-of-left-lung__Inferior basal vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.027313,
+            0.052851,
+            0.086756
+          ],
+          "sourceObjects": [
+            "Inferior basal vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-inferior-basal-vein-of-right-lung": {
+          "centerBlender": [
+            -0.059149,
+            0.044791,
+            1.2505
+          ],
+          "kind": "part",
+          "name": "Inferior basal vein of right lung",
+          "nodes": [
+            "pulmonary-veins-inferior-basal-vein-of-right-lung__Inferior basal vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.08218,
+            0.04588,
+            0.085629
+          ],
+          "sourceObjects": [
+            "Inferior basal vein of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-inferior-lingular-vein-of-left-lung": {
+          "centerBlender": [
+            0.078906,
+            -0.026999,
+            1.281207
+          ],
+          "kind": "part",
+          "name": "Inferior lingular vein of left lung",
+          "nodes": [
+            "pulmonary-veins-inferior-lingular-vein-of-left-lung__Inferior lingular vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.041302,
+            0.068637,
+            0.062246
+          ],
+          "sourceObjects": [
+            "Inferior lingular vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-lateral-vein-of-right-lung": {
+          "centerBlender": [
+            -0.062635,
+            -0.026012,
+            1.291067
+          ],
+          "kind": "part",
+          "name": "Lateral vein of right lung",
+          "nodes": [
+            "pulmonary-veins-lateral-vein-of-right-lung__Lateral vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.088332,
+            0.078989,
+            0.046235
+          ],
+          "sourceObjects": [
+            "Lateral vein of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-left-inferior-pulmonary-vein": {
+          "centerBlender": [
+            0.044317,
+            0.022132,
+            1.292995
+          ],
+          "kind": "part",
+          "name": "Left inferior pulmonary vein",
+          "nodes": [
+            "pulmonary-veins-left-inferior-pulmonary-vein__Left inferior pulmonary vein"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.015166,
+            0.010288,
+            0.013882
+          ],
+          "sourceObjects": [
+            "Left inferior pulmonary vein"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-left-superior-pulmonary-vein": {
+          "centerBlender": [
+            0.046894,
+            0.0082,
+            1.31763
+          ],
+          "kind": "part",
+          "name": "Left superior pulmonary vein",
+          "nodes": [
+            "pulmonary-veins-left-superior-pulmonary-vein__Left superior pulmonary vein"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.01753,
+            0.01308,
+            0.01228
+          ],
+          "sourceObjects": [
+            "Left superior pulmonary vein"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-lingular-vein-of-left-lung": {
+          "centerBlender": [
+            0.055615,
+            0.006966,
+            1.313319
+          ],
+          "kind": "part",
+          "name": "Lingular vein of left lung",
+          "nodes": [
+            "pulmonary-veins-lingular-vein-of-left-lung__Lingular vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.014293,
+            0.01017,
+            0.012007
+          ],
+          "sourceObjects": [
+            "Lingular vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-medial-vein-of-right-lung": {
+          "centerBlender": [
+            -0.037075,
+            -0.024289,
+            1.290056
+          ],
+          "kind": "part",
+          "name": "Medial vein of right lung",
+          "nodes": [
+            "pulmonary-veins-medial-vein-of-right-lung__Medial vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.03721,
+            0.074965,
+            0.052225
+          ],
+          "sourceObjects": [
+            "Medial vein of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-posterior-vein-of-right-lung": {
+          "centerBlender": [
+            -0.062874,
+            0.024896,
+            1.367153
+          ],
+          "kind": "part",
+          "name": "Posterior vein of right lung",
+          "nodes": [
+            "pulmonary-veins-posterior-vein-of-right-lung__Posterior vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.040761,
+            0.057202,
+            0.077326
+          ],
+          "sourceObjects": [
+            "Posterior vein of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-right-inferior-pulmonary-vein": {
+          "centerBlender": [
+            -0.013434,
+            0.023589,
+            1.294377
+          ],
+          "kind": "part",
+          "name": "Right inferior pulmonary vein",
+          "nodes": [
+            "pulmonary-veins-right-inferior-pulmonary-vein__Right inferior pulmonary vein"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.023519,
+            0.013189,
+            0.014634
+          ],
+          "sourceObjects": [
+            "Right inferior pulmonary vein"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-right-superior-pulmonary-vein": {
+          "centerBlender": [
+            -0.029003,
+            0.006028,
+            1.322546
+          ],
+          "kind": "part",
+          "name": "Right superior pulmonary vein",
+          "nodes": [
+            "pulmonary-veins-right-superior-pulmonary-vein__Right superior pulmonary vein"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.032268,
+            0.020765,
+            0.035349
+          ],
+          "sourceObjects": [
+            "Right superior pulmonary vein"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-superior-basal-vein-of-left-lung": {
+          "centerBlender": [
+            0.085591,
+            0.023712,
+            1.241722
+          ],
+          "kind": "part",
+          "name": "Superior basal vein of left lung",
+          "nodes": [
+            "pulmonary-veins-superior-basal-vein-of-left-lung__Superior basal vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.07527,
+            0.028548,
+            0.100827
+          ],
+          "sourceObjects": [
+            "Superior basal vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-superior-basal-vein-of-right-lung": {
+          "centerBlender": [
+            -0.060896,
+            0.042811,
+            1.268576
+          ],
+          "kind": "part",
+          "name": "Superior basal vein of right lung",
+          "nodes": [
+            "pulmonary-veins-superior-basal-vein-of-right-lung__Superior basal vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.097802,
+            0.051944,
+            0.065162
+          ],
+          "sourceObjects": [
+            "Superior basal vein of right lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-superior-lingular-vein-of-left-lung": {
+          "centerBlender": [
+            0.077307,
+            -0.023115,
+            1.301966
+          ],
+          "kind": "part",
+          "name": "Superior lingular vein of left lung",
+          "nodes": [
+            "pulmonary-veins-superior-lingular-vein-of-left-lung__Superior lingular vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.041967,
+            0.060075,
+            0.031532
+          ],
+          "sourceObjects": [
+            "Superior lingular vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-superior-vein-of-left-lung": {
+          "centerBlender": [
+            0.085938,
+            0.016941,
+            1.260851
+          ],
+          "kind": "part",
+          "name": "Superior vein of left lung",
+          "nodes": [
+            "pulmonary-veins-superior-vein-of-left-lung__Superior vein of left lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.0743,
+            0.108114,
+            0.113653
+          ],
+          "sourceObjects": [
+            "Superior vein of left lung"
+          ],
+          "system": "cardiovascular"
+        },
+        "pulmonary-veins-superior-vein-of-right-lung": {
+          "centerBlender": [
+            -0.06169,
+            0.049164,
+            1.305314
+          ],
+          "kind": "part",
+          "name": "Superior vein of right lung",
+          "nodes": [
+            "pulmonary-veins-superior-vein-of-right-lung__Superior vein of right lung"
+          ],
+          "parentId": "pulmonary-veins",
+          "selectable": true,
+          "sizeBlender": [
+            0.081242,
+            0.051104,
+            0.042572
+          ],
+          "sourceObjects": [
+            "Superior vein of right lung"
+          ],
+          "system": "cardiovascular"
+        }
+      },
+      "system": "cardiovascular"
+    }
+  }
+}

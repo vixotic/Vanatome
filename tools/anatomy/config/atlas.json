@@ -690,6 +690,146 @@
           "decimate": 0.8
         }
       ]
+    },
+    "cerebrum": {
+      "description": "Cerebral hemispheres, telencephalic structures, and diencephalic structures represented in the Z-Anatomy source.",
+      "liveAsset": "public/models/z-anatomy-cerebrum.glb",
+      "liveManifest": "public/models/z-anatomy-cerebrum-manifest.json",
+      "validation": {
+        "expectedObjectCount": 169,
+        "maximumAssetBytes": 12000000
+      },
+      "groups": [
+        {
+          "id": "cerebrum",
+          "name": "Cerebrum",
+          "system": "nervous",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Cerebrum",
+            "recursive": true,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.78, 0.58, 0.65, 1.0], "roughness": 0.5},
+          "decimate": 0.6
+        }
+      ]
+    },
+    "cerebellum": {
+      "description": "Cerebellar hemispheres, vermis, grey and white matter, and cerebellar peduncles.",
+      "liveAsset": "public/models/z-anatomy-cerebellum.glb",
+      "liveManifest": "public/models/z-anatomy-cerebellum-manifest.json",
+      "validation": {
+        "expectedObjectCount": 33,
+        "maximumAssetBytes": 7000000
+      },
+      "groups": [
+        {
+          "id": "cerebellum",
+          "name": "Cerebellum",
+          "system": "nervous",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Cerebellum",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.68, 0.46, 0.62, 1.0], "roughness": 0.5},
+          "decimate": 0.65
+        }
+      ]
+    },
+    "cardiac-internal-structures": {
+      "description": "Atrioventricular and semilunar valve leaflets with ventricular papillary muscles.",
+      "liveAsset": "public/models/z-anatomy-cardiac-internal-structures.glb",
+      "liveManifest": "public/models/z-anatomy-cardiac-internal-structures-manifest.json",
+      "validation": {
+        "expectedObjectCount": 13,
+        "maximumAssetBytes": 4000000
+      },
+      "groups": [
+        {
+          "id": "cardiac-internal-structures",
+          "name": "Cardiac Internal Structures",
+          "system": "cardiovascular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Heart",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1,
+            "excludeNames": ["Right atrium", "Right ventricle", "Left atrium", "Left ventricle"]
+          },
+          "material": {"color": [0.72, 0.2, 0.24, 1.0], "roughness": 0.44},
+          "decimate": 0.65
+        }
+      ]
+    },
+    "pulmonary-vessels": {
+      "description": "Pulmonary arterial and venous trees connecting the heart and lungs.",
+      "liveAsset": "public/models/z-anatomy-pulmonary-vessels.glb",
+      "liveManifest": "public/models/z-anatomy-pulmonary-vessels-manifest.json",
+      "validation": {
+        "expectedObjectCount": 47,
+        "maximumAssetBytes": 6000000
+      },
+      "groups": [
+        {
+          "id": "pulmonary-arteries",
+          "name": "Pulmonary Arteries",
+          "system": "cardiovascular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Pulmonary arteries",
+            "recursive": false,
+            "types": ["MESH", "CURVE"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.28, 0.48, 0.72, 1.0], "roughness": 0.42},
+          "decimate": 0.7
+        },
+        {
+          "id": "pulmonary-veins",
+          "name": "Pulmonary Veins",
+          "system": "cardiovascular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Pulmonary veins",
+            "recursive": false,
+            "types": ["MESH", "CURVE"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.72, 0.26, 0.3, 1.0], "roughness": 0.42},
+          "decimate": 0.7
+        }
+      ]
+    },
+    "neck-muscles": {
+      "description": "Superficial and deep neck muscles, including pharyngeal and laryngeal muscle groups.",
+      "liveAsset": "public/models/z-anatomy-neck-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-neck-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 63,
+        "maximumAssetBytes": 9000000
+      },
+      "groups": [
+        {
+          "id": "neck-muscles",
+          "name": "Neck Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Muscles of neck",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.7, 0.24, 0.22, 1.0], "roughness": 0.5},
+          "decimate": 0.65
+        }
+      ]
     }
   },
   "releases": {
@@ -718,14 +858,14 @@
     },
     "demo-1.3.0": {
       "version": "1.3.0",
-      "description": "Cumulative full-body release candidate with male reproductive, endocrine, abdominal, shoulder, gluteal, and facial anatomy.",
-      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs", "male-reproductive", "endocrine-glands", "abdominal-muscles", "shoulder-muscles", "gluteal-muscles", "facial-muscles"],
+      "description": "Cumulative full-body release candidate with expanded visceral, skeletal, muscular, nervous, endocrine, reproductive, lymphatic, and cardiovascular anatomy.",
+      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs", "male-reproductive", "endocrine-glands", "abdominal-muscles", "shoulder-muscles", "gluteal-muscles", "facial-muscles", "cerebrum", "cerebellum", "cardiac-internal-structures", "pulmonary-vessels", "neck-muscles"],
       "liveAsset": "public/models/z-anatomy-1.3.0-full-body.glb",
       "liveManifest": "public/models/z-anatomy-1.3.0-manifest.json",
       "liveRegistry": "public/models/z-anatomy-1.3.0-registry.json",
       "validation": {
-        "expectedObjectCount": 635,
-        "maximumAssetBytes": 45000000
+        "expectedObjectCount": 960,
+        "maximumAssetBytes": 60000000
       }
     }
   }
