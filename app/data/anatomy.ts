@@ -390,6 +390,10 @@ const systemColors: Record<string, string> = {
   lymphatic: "#62d9a7",
   nervous: "#b784ff",
   skeletal: "#9befff",
+  endocrine: "#f0b44d",
+  muscular: "#e8786f",
+  reproductive: "#df7ca7",
+  "regional-anatomy": "#75dfe8",
 };
 
 function displayName(value: string) {
@@ -415,6 +419,10 @@ const layerDefinitions = [
   { id: "lymphatic", label: "Lymphatic" },
   { id: "nervous", label: "Nervous" },
   { id: "skeletal", label: "Skeletal" },
+  { id: "endocrine", label: "Endocrine" },
+  { id: "muscular", label: "Muscular" },
+  { id: "reproductive", label: "Reproductive" },
+  { id: "regional-anatomy", label: "Body shell" },
 ] as const;
 
 export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
@@ -423,18 +431,16 @@ export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
     releasedStructures.map((structure) => [structure.id, structure]),
   );
 
-  const normalizedCuratedRegistry = curatedRegistry.map((structure) => {
+  const normalizedCuratedRegistry: AnatomyStructure[] = curatedRegistry.flatMap((structure) => {
     const released = releasedById.get(structure.id);
-    if (!released) {
-      throw new Error(`Loaded atlas metadata is missing ${structure.id}`);
-    }
-    return {
+    if (!released) return [];
+    return [{
       ...structure,
       parentId: released.parentId ?? structure.parentId,
       layer: released.layer,
       position: [...released.position] as [number, number, number],
       scale: [1, 1, 1] as [number, number, number],
-    };
+    }];
   });
 
   const curatedById = new Map(

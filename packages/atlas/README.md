@@ -18,7 +18,7 @@ without adding React or Three.js to the Atlas runtime.
 
 ## Quick start
 
-`createOfficialHumanAtlas()` uses the immutable public 1.2.0 catalog by
+`createOfficialHumanAtlas()` uses the immutable public 1.3.0 catalog by
 default. A custom URL can point to an exact mirror, another CDN, object store,
 or static files shipped with your application.
 
@@ -66,7 +66,7 @@ export function CardiovascularAtlas() {
 dependency.
 
 The request above downloads catalog JSON, cardiovascular metadata, and the
-cardiovascular GLB—not the other seven system models. The GLB request begins
+cardiovascular GLB—not the other ten system models. The GLB request begins
 when `VanatomeViewer` renders the returned atlas.
 
 ## Loading state
@@ -112,10 +112,10 @@ const humanAtlas = createOfficialHumanAtlas();
 const { atlas } = await humanAtlas.loadSystem("digestive");
 ```
 
-The official release exposes `cardiovascular`, `digestive`, `lymphatic`,
-`nervous`, `regional-anatomy`, `respiratory`, `skeletal`, and `urinary`
-systems. Read `catalog.systems` instead of hard-coding this list when building
-system pickers.
+The official release exposes `cardiovascular`, `digestive`, `endocrine`,
+`lymphatic`, `muscular`, `nervous`, `regional-anatomy`, `reproductive`,
+`respiratory`, `skeletal`, and `urinary` systems. Read `catalog.systems` instead
+of hard-coding this list when building system pickers.
 
 ## Full-body profiles
 
@@ -130,25 +130,27 @@ const cardiovascular = await humanAtlas.loadSystem("cardiovascular");
 const fullBody = await humanAtlas.loadProfile("full-body");
 ```
 
-The `1.2.0` release contains eight independently loadable system
-GLBs and a `full-body` profile. Its system node counts sum to the same 528 nodes
-declared by the full-body bundle, including 126 newly curated appendicular
-skeleton nodes and 53 newly curated lymphoid nodes. Full body additionally
-preserves cross-system and regional context.
+The `1.3.0` release contains eleven independently loadable system GLBs and a
+`full-body` profile. Its system node counts sum to the same 960 nodes declared
+by the full-body bundle. Full body additionally preserves cross-system and
+regional context.
 
 | Load target | Mapped nodes | GLB size |
 | --- | ---: | ---: |
-| Cardiovascular | 4 | 4.4 MiB |
+| Cardiovascular | 64 | 7.6 MiB |
 | Digestive | 12 | 5.5 MiB |
+| Endocrine | 10 | 3.3 MiB |
 | Lymphatic | 54 | 3.7 MiB |
-| Nervous | 32 | 4.2 MiB |
-| Regional anatomy | 236 | 5.9 MiB |
-| Respiratory | 6 | 3.9 MiB |
+| Muscular | 146 | 10.0 MiB |
+| Nervous | 234 | 10.8 MiB |
+| Regional anatomy | 236 | 6.0 MiB |
+| Reproductive | 14 | 3.4 MiB |
+| Respiratory | 6 | 4.0 MiB |
 | Skeletal | 181 | 3.7 MiB |
 | Urinary | 3 | 3.3 MiB |
-| Full body | 528 | 12.8 MiB |
+| Full body | 960 | 30.1 MiB |
 
-Sizes are the immutable 1.2.0 artifacts and may change in a later atlas
+Sizes are the immutable 1.3.0 artifacts and may change in a later atlas
 release.
 
 ## Loader API
@@ -208,15 +210,15 @@ Copy a versioned directory to static hosting and keep released files immutable:
 ```text
 public/
 ├── ATTRIBUTION.txt
-├── releases/1.2.0/
+├── releases/1.3.0/
 │   ├── catalog.json
 │   ├── cardiovascular.metadata.json
 │   ├── respiratory.metadata.json
 │   └── full-body.metadata.json
 └── models/
-    ├── z-anatomy-1.2.0-cardiovascular.glb
-    ├── z-anatomy-1.2.0-respiratory.glb
-    └── z-anatomy-1.2.0-full-body.glb
+    ├── z-anatomy-1.3.0-cardiovascular.glb
+    ├── z-anatomy-1.3.0-respiratory.glb
+    └── z-anatomy-1.3.0-full-body.glb
 ```
 
 Catalog URLs are resolved relative to the fetched `catalog.json`, so the whole
@@ -248,9 +250,9 @@ separate CC BY-SA 4.0 data artifacts. Preserve catalog provenance, attribution,
 modification notices, and applicable ShareAlike terms when redistributing or
 self-hosting them. See [ASSET-LICENSE.md](ASSET-LICENSE.md).
 
-## Upgrading from 0.1.0
+## Upgrading to 0.1.3
 
-Version 0.1.2 keeps the original catalog schema and loader methods compatible.
-Explicit per-system `bundleId` mappings, profiles, `loadProfile`, and the
-official 1.2.0 source are additive. The immutable 1.1.0 hosted release remains
-available for applications pinned to the previous package and atlas version.
+Version 0.1.3 keeps the catalog schema and loader methods backward compatible.
+It moves the official default to the additive 1.3.0 atlas release with eleven
+system bundles and a 960-node full-body profile. Immutable older releases
+remain available to applications that pin an exact catalog URL.

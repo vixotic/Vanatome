@@ -466,6 +466,26 @@ button {
   letter-spacing: 0.15em;
 }
 
+.bundle-switching {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 16px;
+  color: #78aab5;
+  background: rgba(2, 10, 15, 0.72);
+  backdrop-filter: blur(5px);
+  font: 8px var(--font-geist-mono);
+  letter-spacing: 0.16em;
+}
+
+.bundle-switching .scanner-ring {
+  width: 44px;
+  height: 44px;
+}
+
 .scanner-ring {
   width: 58px;
   height: 58px;

@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.3.0",
+  "buildId": "74294b7e83da5dce",
+  "bundleId": "reproductive",
+  "nodeCount": 14,
+  "structures": [
+    {
+      "id": "reproductive-system",
+      "name": "Reproductive",
+      "kind": "system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.0002,
+        -0.5446,
+        0.1269
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "testes",
+      "name": "Testes",
+      "kind": "organ",
+      "parentId": "reproductive-system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0,
+        -0.9104,
+        0.3931
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "testes-testis-left",
+      "name": "Testis.l",
+      "kind": "part",
+      "parentId": "testes",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0.1448,
+        -0.9104,
+        0.3931
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "testes-testis-right",
+      "name": "Testis.r",
+      "kind": "part",
+      "parentId": "testes",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.1448,
+        -0.9104,
+        0.3931
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "epididymides",
+      "name": "Epididymides",
+      "kind": "organ",
+      "parentId": "reproductive-system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0,
+        -0.8507,
+        0.376
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "epididymides-epididymis-left",
+      "name": "Epididymis.l",
+      "kind": "part",
+      "parentId": "epididymides",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0.1496,
+        -0.8507,
+        0.376
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "epididymides-epididymis-right",
+      "name": "Epididymis.r",
+      "kind": "part",
+      "parentId": "epididymides",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.1496,
+        -0.8507,
+        0.376
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "ductus-deferentes",
+      "name": "Ductus Deferentes",
+      "kind": "organ",
+      "parentId": "reproductive-system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0,
+        -0.4123,
+        0.082
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "ductus-deferentes-ductus-deferens-left",
+      "name": "Ductus deferens.l",
+      "kind": "part",
+      "parentId": "ductus-deferentes",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0.2573,
+        -0.4123,
+        0.082
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "ductus-deferentes-ductus-deferens-right",
+      "name": "Ductus deferens.r",
+      "kind": "part",
+      "parentId": "ductus-deferentes",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.2573,
+        -0.4123,
+        0.082
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "ejaculatory-ducts",
+      "name": "Ejaculatory Ducts",
+      "kind": "organ",
+      "parentId": "reproductive-system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0,
+        -0.2819,
+        -0.1879
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "ejaculatory-ducts-ejaculatory-duct-left",
+      "name": "Ejaculatory duct.l",
+      "kind": "part",
+      "parentId": "ejaculatory-ducts",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0.0268,
+        -0.2819,
+        -0.1879
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "ejaculatory-ducts-ejaculatory-duct-right",
+      "name": "Ejaculatory duct.r",
+      "kind": "part",
+      "parentId": "ejaculatory-ducts",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.0268,
+        -0.2819,
+        -0.1879
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "seminal-glands",
+      "name": "Seminal Glands",
+      "kind": "organ",
+      "parentId": "reproductive-system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0,
+        -0.1951,
+        -0.2383
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "seminal-glands-seminal-gland-left",
+      "name": "Seminal gland.l",
+      "kind": "part",
+      "parentId": "seminal-glands",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0.1366,
+        -0.1951,
+        -0.2383
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "seminal-glands-seminal-gland-right",
+      "name": "Seminal gland.r",
+      "kind": "part",
+      "parentId": "seminal-glands",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.1366,
+        -0.1951,
+        -0.2383
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "prostate",
+      "name": "Prostate",
+      "kind": "organ",
+      "parentId": "reproductive-system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.0004,
+        -0.355,
+        -0.1072
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "penile-erectile-tissues",
+      "name": "Penile Erectile Tissues",
+      "kind": "organ",
+      "parentId": "reproductive-system",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0.0008,
+        -0.5955,
+        0.2518
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "penile-erectile-tissues-corpus-cavernosum-of-penis",
+      "name": "Corpus cavernosum of penis",
+      "kind": "part",
+      "parentId": "penile-erectile-tissues",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        0.0008,
+        -0.5927,
+        0.2329
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "penile-erectile-tissues-corpus-spongiosum-of-penis",
+      "name": "Corpus spongiosum of penis",
+      "kind": "part",
+      "parentId": "penile-erectile-tissues",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.0046,
+        -0.6184,
+        0.2305
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "penile-erectile-tissues-glans-penis",
+      "name": "Glans penis",
+      "kind": "part",
+      "parentId": "penile-erectile-tissues",
+      "system": "reproductive",
+      "layer": "reproductive",
+      "selectable": true,
+      "position": [
+        -0.0004,
+        -0.7788,
+        0.6552
+      ],
+      "objectCount": 1
+    }
+  ]
+}
