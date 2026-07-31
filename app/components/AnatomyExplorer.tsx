@@ -47,6 +47,8 @@ import {
   ATLAS_CATALOG_URL,
 } from "../config/atlas";
 
+type MobileNavigationPanel = "browse" | "systems" | null;
+
 const AnatomyScene = dynamic(
   () => import("./AnatomyScene").then((module) => module.AnatomyScene),
   {
@@ -190,7 +192,10 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
   const [leftOpen, setLeftOpen] = useState(true);
   const [rightOpen, setRightOpen] = useState(true);
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false);
+  const [mobileNavigationPanel, setMobileNavigationPanel] =
+    useState<MobileNavigationPanel>(null);
   const [isCompact, setIsCompact] = useState(false);
+  const [isPhone, setIsPhone] = useState(false);
   const [contextMenu, setContextMenu] = useState<{
     id: string;
     x: number;
@@ -205,11 +210,20 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
   const rightPanelExpanded = isCompact ? mobilePanelOpen : rightOpen;
 
   useEffect(() => {
-    const media = window.matchMedia("(max-width: 980px)");
-    const update = () => setIsCompact(media.matches);
+    const compactMedia = window.matchMedia("(max-width: 980px)");
+    const phoneMedia = window.matchMedia("(max-width: 680px)");
+    const update = () => {
+      setIsCompact(compactMedia.matches);
+      setIsPhone(phoneMedia.matches);
+      if (!phoneMedia.matches) setMobileNavigationPanel(null);
+    };
     update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
+    compactMedia.addEventListener("change", update);
+    phoneMedia.addEventListener("change", update);
+    return () => {
+      compactMedia.removeEventListener("change", update);
+      phoneMedia.removeEventListener("change", update);
+    };
   }, []);
 
   const matches = useMemo(() => {
@@ -243,7 +257,12 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
       return next;
     });
     setRightOpen(true);
-    setMobilePanelOpen(true);
+    if (isPhone) {
+      setMobileNavigationPanel(null);
+      setMobilePanelOpen(false);
+    } else {
+      setMobilePanelOpen(true);
+    }
     setQuery("");
   };
 
@@ -355,6 +374,21 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
     }
   };
 
+  const toggleMobileNavigation = (
+    panel: Exclude<MobileNavigationPanel, null>,
+  ) => {
+    setMobilePanelOpen(false);
+    setMobileNavigationPanel((current) =>
+      current === panel ? null : panel,
+    );
+  };
+
+  const toggleMobileDetails = () => {
+    setMobileNavigationPanel(null);
+    setRightOpen(true);
+    setMobilePanelOpen((open) => !open);
+  };
+
   return (
     <main className="app-shell">
       <div className="ambient ambient-one" />
@@ -407,12 +441,44 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
       <section
         className={`workspace ${leftOpen ? "" : "left-collapsed"} ${rightOpen ? "" : "right-collapsed"}`}
       >
-        {leftOpen && (
+        {(leftOpen || isPhone) && (
           <aside
             id="anatomy-browser"
-            className="left-rail"
+            className={`left-rail ${
+              mobileNavigationPanel
+                ? `mobile-browser-open mobile-mode-${mobileNavigationPanel}`
+                : ""
+            }`}
             aria-label="Anatomy structure browser"
+            aria-hidden={
+              isPhone && !mobileNavigationPanel ? true : undefined
+            }
+            inert={
+              isPhone && !mobileNavigationPanel ? true : undefined
+            }
           >
+            <div className="mobile-sheet-header">
+              <div>
+                <span className="mobile-sheet-kicker">
+                  {mobileNavigationPanel === "systems"
+                    ? "DISPLAY FILTER"
+                    : "ANATOMY INDEX"}
+                </span>
+                <strong>
+                  {mobileNavigationPanel === "systems"
+                    ? "Choose systems"
+                    : "Browse anatomy"}
+                </strong>
+              </div>
+              <button
+                type="button"
+                aria-label="Close anatomy browser"
+                onClick={() => setMobileNavigationPanel(null)}
+              >
+                <X size={18} />
+              </button>
+            </div>
+
             <label className="search-box">
               <Search size={17} aria-hidden="true" />
               <input
@@ -562,6 +628,12 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
             id="anatomy-details"
             className={`info-panel ${mobilePanelOpen ? "mobile-open" : ""}`}
             aria-label="Anatomy details"
+            aria-hidden={
+              isCompact && !mobilePanelOpen ? true : undefined
+            }
+            inert={
+              isCompact && !mobilePanelOpen ? true : undefined
+            }
           >
             <button
               type="button"
@@ -659,6 +731,14 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
             onClick={() => setMobilePanelOpen(false)}
           />
         )}
+        {isPhone && mobileNavigationPanel && (
+          <button
+            className="mobile-nav-backdrop"
+            type="button"
+            aria-label="Close mobile navigation"
+            onClick={() => setMobileNavigationPanel(null)}
+          />
+        )}
 
         {contextMenu && menuStructure && (
           <div
@@ -737,6 +817,38 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
           </div>
         )}
       </section>
+
+      <nav className="mobile-dock" aria-label="Mobile anatomy navigation">
+        <button
+          type="button"
+          className={mobileNavigationPanel === "browse" ? "active" : ""}
+          aria-pressed={mobileNavigationPanel === "browse"}
+          onClick={() => toggleMobileNavigation("browse")}
+        >
+          <Search size={18} />
+          <span>BROWSE</span>
+        </button>
+        <button
+          type="button"
+          className={mobileNavigationPanel === "systems" ? "active" : ""}
+          aria-pressed={mobileNavigationPanel === "systems"}
+          onClick={() => toggleMobileNavigation("systems")}
+        >
+          <Layers3 size={18} />
+          <span>SYSTEMS</span>
+          <i>{viewer.visibleLayers.length}</i>
+        </button>
+        <button
+          type="button"
+          className={mobilePanelOpen ? "active" : ""}
+          aria-pressed={mobilePanelOpen}
+          onClick={toggleMobileDetails}
+        >
+          <Info size={18} />
+          <span>DETAILS</span>
+          {selected && <i className="selection-indicator" />}
+        </button>
+      </nav>
 
       <footer className="footer">
         <span>Z-ANATOMY MODEL • {atlasMappedNodeCount} MAPPED NODES • FULL-BODY SHELL</span>
