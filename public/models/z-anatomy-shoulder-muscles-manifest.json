@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "shoulder-muscles"
+  },
+  "build": {
+    "id": "48bff43d92a814f1",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "aa729c3405b888a799220c1496b63ee1cc6c40ac0b636d7f9b8d9b08641ec8d4"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 460488,
+    "sha256": "a91ac652cd3f053f902df59c41eb56eab4d90214e8b76c21973bb2583bb83065"
+  },
+  "objectCount": 14,
+  "groups": {
+    "deltoid-muscles": {
+      "centerBlender": [
+        0,
+        0.04135,
+        1.337207
+      ],
+      "missing": [],
+      "name": "Deltoid Muscles",
+      "nodes": [
+        "deltoid-muscles-acromial-part-of-deltoid-muscle-left__Acromial part of deltoid muscle.l",
+        "deltoid-muscles-acromial-part-of-deltoid-muscle-right__Acromial part of deltoid muscle.r",
+        "deltoid-muscles-clavicular-part-of-deltoid-muscle-left__Clavicular part of deltoid muscle.l",
+        "deltoid-muscles-clavicular-part-of-deltoid-muscle-right__Clavicular part of deltoid muscle.r",
+        "deltoid-muscles-scapular-spinal-part-of-deltoid-muscle-left__Scapular spinal part of deltoid muscle.l",
+        "deltoid-muscles-scapular-spinal-part-of-deltoid-muscle-right__Scapular spinal part of deltoid muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.469868,
+        0.123458,
+        0.173001
+      ],
+      "sourceObjects": [
+        "Acromial part of deltoid muscle.l",
+        "Acromial part of deltoid muscle.r",
+        "Clavicular part of deltoid muscle.l",
+        "Clavicular part of deltoid muscle.r",
+        "Scapular spinal part of deltoid muscle.l",
+        "Scapular spinal part of deltoid muscle.r"
+      ],
+      "structures": {
+        "deltoid-muscles": {
+          "centerBlender": [
+            0,
+            0.04135,
+            1.337207
+          ],
+          "kind": "organ",
+          "name": "Deltoid Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.469868,
+            0.123458,
+            0.173001
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "deltoid-muscles-acromial-part-of-deltoid-muscle-left": {
+          "centerBlender": [
+            0.197201,
+            0.031127,
+            1.342352
+          ],
+          "kind": "part",
+          "name": "Acromial part of deltoid muscle.l",
+          "nodes": [
+            "deltoid-muscles-acromial-part-of-deltoid-muscle-left__Acromial part of deltoid muscle.l"
+          ],
+          "parentId": "deltoid-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.075466,
+            0.06348,
+            0.14772
+          ],
+          "sourceObjects": [
+            "Acromial part of deltoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "deltoid-muscles-acromial-part-of-deltoid-muscle-right": {
+          "centerBlender": [
+            -0.197201,
+            0.031127,
+            1.342352
+          ],
+          "kind": "part",
+          "name": "Acromial part of deltoid muscle.r",
+          "nodes": [
+            "deltoid-muscles-acromial-part-of-deltoid-muscle-right__Acromial part of deltoid muscle.r"
+          ],
+          "parentId": "deltoid-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.075466,
+            0.06348,
+            0.14772
+          ],
+          "sourceObjects": [
+            "Acromial part of deltoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "deltoid-muscles-clavicular-part-of-deltoid-muscle-left": {
+          "centerBlender": [
+            0.14747,
+            0.007028,
+            1.346034
+          ],
+          "kind": "part",
+          "name": "Clavicular part of deltoid muscle.l",
+          "nodes": [
+            "deltoid-muscles-clavicular-part-of-deltoid-muscle-left__Clavicular part of deltoid muscle.l"
+          ],
+          "parentId": "deltoid-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.125993,
+            0.054816,
+            0.155347
+          ],
+          "sourceObjects": [
+            "Clavicular part of deltoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "deltoid-muscles-clavicular-part-of-deltoid-muscle-right": {
+          "centerBlender": [
+            -0.14747,
+            0.007028,
+            1.346034
+          ],
+          "kind": "part",
+          "name": "Clavicular part of deltoid muscle.r",
+          "nodes": [
+            "deltoid-muscles-clavicular-part-of-deltoid-muscle-right__Clavicular part of deltoid muscle.r"
+          ],
+          "parentId": "deltoid-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.125993,
+            0.054816,
+            0.155347
+          ],
+          "sourceObjects": [
+            "Clavicular part of deltoid muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "deltoid-muscles-scapular-spinal-part-of-deltoid-muscle-left": {
+          "centerBlender": [
+            0.158673,
+            0.06307,
+            1.328954
+          ],
+          "kind": "part",
+          "name": "Scapular spinal part of deltoid muscle.l",
+          "nodes": [
+            "deltoid-muscles-scapular-spinal-part-of-deltoid-muscle-left__Scapular spinal part of deltoid muscle.l"
+          ],
+          "parentId": "deltoid-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.136732,
+            0.080018,
+            0.156494
+          ],
+          "sourceObjects": [
+            "Scapular spinal part of deltoid muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "deltoid-muscles-scapular-spinal-part-of-deltoid-muscle-right": {
+          "centerBlender": [
+            -0.158673,
+            0.06307,
+            1.328954
+          ],
+          "kind": "part",
+          "name": "Scapular spinal part of deltoid muscle.r",
+          "nodes": [
+            "deltoid-muscles-scapular-spinal-part-of-deltoid-muscle-right__Scapular spinal part of deltoid muscle.r"
+          ],
+          "parentId": "deltoid-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.136732,
+            0.080018,
+            0.156494
+          ],
+          "sourceObjects": [
+            "Scapular spinal part of deltoid muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "rotator-cuff-muscles": {
+      "centerBlender": [
+        0,
+        0.059205,
+        1.344419
+      ],
+      "missing": [],
+      "name": "Rotator Cuff Muscles",
+      "nodes": [
+        "rotator-cuff-muscles-infraspinatus-muscle-left__Infraspinatus muscle.l",
+        "rotator-cuff-muscles-infraspinatus-muscle-right__Infraspinatus muscle.r",
+        "rotator-cuff-muscles-subscapularis-muscle-left__Subscapularis muscle.l",
+        "rotator-cuff-muscles-subscapularis-muscle-right__Subscapularis muscle.r",
+        "rotator-cuff-muscles-supraspinatus-muscle-left__Supraspinatus muscle.l",
+        "rotator-cuff-muscles-supraspinatus-muscle-right__Supraspinatus muscle.r",
+        "rotator-cuff-muscles-teres-minor-muscle-left__Teres minor muscle.l",
+        "rotator-cuff-muscles-teres-minor-muscle-right__Teres minor muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.394455,
+        0.115687,
+        0.133738
+      ],
+      "sourceObjects": [
+        "Infraspinatus muscle.l",
+        "Infraspinatus muscle.r",
+        "Subscapularis muscle.l",
+        "Subscapularis muscle.r",
+        "Supraspinatus muscle.l",
+        "Supraspinatus muscle.r",
+        "Teres minor muscle.l",
+        "Teres minor muscle.r"
+      ],
+      "structures": {
+        "rotator-cuff-muscles": {
+          "centerBlender": [
+            0,
+            0.059205,
+            1.344419
+          ],
+          "kind": "organ",
+          "name": "Rotator Cuff Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.394455,
+            0.115687,
+            0.133738
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-infraspinatus-muscle-left": {
+          "centerBlender": [
+            0.129246,
+            0.071155,
+            1.342662
+          ],
+          "kind": "part",
+          "name": "Infraspinatus muscle.l",
+          "nodes": [
+            "rotator-cuff-muscles-infraspinatus-muscle-left__Infraspinatus muscle.l"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.132487,
+            0.091788,
+            0.11366
+          ],
+          "sourceObjects": [
+            "Infraspinatus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-infraspinatus-muscle-right": {
+          "centerBlender": [
+            -0.129246,
+            0.071155,
+            1.342662
+          ],
+          "kind": "part",
+          "name": "Infraspinatus muscle.r",
+          "nodes": [
+            "rotator-cuff-muscles-infraspinatus-muscle-right__Infraspinatus muscle.r"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.132487,
+            0.091788,
+            0.11366
+          ],
+          "sourceObjects": [
+            "Infraspinatus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-subscapularis-muscle-left": {
+          "centerBlender": [
+            0.117633,
+            0.053842,
+            1.334817
+          ],
+          "kind": "part",
+          "name": "Subscapularis muscle.l",
+          "nodes": [
+            "rotator-cuff-muscles-subscapularis-muscle-left__Subscapularis muscle.l"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.10505,
+            0.10496,
+            0.114534
+          ],
+          "sourceObjects": [
+            "Subscapularis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-subscapularis-muscle-right": {
+          "centerBlender": [
+            -0.117633,
+            0.053842,
+            1.334817
+          ],
+          "kind": "part",
+          "name": "Subscapularis muscle.r",
+          "nodes": [
+            "rotator-cuff-muscles-subscapularis-muscle-right__Subscapularis muscle.r"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.10505,
+            0.10496,
+            0.114534
+          ],
+          "sourceObjects": [
+            "Subscapularis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-supraspinatus-muscle-left": {
+          "centerBlender": [
+            0.132261,
+            0.053492,
+            1.394905
+          ],
+          "kind": "part",
+          "name": "Supraspinatus muscle.l",
+          "nodes": [
+            "rotator-cuff-muscles-supraspinatus-muscle-left__Supraspinatus muscle.l"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.125054,
+            0.08478,
+            0.032767
+          ],
+          "sourceObjects": [
+            "Supraspinatus muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-supraspinatus-muscle-right": {
+          "centerBlender": [
+            -0.132261,
+            0.053492,
+            1.394905
+          ],
+          "kind": "part",
+          "name": "Supraspinatus muscle.r",
+          "nodes": [
+            "rotator-cuff-muscles-supraspinatus-muscle-right__Supraspinatus muscle.r"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.125054,
+            0.08478,
+            0.032767
+          ],
+          "sourceObjects": [
+            "Supraspinatus muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-teres-minor-muscle-left": {
+          "centerBlender": [
+            0.149167,
+            0.059345,
+            1.339466
+          ],
+          "kind": "part",
+          "name": "Teres minor muscle.l",
+          "nodes": [
+            "rotator-cuff-muscles-teres-minor-muscle-left__Teres minor muscle.l"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.09612,
+            0.075883,
+            0.089499
+          ],
+          "sourceObjects": [
+            "Teres minor muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "rotator-cuff-muscles-teres-minor-muscle-right": {
+          "centerBlender": [
+            -0.149167,
+            0.059345,
+            1.339467
+          ],
+          "kind": "part",
+          "name": "Teres minor muscle.r",
+          "nodes": [
+            "rotator-cuff-muscles-teres-minor-muscle-right__Teres minor muscle.r"
+          ],
+          "parentId": "rotator-cuff-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.09612,
+            0.075883,
+            0.089499
+          ],
+          "sourceObjects": [
+            "Teres minor muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    }
+  }
+}

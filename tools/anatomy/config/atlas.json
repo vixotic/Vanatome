@@ -579,6 +579,117 @@
           "decimate": 0.7
         }
       ]
+    },
+    "shoulder-muscles": {
+      "description": "Deltoid regions and the four paired rotator cuff muscles.",
+      "liveAsset": "public/models/z-anatomy-shoulder-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-shoulder-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 14,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "deltoid-muscles",
+          "name": "Deltoid Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Deltoid muscle",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.68, 0.22, 0.2, 1.0], "roughness": 0.48},
+          "decimate": 0.7
+        },
+        {
+          "id": "rotator-cuff-muscles",
+          "name": "Rotator Cuff Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Rotator cuff muscles",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.76, 0.3, 0.24, 1.0], "roughness": 0.48},
+          "decimate": 0.7
+        }
+      ]
+    },
+    "gluteal-muscles": {
+      "description": "Superficial gluteal muscles and the paired deep lateral rotators of the hip.",
+      "liveAsset": "public/models/z-anatomy-gluteal-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-gluteal-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 20,
+        "maximumAssetBytes": 6000000
+      },
+      "groups": [
+        {
+          "id": "superficial-gluteal-muscles",
+          "name": "Superficial Gluteal Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Superficial gluteal muscles",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.66, 0.2, 0.2, 1.0], "roughness": 0.5},
+          "decimate": 0.7
+        },
+        {
+          "id": "deep-gluteal-muscles",
+          "name": "Deep Gluteal Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceObjects": [
+            "Inferior gemellus muscle.l",
+            "Inferior gemellus muscle.r",
+            "Obturator externus.l",
+            "Obturator externus.r",
+            "Obturator internus.l",
+            "Obturator internus.r",
+            "Piriformis muscle.l",
+            "Piriformis muscle.r",
+            "Quadratus femoris muscle.l",
+            "Quadratus femoris muscle.r",
+            "Superior gemellus muscle.l",
+            "Superior gemellus muscle.r"
+          ],
+          "material": {"color": [0.76, 0.32, 0.26, 1.0], "roughness": 0.5},
+          "decimate": 0.7
+        }
+      ]
+    },
+    "facial-muscles": {
+      "description": "Paired muscles of facial expression represented in the Z-Anatomy source.",
+      "liveAsset": "public/models/z-anatomy-facial-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-facial-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 34,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "facial-expression-muscles",
+          "name": "Facial Expression Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Facial muscles",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.72, 0.28, 0.24, 1.0], "roughness": 0.48},
+          "decimate": 0.8
+        }
+      ]
     }
   },
   "releases": {
@@ -607,14 +718,14 @@
     },
     "demo-1.3.0": {
       "version": "1.3.0",
-      "description": "Cumulative full-body release candidate with male reproductive, endocrine, and abdominal muscular anatomy.",
-      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs", "male-reproductive", "endocrine-glands", "abdominal-muscles"],
+      "description": "Cumulative full-body release candidate with male reproductive, endocrine, abdominal, shoulder, gluteal, and facial anatomy.",
+      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs", "male-reproductive", "endocrine-glands", "abdominal-muscles", "shoulder-muscles", "gluteal-muscles", "facial-muscles"],
       "liveAsset": "public/models/z-anatomy-1.3.0-full-body.glb",
       "liveManifest": "public/models/z-anatomy-1.3.0-manifest.json",
       "liveRegistry": "public/models/z-anatomy-1.3.0-registry.json",
       "validation": {
-        "expectedObjectCount": 567,
-        "maximumAssetBytes": 40000000
+        "expectedObjectCount": 635,
+        "maximumAssetBytes": 45000000
       }
     }
   }
