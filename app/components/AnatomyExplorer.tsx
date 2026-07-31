@@ -282,6 +282,12 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
     setContextMenu(null);
   };
 
+  const openSelectedViewOptions = () => {
+    if (!selected) return;
+    setMobilePanelOpen(false);
+    setContextMenu({ id: selected.id, x: 0, y: 0 });
+  };
+
   const resetViewer = () => {
     setContextMenu(null);
     viewer.reset();
@@ -683,6 +689,14 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
                     <Crosshair size={15} />
                     FOCUS
                   </button>
+                  <button
+                    type="button"
+                    className="panel-action mobile-view-options"
+                    onClick={openSelectedViewOptions}
+                  >
+                    <Layers3 size={15} />
+                    VIEW OPTIONS
+                  </button>
                 </div>
 
                 <div className="data-block">
@@ -761,8 +775,18 @@ function LoadedAnatomyExplorer({ bundle }: { bundle: LoadedAtlasBundle }) {
               onContextMenu={(event) => event.preventDefault()}
             >
               <div className="viewer-context-heading">
-                <span>VIEW OPTIONS</span>
-                <strong>{menuStructure.name}</strong>
+                <div>
+                  <span>VIEW OPTIONS</span>
+                  <strong>{menuStructure.name}</strong>
+                </div>
+                <button
+                  type="button"
+                  className="viewer-context-close"
+                  aria-label="Close view options"
+                  onClick={() => setContextMenu(null)}
+                >
+                  <X size={17} />
+                </button>
               </div>
               <button
                 type="button"

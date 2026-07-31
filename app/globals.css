@@ -619,10 +619,18 @@ button {
 
 .viewer-context-heading {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   padding: 10px 11px 12px;
   border-bottom: 1px solid rgba(88, 231, 255, 0.1);
+}
+
+.viewer-context-heading > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .viewer-context-heading span {
@@ -673,6 +681,18 @@ button {
 .viewer-context-menu button:disabled {
   opacity: 0.38;
   cursor: not-allowed;
+}
+
+.viewer-context-menu .viewer-context-close {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(88, 231, 255, 0.14);
+  background: rgba(88, 231, 255, 0.04);
+  color: #668d98;
 }
 
 .viewer-context-menu .viewer-context-reset {
@@ -774,6 +794,10 @@ button {
   background: rgba(88, 231, 255, 0.1);
   color: var(--cyan);
   outline: none;
+}
+
+.mobile-view-options {
+  display: none;
 }
 
 .data-block {
@@ -1248,6 +1272,50 @@ button {
 
   .info-panel.mobile-open {
     transform: translateY(0);
+  }
+
+  .mobile-view-options {
+    grid-column: 1 / -1;
+    display: flex;
+    min-height: 42px;
+  }
+
+  .viewer-context-dismiss {
+    inset: 58px 0 calc(64px + env(safe-area-inset-bottom));
+    background: rgba(0, 4, 7, 0.68);
+    backdrop-filter: blur(3px);
+  }
+
+  .viewer-context-menu {
+    top: auto !important;
+    right: 0;
+    bottom: calc(64px + env(safe-area-inset-bottom));
+    left: 0 !important;
+    width: 100%;
+    max-height: min(70svh, 600px);
+    padding: 9px 12px 15px;
+    overflow-y: auto;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    box-shadow: 0 -24px 70px rgba(0, 0, 0, 0.56);
+  }
+
+  .viewer-context-heading {
+    padding: 9px 4px 13px;
+  }
+
+  .viewer-context-menu > button {
+    min-height: 58px;
+    padding: 11px 8px;
+  }
+
+  .viewer-context-menu button strong {
+    font-size: 11px;
+  }
+
+  .viewer-context-menu button span {
+    font-size: 8px;
   }
 
   .panel-backdrop,
