@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "abdominal-muscles"
+  },
+  "build": {
+    "id": "b44510563f488ab0",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "e2392d9073f6fbe072c0a69f8e0dfbfc9769ad7961b5f5d06d5bc2cda3f1f0df"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 3625788,
+    "sha256": "3901f75ad2e7f317cd08a3bf43fb8bda990e1860ac3438e23e9bf61b755649c5"
+  },
+  "objectCount": 15,
+  "groups": {
+    "external-abdominal-obliques": {
+      "centerBlender": [
+        0,
+        -0.035332,
+        1.070531
+      ],
+      "missing": [],
+      "name": "External Abdominal Obliques",
+      "nodes": [
+        "external-abdominal-obliques-external-abdominal-oblique-muscle-left__External abdominal oblique muscle.l",
+        "external-abdominal-obliques-external-abdominal-oblique-muscle-right__External abdominal oblique muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.28191,
+        0.17992,
+        0.418151
+      ],
+      "sourceObjects": [
+        "External abdominal oblique muscle.l",
+        "External abdominal oblique muscle.r"
+      ],
+      "structures": {
+        "external-abdominal-obliques": {
+          "centerBlender": [
+            0,
+            -0.035332,
+            1.070531
+          ],
+          "kind": "organ",
+          "name": "External Abdominal Obliques",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.28191,
+            0.17992,
+            0.418151
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "external-abdominal-obliques-external-abdominal-oblique-muscle-left": {
+          "centerBlender": [
+            0.072825,
+            -0.035332,
+            1.070531
+          ],
+          "kind": "part",
+          "name": "External abdominal oblique muscle.l",
+          "nodes": [
+            "external-abdominal-obliques-external-abdominal-oblique-muscle-left__External abdominal oblique muscle.l"
+          ],
+          "parentId": "external-abdominal-obliques",
+          "selectable": true,
+          "sizeBlender": [
+            0.13626,
+            0.17992,
+            0.418151
+          ],
+          "sourceObjects": [
+            "External abdominal oblique muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "external-abdominal-obliques-external-abdominal-oblique-muscle-right": {
+          "centerBlender": [
+            -0.072825,
+            -0.035332,
+            1.070531
+          ],
+          "kind": "part",
+          "name": "External abdominal oblique muscle.r",
+          "nodes": [
+            "external-abdominal-obliques-external-abdominal-oblique-muscle-right__External abdominal oblique muscle.r"
+          ],
+          "parentId": "external-abdominal-obliques",
+          "selectable": true,
+          "sizeBlender": [
+            0.13626,
+            0.17992,
+            0.418151
+          ],
+          "sourceObjects": [
+            "External abdominal oblique muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "internal-abdominal-obliques": {
+      "centerBlender": [
+        0,
+        -0.034418,
+        1.045581
+      ],
+      "missing": [],
+      "name": "Internal Abdominal Obliques",
+      "nodes": [
+        "internal-abdominal-obliques-internal-abdominal-oblique-muscle-left__Internal abdominal oblique muscle.l",
+        "internal-abdominal-obliques-internal-abdominal-oblique-muscle-right__Internal abdominal oblique muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.254849,
+        0.175379,
+        0.391352
+      ],
+      "sourceObjects": [
+        "Internal abdominal oblique muscle.l",
+        "Internal abdominal oblique muscle.r"
+      ],
+      "structures": {
+        "internal-abdominal-obliques": {
+          "centerBlender": [
+            0,
+            -0.034418,
+            1.045581
+          ],
+          "kind": "organ",
+          "name": "Internal Abdominal Obliques",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.254849,
+            0.175379,
+            0.391352
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "internal-abdominal-obliques-internal-abdominal-oblique-muscle-left": {
+          "centerBlender": [
+            0.065133,
+            -0.034418,
+            1.045581
+          ],
+          "kind": "part",
+          "name": "Internal abdominal oblique muscle.l",
+          "nodes": [
+            "internal-abdominal-obliques-internal-abdominal-oblique-muscle-left__Internal abdominal oblique muscle.l"
+          ],
+          "parentId": "internal-abdominal-obliques",
+          "selectable": true,
+          "sizeBlender": [
+            0.124582,
+            0.175379,
+            0.391351
+          ],
+          "sourceObjects": [
+            "Internal abdominal oblique muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "internal-abdominal-obliques-internal-abdominal-oblique-muscle-right": {
+          "centerBlender": [
+            -0.065133,
+            -0.034418,
+            1.045582
+          ],
+          "kind": "part",
+          "name": "Internal abdominal oblique muscle.r",
+          "nodes": [
+            "internal-abdominal-obliques-internal-abdominal-oblique-muscle-right__Internal abdominal oblique muscle.r"
+          ],
+          "parentId": "internal-abdominal-obliques",
+          "selectable": true,
+          "sizeBlender": [
+            0.124582,
+            0.175379,
+            0.391351
+          ],
+          "sourceObjects": [
+            "Internal abdominal oblique muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "transversus-abdominis": {
+      "centerBlender": [
+        0,
+        -0.020376,
+        1.051602
+      ],
+      "missing": [],
+      "name": "Transversus Abdominis",
+      "nodes": [
+        "transversus-abdominis-transversus-abdominis-muscle-left__Transversus abdominis muscle.l",
+        "transversus-abdominis-transversus-abdominis-muscle-right__Transversus abdominis muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.265896,
+        0.167445,
+        0.421111
+      ],
+      "sourceObjects": [
+        "Transversus abdominis muscle.l",
+        "Transversus abdominis muscle.r"
+      ],
+      "structures": {
+        "transversus-abdominis": {
+          "centerBlender": [
+            0,
+            -0.020376,
+            1.051602
+          ],
+          "kind": "organ",
+          "name": "Transversus Abdominis",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.265896,
+            0.167445,
+            0.421111
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "transversus-abdominis-transversus-abdominis-muscle-left": {
+          "centerBlender": [
+            0.068239,
+            -0.020376,
+            1.051602
+          ],
+          "kind": "part",
+          "name": "Transversus abdominis muscle.l",
+          "nodes": [
+            "transversus-abdominis-transversus-abdominis-muscle-left__Transversus abdominis muscle.l"
+          ],
+          "parentId": "transversus-abdominis",
+          "selectable": true,
+          "sizeBlender": [
+            0.129418,
+            0.167445,
+            0.421111
+          ],
+          "sourceObjects": [
+            "Transversus abdominis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "transversus-abdominis-transversus-abdominis-muscle-right": {
+          "centerBlender": [
+            -0.068239,
+            -0.020376,
+            1.051602
+          ],
+          "kind": "part",
+          "name": "Transversus abdominis muscle.r",
+          "nodes": [
+            "transversus-abdominis-transversus-abdominis-muscle-right__Transversus abdominis muscle.r"
+          ],
+          "parentId": "transversus-abdominis",
+          "selectable": true,
+          "sizeBlender": [
+            0.129418,
+            0.167445,
+            0.421111
+          ],
+          "sourceObjects": [
+            "Transversus abdominis muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "rectus-abdominis": {
+      "centerBlender": [
+        0,
+        -0.082332,
+        1.054153
+      ],
+      "missing": [],
+      "name": "Rectus Abdominis",
+      "nodes": [
+        "rectus-abdominis-rectus-abdominis-muscle-left__Rectus abdominis muscle.l",
+        "rectus-abdominis-rectus-abdominis-muscle-right__Rectus abdominis muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.163254,
+        0.074725,
+        0.408386
+      ],
+      "sourceObjects": [
+        "Rectus abdominis muscle.l",
+        "Rectus abdominis muscle.r"
+      ],
+      "structures": {
+        "rectus-abdominis": {
+          "centerBlender": [
+            0,
+            -0.082332,
+            1.054153
+          ],
+          "kind": "organ",
+          "name": "Rectus Abdominis",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.163254,
+            0.074725,
+            0.408386
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "rectus-abdominis-rectus-abdominis-muscle-left": {
+          "centerBlender": [
+            0.042329,
+            -0.082332,
+            1.054153
+          ],
+          "kind": "part",
+          "name": "Rectus abdominis muscle.l",
+          "nodes": [
+            "rectus-abdominis-rectus-abdominis-muscle-left__Rectus abdominis muscle.l"
+          ],
+          "parentId": "rectus-abdominis",
+          "selectable": true,
+          "sizeBlender": [
+            0.078596,
+            0.074725,
+            0.408386
+          ],
+          "sourceObjects": [
+            "Rectus abdominis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "rectus-abdominis-rectus-abdominis-muscle-right": {
+          "centerBlender": [
+            -0.042329,
+            -0.082332,
+            1.054153
+          ],
+          "kind": "part",
+          "name": "Rectus abdominis muscle.r",
+          "nodes": [
+            "rectus-abdominis-rectus-abdominis-muscle-right__Rectus abdominis muscle.r"
+          ],
+          "parentId": "rectus-abdominis",
+          "selectable": true,
+          "sizeBlender": [
+            0.078596,
+            0.074725,
+            0.408386
+          ],
+          "sourceObjects": [
+            "Rectus abdominis muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "pyramidalis-muscles": {
+      "centerBlender": [
+        0,
+        -0.061375,
+        0.886219
+      ],
+      "missing": [],
+      "name": "Pyramidalis Muscles",
+      "nodes": [
+        "pyramidalis-muscles-pyramidalis-muscle-left__Pyramidalis muscle.l",
+        "pyramidalis-muscles-pyramidalis-muscle-right__Pyramidalis muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.062103,
+        0.026931,
+        0.071713
+      ],
+      "sourceObjects": [
+        "Pyramidalis muscle.l",
+        "Pyramidalis muscle.r"
+      ],
+      "structures": {
+        "pyramidalis-muscles": {
+          "centerBlender": [
+            0,
+            -0.061375,
+            0.886219
+          ],
+          "kind": "organ",
+          "name": "Pyramidalis Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.062103,
+            0.026931,
+            0.071713
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "pyramidalis-muscles-pyramidalis-muscle-left": {
+          "centerBlender": [
+            0.017103,
+            -0.061375,
+            0.886219
+          ],
+          "kind": "part",
+          "name": "Pyramidalis muscle.l",
+          "nodes": [
+            "pyramidalis-muscles-pyramidalis-muscle-left__Pyramidalis muscle.l"
+          ],
+          "parentId": "pyramidalis-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.027897,
+            0.026931,
+            0.071713
+          ],
+          "sourceObjects": [
+            "Pyramidalis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "pyramidalis-muscles-pyramidalis-muscle-right": {
+          "centerBlender": [
+            -0.017103,
+            -0.061375,
+            0.886219
+          ],
+          "kind": "part",
+          "name": "Pyramidalis muscle.r",
+          "nodes": [
+            "pyramidalis-muscles-pyramidalis-muscle-right__Pyramidalis muscle.r"
+          ],
+          "parentId": "pyramidalis-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.027897,
+            0.026931,
+            0.071713
+          ],
+          "sourceObjects": [
+            "Pyramidalis muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "quadratus-lumborum": {
+      "centerBlender": [
+        0,
+        0.051282,
+        1.043455
+      ],
+      "missing": [],
+      "name": "Quadratus Lumborum",
+      "nodes": [
+        "quadratus-lumborum-quadratus-lumborum-muscle-left__Quadratus lumborum muscle.l",
+        "quadratus-lumborum-quadratus-lumborum-muscle-right__Quadratus lumborum muscle.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.138255,
+        0.045204,
+        0.206354
+      ],
+      "sourceObjects": [
+        "Quadratus lumborum muscle.l",
+        "Quadratus lumborum muscle.r"
+      ],
+      "structures": {
+        "quadratus-lumborum": {
+          "centerBlender": [
+            0,
+            0.051282,
+            1.043455
+          ],
+          "kind": "organ",
+          "name": "Quadratus Lumborum",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.138255,
+            0.045204,
+            0.206354
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "quadratus-lumborum-quadratus-lumborum-muscle-left": {
+          "centerBlender": [
+            0.043328,
+            0.051282,
+            1.043455
+          ],
+          "kind": "part",
+          "name": "Quadratus lumborum muscle.l",
+          "nodes": [
+            "quadratus-lumborum-quadratus-lumborum-muscle-left__Quadratus lumborum muscle.l"
+          ],
+          "parentId": "quadratus-lumborum",
+          "selectable": true,
+          "sizeBlender": [
+            0.0516,
+            0.045204,
+            0.206354
+          ],
+          "sourceObjects": [
+            "Quadratus lumborum muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "quadratus-lumborum-quadratus-lumborum-muscle-right": {
+          "centerBlender": [
+            -0.043328,
+            0.051282,
+            1.043455
+          ],
+          "kind": "part",
+          "name": "Quadratus lumborum muscle.r",
+          "nodes": [
+            "quadratus-lumborum-quadratus-lumborum-muscle-right__Quadratus lumborum muscle.r"
+          ],
+          "parentId": "quadratus-lumborum",
+          "selectable": true,
+          "sizeBlender": [
+            0.0516,
+            0.045204,
+            0.206354
+          ],
+          "sourceObjects": [
+            "Quadratus lumborum muscle.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "inguinal-ligaments": {
+      "centerBlender": [
+        0,
+        -0.052211,
+        0.896115
+      ],
+      "missing": [],
+      "name": "Inguinal Ligaments",
+      "nodes": [
+        "inguinal-ligaments-inguinal-ligament-left__Inguinal ligament.l",
+        "inguinal-ligaments-inguinal-ligament-right__Inguinal ligament.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.247598,
+        0.009283,
+        0.113204
+      ],
+      "sourceObjects": [
+        "Inguinal ligament.l",
+        "Inguinal ligament.r"
+      ],
+      "structures": {
+        "inguinal-ligaments": {
+          "centerBlender": [
+            0,
+            -0.052211,
+            0.896115
+          ],
+          "kind": "organ",
+          "name": "Inguinal Ligaments",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.247598,
+            0.009283,
+            0.113204
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "inguinal-ligaments-inguinal-ligament-left": {
+          "centerBlender": [
+            0.071526,
+            -0.052211,
+            0.896115
+          ],
+          "kind": "part",
+          "name": "Inguinal ligament.l",
+          "nodes": [
+            "inguinal-ligaments-inguinal-ligament-left__Inguinal ligament.l"
+          ],
+          "parentId": "inguinal-ligaments",
+          "selectable": true,
+          "sizeBlender": [
+            0.104546,
+            0.009283,
+            0.113204
+          ],
+          "sourceObjects": [
+            "Inguinal ligament.l"
+          ],
+          "system": "muscular"
+        },
+        "inguinal-ligaments-inguinal-ligament-right": {
+          "centerBlender": [
+            -0.071526,
+            -0.052211,
+            0.896115
+          ],
+          "kind": "part",
+          "name": "Inguinal ligament.r",
+          "nodes": [
+            "inguinal-ligaments-inguinal-ligament-right__Inguinal ligament.r"
+          ],
+          "parentId": "inguinal-ligaments",
+          "selectable": true,
+          "sizeBlender": [
+            0.104546,
+            0.009282,
+            0.113204
+          ],
+          "sourceObjects": [
+            "Inguinal ligament.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    },
+    "linea-alba": {
+      "centerBlender": [
+        0.001031,
+        -0.077264,
+        1.039074
+      ],
+      "missing": [],
+      "name": "Linea Alba",
+      "nodes": [
+        "linea-alba__Linea alba"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.018038,
+        0.076036,
+        0.395886
+      ],
+      "sourceObjects": [
+        "Linea alba"
+      ],
+      "structures": {
+        "linea-alba": {
+          "centerBlender": [
+            0.001031,
+            -0.077264,
+            1.039074
+          ],
+          "kind": "organ",
+          "name": "Linea Alba",
+          "nodes": [
+            "linea-alba__Linea alba"
+          ],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.018038,
+            0.076036,
+            0.395886
+          ],
+          "sourceObjects": [
+            "Linea alba"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    }
+  }
+}
