@@ -373,6 +373,76 @@
           "decimate": 0.55
         }
       ]
+    },
+    "male-reproductive": {
+      "description": "Male reproductive organs and paired ducts represented in the Z-Anatomy source.",
+      "liveAsset": "public/models/z-anatomy-male-reproductive.glb",
+      "liveManifest": "public/models/z-anatomy-male-reproductive-manifest.json",
+      "validation": {
+        "expectedObjectCount": 14,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "testes",
+          "name": "Testes",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Testis.l", "Testis.r"],
+          "material": {"color": [0.82, 0.55, 0.42, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "epididymides",
+          "name": "Epididymides",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Epididymis.l", "Epididymis.r"],
+          "material": {"color": [0.92, 0.68, 0.44, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "ductus-deferentes",
+          "name": "Ductus Deferentes",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Ductus deferens.l", "Ductus deferens.r"],
+          "material": {"color": [0.78, 0.68, 0.5, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "ejaculatory-ducts",
+          "name": "Ejaculatory Ducts",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Ejaculatory duct.l", "Ejaculatory duct.r"],
+          "material": {"color": [0.72, 0.6, 0.48, 1.0], "roughness": 0.44}
+        },
+        {
+          "id": "seminal-glands",
+          "name": "Seminal Glands",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": ["Seminal gland.l", "Seminal gland.r"],
+          "material": {"color": [0.86, 0.56, 0.4, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "prostate",
+          "name": "Prostate",
+          "system": "reproductive",
+          "sourceObjects": ["Prostate"],
+          "material": {"color": [0.76, 0.38, 0.46, 1.0], "roughness": 0.46}
+        },
+        {
+          "id": "penile-erectile-tissues",
+          "name": "Penile Erectile Tissues",
+          "system": "reproductive",
+          "expandSourceParts": true,
+          "sourceObjects": [
+            "Corpus cavernosum of penis",
+            "Corpus spongiosum of penis",
+            "Glans penis"
+          ],
+          "material": {"color": [0.72, 0.32, 0.4, 1.0], "roughness": 0.46}
+        }
+      ]
     }
   },
   "releases": {
@@ -397,6 +467,18 @@
       "validation": {
         "expectedObjectCount": 528,
         "maximumAssetBytes": 35000000
+      }
+    },
+    "demo-1.3.0": {
+      "version": "1.3.0",
+      "description": "Cumulative full-body release candidate with male reproductive anatomy.",
+      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs", "male-reproductive"],
+      "liveAsset": "public/models/z-anatomy-1.3.0-full-body.glb",
+      "liveManifest": "public/models/z-anatomy-1.3.0-manifest.json",
+      "liveRegistry": "public/models/z-anatomy-1.3.0-registry.json",
+      "validation": {
+        "expectedObjectCount": 542,
+        "maximumAssetBytes": 36000000
       }
     }
   }
