@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.4.0",
+  "buildId": "994e6cc8ffbb212e",
+  "bundleId": "regional-anatomy",
+  "nodeCount": 236,
+  "structures": [
+    {
+      "id": "body-shell",
+      "name": "body-shell",
+      "kind": "organ",
+      "system": "regional-anatomy",
+      "layer": "regional-anatomy",
+      "selectable": false,
+      "position": [
+        0,
+        0.0004,
+        -0.0094
+      ],
+      "objectCount": 236
+    }
+  ]
+}

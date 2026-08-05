@@ -47,7 +47,7 @@ around a curated, Z-Anatomy-derived human atlas.
 
 | **Navigate the hierarchy** | **Bring your own UI** | **Stay static** |
 |:---|:---|:---|
-| Search 782 stable anatomy entries across eleven curated systems. | The React viewer is controlled, composable, and designed to live inside your product. | No backend, account system, analytics service, or paid platform is required. |
+| Search 807 stable anatomy entries across eleven curated systems. | The React viewer is controlled, composable, and designed to live inside your product. | No backend, account system, analytics service, or paid platform is required. |
 
 <table>
   <tr>
@@ -82,7 +82,7 @@ import {
 
 const atlasLoader = createOfficialHumanAtlas({
   catalogUrl:
-    "https://atlas.vanatome.vixotic.in/releases/1.3.0/catalog.json",
+    "https://atlas.vanatome.vixotic.in/releases/1.4.0/catalog.json",
 });
 
 export function Anatomy() {
@@ -113,9 +113,11 @@ export function Anatomy() {
 }
 ```
 
-Distributed catalogs let `loadSystem(id)` resolve a dedicated system GLB,
-while `loadProfile("full-body")` resolves the cumulative full-body bundle.
-Legacy single-bundle catalogs retain their original behavior.
+Distributed catalogs let `loadSystem(id)` resolve one dedicated system GLB and
+`loadSystems(ids)` resolve only a selected set. Pass the returned `atlases`
+collection to the viewer for retained, nonblocking composition. An explicit
+“All” action can use `loadProfile("full-body")` for the optimized cumulative
+asset. Legacy single-atlas viewer usage retains its original behavior.
 
 The package owns the 3D anatomy scene. Your app owns the surrounding
 experience—search, breadcrumbs, hierarchy, sidebars, educational content, and
@@ -135,9 +137,9 @@ catalog, metadata, attribution, and model files on any static host.
 ## What ships today
 
 ```text
-782  stable anatomy entries
-725  geometry-mapped anatomy IDs
-960  mapped GLB nodes
+807  stable anatomy entries
+749  geometry-mapped anatomy IDs
+984  mapped GLB nodes
  11  curated anatomy systems
   0  required servers
 ```
@@ -147,6 +149,7 @@ catalog, metadata, attribution, and model files on any static host.
 - Cardiovascular, digestive, endocrine, lymphatic, muscular, nervous,
   reproductive, respiratory, skeletal, urinary, and regional-anatomy layers
 - Normal, x-ray, and ghost display modes with controlled visibility
+- Proportional multi-system loading with an optimized full-body fast path
 - Selected-only, parent, and translucent-parent isolation modes
 - Explicit model loading, progress, ready, error, and WebGL-loss events
 - Stable public anatomy IDs for URLs, saved views, and product content

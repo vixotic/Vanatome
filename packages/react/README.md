@@ -142,6 +142,26 @@ viewer.setVisibleLayers(["cardiovascular", "skeletal"]);
 An empty array intentionally means “all layers” for compatibility. If the host
 needs a “none selected” state, do not mount the viewer or hide the canvas.
 
+For separately delivered system GLBs, pass `atlases` instead of `atlas`. The
+viewer composes them into one scene with shared selection, isolation, camera,
+and layer behavior. Adding a source keeps already-ready models mounted while
+the new GLB loads; removing a source unloads only that model.
+
+```tsx
+<VanatomeViewer
+  atlases={[cardiovascular.atlas, respiratory.atlas]}
+  visibleLayers={["cardiovascular", "respiratory"]}
+  incrementalLoadingFallback={<span>Adding anatomy…</span>}
+  onModelReady={(modelUrl) => console.info("Ready", modelUrl)}
+/>
+```
+
+Use exactly one data prop: `atlas` for a single GLB or `atlases` for a
+composition. Every composed atlas must have the same release version and, when
+present, build ID. Structure IDs must remain unique across different model
+URLs. `composeVanatomeAtlases()` is exported for hosts that want to validate a
+collection before rendering it.
+
 ### Isolation modes
 
 `useVanatomeController().isolate(id, mode)` supports:
@@ -213,19 +233,28 @@ request and reports its lifecycle:
 
 ```tsx
 <VanatomeViewer
-  atlas={atlas}
+  atlases={atlases}
   loadingFallback={<p>Loading geometry…</p>}
+  incrementalLoadingFallback={<p>Adding selected systems…</p>}
   errorFallback={(error) => <p>{error.message}</p>}
   onLoadStart={(modelUrl) => console.info("Loading", modelUrl)}
+  onModelReady={(modelUrl) => console.info("Ready", modelUrl)}
   onLoadProgress={({ percentage }) => setProgress(percentage)}
   onReady={() => setSceneReady(true)}
   onError={(error) => reportViewerError(error)}
 />
 ```
 
-Model failures and WebGL context loss use stable error codes. Replacing
-`atlas.modelUrl` resets the lifecycle and prevents the previous model's state
-from being presented as the new scene.
+`loadingFallback` is shown while no active model is ready.
+`incrementalLoadingFallback` is shown after at least one model is ready, so the
+host can use a compact nonblocking status instead of replacing the scene.
+`onModelReady` fires per GLB; the existing `onReady` callback fires when every
+currently active GLB is ready.
+
+Model failures and WebGL context loss use stable error codes. Replacing a model
+URL resets that model's lifecycle and prevents its previous state from being
+presented as the new scene. A failed added model reports its error without
+blanking models that are already ready.
 
 The focusable viewer wrapper is labelled “Interactive 3D anatomy viewer” by
 default; override `ariaLabel` for a more specific host context. Mouse orbit,
@@ -254,27 +283,29 @@ The main prop groups are:
 
 | Group | Props |
 | --- | --- |
-| Data | `atlas` |
+| Data | `atlas` or `atlases` |
 | Selection | `selectedId`, `hoveredId`, `onSelect`, `onHover` |
 | Visibility | `visibleLayers`, `alwaysVisibleIds`, `hiddenIds`, `displayMode` |
 | Isolation | `isolation`, compatibility alias `isolatedId` |
 | Camera | `focusRequestKey`, `resetViewKey`, `focusPadding`, `focusDistance`, `cameraAnimationDuration`, `enablePan`, `minDistance`, `maxDistance` |
-| Lifecycle | `onLoadStart`, `onLoadProgress`, `onReady`, `onError`, `loadingFallback`, `errorFallback` |
+| Lifecycle | `onLoadStart`, `onLoadProgress`, `onModelReady`, `onReady`, `onError`, `loadingFallback`, `incrementalLoadingFallback`, `errorFallback` |
 | Interaction | `onStructureContextMenu`, `onEscape`, `onCameraChange`, `onInteractionStart`, `onInteractionEnd` |
 | Presentation | `appearance`, `className`, `style`, `ariaLabel`, `modelScale`, `modelPosition` |
 
-All callbacks and props are optional except `atlas`. Import
+All callbacks and props are optional; exactly one of `atlas` or `atlases` is
+required at runtime. Existing `atlas={atlas}` consumers remain source-compatible. Import
 `VanatomeViewerProps`, `VanatomeViewerAppearance`, and the event/state types
 from the package for exact signatures.
 
 ## Upgrading from 0.1.3
 
-Version 0.1.5 is backward compatible with the 0.1.3 public contract.
+Version 0.1.6 is backward compatible with the 0.1.3 public contract.
 `isolatedId` continues to isolate a selected subtree, the original
 `VanatomeController` type remains unchanged, and an empty `visibleLayers`
 array still displays all layers. Pan, context-menu events, multi-mode
 isolation, appearance controls, camera events, and `VanatomeControllerState`
-are additive.
+are additive. Multi-atlas composition and its per-model lifecycle callbacks are
+also additive; existing single-atlas applications do not need to change.
 
 ## Licensing
 

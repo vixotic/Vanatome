@@ -26,6 +26,8 @@ export {
   type AtlasProvenance,
   type AtlasProfileDescriptor,
   type LoadedAtlasBundle,
+  type LoadedAtlasCollection,
+  type LoadAtlasSystemsOptions,
   type VanatomeVector3,
   type VanatomeViewerAtlas,
 } from "./types.js";

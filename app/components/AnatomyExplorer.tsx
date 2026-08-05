@@ -49,6 +49,7 @@ import {
 } from "../config/atlas";
 
 type MobileNavigationPanel = "browse" | "systems" | null;
+type SystemLoadMode = "incremental" | "full-body";
 
 const INITIAL_SYSTEM_ID = "regional-anatomy";
 
@@ -77,30 +78,49 @@ export function AnatomyExplorer() {
     loader.getState(),
   );
   const [catalog, setCatalog] = useState<AtlasCatalog | null>(null);
-  const [bundle, setBundle] = useState<LoadedAtlasBundle | null>(null);
+  const [bundles, setBundles] = useState<readonly LoadedAtlasBundle[]>([]);
   const [activeSystemIds, setActiveSystemIds] = useState<readonly string[]>([
     INITIAL_SYSTEM_ID,
   ]);
+  const [deliveryMode, setDeliveryMode] = useState<SystemLoadMode>("incremental");
   const [switchingBundle, setSwitchingBundle] = useState(false);
+  const [bundleError, setBundleError] = useState<string | null>(null);
   const [attempt, setAttempt] = useState(0);
   const requestId = useRef(0);
   const activeController = useRef<AbortController | null>(null);
 
-  const loadSystems = useCallback((systemIds: readonly string[]) => {
+  const loadSystems = useCallback((
+    systemIds: readonly string[],
+    mode: SystemLoadMode = "incremental",
+  ) => {
     const nextRequestId = requestId.current + 1;
     requestId.current = nextRequestId;
     activeController.current?.abort();
+    setBundleError(null);
+
+    if (deliveryMode === "full-body" && mode === "incremental") {
+      activeController.current = null;
+      setActiveSystemIds([...systemIds]);
+      setSwitchingBundle(false);
+      return;
+    }
+
     const controller = new AbortController();
     activeController.current = controller;
     setSwitchingBundle(true);
-    const pending = systemIds.length === 1
-      ? loader.loadSystem(systemIds[0], { signal: controller.signal })
-      : loader.loadProfile("full-body", { signal: controller.signal });
+    const pending = mode === "full-body"
+      ? loader.loadProfile("full-body", { signal: controller.signal })
+          .then((bundle) => [bundle] as readonly LoadedAtlasBundle[])
+      : loader.loadSystems(systemIds, {
+          signal: controller.signal,
+          concurrency: 3,
+        }).then((collection) => collection.bundles);
     void pending
-      .then((nextBundle) => {
+      .then((nextBundles) => {
         if (requestId.current !== nextRequestId) return;
-        setBundle(nextBundle);
+        setBundles(nextBundles);
         setActiveSystemIds([...systemIds]);
+        setDeliveryMode(mode);
       })
       .catch((reason: unknown) => {
         if (
@@ -109,11 +129,16 @@ export function AnatomyExplorer() {
         ) {
           return;
         }
+        setBundleError(
+          reason instanceof Error
+            ? reason.message
+            : "Selected anatomy could not be loaded.",
+        );
       })
       .finally(() => {
         if (requestId.current === nextRequestId) setSwitchingBundle(false);
       });
-  }, [loader]);
+  }, [deliveryMode, loader]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -127,7 +152,7 @@ export function AnatomyExplorer() {
         });
       })
       .then((initialBundle) => {
-        setBundle(initialBundle);
+        setBundles([initialBundle]);
         setActiveSystemIds([INITIAL_SYSTEM_ID]);
       })
       .catch((reason: unknown) => {
@@ -146,7 +171,7 @@ export function AnatomyExplorer() {
 
   useEffect(() => () => activeController.current?.abort(), []);
 
-  if (!catalog || !bundle) {
+  if (!catalog || bundles.length === 0) {
     return (
       <AtlasLoadScreen
         state={loaderState}
@@ -157,11 +182,12 @@ export function AnatomyExplorer() {
 
   return (
     <LoadedAnatomyExplorer
-      key={`${bundle.atlas.modelUrl}:${activeSystemIds.join(",")}`}
-      bundle={bundle}
+      bundles={bundles}
       systems={catalog.systems}
       activeSystemIds={activeSystemIds}
+      deliveryMode={deliveryMode}
       switchingBundle={switchingBundle}
+      bundleError={bundleError}
       onSystemsChange={loadSystems}
     />
   );
@@ -231,21 +257,28 @@ function AtlasLoadScreen({
 }
 
 function LoadedAnatomyExplorer({
-  bundle,
+  bundles,
   systems,
   activeSystemIds,
+  deliveryMode,
   switchingBundle,
+  bundleError,
   onSystemsChange,
 }: {
-  bundle: LoadedAtlasBundle;
+  bundles: readonly LoadedAtlasBundle[];
   systems: AtlasCatalog["systems"];
   activeSystemIds: readonly string[];
+  deliveryMode: SystemLoadMode;
   switchingBundle: boolean;
-  onSystemsChange: (systemIds: readonly string[]) => void;
+  bundleError: string | null;
+  onSystemsChange: (
+    systemIds: readonly string[],
+    mode?: SystemLoadMode,
+  ) => void;
 }) {
   const anatomy = useMemo<AnatomyData>(
-    () => createAnatomyData(bundle),
-    [bundle],
+    () => createAnatomyData(bundles),
+    [bundles],
   );
   const {
     registry: anatomyRegistry,
@@ -283,6 +316,11 @@ function LoadedAnatomyExplorer({
     : activeSystemIds.length === 1
       ? `${systems.find((system) => system.id === activeSystemIds[0])?.name ?? "SYSTEM"} SCAN`
       : `${activeSystemIds.length} SYSTEMS SCAN`;
+  const syncVisibleLayers = viewer.setVisibleLayers;
+
+  useEffect(() => {
+    syncVisibleLayers(activeSystemIds);
+  }, [activeSystemIds, syncVisibleLayers]);
 
   useEffect(() => {
     const compactMedia = window.matchMedia("(max-width: 980px)");
@@ -303,13 +341,23 @@ function LoadedAnatomyExplorer({
 
   const matches = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    if (!needle) return anatomyRegistry;
-    return anatomyRegistry.filter(
+    const visibleStructures = anatomyRegistry.filter((organ) =>
+      activeSystemIds.includes(organ.layer),
+    );
+    if (!needle) return visibleStructures;
+    return visibleStructures.filter(
       (organ) =>
         organ.name.toLowerCase().includes(needle) ||
         organ.system.toLowerCase().includes(needle),
     );
-  }, [anatomyRegistry, query]);
+  }, [activeSystemIds, anatomyRegistry, query]);
+
+  const visibleHierarchy = useMemo(
+    () => anatomyHierarchy.filter((structure) =>
+      activeSystemIds.includes(structure.layer),
+    ),
+    [activeSystemIds, anatomyHierarchy],
+  );
 
   const choose = (id: string | null) => {
     setContextMenu(null);
@@ -319,7 +367,6 @@ function LoadedAnatomyExplorer({
       !activeSystemIds.includes(structure.layer)
     ) {
       const nextSystems = [...activeSystemIds, structure.layer];
-      viewer.setVisibleLayers(nextSystems);
       onSystemsChange(nextSystems);
     }
     viewer.select(id);
@@ -377,14 +424,12 @@ function LoadedAnatomyExplorer({
     const nextSystems = active
       ? activeSystemIds.filter((candidate) => candidate !== layerId)
       : [...activeSystemIds, layerId];
-    viewer.setVisibleLayers(nextSystems);
     onSystemsChange(nextSystems);
   };
 
   const showAllSystems = () => {
     const allSystems = systems.map((system) => system.id);
-    viewer.setVisibleLayers(allSystems);
-    onSystemsChange(allSystems);
+    onSystemsChange(allSystems, "full-body");
   };
 
   const menuStructure = contextMenu ? anatomyById[contextMenu.id] : null;
@@ -636,7 +681,7 @@ function LoadedAnatomyExplorer({
                 ? matches.map((structure, index) =>
                     renderStructure(structure, index, 0, true),
                   )
-                : anatomyHierarchy.map((structure, index) =>
+                : visibleHierarchy.map((structure, index) =>
                     renderStructure(structure, index),
                   )}
               {matches.length === 0 && (
@@ -657,7 +702,7 @@ function LoadedAnatomyExplorer({
 
         <section className="viewer" aria-label="Interactive 3D human anatomy model">
           <AnatomyScene
-            atlas={anatomy.atlas}
+            atlases={anatomy.atlases}
             selectedId={viewer.selectedId}
             isolation={viewer.isolation}
             visibleLayers={viewer.visibleLayers}
@@ -675,6 +720,11 @@ function LoadedAnatomyExplorer({
             <div className="bundle-switching" role="status">
               <div className="scanner-ring" aria-hidden="true" />
               <span>LOADING SELECTED ANATOMY</span>
+            </div>
+          )}
+          {bundleError && !switchingBundle && (
+            <div className="bundle-switching bundle-error" role="alert">
+              <span>{bundleError}</span>
             </div>
           )}
 
@@ -968,9 +1018,9 @@ function LoadedAnatomyExplorer({
 
       <footer className="footer">
         <span>
-          Z-ANATOMY MODEL • {atlasMappedNodeCount} MAPPED NODES • {activeSystemIds.length === systems.length
-            ? "FULL-BODY PROFILE"
-            : "SELECTIVE BUNDLE"}
+          Z-ANATOMY MODEL • {atlasMappedNodeCount} MAPPED NODES • {deliveryMode === "full-body"
+            ? "FULL-BODY CACHE"
+            : "SELECTIVE BUNDLES"}
         </span>
         <a href={anatomy.attributionUrl} target="_blank" rel="noreferrer">
           OPEN MODEL ATTRIBUTION

@@ -21,6 +21,7 @@ import {
   type ReactNode,
 } from "react";
 import * as THREE from "three";
+import { resolveVanatomeAtlasSources } from "./composition.js";
 import {
   calculateFocusDistance,
   createStructureIndex,
@@ -29,6 +30,7 @@ import {
   resolveStructureVisibility,
 } from "./sceneBehavior.js";
 import type {
+  VanatomeAtlas,
   VanatomeLoadProgress,
   VanatomeStructure,
   VanatomeViewerAppearance,
@@ -40,17 +42,23 @@ import type {
 
 type LoadedSceneProps = Omit<
   VanatomeViewerProps,
+  | "atlas"
+  | "atlases"
   | "ariaLabel"
   | "className"
   | "errorFallback"
   | "hoveredId"
+  | "incrementalLoadingFallback"
   | "loadingFallback"
   | "onError"
   | "onHover"
   | "onLoadProgress"
   | "onLoadStart"
+  | "onModelReady"
+  | "onReady"
   | "style"
 > & {
+  atlas: VanatomeAtlas;
   hoveredId: string | null;
   initialCameraPosition: VanatomeVector3;
   initialCameraTarget: VanatomeVector3;
@@ -554,7 +562,7 @@ function AtlasModel({
 
 function CameraController({
   atlas,
-  model,
+  models,
   selectedId,
   isolatedId,
   isolation,
@@ -601,7 +609,7 @@ function CameraController({
   | "onInteractionStart"
   | "onInteractionEnd"
 > & {
-  model: THREE.Group;
+  models: readonly THREE.Group[];
 }) {
   const controls = useRef<React.ElementRef<typeof OrbitControls>>(null);
   const animation = useRef<CameraAnimation | null>(null);
@@ -683,17 +691,19 @@ function CameraController({
       return;
     }
 
-    model.updateMatrixWorld(true);
     const bounds = new THREE.Box3();
-    model.traverse((object) => {
-      if (
-        object instanceof THREE.Mesh &&
-        object.visible &&
-        relatedIds.has(anatomyIdFor(object) ?? "")
-      ) {
-        bounds.expandByObject(object);
-      }
-    });
+    for (const model of models) {
+      model.updateMatrixWorld(true);
+      model.traverse((object) => {
+        if (
+          object instanceof THREE.Mesh &&
+          object.visible &&
+          relatedIds.has(anatomyIdFor(object) ?? "")
+        ) {
+          bounds.expandByObject(object);
+        }
+      });
+    }
     if (bounds.isEmpty()) {
       onFocusRejected?.(selectedId, "structure-has-no-visible-geometry");
       return;
@@ -729,7 +739,7 @@ function CameraController({
     focusRequestKey,
     maxDistance,
     minDistance,
-    model,
+    models,
     moveCamera,
     onFocusRejected,
     selectedId,
@@ -789,17 +799,25 @@ function CameraController({
   );
 }
 
-function LoadedScene(props: LoadedSceneProps) {
+function LoadedAtlasModel({
+  sourceAtlas,
+  onMount,
+  onModelReady,
+  ...props
+}: LoadedSceneProps & {
+  sourceAtlas: VanatomeAtlas;
+  onMount: (modelUrl: string, model: THREE.Group | null) => void;
+  onModelReady: (modelUrl: string) => void;
+}) {
   const {
-    atlas,
     modelPosition,
     modelScale,
-    onReady,
   } = props;
-  const onReadyRef = useLatest(onReady);
+  const onModelReadyRef = useLatest(onModelReady);
+  const onMountRef = useLatest(onMount);
   const readyUrl = useRef<string | null>(null);
   const [modelX, modelY, modelZ] = modelPosition;
-  const gltf = useGLTF(atlas.modelUrl) as { scene: THREE.Group };
+  const gltf = useGLTF(sourceAtlas.modelUrl) as { scene: THREE.Group };
   const model = useMemo(() => {
     const clone = gltf.scene.clone(true);
     clone.position.set(modelX, modelY, modelZ);
@@ -815,11 +833,15 @@ function LoadedScene(props: LoadedSceneProps) {
   }, [gltf.scene, modelScale, modelX, modelY, modelZ]);
 
   useEffect(() => {
-    if (readyUrl.current !== atlas.modelUrl) {
-      readyUrl.current = atlas.modelUrl;
-      onReadyRef.current?.();
+    const handleMount = onMountRef.current;
+    const handleModelReady = onModelReadyRef.current;
+    handleMount(sourceAtlas.modelUrl, model);
+    if (readyUrl.current !== sourceAtlas.modelUrl) {
+      readyUrl.current = sourceAtlas.modelUrl;
+      handleModelReady(sourceAtlas.modelUrl);
     }
     return () => {
+      handleMount(sourceAtlas.modelUrl, null);
       model.traverse((object) => {
         if (!(object instanceof THREE.Mesh)) return;
         const materials = Array.isArray(object.material)
@@ -828,14 +850,71 @@ function LoadedScene(props: LoadedSceneProps) {
         materials.forEach((material) => material.dispose());
       });
     };
-  }, [atlas.modelUrl, model, onReadyRef]);
+  }, [model, onModelReadyRef, onMountRef, sourceAtlas.modelUrl]);
+
+  return <AtlasModel {...props} model={model} />;
+}
+
+function CompositeScene({
+  atlases,
+  onError,
+  onLoadProgress,
+  onModelReady,
+  ...props
+}: LoadedSceneProps & {
+  atlases: readonly VanatomeAtlas[];
+  onError: (error: VanatomeViewerError) => void;
+  onLoadProgress?: (progress: VanatomeLoadProgress) => void;
+  onModelReady: (modelUrl: string) => void;
+}) {
+  const [models, setModels] = useState(
+    () => new Map<string, THREE.Group>(),
+  );
+  const activeUrls = useMemo(
+    () => new Set(atlases.map((atlas) => atlas.modelUrl)),
+    [atlases],
+  );
+  const registerModel = useCallback(
+    (modelUrl: string, model: THREE.Group | null) => {
+      setModels((current) => {
+        const existing = current.get(modelUrl);
+        if (model ? existing === model : !existing) return current;
+        const next = new Map(current);
+        if (model) next.set(modelUrl, model);
+        else next.delete(modelUrl);
+        return next;
+      });
+    },
+    [],
+  );
+  const activeModels = useMemo(
+    () => [...models]
+      .filter(([modelUrl]) => activeUrls.has(modelUrl))
+      .map(([, model]) => model),
+    [activeUrls, models],
+  );
 
   return (
     <>
       <ambientLight intensity={0.8} />
       <directionalLight position={[4, 5, 6]} intensity={2.2} />
-      <AtlasModel {...props} model={model} />
-      <CameraController {...props} model={model} />
+      {atlases.map((sourceAtlas) => (
+        <ViewerErrorBoundary
+          key={sourceAtlas.modelUrl}
+          modelUrl={sourceAtlas.modelUrl}
+          onError={onError}
+        >
+          <Suspense fallback={<LoadingMonitor onProgress={onLoadProgress} />}>
+            <LoadedAtlasModel
+              {...props}
+              sourceAtlas={sourceAtlas}
+              onMount={registerModel}
+              onModelReady={onModelReady}
+            />
+          </Suspense>
+        </ViewerErrorBoundary>
+      ))}
+      <CameraController {...props} models={activeModels} />
     </>
   );
 }
@@ -845,6 +924,7 @@ export function VanatomeViewer({
   style,
   ariaLabel = "Interactive 3D anatomy viewer",
   loadingFallback,
+  incrementalLoadingFallback,
   errorFallback,
   modelScale = 1,
   modelPosition = [0, 0, 0],
@@ -862,102 +942,162 @@ export function VanatomeViewer({
   onHover,
   onLoadStart,
   onLoadProgress,
+  onModelReady,
   onReady,
   onError,
   onSelect,
   onStructureContextMenu,
   onEscape,
   selectedId,
-  atlas,
+  atlas: singleAtlas,
+  atlases,
   ...props
 }: VanatomeViewerProps) {
+  const composition = useMemo(
+    () => resolveVanatomeAtlasSources({ atlas: singleAtlas, atlases }),
+    [atlases, singleAtlas],
+  );
+  const collectionKey = composition.modelUrls.join("\u0000");
+  const primaryModelUrl = composition.modelUrls[0];
+  const compositeAtlas = useMemo<VanatomeAtlas>(() => {
+    const first = composition.atlases[0];
+    return {
+      ...first,
+      id: composition.atlases.map((source) => source.id).join("+"),
+      name: composition.atlases.map((source) => source.name).join(" + "),
+      modelUrl: collectionKey,
+      structures: composition.structures,
+      attribution: [...new Set(
+        composition.atlases.map((source) => source.attribution),
+      )].join("\n"),
+    };
+  }, [collectionKey, composition.atlases, composition.structures]);
   const [pointed, setPointed] = useState<{
-    modelUrl: string;
+    collectionKey: string;
     id: string | null;
-  }>(() => ({ modelUrl: atlas.modelUrl, id: null }));
-  const [loadState, setLoadState] = useState<{
-    modelUrl: string;
+  }>(() => ({ collectionKey, id: null }));
+  const [modelStates, setModelStates] = useState<Record<string, {
     status: "loading" | "ready" | "error";
     error: VanatomeViewerError | null;
-  }>(() => ({
-    modelUrl: atlas.modelUrl,
-    status: "loading",
-    error: null,
-  }));
+  }>>({});
   const wrapper = useRef<HTMLDivElement>(null);
   const pointedKeyRef = useRef<string | null>(null);
-  const previousModelUrl = useRef(atlas.modelUrl);
+  const previousCollectionKey = useRef(collectionKey);
+  const readyCollectionKey = useRef<string | null>(null);
   const onHoverRef = useLatest(onHover);
+  const onReadyRef = useLatest(onReady);
   const resolvedAppearance = useMemo(
     () => ({ ...DEFAULT_APPEARANCE, ...appearance }),
     [appearance],
   );
   const effectiveHoveredId =
     hoveredId === undefined
-      ? pointed.modelUrl === atlas.modelUrl
+      ? pointed.collectionKey === collectionKey
         ? pointed.id
         : null
       : hoveredId;
 
   useEffect(() => {
-    if (previousModelUrl.current === atlas.modelUrl) return;
-    previousModelUrl.current = atlas.modelUrl;
+    if (previousCollectionKey.current === collectionKey) return;
+    previousCollectionKey.current = collectionKey;
     pointedKeyRef.current = null;
     onHoverRef.current?.(null);
-  }, [atlas.modelUrl, onHoverRef]);
+  }, [collectionKey, onHoverRef]);
 
   const handlePoint = useCallback(
     (id: string | null) => {
-      const key = `${atlas.modelUrl}\u0000${id ?? ""}`;
+      const key = `${collectionKey}\u0000${id ?? ""}`;
       if (pointedKeyRef.current === key) return;
       pointedKeyRef.current = key;
-      setPointed({ modelUrl: atlas.modelUrl, id });
+      setPointed({ collectionKey, id });
       onHover?.(id);
     },
-    [atlas.modelUrl, onHover],
+    [collectionKey, onHover],
   );
 
-  const handleReady = useCallback((modelUrl: string) => {
-    setLoadState({
-      modelUrl,
-      status: "ready",
-      error: null,
+  const handleLoadStart = useCallback((modelUrl: string) => {
+    setModelStates((current) => ({
+      ...current,
+      [modelUrl]: {
+        status: "loading",
+        error: null,
+      },
+    }));
+    onLoadStart?.(modelUrl);
+  }, [onLoadStart]);
+
+  const handleModelReady = useCallback((modelUrl: string) => {
+    setModelStates((current) => ({
+      ...current,
+      [modelUrl]: {
+        status: "ready",
+        error: null,
+      },
+    }));
+    onModelReady?.(modelUrl);
+  }, [onModelReady]);
+
+  const handleContextRestore = useCallback(() => {
+    setModelStates((current) => {
+      const next = { ...current };
+      for (const modelUrl of composition.modelUrls) {
+        next[modelUrl] = { status: "ready", error: null };
+      }
+      return next;
     });
-    onReady?.();
-  }, [onReady]);
+  }, [composition.modelUrls]);
 
   const handleError = useCallback(
     (error: VanatomeViewerError) => {
-      setLoadState({
-        modelUrl: error.modelUrl,
-        status: "error",
-        error,
-      });
+      setModelStates((current) => ({
+        ...current,
+        [error.modelUrl]: {
+          status: "error",
+          error,
+        },
+      }));
       onError?.(error);
     },
     [onError],
   );
-  const handleSceneReady = useCallback(
-    () => handleReady(atlas.modelUrl),
-    [atlas.modelUrl, handleReady],
+  const activeStates = composition.modelUrls.map(
+    (modelUrl) => modelStates[modelUrl] ?? {
+      status: "loading" as const,
+      error: null,
+    },
   );
+  const readyCount = activeStates.filter(
+    (state) => state.status === "ready",
+  ).length;
+  const loading = activeStates.some((state) => state.status === "loading");
+  const firstError = activeStates.find(
+    (state) => state.status === "error",
+  )?.error ?? null;
+  const currentStatus = loading
+    ? "loading"
+    : readyCount === 0 && firstError
+      ? "error"
+      : "ready";
 
-  const currentLoadState =
-    loadState.modelUrl === atlas.modelUrl
-      ? loadState
-      : {
-          modelUrl: atlas.modelUrl,
-          status: "loading" as const,
-          error: null,
-        };
+  useEffect(() => {
+    if (readyCount !== composition.modelUrls.length) return;
+    if (readyCollectionKey.current === collectionKey) return;
+    readyCollectionKey.current = collectionKey;
+    onReadyRef.current?.();
+  }, [collectionKey, composition.modelUrls.length, onReadyRef, readyCount]);
+
   const fallback =
-    currentLoadState.status === "error" && currentLoadState.error
+    readyCount === 0 && currentStatus === "error" && firstError
       ? typeof errorFallback === "function"
-        ? errorFallback(currentLoadState.error)
+        ? errorFallback(firstError)
         : errorFallback
-      : currentLoadState.status === "loading"
+      : readyCount === 0 && currentStatus === "loading"
         ? loadingFallback
         : null;
+  const incrementalFallback =
+    readyCount > 0 && currentStatus === "loading"
+      ? incrementalLoadingFallback
+      : null;
 
   return (
     <div
@@ -965,9 +1105,9 @@ export function VanatomeViewer({
       className={className}
       role="application"
       aria-label={ariaLabel}
-      aria-busy={currentLoadState.status === "loading"}
+      aria-busy={currentStatus === "loading"}
       tabIndex={0}
-      data-vanatome-status={currentLoadState.status}
+      data-vanatome-status={currentStatus}
       style={{
         position: "relative",
         width: "100%",
@@ -1004,47 +1144,43 @@ export function VanatomeViewer({
         camera={{ position: [...initialCameraPosition], fov: 42 }}
         onPointerMissed={() => onSelect?.(null)}
       >
-        <LoadStartMonitor
-          modelUrl={atlas.modelUrl}
-          onLoadStart={onLoadStart}
-        />
+        {composition.atlases.map((sourceAtlas) => (
+          <LoadStartMonitor
+            key={sourceAtlas.modelUrl}
+            modelUrl={sourceAtlas.modelUrl}
+            onLoadStart={handleLoadStart}
+          />
+        ))}
         <ContextMonitor
-          modelUrl={atlas.modelUrl}
+          modelUrl={primaryModelUrl}
           onError={handleError}
-          onRestore={handleReady}
+          onRestore={handleContextRestore}
         />
-        <ViewerErrorBoundary
-          key={atlas.modelUrl}
-          modelUrl={atlas.modelUrl}
+        <CompositeScene
+          {...props}
+          atlas={compositeAtlas}
+          atlases={composition.atlases}
+          selectedId={selectedId}
+          hoveredId={effectiveHoveredId}
+          onSelect={onSelect}
+          onStructureContextMenu={onStructureContextMenu}
+          onPoint={handlePoint}
           onError={handleError}
-        >
-          <Suspense
-            fallback={<LoadingMonitor onProgress={onLoadProgress} />}
-          >
-            <LoadedScene
-              {...props}
-              atlas={atlas}
-              selectedId={selectedId}
-              hoveredId={effectiveHoveredId}
-              onSelect={onSelect}
-              onStructureContextMenu={onStructureContextMenu}
-              onPoint={handlePoint}
-              onReady={handleSceneReady}
-              modelScale={modelScale}
-              modelPosition={modelPosition}
-              initialCameraPosition={initialCameraPosition}
-              initialCameraTarget={initialCameraTarget}
-              focusDistance={focusDistance}
-              focusPadding={focusPadding}
-              cameraAnimationDuration={cameraAnimationDuration}
-              respectReducedMotion={respectReducedMotion}
-              enablePan={enablePan}
-              minDistance={minDistance}
-              maxDistance={maxDistance}
-              appearance={resolvedAppearance}
-            />
-          </Suspense>
-        </ViewerErrorBoundary>
+          onLoadProgress={onLoadProgress}
+          onModelReady={handleModelReady}
+          modelScale={modelScale}
+          modelPosition={modelPosition}
+          initialCameraPosition={initialCameraPosition}
+          initialCameraTarget={initialCameraTarget}
+          focusDistance={focusDistance}
+          focusPadding={focusPadding}
+          cameraAnimationDuration={cameraAnimationDuration}
+          respectReducedMotion={respectReducedMotion}
+          enablePan={enablePan}
+          minDistance={minDistance}
+          maxDistance={maxDistance}
+          appearance={resolvedAppearance}
+        />
       </Canvas>
       {fallback != null && (
         <div
@@ -1057,6 +1193,20 @@ export function VanatomeViewer({
           }}
         >
           {fallback}
+        </div>
+      )}
+      {incrementalFallback != null && (
+        <div
+          aria-live="polite"
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "grid",
+            placeItems: "center",
+            pointerEvents: "none",
+          }}
+        >
+          {incrementalFallback}
         </div>
       )}
     </div>

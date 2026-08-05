@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.4.0",
+  "buildId": "994e6cc8ffbb212e",
+  "bundleId": "endocrine",
+  "nodeCount": 10,
+  "structures": [
+    {
+      "id": "endocrine-system",
+      "name": "Endocrine",
+      "kind": "system",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0.0061,
+        3.9675,
+        -0.0096
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "pituitary-gland",
+      "name": "Pituitary Gland",
+      "kind": "organ",
+      "parentId": "endocrine-system",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0,
+        5.1102,
+        0.1181
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "pituitary-gland-adenohypophysis",
+      "name": "Adenohypophysis",
+      "kind": "part",
+      "parentId": "pituitary-gland",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0,
+        5.112,
+        0.1218
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "pituitary-gland-neurohypophysis",
+      "name": "Neurohypophysis",
+      "kind": "part",
+      "parentId": "pituitary-gland",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0,
+        5.1087,
+        0.1065
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "pineal-gland",
+      "name": "Pineal Gland",
+      "kind": "organ",
+      "parentId": "endocrine-system",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0,
+        5.2119,
+        -0.1602
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "thyroid-gland",
+      "name": "Thyroid Gland",
+      "kind": "organ",
+      "parentId": "endocrine-system",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0,
+        4.202,
+        0.1137
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "parathyroid-glands",
+      "name": "Parathyroid Glands",
+      "kind": "organ",
+      "parentId": "endocrine-system",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0,
+        4.1917,
+        -0.0134
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "parathyroid-glands-inferior-parathyroid-gland-left",
+      "name": "Inferior parathyroid gland.l",
+      "kind": "part",
+      "parentId": "parathyroid-glands",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0.0761,
+        4.1222,
+        -0.0088
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "parathyroid-glands-inferior-parathyroid-gland-right",
+      "name": "Inferior parathyroid gland.r",
+      "kind": "part",
+      "parentId": "parathyroid-glands",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        -0.0761,
+        4.1222,
+        -0.0088
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "parathyroid-glands-superior-parathyroid-gland-left",
+      "name": "Superior parathyroid gland.l",
+      "kind": "part",
+      "parentId": "parathyroid-glands",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0.1146,
+        4.2608,
+        -0.0224
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "parathyroid-glands-superior-parathyroid-gland-right",
+      "name": "Superior parathyroid gland.r",
+      "kind": "part",
+      "parentId": "parathyroid-glands",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        -0.1146,
+        4.2608,
+        -0.0224
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "adrenal-glands",
+      "name": "Adrenal Glands",
+      "kind": "organ",
+      "parentId": "endocrine-system",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0.0454,
+        1.9616,
+        -0.1079
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "adrenal-glands-suprarenal-gland-left",
+      "name": "Suprarenal gland.l",
+      "kind": "part",
+      "parentId": "adrenal-glands",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        0.3598,
+        2.0239,
+        -0.1746
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "adrenal-glands-suprarenal-gland-right",
+      "name": "Suprarenal gland.r",
+      "kind": "part",
+      "parentId": "adrenal-glands",
+      "system": "endocrine",
+      "layer": "endocrine",
+      "selectable": true,
+      "position": [
+        -0.3261,
+        1.8901,
+        -0.066
+      ],
+      "objectCount": 1
+    }
+  ]
+}

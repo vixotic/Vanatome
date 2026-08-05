@@ -1,0 +1,686 @@
+{
+  "schemaVersion": 1,
+  "atlas": {
+    "id": "vanatome-human",
+    "name": "Vanatome Human Atlas",
+    "version": "1.1.0",
+    "batch": "hand-muscles"
+  },
+  "build": {
+    "id": "9f9d6e8ec248a88f",
+    "deterministic": true,
+    "fingerprints": {
+      "sourceBlendSha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+      "blenderExecutableSha256": "60ba7a9b6743f7acf101274361fa76409e382ae07cd2007ce07dea30f6b129f2",
+      "exporterSha256": "bee6407e659a3da8b1abe66ef14914295f729d891533201f2eee2fb96ca09783",
+      "pipelineSha256": "088c2a4ca31d4d2a4f42bb1f1a926d4c96b59671ab6d830c713994ef95300999",
+      "validatorSha256": "c4a89b26f0ad75ef71d843a2600cc6ad0e6ff9250aad43f53539fdcac5fa30bf",
+      "configSha256": "70f178cec4302c7fa8d7f81580631cc3287af1d99420d4fdc97108afb70ac653"
+    }
+  },
+  "source": {
+    "name": "Z-Anatomy",
+    "fileName": "Startup.blend",
+    "projectUrl": "https://github.com/Z-Anatomy/Models",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Z-Anatomy contributors; Gauthier Kervyn and Marcin Zielinski, with additional contributors and upstream sources documented by Z-Anatomy."
+  },
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS"
+  },
+  "safety": {
+    "embeddedBlendScripts": "disabled",
+    "liveAtlasModifiedDuringConversion": false,
+    "promotionRequired": true
+  },
+  "asset": {
+    "file": "atlas.glb",
+    "bytes": 275616,
+    "sha256": "30f39b6f79cbb71ee1093a6af07be5a39e3916d9ea8fabfe9aee02a9c9c8462f"
+  },
+  "objectCount": 24,
+  "groups": {
+    "hand-muscles": {
+      "centerBlender": [
+        0,
+        -0.038178,
+        0.795208
+      ],
+      "missing": [],
+      "name": "Hand Muscles",
+      "nodes": [
+        "hand-muscles-abductor-digiti-minimi-of-hand-left__Abductor digiti minimi of hand.l",
+        "hand-muscles-abductor-digiti-minimi-of-hand-right__Abductor digiti minimi of hand.r",
+        "hand-muscles-abductor-pollicis-brevis-left__Abductor pollicis brevis.l",
+        "hand-muscles-abductor-pollicis-brevis-right__Abductor pollicis brevis.r",
+        "hand-muscles-deep-head-of-flexor-pollicis-brevis-left__Deep head of flexor pollicis brevis.l",
+        "hand-muscles-deep-head-of-flexor-pollicis-brevis-right__Deep head of flexor pollicis brevis.r",
+        "hand-muscles-dorsal-interossei-muscles-of-hand-left__Dorsal interossei muscles of hand.l",
+        "hand-muscles-dorsal-interossei-muscles-of-hand-right__Dorsal interossei muscles of hand.r",
+        "hand-muscles-flexor-digiti-minimi-of-hand-left__Flexor digiti minimi of hand.l",
+        "hand-muscles-flexor-digiti-minimi-of-hand-right__Flexor digiti minimi of hand.r",
+        "hand-muscles-lumbrical-muscles-of-hand-left__Lumbrical muscles of hand.l",
+        "hand-muscles-lumbrical-muscles-of-hand-right__Lumbrical muscles of hand.r",
+        "hand-muscles-oblique-head-of-adductor-pollicis-left__Oblique head of adductor pollicis.l",
+        "hand-muscles-oblique-head-of-adductor-pollicis-right__Oblique head of adductor pollicis.r",
+        "hand-muscles-opponens-digiti-minimi-muscle-of-hand-left__Opponens digiti minimi muscle of hand.l",
+        "hand-muscles-opponens-digiti-minimi-muscle-of-hand-right__Opponens digiti minimi muscle of hand.r",
+        "hand-muscles-opponens-pollicis-muscle-left__Opponens pollicis muscle.l",
+        "hand-muscles-opponens-pollicis-muscle-right__Opponens pollicis muscle.r",
+        "hand-muscles-palmar-interossei-muscles-left__Palmar interossei muscles.l",
+        "hand-muscles-palmar-interossei-muscles-right__Palmar interossei muscles.r",
+        "hand-muscles-superficial-head-of-flexor-pollicis-brevis-left__Superficial head of flexor pollicis brevis.l",
+        "hand-muscles-superficial-head-of-flexor-pollicis-brevis-right__Superficial head of flexor pollicis brevis.r",
+        "hand-muscles-transverse-head-of-adductor-pollicis-left__Transverse head of adductor pollicis.l",
+        "hand-muscles-transverse-head-of-adductor-pollicis-right__Transverse head of adductor pollicis.r"
+      ],
+      "selectable": true,
+      "sizeBlender": [
+        0.631792,
+        0.040041,
+        0.127266
+      ],
+      "sourceObjects": [
+        "Abductor digiti minimi of hand.l",
+        "Abductor digiti minimi of hand.r",
+        "Abductor pollicis brevis.l",
+        "Abductor pollicis brevis.r",
+        "Deep head of flexor pollicis brevis.l",
+        "Deep head of flexor pollicis brevis.r",
+        "Dorsal interossei muscles of hand.l",
+        "Dorsal interossei muscles of hand.r",
+        "Flexor digiti minimi of hand.l",
+        "Flexor digiti minimi of hand.r",
+        "Lumbrical muscles of hand.l",
+        "Lumbrical muscles of hand.r",
+        "Oblique head of adductor pollicis.l",
+        "Oblique head of adductor pollicis.r",
+        "Opponens digiti minimi muscle of hand.l",
+        "Opponens digiti minimi muscle of hand.r",
+        "Opponens pollicis muscle.l",
+        "Opponens pollicis muscle.r",
+        "Palmar interossei muscles.l",
+        "Palmar interossei muscles.r",
+        "Superficial head of flexor pollicis brevis.l",
+        "Superficial head of flexor pollicis brevis.r",
+        "Transverse head of adductor pollicis.l",
+        "Transverse head of adductor pollicis.r"
+      ],
+      "structures": {
+        "hand-muscles": {
+          "centerBlender": [
+            0,
+            -0.038178,
+            0.795208
+          ],
+          "kind": "organ",
+          "name": "Hand Muscles",
+          "nodes": [],
+          "parentId": "muscular-system",
+          "selectable": true,
+          "sizeBlender": [
+            0.631792,
+            0.040041,
+            0.127266
+          ],
+          "sourceObjects": [],
+          "system": "muscular"
+        },
+        "hand-muscles-abductor-digiti-minimi-of-hand-left": {
+          "centerBlender": [
+            0.236896,
+            -0.039523,
+            0.811478
+          ],
+          "kind": "part",
+          "name": "Abductor digiti minimi of hand.l",
+          "nodes": [
+            "hand-muscles-abductor-digiti-minimi-of-hand-left__Abductor digiti minimi of hand.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018179,
+            0.018961,
+            0.067048
+          ],
+          "sourceObjects": [
+            "Abductor digiti minimi of hand.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-abductor-digiti-minimi-of-hand-right": {
+          "centerBlender": [
+            -0.236896,
+            -0.039523,
+            0.811478
+          ],
+          "kind": "part",
+          "name": "Abductor digiti minimi of hand.r",
+          "nodes": [
+            "hand-muscles-abductor-digiti-minimi-of-hand-right__Abductor digiti minimi of hand.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018179,
+            0.018961,
+            0.067048
+          ],
+          "sourceObjects": [
+            "Abductor digiti minimi of hand.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-abductor-pollicis-brevis-left": {
+          "centerBlender": [
+            0.292325,
+            -0.03753,
+            0.839097
+          ],
+          "kind": "part",
+          "name": "Abductor pollicis brevis.l",
+          "nodes": [
+            "hand-muscles-abductor-pollicis-brevis-left__Abductor pollicis brevis.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.040678,
+            0.03062,
+            0.039488
+          ],
+          "sourceObjects": [
+            "Abductor pollicis brevis.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-abductor-pollicis-brevis-right": {
+          "centerBlender": [
+            -0.292325,
+            -0.03753,
+            0.839097
+          ],
+          "kind": "part",
+          "name": "Abductor pollicis brevis.r",
+          "nodes": [
+            "hand-muscles-abductor-pollicis-brevis-right__Abductor pollicis brevis.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.040678,
+            0.03062,
+            0.039488
+          ],
+          "sourceObjects": [
+            "Abductor pollicis brevis.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-deep-head-of-flexor-pollicis-brevis-left": {
+          "centerBlender": [
+            0.291217,
+            -0.039453,
+            0.840043
+          ],
+          "kind": "part",
+          "name": "Deep head of flexor pollicis brevis.l",
+          "nodes": [
+            "hand-muscles-deep-head-of-flexor-pollicis-brevis-left__Deep head of flexor pollicis brevis.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.049357,
+            0.019404,
+            0.033254
+          ],
+          "sourceObjects": [
+            "Deep head of flexor pollicis brevis.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-deep-head-of-flexor-pollicis-brevis-right": {
+          "centerBlender": [
+            -0.291217,
+            -0.039453,
+            0.840043
+          ],
+          "kind": "part",
+          "name": "Deep head of flexor pollicis brevis.r",
+          "nodes": [
+            "hand-muscles-deep-head-of-flexor-pollicis-brevis-right__Deep head of flexor pollicis brevis.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.049357,
+            0.019404,
+            0.033254
+          ],
+          "sourceObjects": [
+            "Deep head of flexor pollicis brevis.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-dorsal-interossei-muscles-of-hand-left": {
+          "centerBlender": [
+            0.274874,
+            -0.031426,
+            0.799972
+          ],
+          "kind": "part",
+          "name": "Dorsal interossei muscles of hand.l",
+          "nodes": [
+            "hand-muscles-dorsal-interossei-muscles-of-hand-left__Dorsal interossei muscles of hand.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.064042,
+            0.026536,
+            0.071148
+          ],
+          "sourceObjects": [
+            "Dorsal interossei muscles of hand.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-dorsal-interossei-muscles-of-hand-right": {
+          "centerBlender": [
+            -0.274874,
+            -0.031426,
+            0.799972
+          ],
+          "kind": "part",
+          "name": "Dorsal interossei muscles of hand.r",
+          "nodes": [
+            "hand-muscles-dorsal-interossei-muscles-of-hand-right__Dorsal interossei muscles of hand.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.064042,
+            0.026536,
+            0.071148
+          ],
+          "sourceObjects": [
+            "Dorsal interossei muscles of hand.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-flexor-digiti-minimi-of-hand-left": {
+          "centerBlender": [
+            0.242744,
+            -0.039167,
+            0.811145
+          ],
+          "kind": "part",
+          "name": "Flexor digiti minimi of hand.l",
+          "nodes": [
+            "hand-muscles-flexor-digiti-minimi-of-hand-left__Flexor digiti minimi of hand.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018617,
+            0.018284,
+            0.06192
+          ],
+          "sourceObjects": [
+            "Flexor digiti minimi of hand.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-flexor-digiti-minimi-of-hand-right": {
+          "centerBlender": [
+            -0.242744,
+            -0.039167,
+            0.811145
+          ],
+          "kind": "part",
+          "name": "Flexor digiti minimi of hand.r",
+          "nodes": [
+            "hand-muscles-flexor-digiti-minimi-of-hand-right__Flexor digiti minimi of hand.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018617,
+            0.018284,
+            0.06192
+          ],
+          "sourceObjects": [
+            "Flexor digiti minimi of hand.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-lumbrical-muscles-of-hand-left": {
+          "centerBlender": [
+            0.269402,
+            -0.04214,
+            0.778024
+          ],
+          "kind": "part",
+          "name": "Lumbrical muscles of hand.l",
+          "nodes": [
+            "hand-muscles-lumbrical-muscles-of-hand-left__Lumbrical muscles of hand.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.075773,
+            0.032116,
+            0.092898
+          ],
+          "sourceObjects": [
+            "Lumbrical muscles of hand.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-lumbrical-muscles-of-hand-right": {
+          "centerBlender": [
+            -0.269402,
+            -0.04214,
+            0.778024
+          ],
+          "kind": "part",
+          "name": "Lumbrical muscles of hand.r",
+          "nodes": [
+            "hand-muscles-lumbrical-muscles-of-hand-right__Lumbrical muscles of hand.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.075773,
+            0.032116,
+            0.092898
+          ],
+          "sourceObjects": [
+            "Lumbrical muscles of hand.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-oblique-head-of-adductor-pollicis-left": {
+          "centerBlender": [
+            0.286951,
+            -0.034615,
+            0.8244
+          ],
+          "kind": "part",
+          "name": "Oblique head of adductor pollicis.l",
+          "nodes": [
+            "hand-muscles-oblique-head-of-adductor-pollicis-left__Oblique head of adductor pollicis.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.043982,
+            0.02466,
+            0.031117
+          ],
+          "sourceObjects": [
+            "Oblique head of adductor pollicis.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-oblique-head-of-adductor-pollicis-right": {
+          "centerBlender": [
+            -0.286951,
+            -0.034615,
+            0.8244
+          ],
+          "kind": "part",
+          "name": "Oblique head of adductor pollicis.r",
+          "nodes": [
+            "hand-muscles-oblique-head-of-adductor-pollicis-right__Oblique head of adductor pollicis.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.043982,
+            0.02466,
+            0.031117
+          ],
+          "sourceObjects": [
+            "Oblique head of adductor pollicis.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-opponens-digiti-minimi-muscle-of-hand-left": {
+          "centerBlender": [
+            0.244256,
+            -0.03464,
+            0.816739
+          ],
+          "kind": "part",
+          "name": "Opponens digiti minimi muscle of hand.l",
+          "nodes": [
+            "hand-muscles-opponens-digiti-minimi-muscle-of-hand-left__Opponens digiti minimi muscle of hand.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018437,
+            0.015371,
+            0.047673
+          ],
+          "sourceObjects": [
+            "Opponens digiti minimi muscle of hand.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-opponens-digiti-minimi-muscle-of-hand-right": {
+          "centerBlender": [
+            -0.244256,
+            -0.03464,
+            0.816739
+          ],
+          "kind": "part",
+          "name": "Opponens digiti minimi muscle of hand.r",
+          "nodes": [
+            "hand-muscles-opponens-digiti-minimi-muscle-of-hand-right__Opponens digiti minimi muscle of hand.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.018437,
+            0.015371,
+            0.047673
+          ],
+          "sourceObjects": [
+            "Opponens digiti minimi muscle of hand.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-opponens-pollicis-muscle-left": {
+          "centerBlender": [
+            0.287829,
+            -0.038937,
+            0.830054
+          ],
+          "kind": "part",
+          "name": "Opponens pollicis muscle.l",
+          "nodes": [
+            "hand-muscles-opponens-pollicis-muscle-left__Opponens pollicis muscle.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.0463,
+            0.028674,
+            0.028435
+          ],
+          "sourceObjects": [
+            "Opponens pollicis muscle.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-opponens-pollicis-muscle-right": {
+          "centerBlender": [
+            -0.287829,
+            -0.038937,
+            0.830054
+          ],
+          "kind": "part",
+          "name": "Opponens pollicis muscle.r",
+          "nodes": [
+            "hand-muscles-opponens-pollicis-muscle-right__Opponens pollicis muscle.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.0463,
+            0.028674,
+            0.028435
+          ],
+          "sourceObjects": [
+            "Opponens pollicis muscle.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-palmar-interossei-muscles-left": {
+          "centerBlender": [
+            0.244757,
+            -0.037335,
+            0.7972
+          ],
+          "kind": "part",
+          "name": "Palmar interossei muscles.l",
+          "nodes": [
+            "hand-muscles-palmar-interossei-muscles-left__Palmar interossei muscles.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.005658,
+            0.018086,
+            0.038232
+          ],
+          "sourceObjects": [
+            "Palmar interossei muscles.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-palmar-interossei-muscles-right": {
+          "centerBlender": [
+            -0.244757,
+            -0.037335,
+            0.7972
+          ],
+          "kind": "part",
+          "name": "Palmar interossei muscles.r",
+          "nodes": [
+            "hand-muscles-palmar-interossei-muscles-right__Palmar interossei muscles.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.005658,
+            0.018086,
+            0.038232
+          ],
+          "sourceObjects": [
+            "Palmar interossei muscles.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-superficial-head-of-flexor-pollicis-brevis-left": {
+          "centerBlender": [
+            0.290142,
+            -0.046125,
+            0.831642
+          ],
+          "kind": "part",
+          "name": "Superficial head of flexor pollicis brevis.l",
+          "nodes": [
+            "hand-muscles-superficial-head-of-flexor-pollicis-brevis-left__Superficial head of flexor pollicis brevis.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.043431,
+            0.016529,
+            0.030856
+          ],
+          "sourceObjects": [
+            "Superficial head of flexor pollicis brevis.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-superficial-head-of-flexor-pollicis-brevis-right": {
+          "centerBlender": [
+            -0.290142,
+            -0.046125,
+            0.831642
+          ],
+          "kind": "part",
+          "name": "Superficial head of flexor pollicis brevis.r",
+          "nodes": [
+            "hand-muscles-superficial-head-of-flexor-pollicis-brevis-right__Superficial head of flexor pollicis brevis.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.043431,
+            0.016529,
+            0.030856
+          ],
+          "sourceObjects": [
+            "Superficial head of flexor pollicis brevis.r"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-transverse-head-of-adductor-pollicis-left": {
+          "centerBlender": [
+            0.288506,
+            -0.035027,
+            0.806848
+          ],
+          "kind": "part",
+          "name": "Transverse head of adductor pollicis.l",
+          "nodes": [
+            "hand-muscles-transverse-head-of-adductor-pollicis-left__Transverse head of adductor pollicis.l"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.04268,
+            0.023296,
+            0.039441
+          ],
+          "sourceObjects": [
+            "Transverse head of adductor pollicis.l"
+          ],
+          "system": "muscular"
+        },
+        "hand-muscles-transverse-head-of-adductor-pollicis-right": {
+          "centerBlender": [
+            -0.288506,
+            -0.035027,
+            0.806848
+          ],
+          "kind": "part",
+          "name": "Transverse head of adductor pollicis.r",
+          "nodes": [
+            "hand-muscles-transverse-head-of-adductor-pollicis-right__Transverse head of adductor pollicis.r"
+          ],
+          "parentId": "hand-muscles",
+          "selectable": true,
+          "sizeBlender": [
+            0.04268,
+            0.023296,
+            0.039441
+          ],
+          "sourceObjects": [
+            "Transverse head of adductor pollicis.r"
+          ],
+          "system": "muscular"
+        }
+      },
+      "system": "muscular"
+    }
+  }
+}

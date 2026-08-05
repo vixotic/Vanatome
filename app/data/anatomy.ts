@@ -31,7 +31,7 @@ export type AnatomyData = {
   hierarchy: VanatomeHierarchyNode[];
   layers: readonly { id: string; label: string }[];
   mappedNodeCount: number;
-  atlas: VanatomeAtlas;
+  atlases: readonly VanatomeAtlas[];
   attributionUrl: string;
 };
 
@@ -425,8 +425,14 @@ const layerDefinitions = [
   { id: "regional-anatomy", label: "Body shell" },
 ] as const;
 
-export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
-  const releasedStructures = bundle.metadata.structures;
+export function createAnatomyData(
+  bundles: readonly LoadedAtlasBundle[],
+): AnatomyData {
+  const primaryBundle = bundles[0];
+  if (!primaryBundle) throw new Error("At least one atlas bundle is required.");
+  const releasedStructures = bundles.flatMap(
+    (bundle) => bundle.metadata.structures,
+  );
   const releasedById = new Map(
     releasedStructures.map((structure) => [structure.id, structure]),
   );
@@ -509,7 +515,9 @@ export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
   const hierarchy = createVanatomeHierarchy(
     registry,
   ) as VanatomeHierarchyNode[];
-  const availableLayers = new Set(bundle.descriptor.layers);
+  const availableLayers = new Set(
+    bundles.flatMap((bundle) => bundle.descriptor.layers),
+  );
   const layers = layerDefinitions.filter((layer) =>
     availableLayers.has(layer.id)
   );
@@ -519,11 +527,21 @@ export function createAnatomyData(bundle: LoadedAtlasBundle): AnatomyData {
     byId,
     hierarchy,
     layers,
-    mappedNodeCount: bundle.metadata.nodeCount,
-    atlas: {
-      ...bundle.atlas,
-      structures: viewerStructures,
-    },
-    attributionUrl: bundle.provenance.noticeUrl ?? "/ATTRIBUTION.txt",
+    mappedNodeCount: bundles.reduce(
+      (total, bundle) => total + bundle.metadata.nodeCount,
+      0,
+    ),
+    atlases: bundles.map((bundle) => {
+      const structureIds = new Set(
+        bundle.metadata.structures.map((structure) => structure.id),
+      );
+      return {
+        ...bundle.atlas,
+        structures: viewerStructures.filter((structure) =>
+          structureIds.has(structure.id)
+        ),
+      };
+    }),
+    attributionUrl: primaryBundle.provenance.noticeUrl ?? "/ATTRIBUTION.txt",
   };
 }

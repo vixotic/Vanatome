@@ -1,0 +1,3744 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.4.0",
+  "buildId": "994e6cc8ffbb212e",
+  "bundleId": "nervous",
+  "nodeCount": 234,
+  "structures": [
+    {
+      "id": "nervous-system",
+      "name": "Nervous",
+      "kind": "system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0001,
+        5.2275,
+        -0.1073
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "brainstem",
+      "name": "Brainstem",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9469,
+        -0.0975
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "brainstem-medulla-oblongata-left",
+      "name": "Medulla oblongata.l",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0456,
+        4.8119,
+        -0.1401
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-medulla-oblongata-right",
+      "name": "Medulla oblongata.r",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0456,
+        4.8119,
+        -0.1401
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-midbrain-left",
+      "name": "Midbrain.l",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.05,
+        5.1643,
+        -0.0489
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-midbrain-right",
+      "name": "Midbrain.r",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.05,
+        5.1643,
+        -0.0489
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-pons-left",
+      "name": "Pons.l",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0717,
+        5.0241,
+        -0.0589
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "brainstem-pons-right",
+      "name": "Pons.r",
+      "kind": "part",
+      "parentId": "brainstem",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0717,
+        5.0241,
+        -0.0589
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "fourth-ventricle",
+      "name": "fourth-ventricle",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9806,
+        -0.1727
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebral-aqueduct",
+      "name": "cerebral-aqueduct",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1687,
+        -0.086
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-colliculi",
+      "name": "superior-colliculi",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1877,
+        -0.1164
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "superior-colliculi-superior-colliculus-left",
+      "name": "Superior colliculus.l",
+      "kind": "part",
+      "parentId": "superior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0609,
+        5.1877,
+        -0.1164
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-colliculi-superior-colliculus-right",
+      "name": "Superior colliculus.r",
+      "kind": "part",
+      "parentId": "superior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0609,
+        5.1877,
+        -0.1164
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "inferior-colliculi",
+      "name": "inferior-colliculi",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1581,
+        -0.1133
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "inferior-colliculi-inferior-colliculus-left",
+      "name": "Inferior colliculus.l",
+      "kind": "part",
+      "parentId": "inferior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0513,
+        5.1581,
+        -0.1133
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "inferior-colliculi-inferior-colliculus-right",
+      "name": "Inferior colliculus.r",
+      "kind": "part",
+      "parentId": "inferior-colliculi",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0513,
+        5.1581,
+        -0.1133
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-olives",
+      "name": "medullary-olives",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.8912,
+        -0.11
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "medullary-olives-olive-left",
+      "name": "Olive.l",
+      "kind": "part",
+      "parentId": "medullary-olives",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0597,
+        4.8912,
+        -0.11
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-olives-olive-right",
+      "name": "Olive.r",
+      "kind": "part",
+      "parentId": "medullary-olives",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0597,
+        4.8912,
+        -0.11
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-pyramids",
+      "name": "medullary-pyramids",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.8852,
+        -0.0785
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "medullary-pyramids-pyramid-of-medulla-oblongata-left",
+      "name": "Pyramid of medulla oblongata.l",
+      "kind": "part",
+      "parentId": "medullary-pyramids",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0262,
+        4.8852,
+        -0.0785
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "medullary-pyramids-pyramid-of-medulla-oblongata-right",
+      "name": "Pyramid of medulla oblongata.r",
+      "kind": "part",
+      "parentId": "medullary-pyramids",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0262,
+        4.8852,
+        -0.0785
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "red-nuclei",
+      "name": "red-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1701,
+        0.0063
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "red-nuclei-red-nucleus-left",
+      "name": "Red nucleus.l",
+      "kind": "part",
+      "parentId": "red-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0339,
+        5.1701,
+        0.0063
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "red-nuclei-red-nucleus-right",
+      "name": "Red nucleus.r",
+      "kind": "part",
+      "parentId": "red-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0339,
+        5.1701,
+        0.0063
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei",
+      "name": "oculomotor-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1504,
+        -0.0644
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "oculomotor-nuclei-accessory-nucleus-of-oculomotor-nerve-left",
+      "name": "Accessory nucleus of oculomotor nerve.l",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0057,
+        5.1614,
+        -0.0623
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei-accessory-nucleus-of-oculomotor-nerve-right",
+      "name": "Accessory nucleus of oculomotor nerve.r",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0057,
+        5.1614,
+        -0.0623
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei-nucleus-of-oculomotor-nerve-left",
+      "name": "Nucleus of oculomotor nerve.l",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0137,
+        5.1396,
+        -0.0651
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "oculomotor-nuclei-nucleus-of-oculomotor-nerve-right",
+      "name": "Nucleus of oculomotor nerve.r",
+      "kind": "part",
+      "parentId": "oculomotor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0137,
+        5.1396,
+        -0.0651
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "facial-motor-nuclei",
+      "name": "facial-motor-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9667,
+        -0.0745
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "facial-motor-nuclei-motor-nucleus-of-facial-nerve-left",
+      "name": "Motor nucleus of facial nerve.l",
+      "kind": "part",
+      "parentId": "facial-motor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0346,
+        4.9667,
+        -0.0745
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "facial-motor-nuclei-motor-nucleus-of-facial-nerve-right",
+      "name": "Motor nucleus of facial nerve.r",
+      "kind": "part",
+      "parentId": "facial-motor-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0346,
+        4.9667,
+        -0.0745
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "abducens-nuclei",
+      "name": "abducens-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9753,
+        -0.1116
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "abducens-nuclei-nucleus-of-abducens-nerve-left",
+      "name": "Nucleus of abducens nerve.l",
+      "kind": "part",
+      "parentId": "abducens-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0106,
+        4.9753,
+        -0.1116
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "abducens-nuclei-nucleus-of-abducens-nerve-right",
+      "name": "Nucleus of abducens nerve.r",
+      "kind": "part",
+      "parentId": "abducens-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0106,
+        4.9753,
+        -0.1116
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-salivatory-nuclei",
+      "name": "superior-salivatory-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        4.9525,
+        -0.083
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "superior-salivatory-nuclei-superior-salivatory-nucleus-left",
+      "name": "Superior salivatory nucleus.l",
+      "kind": "part",
+      "parentId": "superior-salivatory-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.046,
+        4.9525,
+        -0.083
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "superior-salivatory-nuclei-superior-salivatory-nucleus-right",
+      "name": "Superior salivatory nucleus.r",
+      "kind": "part",
+      "parentId": "superior-salivatory-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.046,
+        4.9525,
+        -0.083
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "vestibular-nuclei",
+      "name": "vestibular-nuclei",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.0333,
+        -0.0742
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "vestibular-nuclei-vestibular-nuclei-left",
+      "name": "Vestibular nuclei.l",
+      "kind": "part",
+      "parentId": "vestibular-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0377,
+        5.0333,
+        -0.0742
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "vestibular-nuclei-vestibular-nuclei-right",
+      "name": "Vestibular nuclei.r",
+      "kind": "part",
+      "parentId": "vestibular-nuclei",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0377,
+        5.0333,
+        -0.0742
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "interpeduncular-fossae",
+      "name": "interpeduncular-fossae",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.2045,
+        0.0323
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "interpeduncular-fossae-interpeduncular-fossa-left",
+      "name": "Interpeduncular fossa.l",
+      "kind": "part",
+      "parentId": "interpeduncular-fossae",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.017,
+        5.2045,
+        0.0323
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "interpeduncular-fossae-interpeduncular-fossa-right",
+      "name": "Interpeduncular fossa.r",
+      "kind": "part",
+      "parentId": "interpeduncular-fossae",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.017,
+        5.2045,
+        0.0323
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum",
+      "name": "Cerebrum",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        3.867,
+        -0.0615
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "cerebrum-amygdaloid-body-left",
+      "name": "Amygdaloid body.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1732,
+        5.1731,
+        0.0671
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-amygdaloid-body-right",
+      "name": "Amygdaloid body.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1732,
+        5.1731,
+        0.0671
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-angular-gyrus-left",
+      "name": "Angular gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2599,
+        5.4724,
+        -0.456
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-angular-gyrus-right",
+      "name": "Angular gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2599,
+        5.4724,
+        -0.456
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-anterior-commissure",
+      "name": "Anterior commissure",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.2724,
+        0.1008
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-anterior-occipital-sulcus-left",
+      "name": "Anterior occipital sulcus*.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2958,
+        5.2359,
+        -0.4545
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-anterior-occipital-sulcus-right",
+      "name": "Anterior occipital sulcus*.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2958,
+        5.2359,
+        -0.4545
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-calcarine-sulcus-left",
+      "name": "Calcarine sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0892,
+        5.2272,
+        -0.4575
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-calcarine-sulcus-right",
+      "name": "Calcarine sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0892,
+        5.2272,
+        -0.4575
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-caudate-nucleus-left",
+      "name": "Caudate nucleus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1256,
+        5.3124,
+        0.0252
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-caudate-nucleus-right",
+      "name": "Caudate nucleus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1256,
+        5.3124,
+        0.0252
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-central-sulcus-left",
+      "name": "Central sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2359,
+        5.5378,
+        -0.1097
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-central-sulcus-right",
+      "name": "Central sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2359,
+        5.5378,
+        -0.1097
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-left",
+      "name": "Cingulate gyrus and sulcus (Middle anterior part).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.051,
+        5.531,
+        0.1197
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-and-sulcus-middle-anterior-part-right",
+      "name": "Cingulate gyrus and sulcus (Middle anterior part).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.051,
+        5.531,
+        0.1197
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-left",
+      "name": "Cingulate gyrus and sulcus (Middle posterior part).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0634,
+        5.5344,
+        -0.0819
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-and-sulcus-middle-posterior-part-right",
+      "name": "Cingulate gyrus and sulcus (Middle posterior part).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0634,
+        5.5344,
+        -0.0819
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-left",
+      "name": "Cingulate gyrus and sulcus (Posterior dorsal part).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0459,
+        5.4701,
+        -0.2578
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-and-sulcus-posterior-dorsal-part-right",
+      "name": "Cingulate gyrus and sulcus (Posterior dorsal part).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0459,
+        5.4701,
+        -0.2578
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-posteroventral-part-left",
+      "name": "Cingulate gyrus (Posteroventral part*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0607,
+        5.2775,
+        -0.277
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-gyrus-posteroventral-part-right",
+      "name": "Cingulate gyrus (Posteroventral part*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0607,
+        5.2775,
+        -0.277
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-sulcus-marginal-part-left",
+      "name": "Cingulate sulcus (Marginal part*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0767,
+        5.584,
+        -0.2675
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cingulate-sulcus-marginal-part-right",
+      "name": "Cingulate sulcus (Marginal part*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0767,
+        5.584,
+        -0.2675
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-circular-sulcus-of-insula-left",
+      "name": "Circular sulcus of insula.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2748,
+        5.372,
+        0.0788
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-circular-sulcus-of-insula-right",
+      "name": "Circular sulcus of insula.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2748,
+        5.372,
+        0.0788
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-collateral-sulcus-left",
+      "name": "Collateral sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1735,
+        5.1395,
+        -0.2566
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-collateral-sulcus-right",
+      "name": "Collateral sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1735,
+        5.1395,
+        -0.2566
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-corpus-callosum",
+      "name": "Corpus callosum",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.3463,
+        -0.022
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cuneus-left",
+      "name": "Cuneus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0683,
+        5.3121,
+        -0.5199
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-cuneus-right",
+      "name": "Cuneus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0683,
+        5.3121,
+        -0.5199
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-fornix-left",
+      "name": "Fornix.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1072,
+        5.2621,
+        -0.0542
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-fornix-right",
+      "name": "Fornix.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1072,
+        5.2621,
+        -0.0542
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-globus-pallidus-left",
+      "name": "Globus pallidus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.145,
+        5.2862,
+        0.0435
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-globus-pallidus-right",
+      "name": "Globus pallidus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.145,
+        5.2862,
+        0.0435
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-habenula",
+      "name": "Habenula",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.2309,
+        -0.1286
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-hippocampal-commissure",
+      "name": "Hippocampal commissure",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.2977,
+        -0.1194
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-hippocampus-left",
+      "name": "Hippocampus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1854,
+        5.1864,
+        -0.051
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-hippocampus-right",
+      "name": "Hippocampus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1854,
+        5.1864,
+        -0.051
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-hypothalamus",
+      "name": "Hypothalamus",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.001,
+        3.6017,
+        0.1099
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-frontal-sulcus-left",
+      "name": "Inferior frontal sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2757,
+        5.4702,
+        0.2279
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-frontal-sulcus-right",
+      "name": "Inferior frontal sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2757,
+        5.4702,
+        0.2279
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-occipital-gyrus-and-sulcus-left",
+      "name": "Inferior occipital gyrus and sulcus*.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2454,
+        5.1257,
+        -0.488
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-occipital-gyrus-and-sulcus-right",
+      "name": "Inferior occipital gyrus and sulcus*.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2454,
+        5.1257,
+        -0.488
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-temporal-gyrus-left",
+      "name": "Inferior temporal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3582,
+        5.1318,
+        -0.1814
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-temporal-gyrus-right",
+      "name": "Inferior temporal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3582,
+        5.1318,
+        -0.1814
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-temporal-sulcus-left",
+      "name": "Inferior temporal sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2993,
+        5.0835,
+        -0.076
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-inferior-temporal-sulcus-right",
+      "name": "Inferior temporal sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2993,
+        5.0835,
+        -0.076
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-left",
+      "name": "Insula (Subcentral gyrus and ant. and post. sulci*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3786,
+        5.3603,
+        -0.0131
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-insula-subcentral-gyrus-and-ant-and-post-sulci-right",
+      "name": "Insula (Subcentral gyrus and ant. and post. sulci*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3786,
+        5.3603,
+        -0.0131
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-intraparietal-sulcus-left",
+      "name": "Intraparietal sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1983,
+        5.5259,
+        -0.4028
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-intraparietal-sulcus-right",
+      "name": "Intraparietal sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1983,
+        5.5259,
+        -0.4028
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lat-fis-ant-horizont-left",
+      "name": "Lat_Fis-ant-Horizont.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2954,
+        5.3274,
+        0.2528
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lat-fis-ant-horizont-right",
+      "name": "Lat_Fis-ant-Horizont.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2954,
+        5.3274,
+        0.2528
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lat-fis-ant-vertical-left",
+      "name": "Lat_Fis-ant-Vertical.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3147,
+        5.4248,
+        0.1989
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lat-fis-ant-vertical-right",
+      "name": "Lat_Fis-ant-Vertical.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3147,
+        5.4248,
+        0.1989
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lat-fis-post-left",
+      "name": "Lat_Fis-post.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.299,
+        5.3774,
+        -0.1875
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lat-fis-post-right",
+      "name": "Lat_Fis-post.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.299,
+        5.3774,
+        -0.1875
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-geniculate-body-left",
+      "name": "Lateral geniculate body.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1337,
+        5.1857,
+        -0.0921
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-geniculate-body-right",
+      "name": "Lateral geniculate body.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1337,
+        5.1857,
+        -0.0921
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-left",
+      "name": "Lateral occipital gyrus (Middle occipital gyrus*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2439,
+        5.2516,
+        -0.5508
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-occipital-gyrus-middle-occipital-gyrus-right",
+      "name": "Lateral occipital gyrus (Middle occipital gyrus*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2439,
+        5.2516,
+        -0.5508
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-occipitotemporal-gyrus-left",
+      "name": "Lateral occipitotemporal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2566,
+        5.101,
+        -0.2468
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-occipitotemporal-gyrus-right",
+      "name": "Lateral occipitotemporal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2566,
+        5.101,
+        -0.2468
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-ventricle-left",
+      "name": "Lateral ventricle.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1324,
+        5.2851,
+        -0.109
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lateral-ventricle-right",
+      "name": "Lateral ventricle.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1324,
+        5.2851,
+        -0.109
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lentiform-nucleus-left",
+      "name": "Lentiform nucleus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1288,
+        5.3235,
+        0.0218
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lentiform-nucleus-right",
+      "name": "Lentiform nucleus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1288,
+        5.3235,
+        0.0218
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lingual-gyrus-left",
+      "name": "Lingual gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1184,
+        5.1693,
+        -0.4612
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lingual-gyrus-right",
+      "name": "Lingual gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1184,
+        5.1693,
+        -0.4612
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lunate-sulcus-left",
+      "name": "Lunate sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2215,
+        5.2226,
+        -0.5636
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-lunate-sulcus-right",
+      "name": "Lunate sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2215,
+        5.2226,
+        -0.5636
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-mamillary-body-left",
+      "name": "Mamillary body.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0232,
+        5.1903,
+        0.0374
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-mamillary-body-right",
+      "name": "Mamillary body.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0232,
+        5.1903,
+        0.0374
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-medial-geniculate-body-left",
+      "name": "Medial geniculate body.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0981,
+        5.1831,
+        -0.0943
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-medial-geniculate-body-right",
+      "name": "Medial geniculate body.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0981,
+        5.1831,
+        -0.0943
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-left",
+      "name": "Medial occipitotemporal gyrus (Parahippocampal*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.19,
+        5.1113,
+        -0.0716
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-medial-occipitotemporal-gyrus-parahippocampal-right",
+      "name": "Medial occipitotemporal gyrus (Parahippocampal*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.19,
+        5.1113,
+        -0.0716
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-middle-frontal-gyrus-left",
+      "name": "Middle frontal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2227,
+        5.5176,
+        0.2344
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-middle-frontal-gyrus-right",
+      "name": "Middle frontal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2227,
+        5.5176,
+        0.2344
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-middle-temporal-gyrus-left",
+      "name": "Middle temporal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3719,
+        5.2032,
+        -0.1613
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-middle-temporal-gyrus-right",
+      "name": "Middle temporal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3718,
+        5.2032,
+        -0.1613
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-occipital-pole-left",
+      "name": "Occipital pole.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1151,
+        5.1462,
+        -0.5946
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-occipital-pole-right",
+      "name": "Occipital pole.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1151,
+        5.1462,
+        -0.5946
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-occipitotemporal-sulcus-lateral-part-left",
+      "name": "Occipitotemporal sulcus (Lateral part*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3061,
+        5.1576,
+        -0.3086
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-occipitotemporal-sulcus-lateral-part-right",
+      "name": "Occipitotemporal sulcus (Lateral part*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3061,
+        5.1576,
+        -0.3086
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-olfactory-sulcus-left",
+      "name": "Olfactory sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1073,
+        5.2186,
+        0.2671
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-olfactory-sulcus-right",
+      "name": "Olfactory sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1073,
+        5.2186,
+        0.2671
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-opercular-part-of-inferior-frontal-gyrus-left",
+      "name": "Opercular part of inferior frontal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3284,
+        5.4105,
+        0.1536
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-opercular-part-of-inferior-frontal-gyrus-right",
+      "name": "Opercular part of inferior frontal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3284,
+        5.4105,
+        0.1536
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-optic-chiasm-left",
+      "name": "Optic chiasm.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0251,
+        5.1844,
+        0.1143
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-optic-chiasm-right",
+      "name": "Optic chiasm.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0251,
+        5.1844,
+        0.1143
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-optic-tract-left",
+      "name": "Optic tract.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0887,
+        5.1846,
+        0.0006
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-optic-tract-right",
+      "name": "Optic tract.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0887,
+        5.1846,
+        0.0006
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-left",
+      "name": "Orbital gyri (Frontomarginal gyrus and sulcus*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1803,
+        5.3385,
+        0.4716
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-gyri-frontomarginal-gyrus-and-sulcus-right",
+      "name": "Orbital gyri (Frontomarginal gyrus and sulcus*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1803,
+        5.3385,
+        0.4716
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-gyri-left",
+      "name": "Orbital gyri.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1977,
+        5.2452,
+        0.3301
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-gyri-right",
+      "name": "Orbital gyri.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1977,
+        5.2452,
+        0.3301
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-part-of-inferior-frontal-gyrus-left",
+      "name": "Orbital part of  inferior frontal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3124,
+        5.2878,
+        0.2615
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-part-of-inferior-frontal-gyrus-right",
+      "name": "Orbital part of  inferior frontal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3124,
+        5.2878,
+        0.2615
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-sulci-h-shaped-orbital-sulci-left",
+      "name": "Orbital sulci (H-shaped orbital sulci*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2019,
+        5.2621,
+        0.338
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-sulci-h-shaped-orbital-sulci-right",
+      "name": "Orbital sulci (H-shaped orbital sulci*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2019,
+        5.2621,
+        0.338
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-sulci-lateral-orbital-sulcus-left",
+      "name": "Orbital sulci (Lateral Orbital sulcus*).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3306,
+        5.3377,
+        0.3509
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-orbital-sulci-lateral-orbital-sulcus-right",
+      "name": "Orbital sulci (Lateral Orbital sulcus*).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3306,
+        5.3377,
+        0.3509
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-paracentral-gyrus-and-sulcus-left",
+      "name": "Paracentral gyrus and sulcus*.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0843,
+        5.666,
+        -0.2356
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-paracentral-gyrus-and-sulcus-right",
+      "name": "Paracentral gyrus and sulcus*.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0843,
+        5.666,
+        -0.2356
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-paracentral-sulcus-left",
+      "name": "Paracentral sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1757,
+        5.5015,
+        0.3745
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-paracentral-sulcus-right",
+      "name": "Paracentral sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1757,
+        5.5015,
+        0.3745
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-parieto-occipital-sulcus-left",
+      "name": "Parieto-occipital sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1216,
+        5.4321,
+        -0.4512
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-parieto-occipital-sulcus-right",
+      "name": "Parieto-occipital sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1216,
+        5.4321,
+        -0.4512
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-postcentral-gyrus-left",
+      "name": "Postcentral gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2752,
+        5.5781,
+        -0.1314
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-postcentral-gyrus-right",
+      "name": "Postcentral gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2752,
+        5.5781,
+        -0.1314
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-postcentral-sulcus-left",
+      "name": "Postcentral sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2787,
+        5.5732,
+        -0.2046
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-postcentral-sulcus-right",
+      "name": "Postcentral sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2787,
+        5.5732,
+        -0.2046
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-posterior-commissure",
+      "name": "Posterior commissure",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.2175,
+        -0.1011
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-posterior-transverse-collateral-sulcus-left",
+      "name": " Posterior transverse collateral sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1734,
+        5.1196,
+        -0.4777
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-posterior-transverse-collateral-sulcus-right",
+      "name": " Posterior transverse collateral sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1734,
+        5.1196,
+        -0.4777
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precentral-gyrus-left",
+      "name": "Precentral gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2505,
+        5.5756,
+        -0.0395
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precentral-gyrus-right",
+      "name": "Precentral gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2505,
+        5.5756,
+        -0.0395
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precentral-sulcus-inferior-part-left",
+      "name": "Precentral sulcus (inferior part)*.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2919,
+        5.5102,
+        0.0847
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precentral-sulcus-inferior-part-right",
+      "name": "Precentral sulcus (inferior part)*.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2919,
+        5.5102,
+        0.0847
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precentral-sulcus-superior-part-left",
+      "name": "Precentral sulcus (Superior part)*.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.2081,
+        5.6406,
+        -0.0521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precentral-sulcus-superior-part-right",
+      "name": "Precentral sulcus (Superior part)*.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.2081,
+        5.6406,
+        -0.0521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precuneus-left",
+      "name": "Precuneus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0576,
+        5.5025,
+        -0.4222
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-precuneus-right",
+      "name": "Precuneus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0576,
+        5.5025,
+        -0.4222
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-putamen-left",
+      "name": "Putamen.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1769,
+        5.3105,
+        0.0575
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-putamen-right",
+      "name": "Putamen.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1769,
+        5.3105,
+        0.0575
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-septal-nuclei",
+      "name": "Septal nuclei",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0003,
+        5.2225,
+        0.1206
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-septum-pellucidum",
+      "name": "Septum pellucidum",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.3433,
+        0.0144
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-straight-gyrus-gyrus-rectus-left",
+      "name": "Straight gyrus (Gyrus rectus).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.044,
+        5.254,
+        0.3423
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-straight-gyrus-gyrus-rectus-right",
+      "name": "Straight gyrus (Gyrus rectus).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.044,
+        5.254,
+        0.3423
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-stria-medullaris-thalami-left",
+      "name": "Stria medullaris thalami.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0362,
+        5.2733,
+        -0.0222
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-stria-medullaris-thalami-right",
+      "name": "Stria medullaris thalami.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0259,
+        5.2733,
+        -0.0222
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-stria-terminalis-left",
+      "name": "Stria terminalis.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0045,
+        5.2677,
+        -0.0333
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-stria-terminalis-right",
+      "name": "Stria terminalis.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0045,
+        5.2677,
+        -0.0333
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-subparietal-sulcus-left",
+      "name": "Subparietal sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0527,
+        5.4825,
+        -0.3573
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-subparietal-sulcus-right",
+      "name": "Subparietal sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0527,
+        5.4825,
+        -0.3573
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-sulcus-interm-prim-jensen-left",
+      "name": "Sulcus interm_prim-Jensen.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3217,
+        5.4647,
+        -0.3609
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-sulcus-interm-prim-jensen-right",
+      "name": "Sulcus interm_prim-Jensen.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3217,
+        5.4647,
+        -0.3609
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-frontal-gyrus-left",
+      "name": "Superior frontal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0987,
+        5.5457,
+        0.1698
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-frontal-gyrus-right",
+      "name": "Superior frontal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0987,
+        5.5457,
+        0.1698
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-frontal-sulcus-left",
+      "name": "Superior frontal sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1434,
+        5.625,
+        0.1521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-frontal-sulcus-right",
+      "name": "Superior frontal sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1434,
+        5.625,
+        0.1521
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-occipital-gyri-left",
+      "name": "Superior occipital gyri.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1171,
+        5.3709,
+        -0.6096
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-occipital-gyri-right",
+      "name": "Superior occipital gyri.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1171,
+        5.3709,
+        -0.6096
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-parietal-lobule-left",
+      "name": "Superior parietal lobule.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1435,
+        5.5939,
+        -0.4538
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-parietal-lobule-right",
+      "name": "Superior parietal lobule.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1435,
+        5.5939,
+        -0.4538
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-temporal-gyrus-lateral-part-left",
+      "name": "Superior temporal gyrus (Lateral part).l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3933,
+        5.2564,
+        -0.0456
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-temporal-gyrus-lateral-part-right",
+      "name": "Superior temporal gyrus (Lateral part).r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3933,
+        5.2564,
+        -0.0456
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-temporal-sulcus-left",
+      "name": "Superior temporal sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3292,
+        5.312,
+        -0.2268
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-superior-temporal-sulcus-right",
+      "name": "Superior temporal sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3292,
+        5.312,
+        -0.2268
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-supramarginal-gyrus-left",
+      "name": "Supramarginal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3711,
+        5.4886,
+        -0.2452
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-supramarginal-gyrus-right",
+      "name": "Supramarginal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3711,
+        5.4886,
+        -0.2452
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-temporal-plane-left",
+      "name": "Temporal plane.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3975,
+        5.3928,
+        -0.2273
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-temporal-plane-right",
+      "name": "Temporal plane.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3975,
+        5.3928,
+        -0.2273
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-temporal-pole-left",
+      "name": "Temporal pole.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.259,
+        5.0756,
+        0.1132
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-temporal-pole-right",
+      "name": "Temporal pole.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.259,
+        5.0756,
+        0.1132
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-thalamus-left",
+      "name": "Thalamus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0836,
+        5.2792,
+        -0.0566
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-thalamus-right",
+      "name": "Thalamus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0836,
+        5.2792,
+        -0.0566
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-third-ventricle",
+      "name": "Third ventricle",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.2467,
+        -0.0228
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-transverse-frontopolar-gyrus-and-sulcus-left",
+      "name": "Transverse frontopolar gyrus and sulcus*.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0952,
+        5.385,
+        0.5102
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-transverse-frontopolar-gyrus-and-sulcus-right",
+      "name": "Transverse frontopolar gyrus and sulcus*.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0952,
+        5.385,
+        0.5102
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-transverse-occipital-sulcus-left",
+      "name": "Transverse occipital sulcus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1602,
+        5.2953,
+        -0.523
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-transverse-occipital-sulcus-right",
+      "name": "Transverse occipital sulcus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1602,
+        5.2953,
+        -0.523
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-transverse-temporal-gyri-left",
+      "name": "Transverse temporal gyri.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3236,
+        5.3294,
+        -0.0784
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-transverse-temporal-gyri-right",
+      "name": "Transverse temporal gyri.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3236,
+        5.3294,
+        -0.0784
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-triangular-part-of-inferior-frontal-gyrus-left",
+      "name": "Triangular part of inferior frontal gyrus.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.3349,
+        5.4039,
+        0.2535
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-triangular-part-of-inferior-frontal-gyrus-right",
+      "name": "Triangular part of inferior frontal gyrus.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.3349,
+        5.4039,
+        0.2535
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-white-matter-of-telencephalon-left",
+      "name": "White matter of telencephalon.l",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.232,
+        5.3903,
+        -0.0671
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebrum-white-matter-of-telencephalon-right",
+      "name": "White matter of telencephalon.r",
+      "kind": "part",
+      "parentId": "cerebrum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.232,
+        5.3903,
+        -0.0671
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum",
+      "name": "Cerebellum",
+      "kind": "organ",
+      "parentId": "nervous-system",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.0228,
+        -0.2437
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "cerebellum-anterior-quadrangular-lobule-left",
+      "name": "Anterior quadrangular lobule.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.097,
+        5.0971,
+        -0.2091
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-anterior-quadrangular-lobule-right",
+      "name": "Anterior quadrangular lobule.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.097,
+        5.0971,
+        -0.2091
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-base-of-peduncle-left",
+      "name": "Base of peduncle.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.079,
+        5.1671,
+        -0.0046
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-base-of-peduncle-right",
+      "name": "Base of peduncle.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.079,
+        5.1671,
+        -0.0046
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-biventral-lobule-left",
+      "name": "Biventral lobule.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1381,
+        4.8996,
+        -0.2447
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-biventral-lobule-right",
+      "name": "Biventral lobule.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1381,
+        4.8996,
+        -0.2447
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-central-lobule",
+      "name": "Central lobule",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0022,
+        5.085,
+        -0.1893
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-culmen",
+      "name": "Culmen",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0,
+        5.1084,
+        -0.2718
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-declive",
+      "name": "Declive",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0002,
+        5.0821,
+        -0.3756
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-flocculus-left",
+      "name": "Flocculus.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1575,
+        4.9681,
+        -0.136
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-flocculus-right",
+      "name": "Flocculus.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1575,
+        4.9681,
+        -0.136
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-folium-of-vermis",
+      "name": "Folium of vermis",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0001,
+        5.0257,
+        -0.4025
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-gracile-lobule-left",
+      "name": "Gracile lobule.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1548,
+        4.9064,
+        -0.2924
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-gracile-lobule-right",
+      "name": "Gracile lobule.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1548,
+        4.9064,
+        -0.2924
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-inferior-semilunar-lobule-left",
+      "name": "Inferior semilunar lobule.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1693,
+        4.9471,
+        -0.3524
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-inferior-semilunar-lobule-right",
+      "name": "Inferior semilunar lobule.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1693,
+        4.9471,
+        -0.3524
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-lingula-of-cerebellum",
+      "name": "Lingula of cerebellum",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0021,
+        5.0604,
+        -0.1857
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-nodule-of-vermis",
+      "name": "Nodule of vermis",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0005,
+        4.9623,
+        -0.2398
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-peduncle-of-flocculus-left",
+      "name": "Peduncle of flocculus.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1201,
+        4.9822,
+        -0.1804
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-peduncle-of-flocculus-right",
+      "name": "Peduncle of flocculus.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1201,
+        4.9822,
+        -0.1804
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-posterior-quadrangular-lobule-left",
+      "name": "Posterior quadrangular lobule.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1364,
+        5.0659,
+        -0.2786
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-posterior-quadrangular-lobule-right",
+      "name": "Posterior quadrangular lobule.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1364,
+        5.0659,
+        -0.2786
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-pyramis-of-vermis",
+      "name": "Pyramis of vermis",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0001,
+        4.9346,
+        -0.3627
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-superior-cerebellar-peduncle-left",
+      "name": "Superior cerebellar peduncle.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0644,
+        5.044,
+        -0.1775
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-superior-cerebellar-peduncle-right",
+      "name": "Superior cerebellar peduncle.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0644,
+        5.044,
+        -0.1775
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-superior-semilunar-lobule-left",
+      "name": "Superior semilunar lobule.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.1724,
+        5.0127,
+        -0.3562
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-superior-semilunar-lobule-right",
+      "name": "Superior semilunar lobule.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.1724,
+        5.0127,
+        -0.3562
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-tonsil-of-cerebellum-left",
+      "name": "Tonsil of cerebellum.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0871,
+        4.8932,
+        -0.2256
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-tonsil-of-cerebellum-right",
+      "name": "Tonsil of cerebellum.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0871,
+        4.8932,
+        -0.2256
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-tuber-of-vermis",
+      "name": "Tuber of vermis",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0001,
+        4.9717,
+        -0.3955
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-uvula-of-vermis",
+      "name": "Uvula of vermis",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0037,
+        4.938,
+        -0.2879
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-wing-of-central-lobule-left",
+      "name": "Wing of central lobule.l",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        0.0695,
+        5.0968,
+        -0.1358
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "cerebellum-wing-of-central-lobule-right",
+      "name": "Wing of central lobule.r",
+      "kind": "part",
+      "parentId": "cerebellum",
+      "system": "nervous",
+      "layer": "nervous",
+      "selectable": true,
+      "position": [
+        -0.0695,
+        5.0968,
+        -0.1358
+      ],
+      "objectCount": 1
+    }
+  ]
+}

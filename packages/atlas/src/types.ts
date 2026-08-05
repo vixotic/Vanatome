@@ -114,6 +114,18 @@ export type LoadedAtlasBundle = {
   atlas: VanatomeViewerAtlas;
 };
 
+export type LoadedAtlasCollection = {
+  systemIds: readonly AnatomySystemId[];
+  bundles: readonly LoadedAtlasBundle[];
+  atlases: readonly VanatomeViewerAtlas[];
+};
+
+export type LoadAtlasSystemsOptions = {
+  signal?: AbortSignal;
+  /** Maximum simultaneous metadata requests. Defaults to 3. */
+  concurrency?: number;
+};
+
 export type AtlasLoaderErrorCode =
   | "fetch-unavailable"
   | "catalog-fetch"
@@ -121,6 +133,7 @@ export type AtlasLoaderErrorCode =
   | "bundle-not-found"
   | "profile-not-found"
   | "system-not-found"
+  | "systems-empty"
   | "system-ambiguous"
   | "metadata-fetch"
   | "metadata-invalid"
@@ -174,6 +187,10 @@ export interface AtlasLoader {
     systemId: AnatomySystemId,
     options?: { signal?: AbortSignal },
   ): Promise<LoadedAtlasBundle>;
+  loadSystems(
+    systemIds: readonly AnatomySystemId[],
+    options?: LoadAtlasSystemsOptions,
+  ): Promise<LoadedAtlasCollection>;
 }
 
 export interface AtlasLoaderWithProfiles extends AtlasLoader {

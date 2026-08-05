@@ -9,6 +9,8 @@ import {
   type AtlasLoaderOptions,
   type AtlasLoaderState,
   type LoadedAtlasBundle,
+  type LoadedAtlasCollection,
+  type LoadAtlasSystemsOptions,
 } from "./types.js";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -313,8 +315,10 @@ export function createAtlasLoader(
 ): AtlasLoaderWithProfiles {
   let state: AtlasLoaderState = { status: "idle" };
   let catalog: AtlasCatalog | undefined;
+  let loadingCatalog: Promise<AtlasCatalog> | undefined;
   let resolvedCatalogUrl = options.catalogUrl;
   const loadedBundles = new Map<string, LoadedAtlasBundle>();
+  const loadingBundles = new Map<string, Promise<LoadedAtlasBundle>>();
   const listeners = new Set<AtlasLoaderListener>();
 
   function setState(next: AtlasLoaderState): void {
@@ -337,29 +341,38 @@ export function createAtlasLoader(
     signal?: AbortSignal;
   }): Promise<AtlasCatalog> {
     if (catalog) return catalog;
-    setState({ status: "loading-catalog", catalogUrl: options.catalogUrl });
-    try {
-      const response = await getFetch()(options.catalogUrl, {
-        signal: loadOptions?.signal,
-      });
-      if (!response.ok) {
-        throw new AtlasLoaderError(
+    if (loadingCatalog) return loadingCatalog;
+    const pending = (async () => {
+      setState({ status: "loading-catalog", catalogUrl: options.catalogUrl });
+      try {
+        const response = await getFetch()(options.catalogUrl, {
+          signal: loadOptions?.signal,
+        });
+        if (!response.ok) {
+          throw new AtlasLoaderError(
+            "catalog-fetch",
+            `Atlas catalog request failed with HTTP ${response.status}.`,
+          );
+        }
+        resolvedCatalogUrl = response.url || options.catalogUrl;
+        catalog = parseCatalog(await response.json(), options.expectedAtlas);
+        setState({ status: "catalog-ready", catalog });
+        return catalog;
+      } catch (cause) {
+        const error = fetchError(
           "catalog-fetch",
-          `Atlas catalog request failed with HTTP ${response.status}.`,
+          `Unable to load atlas catalog from ${options.catalogUrl}.`,
+          cause,
         );
+        setState({ status: "error", operation: "catalog", error });
+        throw error;
       }
-      resolvedCatalogUrl = response.url || options.catalogUrl;
-      catalog = parseCatalog(await response.json(), options.expectedAtlas);
-      setState({ status: "catalog-ready", catalog });
-      return catalog;
-    } catch (cause) {
-      const error = fetchError(
-        "catalog-fetch",
-        `Unable to load atlas catalog from ${options.catalogUrl}.`,
-        cause,
-      );
-      setState({ status: "error", operation: "catalog", error });
-      throw error;
+    })();
+    loadingCatalog = pending;
+    try {
+      return await pending;
+    } finally {
+      if (loadingCatalog === pending) loadingCatalog = undefined;
     }
   }
 
@@ -395,66 +408,79 @@ export function createAtlasLoader(
       return cached;
     }
 
-    setState({ status: "loading-bundle", catalog: loadedCatalog, bundle });
-    try {
-      const metadataUrl = resolveUrl(bundle.metadataUrl, resolvedCatalogUrl);
-      const response = await getFetch()(metadataUrl, {
-        signal: loadOptions?.signal,
-      });
-      if (!response.ok) {
-        throw new AtlasLoaderError(
-          "metadata-fetch",
-          `Bundle metadata request failed with HTTP ${response.status}.`,
+    const activeLoad = loadingBundles.get(bundle.id);
+    if (activeLoad) return activeLoad;
+
+    const pending = (async () => {
+      setState({ status: "loading-bundle", catalog: loadedCatalog, bundle });
+      try {
+        const metadataUrl = resolveUrl(bundle.metadataUrl, resolvedCatalogUrl);
+        const response = await getFetch()(metadataUrl, {
+          signal: loadOptions?.signal,
+        });
+        if (!response.ok) {
+          throw new AtlasLoaderError(
+            "metadata-fetch",
+            `Bundle metadata request failed with HTTP ${response.status}.`,
+          );
+        }
+        const metadata = parseMetadata(
+          await response.json(),
+          loadedCatalog,
+          bundle,
         );
-      }
-      const metadata = parseMetadata(
-        await response.json(),
-        loadedCatalog,
-        bundle,
-      );
-      const loaded: LoadedAtlasBundle = {
-        descriptor: bundle,
-        metadata,
-        provenance: {
-          ...loadedCatalog.provenance,
-          noticeUrl: loadedCatalog.provenance.noticeUrl
-            ? resolveUrl(
+        const loaded: LoadedAtlasBundle = {
+          descriptor: bundle,
+          metadata,
+          provenance: {
+            ...loadedCatalog.provenance,
+            noticeUrl: loadedCatalog.provenance.noticeUrl
+              ? resolveUrl(
                 loadedCatalog.provenance.noticeUrl,
                 resolvedCatalogUrl,
               )
-            : undefined,
-        },
-        atlas: {
-          id: `${loadedCatalog.atlas.id}:${bundle.id}`,
-          name: `${loadedCatalog.atlas.name} — ${bundle.name}`,
-          version: loadedCatalog.atlas.version,
-          buildId: loadedCatalog.atlas.buildId,
-          modelUrl: resolveUrl(bundle.modelUrl, resolvedCatalogUrl),
-          structures: metadata.structures,
-          attribution: loadedCatalog.provenance.attribution,
-        },
-      };
-      loadedBundles.set(bundle.id, loaded);
-      setState({
-        status: "ready",
-        catalog: loadedCatalog,
-        bundle: loaded,
-      });
-      return loaded;
-    } catch (cause) {
-      const error = fetchError(
-        "metadata-fetch",
-        `Unable to load metadata for atlas bundle "${bundle.id}".`,
-        cause,
-      );
-      setState({
-        status: "error",
-        operation: "bundle",
-        error,
-        catalog: loadedCatalog,
-        bundle,
-      });
-      throw error;
+              : undefined,
+          },
+          atlas: {
+            id: `${loadedCatalog.atlas.id}:${bundle.id}`,
+            name: `${loadedCatalog.atlas.name} — ${bundle.name}`,
+            version: loadedCatalog.atlas.version,
+            buildId: loadedCatalog.atlas.buildId,
+            modelUrl: resolveUrl(bundle.modelUrl, resolvedCatalogUrl),
+            structures: metadata.structures,
+            attribution: loadedCatalog.provenance.attribution,
+          },
+        };
+        loadedBundles.set(bundle.id, loaded);
+        setState({
+          status: "ready",
+          catalog: loadedCatalog,
+          bundle: loaded,
+        });
+        return loaded;
+      } catch (cause) {
+        const error = fetchError(
+          "metadata-fetch",
+          `Unable to load metadata for atlas bundle "${bundle.id}".`,
+          cause,
+        );
+        setState({
+          status: "error",
+          operation: "bundle",
+          error,
+          catalog: loadedCatalog,
+          bundle,
+        });
+        throw error;
+      }
+    })();
+    loadingBundles.set(bundle.id, pending);
+    try {
+      return await pending;
+    } finally {
+      if (loadingBundles.get(bundle.id) === pending) {
+        loadingBundles.delete(bundle.id);
+      }
     }
   }
 
@@ -501,6 +527,54 @@ export function createAtlasLoader(
     return loadBundle(bundles[0].id, loadOptions);
   }
 
+  async function loadSystems(
+    systemIds: readonly string[],
+    loadOptions?: LoadAtlasSystemsOptions,
+  ): Promise<LoadedAtlasCollection> {
+    const uniqueSystemIds = [...new Set(systemIds)];
+    if (uniqueSystemIds.length === 0) {
+      throw new AtlasLoaderError(
+        "systems-empty",
+        "At least one anatomy system is required.",
+      );
+    }
+
+    const requestedConcurrency = Math.floor(loadOptions?.concurrency ?? 3);
+    const concurrency = Math.min(
+      uniqueSystemIds.length,
+      Number.isFinite(requestedConcurrency)
+        ? Math.max(1, requestedConcurrency)
+        : 3,
+    );
+    const results = new Array<LoadedAtlasBundle>(uniqueSystemIds.length);
+    let nextIndex = 0;
+    const workers = Array.from({ length: concurrency }, async () => {
+      while (nextIndex < uniqueSystemIds.length) {
+        if (loadOptions?.signal?.aborted) {
+          throw new AtlasLoaderError(
+            "aborted",
+            "Atlas loading was aborted.",
+          );
+        }
+        const index = nextIndex;
+        nextIndex += 1;
+        results[index] = await loadSystem(uniqueSystemIds[index], {
+          signal: loadOptions?.signal,
+        });
+      }
+    });
+    await Promise.all(workers);
+
+    const bundles = [...new Map(
+      results.map((bundle) => [bundle.descriptor.id, bundle]),
+    ).values()];
+    return {
+      systemIds: uniqueSystemIds,
+      bundles,
+      atlases: bundles.map((bundle) => bundle.atlas),
+    };
+  }
+
   async function loadProfile(
     profileId?: string,
     loadOptions?: { signal?: AbortSignal },
@@ -537,6 +611,7 @@ export function createAtlasLoader(
     loadCatalog,
     loadBundle,
     loadSystem,
+    loadSystems,
     loadProfile,
   };
 }
