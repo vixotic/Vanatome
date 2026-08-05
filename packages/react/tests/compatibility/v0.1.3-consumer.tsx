@@ -105,3 +105,13 @@ export function EnhancedConsumer() {
     </>
   );
 }
+
+export function CompositeConsumer() {
+  return (
+    <VanatomeViewer
+      atlases={[atlas]}
+      incrementalLoadingFallback={<span>Adding anatomy</span>}
+      onModelReady={() => {}}
+    />
+  );
+}

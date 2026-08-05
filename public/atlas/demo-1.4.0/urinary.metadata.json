@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "atlasId": "vanatome-human",
+  "atlasVersion": "1.4.0",
+  "buildId": "994e6cc8ffbb212e",
+  "bundleId": "urinary",
+  "nodeCount": 3,
+  "structures": [
+    {
+      "id": "urinary-system",
+      "name": "Urinary",
+      "kind": "system",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.0077,
+        1.1877,
+        -0.0707
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "kidneys",
+      "name": "Kidneys",
+      "kind": "organ",
+      "parentId": "urinary-system",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.0098,
+        1.6238,
+        -0.087
+      ],
+      "objectCount": 0
+    },
+    {
+      "id": "kidneys-kidney-left",
+      "name": "Kidney.l",
+      "kind": "part",
+      "parentId": "kidneys",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.4313,
+        1.6857,
+        -0.1278
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "kidneys-kidney-right",
+      "name": "Kidney.r",
+      "kind": "part",
+      "parentId": "kidneys",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        -0.413,
+        1.5567,
+        -0.0691
+      ],
+      "objectCount": 1
+    },
+    {
+      "id": "bladder",
+      "name": "bladder",
+      "kind": "organ",
+      "parentId": "urinary-system",
+      "system": "urinary",
+      "layer": "urinary",
+      "selectable": true,
+      "position": [
+        0.0027,
+        -0.1155,
+        0.0009
+      ],
+      "objectCount": 1
+    }
+  ]
+}

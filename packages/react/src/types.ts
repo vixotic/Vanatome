@@ -22,9 +22,16 @@ export type VanatomeAtlas = {
   id: string;
   name: string;
   version: string;
+  buildId?: string;
   modelUrl: string;
   structures: readonly VanatomeStructure[];
   attribution: string;
+};
+
+export type VanatomeAtlasComposition = {
+  atlases: readonly VanatomeAtlas[];
+  modelUrls: readonly string[];
+  structures: readonly VanatomeStructure[];
 };
 
 export type VanatomeHierarchyNode = VanatomeStructure & {
@@ -85,8 +92,7 @@ export type VanatomeViewerAppearance = {
   pulseSelection?: boolean;
 };
 
-export type VanatomeViewerProps = {
-  atlas: VanatomeAtlas;
+type VanatomeViewerBaseProps = {
   selectedId?: string | null;
   hoveredId?: string | null;
   isolatedId?: string | null;
@@ -103,6 +109,7 @@ export type VanatomeViewerProps = {
   onEscape?: () => void;
   onLoadStart?: (modelUrl: string) => void;
   onLoadProgress?: (progress: VanatomeLoadProgress) => void;
+  onModelReady?: (modelUrl: string) => void;
   onReady?: () => void;
   onError?: (error: VanatomeViewerError) => void;
   onFocusRejected?: (
@@ -116,6 +123,7 @@ export type VanatomeViewerProps = {
   style?: CSSProperties;
   ariaLabel?: string;
   loadingFallback?: ReactNode;
+  incrementalLoadingFallback?: ReactNode;
   errorFallback?: ReactNode | ((error: VanatomeViewerError) => ReactNode);
   modelScale?: number;
   modelPosition?: VanatomeVector3;
@@ -130,6 +138,19 @@ export type VanatomeViewerProps = {
   maxDistance?: number;
   appearance?: VanatomeViewerAppearance;
 };
+
+export type VanatomeViewerProps = VanatomeViewerBaseProps & (
+  | {
+      /** Existing single-model source. */
+      atlas: VanatomeAtlas;
+      atlases?: never;
+    }
+  | {
+      /** Additive multi-model source. */
+      atlas?: never;
+      atlases: readonly VanatomeAtlas[];
+    }
+);
 
 export type VanatomeController = {
   selectedId: string | null;

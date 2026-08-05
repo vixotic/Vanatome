@@ -20,11 +20,11 @@ const repoRoot = resolve(toolRoot, "../..");
 function usage() {
   console.log(`Usage:
   node tools/anatomy/distribute-release.mjs \\
-    --source-model public/models/z-anatomy-full-body.glb \\
-    --registry app/data/z-anatomy-registry.json \\
-    --manifest public/models/z-anatomy-manifest.json \\
-    --version 1.3.0 \\
-    --release demo-1.3.0
+    --source-model public/models/z-anatomy-1.4.0-full-body.glb \\
+    --registry public/models/z-anatomy-1.4.0-registry.json \\
+    --manifest public/models/z-anatomy-1.4.0-manifest.json \\
+    --version 1.4.0 \\
+    --release demo-1.4.0
 
 The full-body GLB is the canonical superset. System GLBs and their metadata are
 derived from it, and the generated catalog maps systems to those smaller files.`);

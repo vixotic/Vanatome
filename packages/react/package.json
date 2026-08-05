@@ -1,6 +1,6 @@
 {
   "name": "@vixotic/vanatome-react",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Embeddable React viewer for curated Vanatome human anatomy atlases.",
   "license": "MIT",
   "type": "module",

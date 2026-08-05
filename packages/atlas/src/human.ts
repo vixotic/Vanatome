@@ -7,19 +7,19 @@ import type {
 export const OFFICIAL_HUMAN_ATLAS = {
   id: "vanatome-human",
   name: "Vanatome Human Atlas",
-  version: "1.3.0",
-  buildId: "74294b7e83da5dce",
+  version: "1.4.0",
+  buildId: "994e6cc8ffbb212e",
   catalogFile: "catalog.json",
   catalogUrl:
-    "https://atlas.vanatome.vixotic.in/releases/1.3.0/catalog.json",
+    "https://atlas.vanatome.vixotic.in/releases/1.4.0/catalog.json",
   defaultProfileId: "full-body",
 } as const;
 
 export const DEMO_HUMAN_ATLAS = {
   id: "vanatome-human",
   name: "Vanatome Human Atlas",
-  version: "1.3.0",
-  buildId: "74294b7e83da5dce",
+  version: "1.4.0",
+  buildId: "994e6cc8ffbb212e",
   catalogFile: "catalog.json",
   defaultProfileId: "full-body",
 } as const;
@@ -60,7 +60,7 @@ export function createDemoHumanAtlas(options?: {
 }): AtlasLoaderWithProfiles {
   return createAtlasLoader({
     catalogUrl:
-      options?.catalogUrl ?? "/atlas/demo-1.3.0/catalog.json",
+      options?.catalogUrl ?? "/atlas/demo-1.4.0/catalog.json",
     fetch: options?.fetch,
     expectedAtlas: {
       id: DEMO_HUMAN_ATLAS.id,

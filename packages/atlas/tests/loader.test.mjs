@@ -110,10 +110,10 @@ function jsonResponse(body, url, status = 200) {
 
 test("official identity provides the immutable public catalog by default", () => {
   assert.equal(OFFICIAL_HUMAN_ATLAS.id, "vanatome-human");
-  assert.equal(OFFICIAL_HUMAN_ATLAS.version, "1.3.0");
+  assert.equal(OFFICIAL_HUMAN_ATLAS.version, "1.4.0");
   assert.equal(
     OFFICIAL_HUMAN_ATLAS.catalogUrl,
-    "https://atlas.vanatome.vixotic.in/releases/1.3.0/catalog.json",
+    "https://atlas.vanatome.vixotic.in/releases/1.4.0/catalog.json",
   );
   const loader = createOfficialHumanAtlas();
   assert.deepEqual(loader.getState(), { status: "idle" });
@@ -224,6 +224,100 @@ test("explicit system mappings coexist with a cumulative full-body profile", asy
   ]);
 });
 
+test("loads several system bundles with bounded concurrency and stable order", async () => {
+  const multiCatalog = {
+    ...catalog,
+    systems: [
+      { id: "cardiovascular", name: "Cardiovascular", bundleId: "cardiovascular" },
+      { id: "respiratory", name: "Respiratory", bundleId: "respiratory" },
+    ],
+    layers: [
+      { id: "cardiovascular", name: "Cardiovascular" },
+      { id: "respiratory", name: "Respiratory" },
+    ],
+    bundles: [
+      catalog.bundles[0],
+      {
+        id: "respiratory",
+        name: "Respiratory system",
+        systems: ["respiratory"],
+        layers: ["respiratory"],
+        modelUrl: "./respiratory.glb",
+        metadataUrl: "./respiratory.metadata.json",
+      },
+    ],
+  };
+  const respiratoryMetadata = {
+    ...metadata,
+    bundleId: "respiratory",
+    structures: [
+      {
+        id: "lungs",
+        name: "Lungs",
+        kind: "organ",
+        system: "respiratory",
+        layer: "respiratory",
+        position: [0, 0, 0],
+        objectCount: 1,
+      },
+    ],
+  };
+  let activeRequests = 0;
+  let maximumActiveRequests = 0;
+  const requests = [];
+  const loader = createAtlasLoader({
+    catalogUrl: "https://assets.example/atlas/catalog.json",
+    fetch: async (input) => {
+      const url = String(input);
+      requests.push(url);
+      if (url.endsWith("catalog.json")) return jsonResponse(multiCatalog, url);
+      activeRequests += 1;
+      maximumActiveRequests = Math.max(maximumActiveRequests, activeRequests);
+      await new Promise((resolve) => setTimeout(resolve, 5));
+      activeRequests -= 1;
+      return jsonResponse(
+        url.endsWith("respiratory.metadata.json")
+          ? respiratoryMetadata
+          : metadata,
+        url,
+      );
+    },
+  });
+
+  const loaded = await loader.loadSystems(
+    ["respiratory", "cardiovascular", "respiratory"],
+    { concurrency: 2 },
+  );
+
+  assert.deepEqual(loaded.systemIds, ["respiratory", "cardiovascular"]);
+  assert.deepEqual(
+    loaded.bundles.map((bundle) => bundle.descriptor.id),
+    ["respiratory", "cardiovascular"],
+  );
+  assert.deepEqual(
+    loaded.atlases.map((atlas) => atlas.modelUrl),
+    [
+      "https://assets.example/atlas/respiratory.glb",
+      "https://assets.example/atlas/cardiovascular.glb",
+    ],
+  );
+  assert.equal(maximumActiveRequests, 2);
+  assert.equal(requests.length, 3);
+});
+
+test("rejects an empty system collection", async () => {
+  const loader = createAtlasLoader({
+    catalogUrl: "https://assets.example/atlas/catalog.json",
+    fetch: async () => jsonResponse(catalog, ""),
+  });
+
+  await assert.rejects(
+    loader.loadSystems([]),
+    (error) =>
+      error instanceof AtlasLoaderError && error.code === "systems-empty",
+  );
+});
+
 test("exposes HTTP failures as an explicit error state", async () => {
   const loader = createAtlasLoader({
     catalogUrl: "https://assets.example/missing.json",
@@ -332,7 +426,7 @@ test("repository demo catalog matches its metadata and immutable GLB", async () 
 
 test("distributed demo release loads systems independently and full body as a profile", async () => {
   const demoDirectory = new URL(
-    "../../../public/atlas/demo-1.3.0/",
+    "../../../public/atlas/demo-1.4.0/",
     import.meta.url,
   );
   const demoCatalog = JSON.parse(
@@ -341,7 +435,7 @@ test("distributed demo release loads systems independently and full body as a pr
   const metadataByUrl = new Map();
   for (const bundle of demoCatalog.bundles) {
     metadataByUrl.set(
-      new URL(bundle.metadataUrl, "https://demo.local/atlas/demo-1.3.0/catalog.json").href,
+      new URL(bundle.metadataUrl, "https://demo.local/atlas/demo-1.4.0/catalog.json").href,
       JSON.parse(
         await readFile(new URL(bundle.metadataUrl, demoDirectory), "utf8"),
       ),
@@ -370,7 +464,7 @@ test("distributed demo release loads systems independently and full body as a pr
 
   const requests = [];
   const loader = createDemoHumanAtlas({
-    catalogUrl: "https://demo.local/atlas/demo-1.3.0/catalog.json",
+    catalogUrl: "https://demo.local/atlas/demo-1.4.0/catalog.json",
     fetch: async (input) => {
       const url = String(input);
       requests.push(url);
@@ -384,6 +478,6 @@ test("distributed demo release loads systems independently and full body as a pr
   assert.equal(cardiovascular.descriptor.id, "cardiovascular");
   assert.equal(cardiovascular.metadata.nodeCount, 64);
   assert.equal(profile.descriptor.id, "curated-full-body");
-  assert.equal(profile.metadata.nodeCount, 960);
+  assert.equal(profile.metadata.nodeCount, 984);
   assert.equal(requests.length, 3);
 });

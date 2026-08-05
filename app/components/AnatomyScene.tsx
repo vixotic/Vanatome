@@ -8,7 +8,7 @@ import {
 } from "@vixotic/vanatome-react";
 
 type Props = {
-  atlas: VanatomeAtlas;
+  atlases: readonly VanatomeAtlas[];
   selectedId: string | null;
   isolation: VanatomeIsolationState | null;
   visibleLayers: readonly string[];
@@ -19,10 +19,10 @@ type Props = {
   onEscape: () => void;
 };
 
-export function AnatomyScene({ atlas, ...props }: Props) {
+export function AnatomyScene({ atlases, ...props }: Props) {
   return (
     <VanatomeViewer
-      atlas={atlas}
+      atlases={atlases}
       modelScale={7}
       modelPosition={[0, -6.1, 0]}
       initialCameraPosition={[0, 0, 18]}
@@ -33,6 +33,12 @@ export function AnatomyScene({ atlas, ...props }: Props) {
         <div className="scene-loading">
           <div className="scanner-ring" />
           <span>Loading anatomical geometry</span>
+        </div>
+      )}
+      incrementalLoadingFallback={(
+        <div className="bundle-switching">
+          <div className="scanner-ring" />
+          <span>STREAMING SELECTED ANATOMY</span>
         </div>
       )}
       {...props}

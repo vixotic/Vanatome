@@ -830,6 +830,31 @@
           "decimate": 0.65
         }
       ]
+    },
+    "hand-muscles": {
+      "description": "Intrinsic muscles of both hands, including thenar, hypothenar, lumbrical, and interosseous groups.",
+      "liveAsset": "public/models/z-anatomy-hand-muscles.glb",
+      "liveManifest": "public/models/z-anatomy-hand-muscles-manifest.json",
+      "validation": {
+        "expectedObjectCount": 24,
+        "maximumAssetBytes": 5000000
+      },
+      "groups": [
+        {
+          "id": "hand-muscles",
+          "name": "Hand Muscles",
+          "system": "muscular",
+          "expandSourceParts": true,
+          "sourceSelector": {
+            "collection": "Muscles of hand",
+            "recursive": false,
+            "types": ["MESH"],
+            "minimumPolygons": 1
+          },
+          "material": {"color": [0.72, 0.25, 0.23, 1.0], "roughness": 0.5},
+          "decimate": 0.65
+        }
+      ]
     }
   },
   "releases": {
@@ -866,6 +891,18 @@
       "validation": {
         "expectedObjectCount": 960,
         "maximumAssetBytes": 60000000
+      }
+    },
+    "demo-1.4.0": {
+      "version": "1.4.0",
+      "description": "Cumulative full-body release with intrinsic hand musculature added to the existing eleven-system atlas.",
+      "batches": ["visceral-core", "torso-skeleton", "body-shell", "brainstem-core", "appendicular-skeleton", "lymphoid-organs", "male-reproductive", "endocrine-glands", "abdominal-muscles", "shoulder-muscles", "gluteal-muscles", "facial-muscles", "cerebrum", "cerebellum", "cardiac-internal-structures", "pulmonary-vessels", "neck-muscles", "hand-muscles"],
+      "liveAsset": "public/models/z-anatomy-1.4.0-full-body.glb",
+      "liveManifest": "public/models/z-anatomy-1.4.0-manifest.json",
+      "liveRegistry": "public/models/z-anatomy-1.4.0-registry.json",
+      "validation": {
+        "expectedObjectCount": 984,
+        "maximumAssetBytes": 65000000
       }
     }
   }

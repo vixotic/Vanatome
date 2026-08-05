@@ -1,5 +1,9 @@
 export { VanatomeViewer } from "./VanatomeViewer.js";
 export {
+  composeVanatomeAtlases,
+  resolveVanatomeAtlasSources,
+} from "./composition.js";
+export {
   createVanatomeHierarchy,
   getVanatomeDescendantIds,
 } from "./hierarchy.js";
@@ -11,6 +15,7 @@ export {
 export { useVanatomeController } from "./useVanatomeController.js";
 export type {
   VanatomeAtlas,
+  VanatomeAtlasComposition,
   VanatomeController,
   VanatomeControllerState,
   VanatomeContextMenuEvent,

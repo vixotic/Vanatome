@@ -468,22 +468,32 @@ button {
 
 .bundle-switching {
   position: absolute;
-  inset: 0;
+  left: 50%;
+  bottom: 88px;
+  transform: translateX(-50%);
   z-index: 8;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 13px;
+  border: 1px solid rgba(88, 231, 255, 0.2);
   color: #78aab5;
-  background: rgba(2, 10, 15, 0.72);
-  backdrop-filter: blur(5px);
+  background: rgba(2, 10, 15, 0.88);
+  backdrop-filter: blur(8px);
   font: 8px var(--font-geist-mono);
   letter-spacing: 0.16em;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .bundle-switching .scanner-ring {
-  width: 44px;
-  height: 44px;
+  width: 14px;
+  height: 14px;
+}
+
+.bundle-switching.bundle-error {
+  border-color: rgba(255, 91, 101, 0.55);
+  color: #ff7b84;
 }
 
 .scanner-ring {
